@@ -14,5 +14,10 @@ namespace deals.earlymoments.com.Controllers
         {
             return View();
         }
+
+        public ActionResult Four_for_99()
+        {
+            return View();
+        }
 	}
 }
