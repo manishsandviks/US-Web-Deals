@@ -50,3 +50,16 @@ E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.csprojResolveAssemblyReference.cache
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.pdb
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\as400request.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\com.sandviks.sfmc.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\dbConn.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\OrderEngine.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\webConn.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\MaxMindCCFraud.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\CustServiceProxy.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\AlliantDataProxy.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\SAHUtils.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\MaxMindMinFraud.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\PaymentTechService.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\MaxMindCCFraudAPI.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\OrderEngine.pdb

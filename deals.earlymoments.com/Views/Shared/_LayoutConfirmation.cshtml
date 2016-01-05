@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    <link href="/Content/confirmation.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/script/jquery.1.11.3.min.js"></script>
+    <script src="/script/bootstrap.min.js"></script>
+    <script src="/script/enquire.min.js"></script>
+</head>
+
+<body>
+    <header class="row hideSmall">
+        <div class="container">
+            <div class="col-md-12 text-center">
+                @RenderSection("headerStrip", required: true)
+            </div>
+        </div>
+    </header>
+    <div class="container marginTop15">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 confirmLeft">
+                @RenderBody()
+            </div>
+
+            <div class="col-md-4 col-sm-4 centerSmall smallMarginTop20">
+                @RenderSection("rightPanel", required: false)
+            </div>
+        </div>
+    </div>
+    <footer class="container marginTop15 marginBot20">
+        <div class="row">
+            <div class="col-md-12 text-center f12">
+                <hr class="hideBig">
+                @RenderSection("footerSection", required: true)
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

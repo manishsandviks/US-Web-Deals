@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Confirmation";
+    Layout = "~/Views/Shared/_LayoutConfirmation.cshtml";
+}
+<h1 class="bold">Thank you for your order from Early Moments!</h1>
+<p>Your @ViewBag.product shipment will be on its way to you and your child shortly.</p>
+<p class="noMargin">You can <a href="#">print</a> this order confirmation for your records.</p>
+<p>You will also receive a confirmation email shortly.</p>
+<h5 class="confId marginTop30">Confirmation #: @ViewBag.order_id</h5>
+<div class="table-responsive noBorder confDtl">
+    <table class="table black">
+        <tr>
+            <td>BILL TO</td>
+            <!-- <td>LISA MOORE<br>37 FARM ST<br>DANBURY, CT 06811</td>-->
+            <td>@Html.Raw(ViewBag.BillingAddress)</td>
+            <td>SHIP TO</td>
+            <td>@Html.Raw(ViewBag.ShippingAddress)</td>
+        </tr>
+        <tr>
+            <td>CARD</td>
+            <!--<td>XXXX-XXXX-XXXX-1064<br>Exp: 04-2020</td>-->
+            <td>@ViewBag.CreditCardNumber<br>Exp: @ViewBag.CardExpiry</td>
+            <td>DATE</td>
+            <td>@string.Format("{0:MM/dd/yyyy}", System.DateTime.Now.Date)</td>
+        </tr>
+    </table>
+</div>
+<div class="clearfix"></div>
+
+<div class="table-responsive noBorder orderDetails">
+    @Html.Raw(ViewBag.Cart)
+</div>
+<div class="clearfix"></div>
+<p>*Plus sales tax where applicable.</p>
+
+@section headerStrip {
+    <img src="/Images/Seuss/confirm_head.gif" alt="" class="responsiveImg" id="headerImage">
+}
+
+@section rightPanel {
+    <img src="/Images/fgcntoysrus500gc_274_hibrand.gif" alt="" class="responsiveImg">
+}
+
+@section footerSection {
+    <p>
+        Dr. Seuss properties&trade; &amp; &copy; @System.DateTime.Now.Year, Dr. Seuss Enterprises, L.P. All Rights Reserved<br class="hideSmall">
+        Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 Copyright &copy; @System.DateTime.Now.Year
+    </p>
+}
+

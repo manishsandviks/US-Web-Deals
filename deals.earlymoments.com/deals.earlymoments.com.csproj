@@ -39,7 +39,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="as400request">
+      <HintPath>..\..\..\..\Sandviks Dll Library\as400request.dll</HintPath>
+    </Reference>
+    <Reference Include="com.sandviks.sfmc">
+      <HintPath>..\..\..\..\Sandviks Dll Library\com.sandviks.sfmc.dll</HintPath>
+    </Reference>
+    <Reference Include="dbConn">
+      <HintPath>..\..\..\..\Sandviks Dll Library\dbConn.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="OrderEngine">
+      <HintPath>..\..\..\US-Lib-OrderEngine\OrderEngine\bin\Debug\OrderEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -93,6 +105,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="webConn">
+      <HintPath>..\..\..\..\Sandviks Dll Library\webConn.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -116,17 +131,168 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CommonModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\confirmation.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\seuss\4for1\custom.css" />
+    <Content Include="Content\themes\seuss\4for1\media.css" />
+    <Content Include="Content\themes\seuss\4for99Calendar1\custom.css" />
+    <Content Include="Content\themes\seuss\4for99Calendar1\media.css" />
+    <Content Include="Content\themes\seuss\4for99\custom.css" />
+    <Content Include="Content\themes\seuss\4for99\media.css" />
+    <Content Include="Content\themes\seuss\Payment4for1\custom.css" />
+    <Content Include="Content\themes\seuss\Payment4for1\media.css" />
+    <Content Include="Content\themes\seuss\Payment4for99\custom.css" />
+    <Content Include="Content\themes\seuss\Payment4for99\media.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\cc.png" />
+    <Content Include="Images\cvv.jpg" />
+    <Content Include="Images\fgcntoysrus500gc_274_hibrand.gif" />
+    <Content Include="Images\key.jpg" />
+    <Content Include="Images\seuss\4for1\bb.png" />
+    <Content Include="Images\seuss\4for1\button_1.png" />
+    <Content Include="Images\seuss\4for1\leftBottom.png" />
+    <Content Include="Images\seuss\4for1\left_01.jpg" />
+    <Content Include="Images\seuss\4for1\left_02.jpg" />
+    <Content Include="Images\seuss\4for1\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for1\right_top1.png" />
+    <Content Include="Images\seuss\4for1\springformbkg.gif" />
+    <Content Include="Images\seuss\4for1\step1.png" />
+    <Content Include="Images\seuss\4for1\step1Mob.png" />
+    <Content Include="Images\seuss\4for1\step2.png" />
+    <Content Include="Images\seuss\4for1\top.gif" />
+    <Content Include="Images\seuss\4for99Calendar1\bb.png" />
+    <Content Include="Images\seuss\4for99Calendar1\button_1.png" />
+    <Content Include="Images\seuss\4for99Calendar1\dot_pattern.gif" />
+    <Content Include="Images\seuss\4for99Calendar1\formBg.jpg" />
+    <Content Include="Images\seuss\4for99Calendar1\leftBottom.png" />
+    <Content Include="Images\seuss\4for99Calendar1\left_01.jpg" />
+    <Content Include="Images\seuss\4for99Calendar1\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for99Calendar1\right_top1.png" />
+    <Content Include="Images\seuss\4for99Calendar1\step1.png" />
+    <Content Include="Images\seuss\4for99Calendar1\step2.png" />
+    <Content Include="Images\seuss\4for99Calendar1\top.gif" />
+    <Content Include="Images\seuss\4for99Calendar1\ui-icons_222222_256x240.png" />
+    <Content Include="Images\seuss\4for99Calendar1\ui-icons_454545_256x240.png" />
+    <Content Include="Images\seuss\4for99\arrow.png" />
+    <Content Include="Images\seuss\4for99\bb.png" />
+    <Content Include="Images\seuss\4for99\button_1.png" />
+    <Content Include="Images\seuss\4for99\leftBottom.png" />
+    <Content Include="Images\seuss\4for99\left_01.jpg" />
+    <Content Include="Images\seuss\4for99\left_02.jpg" />
+    <Content Include="Images\seuss\4for99\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for99\right_top1.png" />
+    <Content Include="Images\seuss\4for99\springformbkg.gif" />
+    <Content Include="Images\seuss\4for99\step1.png" />
+    <Content Include="Images\seuss\4for99\step1Mob.png" />
+    <Content Include="Images\seuss\4for99\step2.png" />
+    <Content Include="Images\seuss\4for99\top.gif" />
+    <Content Include="Images\seuss\confirm_head.gif" />
+    <Content Include="Images\seuss\Payment4for1\bb.png" />
+    <Content Include="Images\seuss\Payment4for1\button_2.png" />
+    <Content Include="Images\seuss\Payment4for1\cc.png" />
+    <Content Include="Images\seuss\Payment4for1\cvv.jpg" />
+    <Content Include="Images\seuss\Payment4for1\dot_pattern.gif" />
+    <Content Include="Images\seuss\Payment4for1\download.png" />
+    <Content Include="Images\seuss\Payment4for1\formBg.gif" />
+    <Content Include="Images\seuss\Payment4for1\formBg.jpg" />
+    <Content Include="Images\seuss\Payment4for1\formBg1.jpg" />
+    <Content Include="Images\seuss\Payment4for1\header.jpg" />
+    <Content Include="Images\seuss\Payment4for1\key.jpg" />
+    <Content Include="Images\seuss\Payment4for1\leftBottom.jpg" />
+    <Content Include="Images\seuss\Payment4for1\left_01.jpg" />
+    <Content Include="Images\seuss\Payment4for1\left_02.jpg" />
+    <Content Include="Images\seuss\Payment4for1\mobile_form_top.png" />
+    <Content Include="Images\seuss\Payment4for1\mobile_headerfall.png" />
+    <Content Include="Images\seuss\Payment4for1\right_top1.png" />
+    <Content Include="Images\seuss\Payment4for1\step3.png" />
+    <Content Include="Images\seuss\Payment4for99\button_2.png" />
+    <Content Include="Images\seuss\Payment4for99\dot_pattern.gif" />
+    <Content Include="Images\seuss\Payment4for99\download.png" />
+    <Content Include="Images\seuss\Payment4for99\header.jpg" />
+    <Content Include="Images\seuss\Payment4for99\key.jpg" />
+    <Content Include="Images\seuss\Payment4for99\leftBottom.jpg" />
+    <Content Include="Images\seuss\Payment4for99\left_01.jpg" />
+    <Content Include="Images\seuss\Payment4for99\left_02.jpg" />
+    <Content Include="Images\seuss\Payment4for99\mobile_form_top.png" />
+    <Content Include="Images\seuss\Payment4for99\mobile_headerfall.png" />
+    <Content Include="Images\seuss\Payment4for99\right_top1.png" />
+    <Content Include="Images\seuss\Payment4for99\step3.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -139,6 +305,15 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\enquire.min.js" />
+    <Content Include="Script\jquery-ui.js" />
+    <Content Include="Script\jquery.1.11.3.min.js" />
+    <Content Include="Script\seuss\4for1\main.js" />
+    <Content Include="Script\seuss\4for99Calendar1\main.js" />
+    <Content Include="Script\seuss\4for99\main.js" />
+    <Content Include="Script\seuss\Payment4for1\main.js" />
+    <Content Include="Script\seuss\Payment4for99\main.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,11 +329,16 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\Shared\_LayoutConfirmation.cshtml" />
+    <Content Include="Views\Shared\_BillingPartialPage.cshtml" />
+    <Content Include="Views\Seuss\Four_for_1.cshtml" />
+    <Content Include="Views\Shared\_ShippingPartialPage.cshtml" />
+    <Content Include="Views\Seuss\Payment4_for_1.cshtml" />
+    <Content Include="Views\Home\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Seuss\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
