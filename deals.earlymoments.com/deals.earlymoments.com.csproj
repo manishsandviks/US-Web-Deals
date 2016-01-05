@@ -132,9 +132,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CommonModels.cs" />
+    <Compile Include="Models\ShippingModels.cs" />
+    <Compile Include="Models\UtilitiesModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ViewContextExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\emails\emregular.txt" />
+    <Content Include="Assets\StateList.xml" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\common.css" />
     <Content Include="Content\confirmation.css" />
