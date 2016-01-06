@@ -18,6 +18,7 @@ namespace deals.earlymoments.com.Controllers
             return View();
         }
 
+        [PreserveQueryString]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

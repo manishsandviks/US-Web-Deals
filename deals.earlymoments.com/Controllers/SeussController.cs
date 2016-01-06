@@ -5,12 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using deals.earlymoments.com.Models;
 using OrderEngine;
+using deals.earlymoments.com.Utilities;
 
 namespace deals.earlymoments.com.Controllers
 {
     public class SeussController : Controller
     {
-
+        [PreserveQueryString]
         public ActionResult Four_for_1()
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
