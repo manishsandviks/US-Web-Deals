@@ -228,15 +228,15 @@ namespace deals.earlymoments.com.Models
 
         public string ResponsivePayment_GiftingProducts(OrderVariables oVars, bool option = false, string template = "")
         {
-            string start_product_list = "<table id='txlCart' border='0' width='99%'><tr><td class='bold ash-txt border-dashed'>Item</td><td class='text-right bold ash-txt border-dashed'>Price</td></tr>";
-            string prod_list = "<tr><td class='paddingBT3'>!_product_!</td><td class='text-right'>!_cost_!</td></tr>";
+            string start_product_list = "<div class='table-responsive smallTable f12'><table class='table' width='100%' border='0' cellspacing='0' cellpadding='0'><thead><tr><td>Item</td><td>Price</td></tr></thead>";
+            string prod_list = "<tr><td >!_product_!</td><td class='text-right'>!_cost_!</td></tr>";
             string space_column = "<tr height='5px''><td colspan='2'></td></tr>";
             string dotted_line = "<tr><td colspan='2'><div style='border-bottom: dashed thin #999999; padding-top: 10px; margin-bottom: 10px;clear: both;'></div></td></tr><tr><td colspan='2'></td></tr><tr>";
-            string shipping = "<tr><td class='paddingBT3'>Shipping and Handling</td><td class='text-right'>!_ship_!</td></tr>";
-            string coupon_text = "<tr><td class='paddingBT3'>Coupon/Discount</td><td class='text-right'>-!_discount_!</td></tr>";
-            string tax = "<tr><td class='paddingBT3'>&nbsp;&nbsp;Tax</td><td class='text-right'>!_tax_!</td></tr>";
-            string bottom_extra_line = "<tr><td colspan='2' class='paddingBT3'>!_extra_content_!</td></tr>";
-            string end_product_list = "</table>";
+            string shipping = "<tr><td>Shipping and Handling</td><td>!_ship_!</td></tr>";
+            string coupon_text = "<tr><td >Coupon/Discount</td><td >-!_discount_!</td></tr>";
+            string tax = "<tr><td>&nbsp;&nbsp;Tax</td><td >!_tax_!</td></tr>";
+            string bottom_extra_line = "<tr><td>!_extra_content_!</td></tr>";
+            string end_product_list = "</table></div>";
             string prod = oVars.proj_desc;
 
             bool isQty = false;
@@ -250,8 +250,8 @@ namespace deals.earlymoments.com.Models
 
                 if (template == "gift")
                 {
-                    prod_list = prod_list.Replace("!_product_!", prod).Replace("!_cost_!", ((oVars.ShipVars[0].unit_price == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oVars.ShipVars[0].unit_price)));
-                    prod_list += space_column;
+                    prod_list = prod_list.Replace("!_product_!", prod).Replace("!_cost_!", ((oVars.ShipVars[0].unit_price == 0) ? "FREE" : String.Format("{0:c}", oVars.ShipVars[0].unit_price)));
+                    // prod_list += space_column;
                 }
                 else
                 {
@@ -266,12 +266,12 @@ namespace deals.earlymoments.com.Models
                                 {
                                     eBooks = oOffers.offer_item == "EBOOK" ? true : false;
 
-                                    prod_list += "<tr><td class='paddingBT3'>" + (eBooks ? "<strong>" + oOffers.item_desc + "</strong>" : oOffers.item_desc) +
-                                        "</td><td class='text-right'>" +
+                                    prod_list += "<tr><td>" + (eBooks ? "" + oOffers.item_desc + "" : oOffers.item_desc) +
+                                        "</td><td>" +
                                         ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) :
                                         GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost)) : String.Format("{0:c}", oOffers.item_cost)) + "</td></tr>";
                                 }
-                                prod_list += space_column;
+                                // prod_list += space_column;
                             }
                             else
                             {
@@ -280,8 +280,8 @@ namespace deals.earlymoments.com.Models
                                 {
                                     tmp_prodlist += oOffers.item_desc + "<br />";
                                 }
-                                prod_list += "<tr><td class='paddingBT3'>" + tmp_prodlist + "</td><td class='text-right'>" + ((oShipVars.unit_price == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oShipVars.unit_price)) + "</td></tr>";
-                                prod_list += space_column;
+                                prod_list += "<tr><td>" + tmp_prodlist + "</td><td>" + ((oShipVars.unit_price == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oShipVars.unit_price)) + "</td></tr>";
+                                // prod_list += space_column;
                             }
                         }
                     }
@@ -291,7 +291,7 @@ namespace deals.earlymoments.com.Models
                 // This will display Shipping and Handing ONLY when there is NO s&h item listed in the offers.
                 if (!oVars.ship_item_listed) { start_product_list += shipping.Replace("!_ship_!", ((oVars.total_sah == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oVars.total_sah))); }
 
-                start_product_list += dotted_line;
+                // start_product_list += dotted_line;
 
                 if (oVars.discount_amt > 0) { start_product_list += coupon_text.Replace("!_discount_!", String.Format("{0:c}", oVars.discount_amt)); }
 
@@ -311,31 +311,29 @@ namespace deals.earlymoments.com.Models
             }
             else
             {
-                start_product_list = "<table style='border: none; padding: 0px; width:99%;'>"
-                    + "<tr><td><strong>Item</strong></td>"
-                    + "<td><strong>Price</strong></td>"
-                    + "<td><strong>Quantity</strong></td>"
-                    + "<td style='padding-left:30px'><strong>Subtotal</strong></td>"
-                    + "</tr><tr><td colspan='4'><div style='border-bottom: dashed thin #999999; margin-bottom: 10px; clear: both;'></div></td></tr>";
+                start_product_list = "<div class='table-responsive smallTable f12'><table class='table' width='100%' border='0' cellspacing='0' cellpadding='0'>"
+                    + "<thead><tr><td>Item</td>"
+                    + "<td>Price</td></tr><thead>";
+
+                //   + "</tr><tr><td colspan='4'><div style='border-bottom: dashed thin #999999; margin-bottom: 10px; clear: both;'></div></td></tr>";
 
 
-                prod_list = "<tr><td><div style='color: #333333; float: left;'>!_product_!</div></td>"
-                    + "<td><div style='color: #333333; float: left; display:table-cell; vertical-align:middle;'>!_cost_!</div></td>"
-                    + "<td><div style='color: #333333; padding-left:20px; float: left; display:table-cell; vertical-align:middle;'>!_quantity_!</div></td>"
-                    + "<td><div style='color: #333333; padding-left: 10px; float: right; display:table-cell; vertical-align:middle;'>!_subtotal_!</div></td></tr>";
+                prod_list = "<tr><td>!_product_!</td>"
+                    + "<td>!_cost_!</td>"
+                    + "<td>!_subtotal_!</td></tr>";
 
                 space_column = "<tr height='5px''><td colspan='4'></td></tr>";
                 dotted_line = "<tr><td colspan='4'><div style='border-bottom: dashed thin #999999; padding-top: 10px; margin-bottom: 10px;clear: both;'></div></td></tr><tr><td colspan='4'></td></tr><tr>";
 
-                coupon_text = "<tr><td><strong>Coupon/Discount</strong></td><td><strong>-!_discount_!</strong></td></tr>";
+                coupon_text = "<tr><td>Coupon/Discount</td><td>-!_discount_!</td></tr>";
 
-                shipping = "<tr><td valign='middle' colspan='3' width='99%'><strong>Shipping and Handling</strong></td>"
-                    + "<td valign='middle' style='padding-left:50px;float:right;'><strong>!_ship_!</strong></td></tr>";
+                shipping = "<tr><td>Shipping and Handling</td>"
+                    + "<td>!_ship_!</td></tr>";
 
-                tax = "<tr><td valign='middle' colspan='3' width='99%'><strong>Tax</strong></td>"
-                    + "<td valign='middle' style='padding-left:50px;float:right;'><strong>!_tax_!</strong></td></tr>";
+                tax = "<tr><td>Tax</td>"
+                    + "<td>!_tax_!</td></tr>";
 
-                end_product_list = "</table>";
+                end_product_list = "</table></div>";
                 prod = oVars.proj_desc;
 
                 if (option) { prod += "<br>(<span style='font-size:9px;'>Will be shipped all at once</span>)"; }
@@ -356,13 +354,12 @@ namespace deals.earlymoments.com.Models
                             {
                                 foreach (OrderEngine.OfferProperties oOffers in oShipVars.OfferVars)
                                 {
-                                    prod_list += "<tr><td><div style='color: #333333; float: left;'>" + oOffers.item_desc + "</div></td>"
-                                        + "<td><div style='color: #333333; float: left; display:table-cell; vertical-align:middle;'>" + ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) : "<strong>" + GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost)) + "</div></td>"
-                                        + "<td align='center'><div style='color: #333333; padding-left: 20px; float: left; display:table-cell; vertical-align:middle;'>" + oShipVars.quantity + "</div></td>"
-                                        + "<td><div style='color: #333333; padding-left: 10px; float: right; display:table-cell; vertical-align:middle;'>" + ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity) : "<strong>" + GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity)) + "</div></td>"
+                                    prod_list += "<tr><td>" + oOffers.item_desc + "</td>"
+                                        + "<td>" + ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) : "<strong>" + GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost)) + "</td>"
+                                        // + "<td>" + ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity) : "<strong>" + GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity)) + "</td>"
                                         + "</tr>";
                                 }
-                                prod_list += space_column;
+
                             }
                             else
                             {
@@ -371,23 +368,22 @@ namespace deals.earlymoments.com.Models
                                 {
                                     tmp_prodlist += oOffers.item_desc + "<br />";
                                 }
-                                prod_list += "<tr><td style='width: 260px;'><div style='color: #333333; padding-left: 20px; width: 260px; float: left;'>"
+                                prod_list += "<tr><td>"
                                     + tmp_prodlist
-                                    + "</div></td><td style='width: 50px;' valign='middle' align='right'><div style='color: #333333; padding-left: 20px; width: 50px; float: left; display:table-cell; vertical-align:middle;'>"
-                                    + ((oShipVars.unit_price == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oShipVars.unit_price))
-                                    + "</div></td></tr>";
-                                prod_list += space_column;
+                                   + "</td><td>"
+                                    + ((oShipVars.unit_price == 0) ? "FREE" : String.Format("{0:c}", oShipVars.unit_price))
+                                    + "</td></tr>";
                             }
                         }
                     }
                 }
                 start_product_list += prod_list;
-                start_product_list += dotted_line;
+                //start_product_list += dotted_line;
 
                 if (oVars.discount_amt > 0) { start_product_list += coupon_text.Replace("!_discount_!", String.Format("{0:c}", oVars.discount_amt)); }
 
                 // This will display Shipping and Handing ONLY when there is NO s&h item listed in the offers.
-                if (!oVars.ship_item_listed) { start_product_list += shipping.Replace("!_ship_!", ((oVars.total_sah == 0) ? "<strong>$0.00</strong>" : String.Format("{0:c}", oVars.total_sah))); }
+                if (!oVars.ship_item_listed) { start_product_list += shipping.Replace("!_ship_!", ((oVars.total_sah == 0) ? "$0.00" : String.Format("{0:c}", oVars.total_sah))); }
                 start_product_list += tax.Replace("!_tax_!", String.Format("{0:c}", oVars.tax_amt));
 
                 return start_product_list += end_product_list;
@@ -398,7 +394,7 @@ namespace deals.earlymoments.com.Models
 
         public string ResponsiveConfirmation_GiftingProducts(OrderVariables oVars, bool option = false, string template = "")
         {
-            string start_product_list = "<table id='tblCart' class='table table-striped bold'><tr><td class='text-center'>QTY</td><td class='text-center'>Item</td><td class='text-center'>Price</td></tr>";
+            string start_product_list = "<table id='tblCart' class='table table-striped bold'><tr><td>QTY</td><td>Item</td><td>Price</td></tr>";
             string prod_list = "<tr><td class='paddingBT3'>!_product_!</td><td class='text-right'>!_cost_!</td></tr>";
             string space_column = "<tr height='5px'><td colspan='3'></td></tr>";
             string dotted_line = "<tr><td colspan='2'><div style='border-bottom: dashed thin #999999; padding-top: 10px; margin-bottom: 10px;clear: both;'></div></td></tr><tr><td colspan='2'></td></tr><tr>";
@@ -439,10 +435,9 @@ namespace deals.earlymoments.com.Models
                                 {
                                     eBooks = oOffers.offer_item == "EBOOK" ? true : false;
 
-                                    prod_list += "<tr><td></td>" +
-                                    "<td class='paddingBT3'>" +
+                                    prod_list += "<tr><td>" + oShipVars.OfferVars.Count + "</td><td class='paddingBT3'>" +
                                         (eBooks ? "<strong>" + oOffers.item_desc + "</strong>" : oOffers.item_desc) +
-                                        "</div></td><td class='text-right'>" +
+                                        "</td><td class='text-right'>" +
                                         ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) : "<strong>" +
                                         GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost)) + "</td></tr>";
                                 }
