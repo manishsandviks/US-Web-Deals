@@ -61,8 +61,8 @@ namespace deals.earlymoments.com.Controllers
                         string CCNumber = oVariables.CCVars[0] != null ? oVariables.CCVars[0].number : "";
 
                         ViewBag.CreditCardNumber = EncryptCreditCard(CCNumber);
-                        ViewBag.CardExpiry = oVariables.CCVars[0] != null ? oVariables.CCVars[0].expdate : "";
-
+                        string ccExpiryDate = oVariables.CCVars[0] != null ? oVariables.CCVars[0].expdate : "";
+                        ViewBag.CardExpiry = FormatCCExpiryDate(ccExpiryDate);
                         shipping_address = oComm.Confirmation_ShippingAddress(oVariables);
                         ViewBag.ShippingAddress = shipping_address;
                         billing_address = oComm.Confirmation_BillingAddress(oVariables, template);
@@ -194,18 +194,40 @@ namespace deals.earlymoments.com.Controllers
         private string EncryptCreditCard(string CCNumber)
         {
             string encryptedCC = "";
-
+            encryptedCC = "XXXX-XXXX-XXXX-XXXX";
             if (!string.IsNullOrEmpty(CCNumber) && CCNumber.Length > 0)
             {
-                // encryptedCC=String.Format("{0:XXXX-XXXX-XXXX-0000}", CCNumber); 
                 int clen = CCNumber.Length;
-                if (clen > 0 && clen == 16)
+                if (clen > 0 && (clen == 15 || clen == 16))
                     encryptedCC = CCNumber.Insert(4, "-").Insert(9, "-").Insert(14, "-");
                 else if (clen > 0 && clen == 17)
                     encryptedCC = CCNumber.Insert(4, "-").Insert(8, "-").Insert(12, "-").Insert(16, "-");
 
+                switch (clen)
+                {
+                    case 15:
+                        encryptedCC = "XXXX-XXXX-XXX-" + CCNumber.Substring(clen - 4, 4);
+                        break;
+                    case 16:
+                        encryptedCC = "XXXX-XXXX-XXXX-" + CCNumber.Substring(clen - 4, 4);
+                        break;
+                    case 17:
+                        encryptedCC = "XXXX-XXX-XXX-XXX-" + CCNumber.Substring(clen - 4, 4);
+                        break;
+                    default:
+                        encryptedCC = "XXXX-XXXX-XXXX-" + CCNumber.Substring(clen - 4, 4);
+                        break;
+                }
             }
             return encryptedCC;
         }
+
+        private string FormatCCExpiryDate(string ExpDate)
+        {
+            string formatedDate = "";
+            formatedDate = ExpDate.Insert(2, "-");
+            return formatedDate;
+        }
+
     }
 }

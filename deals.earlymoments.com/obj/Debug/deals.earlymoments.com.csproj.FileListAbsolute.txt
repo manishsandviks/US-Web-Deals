@@ -62,3 +62,4 @@ E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Antlr3.Runtime.
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json.xml
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.pdb
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.csprojResolveAssemblyReference.cache

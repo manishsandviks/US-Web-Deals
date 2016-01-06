@@ -199,6 +199,7 @@ namespace deals.earlymoments.com.Models
 
         public static OrderVariables AssignShippingToOrderVariable(OrderVariables oVariables, ShippingAddress newShippingAddress)
         {
+            CommonModels oComm = new CommonModels();
             //OrderVariables oVariables = new OrderVariables();
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname = newShippingAddress.ShippingFirstName;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname = newShippingAddress.ShippingLastName;
@@ -208,29 +209,47 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
             oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
-            //CommonMethods oComm=new CommonMethods();
-            //oVariables.ip_address=oComm.get
+          
+            oVariables.ip_address = oComm.GetIPAddress();
             oVariables.phone = newShippingAddress.ShippingPhone;
             oVariables.email = newShippingAddress.ShippingEmail;
             oVariables.bonus_option = false;
 
+            if (newShippingAddress.isBonusSelected)
+            {
+                oVariables.bonus_option = true;
+            }
+
+            //Setting billing Address by default same as shipping address.
+            // later on payment page it will be updated if shipping and biling not same
+            oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
+            oVariables.bill_to_lname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname;
+            oVariables.bill_to_address1 = oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1;
+            oVariables.bill_to_apt = oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt;
+            oVariables.bill_to_city = oVariables.ShipVars[oVariables.default_shp_id].ship_to_city;
+            oVariables.bill_to_state = oVariables.ShipVars[oVariables.default_shp_id].ship_to_state;
+            oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
             return oVariables;
         }
 
         public static OrderVariables AssignBillingToOrderVariable(OrderVariables oVariables, BillingDetails billingDetails)
         {
             //Assigning Billing Address details to OVariable
-            if (billingDetails.isBillingSameToShipping)
-            {
-                oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
-                oVariables.bill_to_lname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname;
-                oVariables.bill_to_address1 = oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1;
-                oVariables.bill_to_apt = oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt;
-                oVariables.bill_to_city = oVariables.ShipVars[oVariables.default_shp_id].ship_to_city;
-                oVariables.bill_to_state = oVariables.ShipVars[oVariables.default_shp_id].ship_to_state;
-                oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
-            }
-            else
+            //if (billingDetails.isBillingSameToShipping)
+            //{
+            //    oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
+            //    oVariables.bill_to_lname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname;
+            //    oVariables.bill_to_address1 = oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1;
+            //    oVariables.bill_to_apt = oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt;
+            //    oVariables.bill_to_city = oVariables.ShipVars[oVariables.default_shp_id].ship_to_city;
+            //    oVariables.bill_to_state = oVariables.ShipVars[oVariables.default_shp_id].ship_to_state;
+            //    oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
+            //}
+            //else
+
+
+            //As we are setting billing and shipping address same on landing page 
+            if (billingDetails.isBillingSameToShipping == false)
             {
                 oVariables.bill_to_fname = billingDetails.BillingFirstName.Trim();
                 oVariables.bill_to_lname = billingDetails.BillingLastName.Trim();
@@ -239,7 +258,6 @@ namespace deals.earlymoments.com.Models
                 oVariables.bill_to_city = billingDetails.BillingCity.Trim();
                 oVariables.bill_to_state = billingDetails.BillingState.Trim();
                 oVariables.bill_to_zipcode = billingDetails.BillingZipCode.Trim();
-
             }
 
             //Assigning Payment details to OVariable

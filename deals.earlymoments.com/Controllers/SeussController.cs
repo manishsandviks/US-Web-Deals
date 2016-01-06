@@ -48,70 +48,70 @@ namespace deals.earlymoments.com.Controllers
 
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 
-                //oVariables = oProcess.OrderSubmit(oVariables);
-                //if (oVariables != null)
-                //{
-                //    if (oVariables.order_id > 0)
-                //    {
-                //        Session.Add("NewOrderDetails", oVariables);
-                //        return RedirectToAction("Confirmation", "Home");
-                //    }
-                //    else
-                //    {
-                //        if (oVariables.err.Length >= 0)
-                //        {
-                //            // page_log += "Order is NOT processed. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                //            if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
-                //            {
-                //                //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                //                //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
-                //                // HttpContext.Current.ApplicationInstance.CompleteRequest();
-                //                return RedirectToAction("orderstatus", "Home");
-                //            }
-                //            else if (oVariables.err.Length > 0)
-                //            {
-                //                //  page_log += "Order is NOT processed with an ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                //                //  lblErrorMsg.Text = oVariables.err;
-                //                //  oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                //                //  string error_msg = string.Empty;
-                //                //  error_msg = "alert('" + oVariables.err + "')";
-                //                //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
-                //                ViewBag.ErrorMsg = oVariables.err;
-                //                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                //            }
-                //            else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
-                //            {
-                //                //  page_log += "Order is NOT processed with NO ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                //                Session.Add("NewSBMDetails", oVariables);
-                //                //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
-                //                //   HttpContext.Current.ApplicationInstance.CompleteRequest();
-                //                return RedirectToAction("Payment4_for_1", "Seuss");
-                //            }
-                //            else
-                //            {
-                //                /* page_log += "Order is NOT processed with YES ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                //                 lblErrorMsg.Text = oVariables.err;
-                //                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                //                 string error_msg = string.Empty;
-                //                 error_msg = "alert('" + oVariables.err + "')";
-                //                 ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true); */
+                oVariables = oProcess.OrderSubmit(oVariables);
+                if (oVariables != null)
+                {
+                    if (oVariables.order_id > 0)
+                    {
+                        Session.Add("NewOrderDetails", oVariables);
+                        return RedirectToAction("Confirmation", "Home");
+                    }
+                    else
+                    {
+                        if (oVariables.err.Length >= 0)
+                        {
+                            // page_log += "Order is NOT processed. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                            if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                            {
+                                //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
+                                // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                return RedirectToAction("orderstatus", "Home");
+                            }
+                            else if (oVariables.err.Length > 0)
+                            {
+                                //  page_log += "Order is NOT processed with an ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                //  lblErrorMsg.Text = oVariables.err;
+                                //  oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                //  string error_msg = string.Empty;
+                                //  error_msg = "alert('" + oVariables.err + "')";
+                                //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
+                                ViewBag.ErrorMsg = oVariables.err;
+                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                            }
+                            else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
+                            {
+                                //  page_log += "Order is NOT processed with NO ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                Session.Add("NewSBMDetails", oVariables);
+                                //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
+                                //   HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                return RedirectToAction("Payment4_for_1", "Seuss");
+                            }
+                            else
+                            {
+                                /* page_log += "Order is NOT processed with YES ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                 lblErrorMsg.Text = oVariables.err;
+                                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                 string error_msg = string.Empty;
+                                 error_msg = "alert('" + oVariables.err + "')";
+                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true); */
 
-                //                ViewBag.ErrorMsg = oVariables.err;
-                //                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                //            }
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    //page_log += "Order is NOT processed, Order Process returned NULL.<br>";
-                //    Session["NewSBMDetails"] = null;
-                //    return RedirectToAction("orderstatus", "Home");
-                //}
+                                ViewBag.ErrorMsg = oVariables.err;
+                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    //page_log += "Order is NOT processed, Order Process returned NULL.<br>";
+                    Session["NewSBMDetails"] = null;
+                    return RedirectToAction("orderstatus", "Home");
+                }
                 //ends Submitting shipping details to order engin for order process
-                Session["NewSBMDetails"] = oVariables;
-                Session["ShippingDetails"] = oVariables;
-                return RedirectToAction("Payment4_for_1", "Seuss");
+                //Session["NewSBMDetails"] = oVariables;
+                //Session["ShippingDetails"] = oVariables;
+                //return RedirectToAction("Payment4_for_1", "Seuss");
             }
             catch (Exception ex)
             {
