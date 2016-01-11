@@ -34,10 +34,12 @@ E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\dbConn.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Microsoft.Web.Infrastructure.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\OrderEngine.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Abstractions.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Helpers.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Mvc.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Optimization.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Razor.dll
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.Routing.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.WebPages.Deployment.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.WebPages.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.WebPages.Razor.dll
@@ -60,6 +62,5 @@ E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.WebP
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\System.Web.WebPages.Razor.xml
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Antlr3.Runtime.pdb
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json.xml
-E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.csprojResolveAssemblyReference.cache
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.pdb
