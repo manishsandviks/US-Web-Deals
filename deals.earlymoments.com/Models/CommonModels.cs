@@ -236,6 +236,7 @@ namespace deals.earlymoments.com.Models
             string coupon_text = "<tr><td >Coupon/Discount</td><td >-!_discount_!</td></tr>";
             string tax = "<tr><td>&nbsp;&nbsp;Tax</td><td >!_tax_!</td></tr>";
             string bottom_extra_line = "<tr><td>!_extra_content_!</td></tr>";
+            string total = "<tfoot><tr><td class='paddingBT3 bold'>Total</td><td class='text-right bold'>!_total_!</td></tr></tfoot>";
             string end_product_list = "</table></div>";
             string prod = oVars.proj_desc;
 
@@ -305,6 +306,7 @@ namespace deals.earlymoments.com.Models
                         start_product_list += bottom_extra_line.Replace("!_extra_content_!", "<img src='Assets/images/payment/ebooks_em_payment_banner.jpg' />");
                 }
 
+                start_product_list += total.Replace("!_total_!", String.Format("{0:c}", oVars.total_amt + oVars.tax_amt + oVars.total_sah));
 
                 return start_product_list += end_product_list;
 
@@ -332,6 +334,9 @@ namespace deals.earlymoments.com.Models
 
                 tax = "<tr><td>Tax</td>"
                     + "<td>!_tax_!</td></tr>";
+
+                total = "<tfoot><tr><td>Total/td>"
+                 + "<td>!_total_!</td></tr></tfoot>";
 
                 end_product_list = "</table></div>";
                 prod = oVars.proj_desc;
@@ -385,7 +390,7 @@ namespace deals.earlymoments.com.Models
                 // This will display Shipping and Handing ONLY when there is NO s&h item listed in the offers.
                 if (!oVars.ship_item_listed) { start_product_list += shipping.Replace("!_ship_!", ((oVars.total_sah == 0) ? "$0.00" : String.Format("{0:c}", oVars.total_sah))); }
                 start_product_list += tax.Replace("!_tax_!", String.Format("{0:c}", oVars.tax_amt));
-
+                start_product_list += total.Replace("!_total_!", String.Format("{0:c}", oVars.total_amt + oVars.tax_amt + oVars.total_sah));
                 return start_product_list += end_product_list;
             }
         }

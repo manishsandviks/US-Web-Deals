@@ -171,6 +171,7 @@ namespace deals.earlymoments.com.Models
             [DisplayName("Billing Zip Code")]
             [StringLength(10, MinimumLength = 5, ErrorMessage = "Billing Zip Code cannot be longer than 10 characters.")]
             public string CCBillZipCode { get; set; }
+            public string SecurityCaptch { get; set; }
 
             public BillingDetails()
             {
@@ -187,6 +188,7 @@ namespace deals.earlymoments.com.Models
                 CardExpiryYear = "";
                 SecurityCode = "";
                 CCBillZipCode = "";
+                SecurityCaptch = "";
             }
 
         }
@@ -209,7 +211,7 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
             oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
-          
+
             oVariables.ip_address = oComm.GetIPAddress();
             oVariables.phone = newShippingAddress.ShippingPhone;
             oVariables.email = newShippingAddress.ShippingEmail;

@@ -8,6 +8,8 @@ using OrderEngine;
 using System.IO;
 using System.Configuration;
 using deals.earlymoments.com.Utilities;
+using System.Net;
+using System.Data;
 
 namespace deals.earlymoments.com.Controllers
 {
@@ -77,14 +79,21 @@ namespace deals.earlymoments.com.Controllers
                         if (!string.IsNullOrEmpty(email))
                         {
                             ProcessConfirmationEmail(oVariables, shipping_address, billing_address, shipall);
-                        }
+                            BuildDynamicPixel(oVariables);
+                            //internalPixel = "<img src='https://ping.earlymoments.com/conversion.ashx?o=" + oVariables.order_id + "&e=" + oVariables.email + "' width='1' height='1' border='0' /><iframe src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=ifr' height='1' width='1' frameborder='0'></iframe><br /><img src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=img' width='1' height='1' border='0' />";
+                            //internalPixel = "<iframe src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=ifr' height='1' width='1' frameborder='0'></iframe><br /><img src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=img' width='1' height='1' border='0' />";
+                            //Session["IsPostBack"] = true;
 
+                            FirePostBackPixel(oVariables);
+                        }
                     }
                 }
                 return View();
             }
-            catch
+            catch (Exception ex)
             {
+                oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                  + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 return View();
             }
             finally
@@ -94,6 +103,16 @@ namespace deals.earlymoments.com.Controllers
                 oComm = null;
                 oProcess = null;
             }
+        }
+
+        public ActionResult OrderStatus()
+        {
+            return View();
+        }
+
+        public ActionResult ThankYou()
+        {
+            return View();
         }
 
         private void ProcessConfirmationEmail(OrderVariables oVariables, string ship_address, string bill_address, string shipall)
@@ -230,5 +249,197 @@ namespace deals.earlymoments.com.Controllers
             return formatedDate;
         }
 
+        private void BuildDynamicPixel(OrderVariables oVariables)
+        {
+            CommonModels oComm = new CommonModels();
+            string vendor_tracking = "";
+            string aff_id = "";
+            string aff_id2 = "";
+
+            string finalpixel = string.Empty;
+            DataTable pixeltb = new DataTable();
+            DataTable vendparamstb = new DataTable();
+            string pixelstring = string.Empty;
+
+            if (oVariables.vendor_id.ToString().Trim().Length == 4)
+            {
+                try
+                {
+
+                    pixeltb = Dynamic_Pixel(oVariables, "get_vndr_details", oVariables.vendor_id.ToString().Trim().ToUpper());
+                    //Building Pixel
+                    if (pixeltb != null && pixeltb.Rows.Count > 0 && pixeltb.Rows[0]["pixel_hardcoded"].ToString().Trim() == "N")
+                    {
+                        vendparamstb = Dynamic_Pixel(oVariables, "GetVendorPixelData", oVariables.vendor_id.ToString().Trim().ToUpper());
+                        //Raw Pixel
+                        pixelstring = pixeltb.Rows[0]["pixel"].ToString().Trim();
+                        if (vendparamstb != null && vendparamstb.Rows.Count >= 1)
+                        {
+                            string[] vendor_var = new string[vendparamstb.Rows.Count];
+                            string[] sys_var = new string[vendparamstb.Rows.Count];
+
+                            int i = 0;
+                            foreach (DataRow dr in vendparamstb.Rows)
+                            {
+                                try
+                                {
+                                    vendor_var[i] = dr["vendor_var"].ToString().Trim();
+                                    sys_var[i] = dr["system_var"].ToString().Trim();
+                                    i = i + 1;
+                                }
+                                catch (Exception ex)
+                                {
+                                    oComm.SendEmail("BuildDynamicPixel() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                                        + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
+                                }
+                            }
+
+                            //pixelstring = pixeltb.Rows[0]["pixel"].ToString().Trim();
+                            if (((string)Request.QueryString["tracking"]) != null) { vendor_tracking = ((string)Request.QueryString["tracking"]).ToString().Trim(); }
+                            if (((string)Request.QueryString["aff_id"]) != null) { aff_id = ((string)Request.QueryString["aff_id"]).ToString().Trim(); }
+                            if (((string)Request.QueryString["aff_id2"]) != null) { aff_id2 = ((string)Request.QueryString["aff_id2"]).ToString().Trim(); }
+
+                            double base_amt = 0.00;
+
+                            foreach (OrderEngine.ShippingVariables oShipVars in oVariables.ShipVars)
+                                if (oShipVars.selected && oShipVars.offer_type.In("B", "O"))
+                                    foreach (OrderEngine.OfferProperties oOffers in oShipVars.OfferVars)
+                                        base_amt += oOffers.item_cost;
+
+
+                            for (int j = 0; j < sys_var.Length; j++)
+                            {
+
+                                switch (sys_var[j].Trim())
+                                {
+                                    //[vendor_tracking]
+                                    case "VDT":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], vendor_tracking);
+                                        break;
+                                    //[order_id]
+                                    case "OID":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], oVariables.order_id.ToString());
+                                        break;
+                                    //[aff_id]
+                                    case "AFI1":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], aff_id);
+                                        break;
+                                    //[aff_id2]
+                                    case "AFI2":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], aff_id2);
+                                        break;
+                                    //[email]
+                                    case "EMA":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], oVariables.email.ToString());
+                                        break;
+                                    //[promotion_code]
+                                    case "PRC":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], oVariables.promotion_code.ToString());
+                                        break;
+                                    //[SubTotal]
+                                    case "SUBTO":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], (oVariables.total_amt - oVariables.tax_amt).ToString());
+                                        break;
+                                    //[total_amt]
+                                    case "TOA":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], oVariables.total_amt.ToString());
+                                        break;
+                                    case "BAMT":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], base_amt.ToString());
+                                        break;
+                                    case "PRJ":
+                                        pixelstring = pixelstring.Replace(vendor_var[j], oVariables.project);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    else if (pixeltb.Rows[0]["isPostBack"].ToString().Trim() == "N")
+                    {
+                        vendparamstb = null;
+                        //Raw Pixel
+                        pixelstring = pixeltb.Rows[0]["pixel"].ToString().Trim();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    oComm.SendEmail("BuildDynamicPixel() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                        + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
+                }
+            }
+            else
+            {
+                pixelstring = "";
+            }
+        }
+
+        public DataTable Dynamic_Pixel(OrderVariables oVariables, string SPname, string pixcd)
+        {
+            CommonModels oComm = new CommonModels();
+            dbConn.dbConnector.dbConn oDBConn;
+            DataTable pixeltb = new DataTable();
+            DataSet VpixData = new DataSet();
+            try
+            {
+                //DBConn and SP execution
+                oDBConn = new dbConn.dbConnector.dbConn();
+                oDBConn.regKey = ConfigurationManager.AppSettings["SQLConn"].ToString();
+                VpixData = oDBConn.ExecSPReturnSingleDS(SPname, pixcd);
+                pixeltb = VpixData.Tables[0];
+                return pixeltb;
+            }
+            catch (Exception ex)
+            {
+                oComm.SendEmail("Dynamic_Pixel() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): " + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
+                return null;
+            }
+            finally
+            {
+                oDBConn = null;
+                pixeltb = null;
+                VpixData = null;
+
+            }
+        }
+
+        private void FirePostBackPixel(OrderVariables oVariables)
+        {
+            string SQLString = System.Configuration.ConfigurationManager.AppSettings["SQLConn"].ToString();
+            try
+            {
+                if (oVariables != null && (!string.IsNullOrEmpty(oVariables.transaction_id)) && (oVariables.transaction_id.Trim().Length > 0))
+                {
+                    string trans_id = oVariables.transaction_id.Trim();
+                    string pixelstring = oVariables.pixel.Trim();
+                    string conversionPixel = "https://sandvikpublishing.go2cloud.org/aff_lsr?transaction_id=" + trans_id;
+                    dbConn.dbConnector.dbConn oDBConn = new dbConn.dbConnector.dbConn();
+                    oDBConn.regKey = SQLString;
+                    int rowId = 0;
+                    rowId = oDBConn.ExecSPReturnInteger("InsertVendorPxlPostBackFeedback", oVariables.order_id, conversionPixel, rowId);
+                    oDBConn = null;
+
+                    var client = new WebClient();
+                    var content = client.DownloadString(conversionPixel);
+
+                    oDBConn = new dbConn.dbConnector.dbConn();
+                    oDBConn.regKey = SQLString;
+                    oDBConn.ExecSP("UpdateVendorPxlPostBackFeedback", rowId, string.IsNullOrEmpty(content) ? content.ToString().Trim() : "EMPTY");
+                    oDBConn = null;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                // dSet = null;
+            }
+        }
     }
 }

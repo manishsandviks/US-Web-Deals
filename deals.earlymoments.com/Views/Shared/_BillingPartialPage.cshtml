@@ -162,7 +162,7 @@
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
             <!--<input type="text" maxlength="15" class="form-control" id="txtCardnum"> -->
-            @Html.TextBoxFor(model => model.CreditCardNumber, new { @id = "CreditCardNum", @maxlength = "17", @class = "form-control" })
+            @Html.TextBoxFor(model => model.CreditCardNumber, new { @id = "txtCreditCardNumber", @maxlength = "17", @class = "form-control" })
         </div>
     </div>
     <div class="row formFieldGap">
@@ -185,7 +185,7 @@
                  <option value="11">11</option>
                  <option value="12">12</option>
              </select> -->
-            @Html.DropDownListFor(model => model.CardExpiryMonth, (IEnumerable<SelectListItem>)ViewData["MonthList"], "Month", new { @id = "cc_date", @class = "form-control medField" })
+            @Html.DropDownListFor(model => model.CardExpiryMonth, (IEnumerable<SelectListItem>)ViewData["MonthList"], "Month", new { @id = "optCardExpiryMonth", @class = "form-control medField" })
             <span style="color:#000;">&nbsp; / &nbsp;</span>
             <!--<select name="expYear" id="expYear">
                 <option value="">&nbsp;</option>
@@ -200,7 +200,7 @@
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
             </select>-->
-            @Html.DropDownListFor(model => model.CardExpiryYear, (IEnumerable<SelectListItem>)ViewData["YearList"], "Year", new { @id = "cc_year", @class = "form-control medField" })
+            @Html.DropDownListFor(model => model.CardExpiryYear, (IEnumerable<SelectListItem>)ViewData["YearList"], "Year", new { @id = "optCardExpiryYear", @class = "form-control medField" })
         </div>
     </div>
     <div class="row formFieldGap smallMarginTop10">
@@ -210,7 +210,7 @@
         <div class="col-md-8 col-sm-8 col-xs-8 cvvBox">
             <div class="input-group cvv">
                 <!--<input type="text" maxlength="4" class="form-control" id="txtCVV"> -->
-                @Html.TextBoxFor(model => model.SecurityCode, new { @id = "CVV", @maxlength = "4", @class = "form-control" })
+                @Html.TextBoxFor(model => model.SecurityCode, new { @id = "txtCVV", @maxlength = "4", @class = "form-control" })
                 <div class="input-group-addon modalQ" data-toggle="modal" data-target="#cvvModal">
                     <i class="fa fa-question-circle f18 hand"></i>
                 </div>

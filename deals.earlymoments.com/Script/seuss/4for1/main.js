@@ -11,11 +11,3 @@ enquire.register("screen and (max-width:767px)", {
     }
 })
 //end of interchange
-
-$(document).ready(function () {
-   
-    $("#btnSubmit").click(function () {
-        //alert("Hi, button clicked");
-        $("#form1").submit();
-    });
-})

@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\SeussController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -319,6 +320,8 @@
     <Content Include="Script\seuss\4for99\main.js" />
     <Content Include="Script\seuss\Payment4for1\main.js" />
     <Content Include="Script\seuss\Payment4for99\main.js" />
+    <Content Include="Script\Payment-Validation.js" />
+    <Content Include="Script\Validation.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -341,9 +344,13 @@
     <Content Include="Views\Shared\_ShippingPartialPage.cshtml" />
     <Content Include="Views\Seuss\Payment4_for_1.cshtml" />
     <Content Include="Views\Home\Confirmation.cshtml" />
+    <Content Include="Views\Shared\_LayoutEarlymoments.cshtml" />
+    <Content Include="Views\Home\OrderStatus.cshtml" />
+    <Content Include="Views\Home\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

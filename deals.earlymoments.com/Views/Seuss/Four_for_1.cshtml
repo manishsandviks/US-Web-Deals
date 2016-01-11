@@ -1,5 +1,4 @@
 ﻿@model deals.earlymoments.com.Models.ShippingModels.ShippingAddress
-
 @{
     //ViewBag.Title = "Four_for_1";
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
@@ -8,6 +7,7 @@
 <link href="/Content/themes/seuss/4for1/custom.css" rel="stylesheet" />
 <link href="/Content/themes/seuss/4for1/media.css" rel="stylesheet" />
 <script src="/script/seuss/4for1/main.js"></script>
+<script src="/script/Validation.js"></script>
 @using (Html.BeginForm("Four_for_1", "Seuss", FormMethod.Post, new { @id = "form1" }))
 {
     <img src="/Images/seuss/4for1/springformbkg.gif" class="responsiveImg formBgMain hideSmall">
@@ -57,6 +57,7 @@
 <script>
     $(document).ready(function () {
         var err = '';
+
         if ('@ViewBag.ErrorMsg' != null) {
             err = '@ViewBag.ErrorMsg';
             if (err.length > 0) {
@@ -64,6 +65,7 @@
                 $("#dialog-message").modal("toggle");
             }
         }
+
     })
 </script>
 

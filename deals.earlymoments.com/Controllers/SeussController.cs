@@ -34,7 +34,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("seuss-2015-regular-birthday-5for595-oh-499be");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -179,7 +179,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
-        public ActionResult Payment4_for_1(ShippingModels.BillingDetails billing)
+        public ActionResult Payment4_for_1(FormCollection form, ShippingModels.BillingDetails billing)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -189,6 +189,23 @@ namespace deals.earlymoments.com.Controllers
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
+            if (!string.IsNullOrEmpty(billing.SecurityCaptch) && Session["rndtext"] != null)
+            {
+                string strCaptch = Session["rndtext"] as string;
+                if (!strCaptch.Equals(billing.SecurityCaptch))
+                {
+                    ViewBag.ErrorMsg = "Invalid Security Captch.";
+                    return View();
+                }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(billing.SecurityCaptch))
+                {
+                    ViewBag.ErrorMsg = "Security Captch is required.";
+                    return View();
+                }
+            }
 
             if (Session["ShippingDetails"] != null)
                 oVariables = Session["ShippingDetails"] as OrderVariables;

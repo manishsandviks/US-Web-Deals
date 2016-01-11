@@ -20,6 +20,61 @@
     <script src="/script/jquery.1.11.3.min.js"></script>
     <script src="/script/bootstrap.min.js"></script>
     <script src="/script/enquire.min.js"></script>
+
+    <!-- MMD tracking Script -->
+    <script type="text/javascript">
+        maxmind_user_id = "35644";
+        (function () {
+            var loadDeviceJs = function () {
+                var element = document.createElement('script');
+                element.src = ('https:' == document.location.protocol ? 'https:' : 'http:')
+            + '//device.maxmind.com/js/device.js';
+                document.body.appendChild(element);
+            };
+            if (window.addEventListener) {
+                window.addEventListener('load', loadDeviceJs, false);
+            } else if (window.attachEvent) {
+                window.attachEvent('onload', loadDeviceJs);
+            }
+        })();
+    </script>
+    <!-- MMD tracking Script -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1122629181099927');
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase');</script>
+    <noscript>
+        <img height="1" width="1" style="display: none"
+             src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!---------------------------------------------------- UpSellIt --------------------------------------------------->
+    <script type="text/javascript">
+        var USI_orderID = '<%=order_id %>';
+        var USI_orderAmt = '<%=amt %>';
+        var USI_headID = document.getElementsByTagName("head")[0];
+        var USI_dynScript = document.createElement("script");
+        USI_dynScript.setAttribute('type', 'text/javascript');
+        USI_dynScript.src = 'http' + (document.location.protocol == 'https:' ? 's://www' : '://www') + '.upsellit.com/upsellitReporting.jsp?command=REPORT&siteID=8096&productID=77&position=1&orderID=' + escape(USI_orderID) + '&orderAmt=' + escape(USI_orderAmt);
+        USI_headID.appendChild(USI_dynScript);
+        var USI_dynScript2 = document.createElement("script");
+        USI_dynScript2.setAttribute('type', 'text/javascript');
+        USI_dynScript2.src = 'http' + (document.location.protocol == 'https:' ? 's://www' : '://www') + '.upsellit.com/hound/sale.jsp?orderID=' + escape(USI_orderID) + '&orderAmt=' + escape(USI_orderAmt);
+        USI_headID.appendChild(USI_dynScript2);
+    </script>
+    <!---------------------------------------------------- UpSellIt --------------------------------------------------->
+
 </head>
 
 <body>
