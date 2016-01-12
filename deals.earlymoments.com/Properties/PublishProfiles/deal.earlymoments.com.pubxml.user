@@ -9,8 +9,56 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>D:\Builds\EMDeals</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Assets/emails/cokerewards.htm">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/ebk_optout.htm">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/ebk_optout.txt">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/emdoubleupsell.htm">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/emparents.htm">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/emregular.htm">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
     <File Include="Assets/emails/emregular.txt">
-      <publishTime>01/11/2016 23:12:54</publishTime>
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/emregularebooks.htm">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/emregularebooks.txt">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/emreinstate.txt">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/emsecure.htm">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/em_optout.txt">
+      <publishTime>01/12/2016 19:37:33</publishTime>
+    </File>
+    <File Include="Assets/emails/ews_optout_email.txt">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/gifting.htm">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/ornaments.htm">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/ornaments.txt">
+      <publishTime>01/12/2016 19:37:36</publishTime>
+    </File>
+    <File Include="Assets/emails/welcome.htm">
+      <publishTime>01/12/2016 19:37:36</publishTime>
     </File>
     <File Include="Assets/StateList.xml">
       <publishTime>01/11/2016 23:12:54</publishTime>
@@ -34,7 +82,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="bin/deals.earlymoments.com.dll">
-      <publishTime>01/12/2016 18:52:54</publishTime>
+      <publishTime>01/12/2016 20:01:38</publishTime>
     </File>
     <File Include="bin/MaxMindCCFraud.dll">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -301,7 +349,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/12/2016 16:50:02</publishTime>
     </File>
     <File Include="Content/themes/seuss/Payment4for99/media.css">
-      <publishTime>01/12/2016 18:52:28</publishTime>
+      <publishTime>01/12/2016 19:18:57</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/11/2016 23:12:55</publishTime>

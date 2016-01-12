@@ -89,8 +89,6 @@
 	.rightCol{background:url(../images/formBg.gif) no-repeat;}
 }
 
-
-
 @media screen and (min-width: 768px) and (max-width:991px){
 	.rightFormDiv{position:relative; top:-24px; padding-right:15px;}
 	.formStep1{margin-left:-5px; top:-22px; position:relative; max-width:101.8%;}

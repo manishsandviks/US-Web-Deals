@@ -16,9 +16,11 @@ namespace deals.earlymoments.com.Controllers
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
+            if ((string)Request.QueryString["vendorcode"] != null) { string aa = (string)Request.QueryString["vendorcode"]; }
             return View();
         }
 
+        [PreserveQueryString]
         [HttpPost]
         public ActionResult Four_for_1(FormCollection form, ShippingModels.ShippingAddress shipping)
         {
@@ -34,6 +36,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
+                var value = HttpContext.Request.Params.Get("vendorcode");
                 oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }

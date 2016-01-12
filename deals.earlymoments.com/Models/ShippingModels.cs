@@ -50,7 +50,7 @@ namespace deals.earlymoments.com.Models
             public string ShippingEmail { get; set; }
 
             [Required(ErrorMessage = "Shipping Confirm Email is required.")]
-            [StringLength(50, MinimumLength = 6, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
+            [StringLength(50, MinimumLength = 10, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
             public string ShippingConfirmEmail { get; set; }
 
             [StringLength(50, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
