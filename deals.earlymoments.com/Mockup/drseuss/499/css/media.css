@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 320px){
+	.xsTop10{margin-top:10px;}
+	.phone input, .zip input, .chDob select{width:31% !important; display:inline;}
+}
+
+@media screen and (max-width: 360px){
+	.widthSmallFull{width:100%;}
+	.customMainContainer{margin-left:15px !important; margin-right:15px !important;}
+}
+
+@media screen and (max-width: 414px){
+	
+}
+@media screen and (min-width:360px) and (max-width:767px){
+	.phone input, .zip input, .chDob select{width:31% !important; display:inline;}
+	.chDob select{padding:2px;}
+}
+
+@media screen and (max-width:767px){
+	::-webkit-input-placeholder{color:#fff !important;}
+	:-moz-placeholder{color:#fff !important;}
+	::-moz-placeholder{color:#fff !important;}
+	::-ms-input-placeholder{color:#fff !important;}
+	.rightPaddingSmallOff{padding-right:0;}
+	.paddingLRoffSm{padding-left:0; padding-right:0;}
+	.smallMarginTopBot{margin-top:15px; margin-bottom:15px;}
+	.smallMarginTop5{margin-top:5px;}
+	.smallMarginTop10{margin-top:10px;}
+	.smallMarginTop20{margin-top:20px;}
+	.smallMarginBottom5{margin-bottom:5px;}
+	.smallMarginBottom10{margin-bottom:10px;}
+	.smallMarginBottom20{margin-bottom:20px;}
+	.noLeftPaddingSmall{padding-left:0;}
+	.noRightPaddingSmall{padding-right:0;}
+	.noMarginBottomSmall{margin-bottom:0;}
+	.customPad{padding:0;}
+	.hideSmall{display:none;}
+	
+	.customMainContainer{margin-left:20px; margin-right:20px; margin-top:20px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px; background-color:#FCF5AD !important;border:3px solid #436125; background-color:#FCF5AD; overflow:hidden; box-shadow:none !important;}
+	.formContainer{margin-left:30px; margin-right:30px; margin-top:10px;}
+	.formStep1,.formStep2{margin-left:7px; max-width:94%;margin-top:-12px;}
+	.formStep1Bg{background-color: #79E2FF; margin:0;}
+	.formStep2Bg{background-color: #BED630; margin:0;}
+	#headerImage{width:100%;}
+	.rightFormDiv{background-color:#FCF5AD;}
+	.orderForm label{margin-bottom:0;}
+	.orderForm .form-control{margin-bottom:0;}
+	#date-picker{margin-bottom:0;}
+	.adjustMobileFormContainer .formLabel{text-align:right !important; padding-right:0; font-size:11px;}
+}
+
+@media screen and (max-width:800px){
+}
+
+@media screen and (min-width: 768px){
+	.noPaddingLRbig{padding-left:0; padding-right:0;}
+	.hideBig{display:none;}
+	.absoluteBig{position:absolute;}
+	.marginTopLg30{margin-top:30px;}
+	.controllForm .form-group label{display:none;}
+	
+	.customMainContainer{width:700px;}
+	.formContainer{padding-left:15px; padding-right:15px; padding-bottom:15px;}
+	.formLabel{text-align:right; padding-right:0;}
+	.heightAdjustLeft{margin:0; min-height:35px;}
+	.submitButton{font-size:24px;}
+	.submitButton i{font-size:24px; color:#fff !important;}
+	
+	.phone input, .zip input, .chDob select{width:31% !important;}
+	.chDob select{padding:2px;}
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width:991px){
+	.rightFormDiv{position:absolute; top:-24px; padding-right:15px;}
+	.formStep1, .formStep2{margin-left:-7px; top:-9px; position:relative; max-width:102.4%;}
+	.orderForm{border-left:2px solid #436125; border-right:2px solid #436125; border-bottom:2px solid #436125; background-color:#FCF5AD; width:100%; margin-left:0;}
+	.leftBotImg{position:relative; z-index:9; left:-19px; max-width:108%;}
+}
+@media only screen and (min-width : 480px) and (max-width : 800px) and (orientation:landscape){
+	.customMainContainer{padding-bottom:40px !important;}
+	.leftBotImg{position:relative; z-index:9; left:-13px; max-width:106%;}
+	.heightAdjustLeft{min-height:220px;}
+	.leftBotImg{position:relative; z-index:9; left:-13px; max-width:106%;}
+}
+@media screen and (min-width:992px){
+	.customMainContainer{width:960px;}
+	.formBgMain{position:relative; max-width:102%; left:-8px;}
+	.rightFormDiv{position:absolute; top:-34px;}
+	.formStep1, .formStep2{margin-left:-9px; top:-12px; position:relative; max-width:102.4%;}
+	.orderForm{border-left:2px solid #436125; border-right:2px solid #436125; border-bottom:2px solid #436125; background-color:#FCF5AD; width:95%; margin-left:0;}
+	.leftBotImg{position:relative; z-index:9; left:-19px; max-width:108%;}
+	
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation:portrait){
+	.customMainContainer{padding-bottom:40px !important;}
+	.leftBotImg{position:relative; z-index:9; left:-13px; max-width:106%;}
+	.heightAdjustLeft{min-height:230px;}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+}
+

@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>:: Elmo's Learning Adventure ::</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<!-- Include Bootstrap Datepicker -->
+<link href="css/jquery-ui.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+	<div class="container customMainContainer paddingLRoffSm">
+    	<header>
+        	<div class="row adjustContainer">
+                <div class="col-md-12 hideSmall">
+                    <img class="logo responsiveImg" src="images/header_logo.png" alt="Elmo's Learning Adventure">
+                    <img class="burst responsiveImg" src="images/header_burst.png">
+                </div>
+                <div class="col-md-12 hideBig">
+                  <a id="aboutlink" href="#"><img class="burst responsiveImg hand" src="images/mobileHeader_LP1.png"></a>
+                </div>
+            </div>
+        </header>
+        <div class="mainWhiteBodyContainer">
+        	<div class="row adjustContainer">
+                <div class="col-md-7 col-sm-7 bodyLeftPart">
+                    <p class="text-center"><img src="images/lp_offer.gif" alt="" class="responsiveImg"></p>
+                    <p class="leftTag"><img src="images/leftTag1.png" alt="" class="responsiveImg"></p>
+                    <p class="leftProduct1 centerSmall"><img src="images/leftProduct1.jpg" alt="" class="responsiveImg"></p>
+                    <div class="leftText">
+                    	<p>Kids love to learn with <em>Sesame Street</em> characters! <em>Elmo’s Learning Adventure</em> teaches basic preschool skills like numbers, ABCs, colors, sharing, health, problem-solving and more.</p>
+                        <ul>
+                            <li>Each fun-filled Learning Adventure Kit helps your child get ready for school.</li>
+                            <li>The fun begins with a giant introductory package worth $39.75, yours for just $3.99.</li>
+                            <li>Kids look forward to receiving two new kits in the mail about once per month.</li>
+                            <li>Each Learning Adventure Kit includes a hardcover Storybook, an Activity Book, 6 Learning Adventure Cards and a handy storage case.</li>
+                            <li>No obligation to buy anything else &mdash; ever.</li>
+                        </ul>
+                    </div>
+                    <div class="panel-group hideBig guaranteetext" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default guaranteeBox">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                            	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h4 class="panel-title f12 togGuarantee">Click here to view our complete Guarantee</h4></a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                	<h4>100% GUARANTEE YOUR SATISFACTION IS GUARANTEED</h4>
+                                    <p>We want you to be 100% satisfied with every product we offer you and your family. If for any reason you are not, just let us know. At Early Moments&trade;, there is never a purchase commitment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 col-sm-5">
+                	<p class="characters hideSmall"><img src="images/characters.png" alt="" class="responsiveImg"></p>
+                	<div class="rightFormContainer" id="about">
+                    	<p class="formTop"><img src="images/formTop.png" alt="" class="responsiveImg"></p>
+                        <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
+                        	<div class="row formFieldGap">
+                            	<div class="col-md-12">
+                                	<p class="required"><span>*</span> Indicates required field</p>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> First Name</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="15" class="form-control" id="txtFirstName">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Last Name</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="15" class="form-control" id="txtLastName">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Address</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text"maxlength="30" class="form-control" id="txtAddress">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Address 2</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text"maxlength="30" class="form-control" id="txtAddress2">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> City</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="16" class="form-control" id="txtCity">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> State</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<select name="selectState" id="listState" class="form-control">
+                                        <option value="">Select a State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="FM">Federated States of Micronesia</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="VI">Virgin Islands</option>
+                                        <option value="AA">U.S. Armed Forces – Americas</option>
+                                        <option value="AE">U.S. Armed Forces – Europe</option>
+                                        <option value="AP">U.S. Armed Forces – Pacific</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Zip Code</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="10" class="form-control" id="txtZip">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Phone</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<div class="form-inline phone">
+                                    	<input type="text" maxlength="3" class="form-control" id="txtPhone1">
+                                        <input type="text" maxlength="3" class="form-control" id="txtPhone2">
+                                        <input type="text" maxlength="4" class="form-control" id="txtPhone3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Email</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="50" class="form-control" id="txtEmail">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Confirm Email</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="50" class="form-control" id="txtConfirmEmail">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Child Name</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="30" class="form-control" id="txtChildName">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Child Date of Birth or Due Date</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<div class="form-inline chDob">
+                                    	<select name="childM" id="childM" class="form-control">
+                                            <option value="">Month</option>
+                                            <option value="01">Jan</option>
+                                            <option value="02">Feb</option>
+                                            <option value="03">Mar</option>
+                                            <option value="04">Apr</option>
+                                            <option value="05">May</option>
+                                            <option value="06">Jun</option>
+                                            <option value="07">Jul</option>
+                                            <option value="08">Aug</option>
+                                            <option value="09">Sep</option>
+                                            <option value="10">Oct</option>
+                                            <option value="11">Nov</option>
+                                            <option value="12">Dec</option>
+                                        </select>
+                                        <select name="childD" id="childD" class="form-control">
+                                            <option value="">Day</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <select name="childY" id="childY" class="form-control">
+                                            <option value="">Year</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Child Gender</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8 childGender">
+                                	<div class="input-group">
+                                        <select style="txt" id="txtGender" class="form-control">
+                                            <option value="">Gender</option>
+                                            <option value="M">Boy</option>
+                                            <option value="F">Girl</option>
+                                            <option value="X">I don't know yet</option>
+                                        </select>
+                                        <div class="input-group-addon modalQ" data-toggle="modal" data-target="#childGndr">
+                                        	<i class="fa fa-question-circle f18 hand"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="panel panel-default formBonusOffer roundedBorder">
+                            <div class="panel-heading roundedBorderTop">
+                                <h4>Step 2: BONUS OFFER!</h4>
+                            </div>
+                            <div class="panel-body roundedBorderBottom">
+                                <img src="images/bonusFormPic.jpg" alt="" class="responsiveImg marginBot10">
+                                <p><span class="red">*</span>Take two additional Learning Adventure Kits &mdash; <i>Sesame Street Dictionary</i> and <i>The Together Book</i> &mdash; for just $7.99. That&rsquo;s 50% off the regular low price and there's no additional shipping!</p>
+                                <div class="text-center">
+                                	<label class="radio-inline">
+                                    	<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Yes!
+                                    </label>
+                                    <label class="radio-inline">
+                                    	<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No, Thank You.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center"><img src="images/continue-button.png" alt="" class="responsiveImg buttonContinue"></p>
+                    </div>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div class="col-md-12 marginTop20 learningGuide hideSmall">
+                	<h3><em>Elmo’s Learning Adventure</em> guides your growing<br>
+					child through nine critical preschool subjects:</h3>
+                    <p><img src="images/guideIcons.gif" alt="" class="responsiveImg"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <footer class="smallMarginTop20">
+        	<div class="row adjustContainer">
+            	<div class="col-md-2 col-sm-2 centerSmall">
+                	<p><img src="images/footerLogo.png" alt="" class="responsiveImg"></p>
+                </div>
+                <div class="col-md-10 col-sm-10 white f12">
+                	<p>&ldquo;Sesame Workshop&rdquo;&reg;, &ldquo;Sesame Street&rdquo;&reg;, &ldquo;Elmo&rsquo;s Learning Adventure&rdquo;, and associated characters, trademarks, and design elements are owned and licensed by Sesame Workshop, &copy;<script type="text/javascript">var d=new Date;var year=d.getFullYear();document.write(d.getFullYear());</script> Sesame Workshop. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+	<!--child Gender modal-->
+    <div class="modal fade" id="childGndr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                	<button type="button" class="close red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                	<p><b>Why do you need to know my child&rsquo;s age?</b></p>
+                    <p>What makes us different from all other book programs is our variety of books and book formats, and our ability to ship books that are specifically matched to your child&rsquo;s age. We&rsquo;ve spent more than 40 years researching how to do this and it is how we ensure that both you and your child will enjoy, be engaged by, and learn from every package we send.</p>
+                    <p><b>Why do you need to know my child&rsquo;s name and gender?</b></p>
+                    <p>Actually, we don&rsquo;t! We ask for your child&rsquo;s name and gender just so that we can personalize all of our communications to you. If you prefer not to provide this information, it will not impact the quality of your experience as an Early Moments customer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script src="js/jquery.1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery-ui.js"></script>
+<script src="js/enquire.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(font-awesome.css);
+@import url(common.css);
+@import url(media.css);
+
+body{background:url(../images/dot_pattern.gif) repeat; font-family:'Arial', Helvetica, sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+footer{max-width:1000px; font-size:11px;}
+.customMainContainer{background-color:#fff;}
+.formContainer{font-size:12px; color:#000;}
+.formContainer span{color:#f00;}
+.formContainer .form-control{height:28px; font-size:11px; border-radius:0;}
+.cvvBox .input-group-addon{padding:2px 12px; background-color:transparent; border:none; line-height:0;}
+.close{opacity:1;}
+.submitButton{color:#fff;}
+.input-group-addon span{color:#000;}
+
+/*payment*/
+.orderForm{-webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px;}
+.rightFormContainer{padding-left:15px; padding-right:15px;}
+.orderSummery{margin-left:35px; margin-right:35px; margin-bottom:0; box-shadow:none; border:none;}
+.orderSummery p{padding:6px 0; border:none; font-weight:bold; color:#333; margin:0;}
+.orderSummery  table{margin-bottom:0;}
+.orderSummery  table tr td{border:none; padding:3px;}
+.orderSummery thead, .orderSummery  table tfoot{font-weight:700; background-color:#C4DA63;}
+.dashed{border-top: 1px dashed #231f20 !important; height:12px;}
+.orderSummery tbody{font-size:13px;}
+.orderSummery tbody td{padding-left:15px;}
+.orderSummery .panel-body{padding:0;}
+.orderSummery .panel-heading{padding:5px; text-align:center; border:none; margin-bottom:10px; margin-top:10px;}
+.orderSummery .panel-heading h5{margin:0;}
+
+
+/*style start for click to view stepAgreementBox*/
+#divViewTermsAndConditions{background:#c3c3c3; color:#000; padding:3px 5px; font-size:10px; cursor:pointer; margin-top:5px; text-align:center;}
+.fieldset-membership{background-color:#fff; padding:10px;}
+.stepAgreementBox{border:1px solid #333;}
+.stepAgreementBox .scroll{height:80px; overflow: auto; font-size: 11px; line-height: 13px; margin-top: 5px; padding:0 10px 0 7px;}
+.stepAgreementBox .tickAgree span{color:#f00;}
+/*style end for click to view stepAgreementBox*/
+
+.cvv{max-width:150px;}
+.expDate select{height:28px;}
+.adob{font-size:11px !important;}
+
+#cvvModal{padding-right:0 !important;}
+.formLabel label{margin-top:4px;}
+
+.left1Img{width:101%;}

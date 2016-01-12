@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(font-awesome.css);
+@import url(common.css);
+@import url(media.css);
+
+body{background-color:#ff9d00; font-family:'Arial', Helvetica, sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+footer{max-width:1000px; font-size:11px;}
+.customMainContainer{background-color:#fff; padding-bottom:30px;}
+.formContainer{font-size:12px; color:#000;}
+.formContainer span{color:#f00;}
+.formContainer .form-control{height:28px; font-size:11px; border-radius:0;}
+.childGender .input-group-addon{padding:2px 12px; background-color:transparent; border:none;}
+.close{opacity:1;}
+.submitButton{color:#fff;}
+.input-group-addon{padding:5px 12px; background-color:#fff;}
+.input-group-addon span{color:#000;}
+
+#childGndr{padding-right:0 !important;}
+.formLabel label{margin-top:3px;}
+.leftBotImg{margin-top:30px;}

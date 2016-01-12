@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ArialRoundedMTBoldBold';
+    src: url('../fonts/ArialRoundedMTBoldBold.eot');
+    src: url('../fonts/ArialRoundedMTBoldBold.eot') format('embedded-opentype'),
+         url('../fonts/ArialRoundedMTBoldBold.woff2') format('woff2'),
+         url('../fonts/ArialRoundedMTBoldBold.woff') format('woff'),
+         url('../fonts/ArialRoundedMTBoldBold.ttf') format('truetype'),
+         url('../fonts/ArialRoundedMTBoldBold.svg#ArialRoundedMTBoldBold') format('svg');
+}
