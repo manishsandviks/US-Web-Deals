@@ -11,9 +11,6 @@
 	customMainContainer{margin-left:15px !important; margin-right:15px !important;}
 }
 
-@media screen and (max-width: 414px){
-	
-}
 @media screen and (min-width:360px) and (max-width:767px){
 	.phone input, .zip input, .chDob select{width:31% !important; display:inline;}
 	.chDob select{padding:2px;}
@@ -101,7 +98,3 @@
 	.leftBotImg{position:relative; z-index:9; left:-13px; max-width:106%;}
 	.heightAdjustLeft{min-height:225px;}
 }
-
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
-}
-

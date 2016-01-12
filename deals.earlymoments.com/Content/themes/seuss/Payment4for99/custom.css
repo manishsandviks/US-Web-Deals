@@ -1,6 +1,7 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 
+
 body{background-color:#ff9d00; font-family:'Arial', Helvetica, sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;} 
 
 footer{max-width:1000px; font-size:11px; color:#000;}

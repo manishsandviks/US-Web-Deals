@@ -83,6 +83,7 @@
 	.formFieldGap{margin-bottom:8px;}
 	
 	.cvv .input-group{width: 73% !important;}
+    .expDate select{width:38% !important;}
 	.zip input, .aDb select{width:32% !important;}
 	.aDb select{padding:2px;}
 	.rightCol{background:url(../images/formBg.gif) no-repeat;}
@@ -129,3 +130,4 @@
 	.formFieldGap{margin-bottom:10px;}
 	.heightAdjustLeft{min-height:60px;}
 }
+

@@ -281,9 +281,13 @@
     <Content Include="Images\seuss\Payment4for1\mobile_headerfall.png" />
     <Content Include="Images\seuss\Payment4for1\right_top1.png" />
     <Content Include="Images\seuss\Payment4for1\step3.png" />
+    <Content Include="Images\seuss\Payment4for99\bb.png" />
     <Content Include="Images\seuss\Payment4for99\button_2.png" />
+    <Content Include="Images\seuss\Payment4for99\cc.png" />
     <Content Include="Images\seuss\Payment4for99\dot_pattern.gif" />
     <Content Include="Images\seuss\Payment4for99\download.png" />
+    <Content Include="Images\seuss\Payment4for99\formBg.gif" />
+    <Content Include="Images\seuss\Payment4for99\formBg.jpg" />
     <Content Include="Images\seuss\Payment4for99\header.jpg" />
     <Content Include="Images\seuss\Payment4for99\key.jpg" />
     <Content Include="Images\seuss\Payment4for99\leftBottom.jpg" />

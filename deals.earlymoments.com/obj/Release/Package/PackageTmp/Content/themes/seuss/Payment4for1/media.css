@@ -4,6 +4,7 @@
 @media screen and (max-width: 320px){
 	.xsTop10{margin-top:10px;}
 	.formStep1{margin-top:-8px !important;}
+    /*.expDate select{width:49px !important;}*/
 }
 
 @media screen and (max-width: 360px){
@@ -45,7 +46,7 @@
 	.centerSmall{text-align:center;}
 	
 	/*.customMainContainer{margin-left:20px; margin-right:20px; margin-top:20px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px; background-color:#FCF5AD !important;border:3px solid #436125; background-color:#FCF5AD; overflow:hidden;}*/
-	..rightCol{background:none !important;}
+	.rightCol{background:none !important;}
 	.customMainContainer{margin-left:20px; margin-right:20px; margin-top:20px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px; background-color:#FCF5AD !important; background-color:#FCF5AD; padding-bottom:0 !important; -moz-box-shadow: 0 0 2px 2px #BF7908; -webkit-box-shadow: 0 0 2px 3px #BF7908; box-shadow: 0 0 3px 3px #BF7908;}
 	
 	.formContainer{margin-top:10px;}
@@ -82,8 +83,8 @@
 	.submitButton{font-size:24px;}
 	.submitButton i{font-size:24px; color:#fff !important;}
 	.formFieldGap{margin-bottom:8px;}
-	
-	.zip input, .expDate select{width:32% !important;}
+	/*.expDate select{width:40% !important;} */
+	.zip input, .aDb select{width:32% !important;}
 	.aDb select{padding:2px;}
 	.rightCol{background:url(../images/formBg.gif) no-repeat;}
 }
