@@ -131,6 +131,7 @@ namespace deals.earlymoments.com.Controllers
             return View();
         }
 
+        [PreserveQueryString]
         public ActionResult Payment4_for_1()
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -273,6 +274,7 @@ namespace deals.earlymoments.com.Controllers
 
         }
 
+        [PreserveQueryString]
         public ActionResult Four_for_99()
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -295,7 +297,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("seuss-2015-regular-birthday-5for595-oh-499be");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -308,20 +310,90 @@ namespace deals.earlymoments.com.Controllers
 
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
 
-                Session["ShippingDetails"] = oVariables;
-                return RedirectToAction("Payment4for99", "Seuss");
-            }
-            catch
-            {
+                //Submitting shipping details to order engin for order process
+                //Code commented for passing to payment page. 
+                oVariables = oProcess.OrderSubmit(oVariables);
+                if (oVariables != null)
+                {
+                    if (oVariables.order_id > 0)
+                    {
+                        Session.Add("NewOrderDetails", oVariables);
+                        return RedirectToAction("Confirmation", "Home");
+                    }
+                    else
+                    {
+                        if (oVariables.err.Length >= 0)
+                        {
+                            if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                            {
+                                //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
+                                // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                return RedirectToAction("orderstatus", "Home");
+                            }
+                            else if (oVariables.err.Length > 0)
+                            {
+                                //  page_log += "Order is NOT processed with an ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                //  lblErrorMsg.Text = oVariables.err;
+                                //  oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                //  string error_msg = string.Empty;
+                                //  error_msg = "alert('" + oVariables.err + "')";
+                                //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
+                                ViewBag.ErrorMsg = oVariables.err;
+                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                            }
+                            else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
+                            {
+                                //  page_log += "Order is NOT processed with NO ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                Session.Add("NewSBMDetails", oVariables);
+                                //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
+                                //   HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                return RedirectToAction("Payment4_for_99", "Seuss");
+                            }
+                            else
+                            {
+                                /* page_log += "Order is NOT processed with YES ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                                 lblErrorMsg.Text = oVariables.err;
+                                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                 string error_msg = string.Empty;
+                                 error_msg = "alert('" + oVariables.err + "')";
+                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true); */
 
+                                ViewBag.ErrorMsg = oVariables.err;
+                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    //page_log += "Order is NOT processed, Order Process returned NULL.<br>";
+                    Session["NewSBMDetails"] = null;
+                    return RedirectToAction("orderstatus", "Home");
+                }
+                //ends Submitting shipping details to order engin for order process
+                //Session["NewSBMDetails"] = oVariables;
+                //Session["ShippingDetails"] = oVariables;
+                //return RedirectToAction("Payment4_for_1", "Seuss");
+            }
+            catch (Exception ex)
+            {
+                string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
+                CommonModels oCom = new CommonModels();
+                string s = "";// oCom.LogBrowserCapabilities(Request.Browser);
+                oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
+                return View();
             }
             finally
             {
                 oVariables = null;
+                oComm = null;
+                oProcess = null;
             }
             return View();
         }
 
+        [PreserveQueryString]
         public ActionResult Payment4_for_99()
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -373,55 +445,94 @@ namespace deals.earlymoments.com.Controllers
         public ActionResult Payment4_for_99(ShippingModels.BillingDetails billing)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
 
-
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
+            CommonModels oComm = new CommonModels();
+            if (!string.IsNullOrEmpty(billing.SecurityCaptch) && Session["rndtext"] != null)
+            {
+                string strCaptch = Session["rndtext"] as string;
+                if (!strCaptch.Equals(billing.SecurityCaptch))
+                {
+                    ViewBag.ErrorMsg = "Invalid Security Captch.";
+                    return View();
+                }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(billing.SecurityCaptch))
+                {
+                    ViewBag.ErrorMsg = "Security Captch is required.";
+                    return View();
+                }
+            }
+
             if (Session["ShippingDetails"] != null)
                 oVariables = Session["ShippingDetails"] as OrderVariables;
-            if (oVariables != null)
+
+            try
             {
-                oVariables = ShippingModels.AssignBillingToOrderVariable(oVariables, billing);
-                oVariables = oProcess.OrderSubmit(oVariables);
-                if (oVariables != null)
+                if (Session["NewSBMDetails"] != null)
                 {
-                    if (oVariables.order_id > 0)
+                    oVariables = (OrderVariables)Session["NewSBMDetails"];
+                    if (oVariables != null)
                     {
-                        Session["NewSBMDetails"] = null;
-                        Session.Add("NewOrderDetails", oVariables);
-                        return RedirectToAction("Confirmation", "Home");
-                    }
-                    else
-                    {
-                        if (oVariables.err.Length > 0)
+                        oVariables = ShippingModels.AssignBillingToOrderVariable(oVariables, billing);
+                        oVariables = oProcess.OrderSubmit(oVariables);
+                        if (oVariables != null)
                         {
-                            if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                            if (oVariables.order_id > 0)
                             {
                                 Session["NewSBMDetails"] = null;
-                                return RedirectToAction("orderstatus", "Home");
+                                Session.Add("NewOrderDetails", oVariables);
+                                return RedirectToAction("Confirmation", "Home");
                             }
                             else
                             {
-                                Session.Add("NewSBMDetails", oVariables);
-                                ViewBag.ErrorMsg = oVariables.err;
-                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                if (oVariables.err.Length > 0)
+                                {
+                                    if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                                    {
+                                        Session["NewSBMDetails"] = null;
+                                        return RedirectToAction("orderstatus", "Home");
+                                    }
+                                    else
+                                    {
+                                        Session.Add("NewSBMDetails", oVariables);
+                                        ViewBag.ErrorMsg = oVariables.err;
+                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                    }
+                                }
+                                else if (oVariables.isSoftDeclined)
+                                {
+                                    Session["NewSBMDetails"] = null;
+                                    return RedirectToAction("ThankYou", "home");
+                                }
                             }
                         }
-                        else if (oVariables.isSoftDeclined)
+                        else
                         {
-                            Session["NewSBMDetails"] = null;
-                            return RedirectToAction("ThankYou", "home");
+                            return RedirectToAction("orderstatus", "Home");
                         }
                     }
                 }
-                else
-                {
-                    return RedirectToAction("orderstatus", "Home");
-                }
+                return View();
             }
-            return View();
+            catch (Exception ex)
+            {
+                oComm.SendEmail("Exception Raised in EM Landers Payment Page (Submit) - " + ex.Message.ToString());
+                return View();
+            }
+            finally
+            {
+                oComm = null;
+                oVariables = null;
+                oProcess = null;
+            }
+
         }
 
         public ActionResult Four_for_99_Calendar1()

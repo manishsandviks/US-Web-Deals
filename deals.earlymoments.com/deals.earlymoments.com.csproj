@@ -352,6 +352,8 @@
     <Content Include="Views\Shared\_LayoutEarlymoments.cshtml" />
     <Content Include="Views\Home\OrderStatus.cshtml" />
     <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\Seuss\Four_for_99.cshtml" />
+    <Content Include="Views\Seuss\Payment4_for_99.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
