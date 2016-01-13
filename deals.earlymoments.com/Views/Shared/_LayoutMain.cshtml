@@ -24,15 +24,13 @@
     <script src="/script/enquire.min.js"></script>
 </head>
 <body>
-    <div class="container customMainContainer shadowLR roundedBorderBottom marginBot20">
-      
-                @RenderSection("headerStrip", required: true)
-         
+    <div class="container customMainContainer shadowLR roundedBorderBottom marginBot20">      
+                @RenderSection("headerStrip", required: true)         
         <div class="row">
             <div class="col-md-7 col-sm-7 noPaddingLR hideSmall">
                 @RenderSection("LeftPanel", required: true)
             </div>
-            <div class="col-md-5 col-sm-5 noPaddingLR">
+            <div class="col-md-5 col-sm-5 noPaddingLR rightCol">
                 @RenderBody()
             </div>
         </div>
