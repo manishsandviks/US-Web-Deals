@@ -43,8 +43,8 @@ namespace deals.earlymoments.com.Controllers
                 }
 
                 var value = HttpContext.Request.Params.Get("vendorcode");
-                oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
-                //oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
+                //oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -656,7 +656,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for99-secure");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for99-secure-calendar");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -963,7 +963,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for99-secure");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-calendar");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
