@@ -229,6 +229,7 @@ namespace deals.earlymoments.com.Models
         public string ResponsivePayment_GiftingProducts(OrderVariables oVars, bool option = false, string template = "")
         {
             string start_product_list = "<div class='table-responsive smallTable f12'><table class='table' width='100%' border='0' cellspacing='0' cellpadding='0'><thead><tr><td>Item</td><td>Price</td></tr></thead>";
+            string title_text = "<tr><td >!_productTitle_!</td><td class='text-right'>!_FullCost_!</td></tr>";
             string prod_list = "<tr><td >!_product_!</td><td class='text-right'>!_cost_!</td></tr>";
             string space_column = "<tr height='5px''><td colspan='2'></td></tr>";
             string dotted_line = "<tr><td colspan='2'><div style='border-bottom: dashed thin #999999; padding-top: 10px; margin-bottom: 10px;clear: both;'></div></td></tr><tr><td colspan='2'></td></tr><tr>";
@@ -256,6 +257,7 @@ namespace deals.earlymoments.com.Models
                 }
                 else
                 {
+                    start_product_list += title_text.Replace("!_productTitle_!", "" + oVars.ShipVars.FirstOrDefault().OfferVars.Count + "Books From" + oVars.proj_desc).Replace("!_FullCost_!", "");
                     prod_list = "";
                     foreach (OrderEngine.ShippingVariables oShipVars in oVars.ShipVars)
                     {
@@ -271,6 +273,7 @@ namespace deals.earlymoments.com.Models
                                         "</td><td>" +
                                         ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) :
                                         GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost)) : String.Format("{0:c}", oOffers.item_cost)) + "</td></tr>";
+                                
                                 }
                                 // prod_list += space_column;
                             }

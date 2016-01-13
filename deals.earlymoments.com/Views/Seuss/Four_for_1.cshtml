@@ -58,7 +58,7 @@
         var err = '';
 
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
             if (err.length > 0) {
                 $("#spnErrorMessage").text(err.toString());
                 $("#dialog-message").modal("toggle");

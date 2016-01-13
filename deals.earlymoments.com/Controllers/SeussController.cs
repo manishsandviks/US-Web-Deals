@@ -33,11 +33,16 @@ namespace deals.earlymoments.com.Controllers
             {
                 if (ModelState.IsValid == false)
                 {
+                    var message = string.Join("<br/>", ModelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage));
+                    ViewBag.ErrorMsg = message.ToString();
                     return View();
                 }
 
                 var value = HttpContext.Request.Params.Get("vendorcode");
-                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
+                oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
+                //oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -162,7 +167,11 @@ namespace deals.earlymoments.com.Controllers
                     conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
                     cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
                     total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
-
+                    ViewBag.IsBonusSelected = false;
+                    if (oVariables.bonus_option == true)
+                    {
+                        ViewBag.IsBonusSelected = true;
+                    }
                     ViewBag.CartSummary = cart_details;
                     ViewBag.Cart = cartId;
                     ViewBag.Total = total;
@@ -193,6 +202,12 @@ namespace deals.earlymoments.com.Controllers
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
+
+            string cart_details, conf_pg_tac, total = "";
+            string shipall = "false";
+            string template = "";
+            string pixel = "";
+
             if (!string.IsNullOrEmpty(billing.SecurityCaptch) && Session["rndtext"] != null)
             {
                 string strCaptch = Session["rndtext"] as string;
@@ -219,6 +234,7 @@ namespace deals.earlymoments.com.Controllers
                 if (Session["NewSBMDetails"] != null)
                 {
                     oVariables = (OrderVariables)Session["NewSBMDetails"];
+
                     if (oVariables != null)
                     {
                         oVariables = ShippingModels.AssignBillingToOrderVariable(oVariables, billing);
@@ -252,6 +268,24 @@ namespace deals.earlymoments.com.Controllers
                                     Session["NewSBMDetails"] = null;
                                     return RedirectToAction("ThankYou", "home");
                                 }
+                                //Setting values if page is getting back to the payment view only.
+                                Dictionary<string, string> d = oComm.GetOfferCreatives(oVariables);
+                                ViewBag.HeaderImageSrc = oComm.GetDictionaryValue("payment_header", d);
+                                if ((string)Request.QueryString["shipall"] != null) { shipall = (string)Request.QueryString["shipall"]; }
+                                if ((string)Request.QueryString["template"] != null) { template = (string)Request.QueryString["template"]; }
+                                string cartId = oVariables.cart_id.ToString();
+                                conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
+                                cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
+                                total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
+                                ViewBag.IsBonusSelected = false;
+                                if (oVariables.bonus_option == true)
+                                {
+                                    ViewBag.IsBonusSelected = true;
+                                }
+                                ViewBag.CartSummary = cart_details;
+                                ViewBag.Cart = cartId;
+                                ViewBag.Total = total;
+                                ViewBag.ConfPgTAC = conf_pg_tac;
                             }
                         }
                         else
@@ -259,8 +293,13 @@ namespace deals.earlymoments.com.Controllers
                             return RedirectToAction("orderstatus", "Home");
                         }
                     }
+                    return View();
                 }
-                return View();
+                else
+                {
+                    return RedirectToAction("Four_For_1", "Seuss");
+                }
+
             }
             catch (Exception ex)
             {
