@@ -1,7 +1,8 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 
-body{background:url(../images/dot_pattern.gif) repeat; font-family:'Arial', Helvetica, sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+body{background:url(/Images/Seuss/4for99Calendar1/dot_pattern.gif) repeat; font-family:'Arial', Helvetica, sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
 
 footer{max-width:1000px; font-size:11px;}
 .customMainContainer{background-color:#fff; padding-bottom:30px;}
@@ -14,4 +15,4 @@ footer{max-width:1000px; font-size:11px;}
 .input-group-addon{padding:5px 12px; background-color:#fff;}
 .input-group-addon span{color:#000;}
 
-.formRightBgMain{background:url(../images/formBg.jpg) repeat-y;}
+.formRightBgMain{background:url(/Images/Seuss/4for99Calendar1/formBg.jpg) repeat-y;}

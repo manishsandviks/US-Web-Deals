@@ -1,0 +1,113 @@
+﻿@model deals.earlymoments.com.Models.ShippingModels.ShippingAddress
+@{
+    //ViewBag.Title = "Four_for_1";
+    Layout = "~/Views/Shared/_LayoutElmo.cshtml";
+}
+
+<link href="/Content/themes/elmo/399/custom.css" rel="stylesheet" />
+<link href="/Content/themes/elmo/399/media.css" rel="stylesheet" />
+<script src="/script/elmo/399/main.js"></script>
+<script src="/script/Validation.js"></script>
+@using (Html.BeginForm("Three_99", "Elmo", FormMethod.Post, new { @id = "form1" }))
+{
+    <p class="characters hideSmall"><img src="/Images/elmo/399/characters.png" alt="" class="responsiveImg"></p>
+    <div class="rightFormContainer">
+        <p class="formTop"><img src="/Images/elmo/399/formTop.png" alt="" class="responsiveImg"></p>
+
+        <div class="formContainer smallMarginBottom20 adjustMobileFormContainer">
+            @Html.Partial("_ShippingPartialPage", Model)
+        </div>
+        <div class="clearfix"></div>
+        <!-- <p class="formStep2Bg"><img src="/Images/elmo/399/step2.png" class="responsiveImg formStep2"></p>-->
+
+        <div class="panel panel-default formBonusOffer roundedBorder">
+
+            <div class="panel-heading roundedBorderTop">
+                <h4>Step 2: BONUS OFFER!</h4>
+            </div>
+            <div class="panel-body roundedBorderBottom">
+                <img src="/Images/elmo/399/bonusFormPic.jpg" alt="" class="responsiveImg marginBot10">
+                <p><span class="red">*</span>Take two additional Learning Adventure Kits &mdash; <i>Sesame Street Dictionary</i> and <i>The Together Book</i> &mdash; for just $7.99. That&rsquo;s 50% off the regular low price and there's no additional shipping!</p>
+                <div class="radio stepOffer">
+                    <label>
+                        @Html.RadioButtonFor(model => model.isBonusSelected, true, new { @id = "radyes", @Checked = true })
+                        <strong><span>*</span> YES!</strong>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        @Html.RadioButtonFor(model => model.isBonusSelected, false, new { @id = "radno" })
+                        <strong>No, thank you</strong>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <p class="text-center"><img src="/Images/elmo/399/continue-button.png" alt="" class="responsiveImg buttonContinue" id="btnSubmit"></p>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@ViewBag.ErrorMsg';
+            if (err.length > 0) {
+                $("#spnErrorMessage").text(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+    })
+</script>
+
+@section headerStrip {
+    <header class="row">
+        <div class="row adjustContainer">
+            <div class="col-md-12 hideSmall">
+                <img class="logo responsiveImg" src="/Images/elmo/399/header_logo.png" alt="Elmo's Learning Adventure">
+                <img class="burst responsiveImg" src="/Images/elmo/399/header_burst.png">
+            </div>
+            <div class="col-md-12 hideBig">
+                <a id="aboutlink" href="#"><img class="burst responsiveImg hand" src="/Images/elmo/399/mobileHeader_LP1.png"></a>
+            </div>
+        </div>
+    </header>
+}
+
+@section LeftPanel {
+    <p class="text-center"><img src="/Images/elmo/399/lp_offer.gif" alt="" class="responsiveImg"></p>
+    <p class="leftTag"><img src="/Images/elmo/399/leftTag1.png" alt="" class="responsiveImg"></p>
+    <p class="leftProduct1 centerSmall"><img src="/Images/elmo/399/leftProduct1.jpg" alt="" class="responsiveImg"></p>
+    <div class="leftText">
+        <p>Kids love to learn with <em>Sesame Street</em> characters! <em>Elmo’s Learning Adventure</em> teaches basic preschool skills like numbers, ABCs, colors, sharing, health, problem-solving and more.</p>
+        <ul>
+            <li>Each fun-filled Learning Adventure Kit helps your child get ready for school.</li>
+            <li>The fun begins with a giant introductory package worth $39.75, yours for just $3.99.</li>
+            <li>Kids look forward to receiving two new kits in the mail about once per month.</li>
+            <li>Each Learning Adventure Kit includes a hardcover Storybook, an Activity Book, 6 Learning Adventure Cards and a handy storage case.</li>
+            <li>No obligation to buy anything else &mdash; ever.</li>
+        </ul>
+    </div>
+    <div class="panel-group hideBig guaranteetext" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default guaranteeBox">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h4 class="panel-title f12 togGuarantee">Click here to view our complete Guarantee</h4></a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <h4>100% GUARANTEE YOUR SATISFACTION IS GUARANTEED</h4>
+                    <p>We want you to be 100% satisfied with every product we offer you and your family. If for any reason you are not, just let us know. At Early Moments&trade;, there is never a purchase commitment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section MiddleFooter {
+    <div class="col-md-12 marginTop20 learningGuide hideSmall">
+        <h3>
+            <em>Elmo’s Learning Adventure</em> guides your growing<br>
+            child through nine critical preschool subjects:
+        </h3>
+        <p><img src="/images/elmo/399/guideIcons.gif" alt="" class="responsiveImg"></p>
+    </div>
+}

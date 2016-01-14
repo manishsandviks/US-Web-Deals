@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/themes/elmo/common.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/script/jquery.1.11.3.min.js"></script>
+    <script src="/script/bootstrap.min.js"></script>
+
+    <script src="/script/jquery-ui.js"></script>
+    <script src="/script/enquire.min.js"></script>
+</head>
+<body>
+    <div class="container customMainContainer paddingLRoffSm">
+        @RenderSection("headerStrip", required: true)
+        <div class="mainWhiteBodyContainer">
+            <div class="row adjustContainer">
+                <div class="col-md-7 col-sm-7 bodyLeftPart">
+                    @RenderSection("LeftPanel", required: true)
+                </div>
+                <div class="col-md-5 col-sm-5 noPaddingLR">
+                    @RenderBody()
+                </div>
+                <div class="clearfix"></div>
+
+                @RenderSection("MiddleFooter", required: false)
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <footer class="smallMarginTop20">
+        <div class="row adjustContainer">
+            <div class="col-md-2 col-sm-2 centerSmall">
+                <p><img src="images/footerLogo.png" alt="" class="responsiveImg"></p>
+            </div>
+            <div class="col-md-10 col-sm-10 white f12">
+                <p>
+                    &ldquo;Sesame Workshop&rdquo;&reg;, &ldquo;Sesame Street&rdquo;&reg;, &ldquo;Elmo&rsquo;s Learning Adventure&rdquo;,
+                    and associated characters, trademarks, and design elements are owned and licensed by Sesame Workshop, &copy;@System.DateTime.Now.Year
+                    Sesame Workshop. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--child Gender modal-->
+    <div class="modal fade" id="childGndr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p><b>Why do you need to know my child&rsquo;s age?</b></p>
+                    <p>What makes us different from all other book programs is our variety of books and book formats, and our ability to ship books that are specifically matched to your child&rsquo;s age. We&rsquo;ve spent more than 40 years researching how to do this and it is how we ensure that both you and your child will enjoy, be engaged by, and learn from every package we send.</p>
+                    <p><b>Why do you need to know my child&rsquo;s name and gender?</b></p>
+                    <p>Actually, we don&rsquo;t! We ask for your child&rsquo;s name and gender just so that we can personalize all of our communications to you. If you prefer not to provide this information, it will not impact the quality of your experience as an Early Moments customer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Ends child Gender modal -->
+    <!--cvv Modal-->
+    <div class="modal fade" id="cvvModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <img src="/Images/cvv.jpg" alt="" class="responsiveImg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends CVV Modal -->
+
+    <div id="dialog-message" title="Errors" class="modal fade" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <section class="modal-header">
+                    <h3 id="myModalLabel1" style="color: Red">Error !</h3>
+                </section>
+                <section class="modal-body modal-body-alt">
+                    <span id="spnErrorMessage"></span>
+                </section>
+                <section class="modal-footer">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">
+                        Okay
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

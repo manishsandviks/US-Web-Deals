@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>:: Elmo's Learning Adventure ::</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<!-- Include Bootstrap Datepicker -->
+<link href="css/jquery-ui.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+	<div class="container customMainContainer paddingLRoffSm">
+    	<header class="hideSmall">
+        	<div class="row adjustContainer">
+                <div class="col-md-12 hideSmall">
+                    <img class="logo responsiveImg" src="images/header_logo.png" alt="Elmo's Learning Adventure">
+                    <img class="burst responsiveImg" src="images/header_burst.png">
+                </div>
+                <div class="col-md-12 hideBig">
+                  <a id="aboutlink" href="#"><img class="burst responsiveImg hand" src="images/mobileHeader_LP1.png"></a>
+                </div>
+            </div>
+        </header>
+        <div class="mainWhiteBodyContainer smallMarginTop20">
+        	<div class="row adjustContainer">
+                <div class="col-md-7 col-sm-7 bodyLeftPart">
+                    <p class="text-center"><img src="images/leftTop.gif" alt="" class="responsiveImg"></p>
+                    <p class="text-center hideSmall"><img src="images/left2.jpg" alt="" class="responsiveImg"></p>
+                    <div class="clearfix"></div>
+                    <div class="panel panel-default orderSummery roundedBorder">
+                        <div class="panel-heading hideBig hand" id="viewOrderSummeryBtn">
+                            <h5>Click here to view your Order Summary</h5>
+                        </div>
+                        <div class="panel-body" id="viewOrderSummery">
+                        	<h4 class="roundedBorderTop">Order Summary</h4>
+                            <div class="table-responsive smallTable roundedBorderBottom">
+                            	<table class="table marginTop10" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><em>Elmo’s Learning Adventure</em> Introductory Package</strong></td>
+                                            <td><strong>$3.99</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 <em>Sesame Street</em> Hardcover Storybooks</td>
+                                            <td>Included</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Activity Books with learning activities</td>
+                                            <td>Included</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18 Adventure Cards with fun activities</td>
+                                            <td>Included</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Storage Case</td>
+                                            <td>Included</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>2 BONUS Adventure Learning Kits – 50% OFF</strong></td>
+                                            <td><strong>$7.99</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each includes a Hardcover Storybook,</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity Book and 6 Adventure Cards</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Shipping</strong></td>
+                                            <td><strong>FREE</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dashed"></td>
+                                            <td class="dashed"></td>
+                                        </tr>  
+                                        <tr>
+                                            <td><strong>TODAY’S TOTAL</strong></td>
+                                            <td><strong>$11.98</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h4 class="text-center hideSmall bold f20">You Save $50.71!</h4>
+                    <div class="col-md-12 text-center hideSmall">
+                    	<p><img src="images/guarantee1.jpg" class="responsiveImg"></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 col-sm-5">
+                	<p class="characters hideSmall"><img src="images/characters.png" alt="" class="responsiveImg"></p>
+                	<div class="rightFormContainer" id="about">
+                    	<p class="formTop"><img src="images/formTop.png" alt="" class="responsiveImg"></p>
+                        <h5><span class="red">*</span>Is your billing address the same as your shipping address?</h5>
+                        <div class="col-md-12 text-center">
+                            <!--showBillInfo radio-->
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="radbillyes" value="option1" checked> 
+                                <small>YES</small>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="radbillno" value="option2"> 
+                                <small>NO</small>
+                            </label>
+                            <!--showBillInfo radio-->
+                        </div>
+                        <div id="showBillInfo" class="formContainer smallMarginTop10 adjustMobileFormContainer">
+                        	<div class="row formFieldGap">
+                            	<div class="col-md-12 text-center">
+                                	<h4 class="bold red">BILLING INFORMATION</h4>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> First Name</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="15" class="form-control" id="txtFirstName">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Last Name</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="15" class="form-control" id="txtLastName">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Address</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text"maxlength="30" class="form-control" id="txtAddress">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label>Address 2</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text"maxlength="30" class="form-control" id="txtAddress2">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> City</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="16" class="form-control" id="txtCity">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> State</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<select name="selectState" id="listState" class="form-control">
+                                        <option value="">Select a State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="FM">Federated States of Micronesia</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="VI">Virgin Islands</option>
+                                        <option value="AA">U.S. Armed Forces – Americas</option>
+                                        <option value="AE">U.S. Armed Forces – Europe</option>
+                                        <option value="AP">U.S. Armed Forces – Pacific</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Zip Code</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="10" class="form-control" id="txtZip">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        
+                        <div class="col-md-12 text-center marginTop20">
+                        	<p><img src="images/cc.png" class="responsiveImg"></p>
+                        </div>
+                        <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
+                        	<div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Card Number</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<input type="text" maxlength="15" class="form-control" id="txtCardnum">
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Exp. Date</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8 form-inline expDate">
+                                    <select name="expMonth" id="expMonth" class="medField">
+                                    	<option value="">&nbsp;</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <span style="color:#000;">&nbsp; / &nbsp;</span>
+                                    <select name="expYear" id="expYear" class="medField">
+                                    	<option value="">&nbsp;</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> CVV Code</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8 cvv">
+                                	<div class="input-group">
+                                        <input type="text" maxlength="4" class="form-control" id="txtCVV">
+                                        <div class="input-group-addon modalQ" data-toggle="modal" data-target="#childGndr">
+                                        	<span class="f10 hand underline link">What is this?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stepAgreementContainer marginTop15">
+                            <!--stepAgreementBox start-->
+                            <h5 class="bold">&nbsp;Membership Agreement:&nbsp;</h5>
+                            <div class="stepAgreementBox marginBot20">
+                                <fieldset class="fieldset-membership">
+                                    <div class="scroll text-justify" id="divMemberAgreement">
+                                        <strong>It's easy to share the gift of reading with your child</strong> We make it easy and affordable to fill your home with wonderful and educational children's books each month. <nobr><a id="PXLINK_6_0_5" class="pxInta" href="#">Join</a></nobr> <em>Baby Einstein Playful Discoveries</em> today and receive a welcome package that includes 3 board books, 1 plush book, a set of discovery cards with ring, and a parent guide all for <nobr><a id="PXLINK_4_0_3" class="pxInta" href="#">FREE</a></nobr>! Shipping and handling is just $4.99.<br>
+                                        <strong>Plus get an extra bonus!</strong> Save even more when you accept our Extra Bonus Offer. You'll get the Baby Einstein First Words Jumbo Board Book - a $14.95 value - as an extra bonus for only $7.48. That's 50% off with no additional shipping and handling cost!<br>
+                                        <strong>Encourage a life-long love of reading.</strong> Each month thereafter, you and your child will benefit from receiving a <em>Baby Einstein Playful Discoveries</em> set that includes 3 books and a discovery card set to review and enjoy. If you decide to keep them, they are yours for just $3.99 each plus a small shipping and handling charge. Each package will also include a parent guide at no additional cost. <br>
+                                        <strong>Your <nobr><a id="PXLINK_2_0_1" class="pxInta" href="#">complete</a></nobr> satisfaction is guaranteed.</strong> Your exclusive membership benefits allow you to return any book package that does not delight you within 30 days of its original ship date. Use our simple instructions within the shipment to return the package at your expense and we'll refund the <nobr><a id="PXLINK_1_0_0" class="pxInta" href="#">purchase price</a></nobr>, less shipping and handling. You may cancel your membership at any time, for any reason. <u>There is no <nobr><a id="PXLINK_5_0_4" class="pxInta" href="#">purchase</a></nobr> commitment</u>.<br>
+                                        <strong>Exclusive FREE preview privileges.</strong> As a member of <em>Baby Einstein Playful Discoveries</em> who has purchased two club shipments, you will also be automatically enrolled in our separate <em>Free Preview Program</em> to receive, up to four times a year, 7-day free previews of Baby Einstein/Disney products to complement your club. We will always notify you first with offer details, price (usually about $18.00 plus shipping and handling), a reply form and a toll-free number. Simply tell us within 10 days if you choose not to receive the package announced, or do nothing and it will be sent. When you reach the end of your book club, you will receive a <em>Free Preview</em> of a new age-appropriate book club for your child with all the same notification and postage-paid return privileges. As always, your satisfaction is guaranteed and if you do not wish to keep any Preview package you receive, you may return it at our expense.<br>
+                                        <u>Other qualification details and important information</u>: You must be 18 years of age or older to order and all orders are subject to approval. Limit one per household. Out-of-stock titles and free items may be replaced by alternate selections.<br>
+                                        For your convenience, please note that the Welcome Package, all future club shipments and
+<em>Free Preview</em> shipments will be charged to the credit card you provided at sign-up. Sales tax will be added for members in CT, PA and IL. Please pay on time. A late charge will be added to overdue payments to help cover the cost of sending recurring bills. Overpayments on cancelled <nobr><a id="PXLINK_3_0_2" class="pxInta" href="#">accounts</a></nobr> are subject to a $1 per month fee. Future contact may include e-mail if your account is overdue. Customers may occasionally receive information on products, services, special deals, and e-newsletters. Users who no longer wish to receive any marketing or promotional materials from us or our partners may opt-out of receiving these communications using the link located on the bottom of all such promotional e-mails. <a style="color: #000000;" href="https://www.earlymoments.com/Privacy-Policy/" tabindex="0">Click here to read our Privacy Policy</a>.<br>
+                                        © 2015 The Baby Einstein Company, LLC. All rights reserved. Baby Einstein is a trademark of The Baby Einstein Company, LLC. EINSTEIN is a trademark of The Hebrew University of Jerusalem. Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 © 2015</div>
+                                        <div id="divViewTermsAndConditions" class="text-center">
+                                            <span id="spanTermsAndConditionsSummaryLable">Click here to view complete Terms &amp; Conditions</span>
+                                        </div>
+                                </fieldset>
+                            </div>
+                            <!--stepAgreementBox end-->
+                            <div class="form-group">
+                                <div class="checkbox tickAgree f12">
+                                    <label>
+                                        <input type="checkbox"> 
+                                        <span class="red">*</span> I am over the age of 18 and I have read, understand and agree to the terms and conditions of this offer.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
+                        	<div class="row formFieldGap">
+                            	<div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                	<label><span>*</span> Adult Date of Birth</label>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                	<div class="form-inline aDob">
+                                    	<select name="childM" id="childM" class="form-control">
+                                            <option value="">Month</option>
+                                            <option value="01">Jan</option>
+                                            <option value="02">Feb</option>
+                                            <option value="03">Mar</option>
+                                            <option value="04">Apr</option>
+                                            <option value="05">May</option>
+                                            <option value="06">Jun</option>
+                                            <option value="07">Jul</option>
+                                            <option value="08">Aug</option>
+                                            <option value="09">Sep</option>
+                                            <option value="10">Oct</option>
+                                            <option value="11">Nov</option>
+                                            <option value="12">Dec</option>
+                                        </select>
+                                        <select name="childD" id="childD" class="form-control">
+                                            <option value="">Day</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <select name="childY" id="childY" class="form-control">
+                                            <option value="">Year</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-12 text-center">
+                                	<p class="f10">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
+                                    <p class="f12"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
+                                </div>
+                            </div>
+                            <div class="row formFieldGap">
+                            	<div class="col-md-12 text-center">
+                                	<p><img src="images/key.jpg" class="responsiveImg"></p>
+                                    <p style="width:30%; margin:10px auto;"><input type="text" maxlength="5" class="form-control" id="txtKey"></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-center marginTop15"><img src="images/join-button.png" alt="" class="responsiveImg buttonContinue"></p>
+                        <p class="marginTop10 text-center"><img src="images/download.png" class="responsiveImg"></p>
+                    </div>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div class="col-md-12 marginTop20 learningGuide hide">
+                	<h3><em>Elmo’s Learning Adventure</em> guides your growing<br>
+					child through nine critical preschool subjects:</h3>
+                    <p><img src="images/guideIcons.gif" alt="" class="responsiveImg"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <footer class="smallMarginTop20">
+        	<div class="row adjustContainer">
+            	<div class="col-md-2 col-sm-2 centerSmall">
+                	<p><img src="images/footerLogo.png" alt="" class="responsiveImg"></p>
+                </div>
+                <div class="col-md-10 col-sm-10 white f12">
+                	<p>&ldquo;Sesame Workshop&rdquo;&reg;, &ldquo;Sesame Street&rdquo;&reg;, &ldquo;Elmo&rsquo;s Learning Adventure&rdquo;, and associated characters, trademarks, and design elements are owned and licensed by Sesame Workshop, &copy;<script type="text/javascript">var d=new Date;var year=d.getFullYear();document.write(d.getFullYear());</script> Sesame Workshop. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+	<!--child Gender modal-->
+    <div class="modal fade" id="childGndr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                	<button type="button" class="close red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                	<p class="noMargin helv"><b>What is a card security ID?</b></p>
+                    <p class="f12">Your card security ID number (also called a "card verification code" or "security code") is a three- or four-digit number printed on most major credit cards and debit cards.</p>
+                    <p class="noMargin helv"><b>Why do we request card security IDs?</b></p>
+                    <p class="f12">We request your card security ID number to enhance the security of your transaction. The ID number appears on the card itself, and by requesting this number, we are helping to ensure that the cardholder is actually holding the card. This practice reduces the chance that an unauthorized person is fraudulently using your credit or debit card. We do not permamently store security ID numbers in our system. We will request the ID number whenever a customer uses a credit or debit card to purchase items online.</p>
+                    <p class="noMargin helv"><b>Where can I find the card security ID?</b></p>
+                    <p class="f12">You can find the the Card Security Code on the back of MasterCard, Visa and Discover credit or debit cards. It is a separate group of 3 digits on or to the right of the signature strip. On American Express cards, the Card Security Code is a printed (not embossed) group of 4 digits on the front towards the right.</p>
+                    <p class="noMargin helv"><b>What if my card doesn't have a card security ID?</b></p>
+                    <p class="f12">Not all credit and debit cards have a card security ID number. If your card does not have one, please leave the 'Card Security Code' text box blank.</p>
+                    <p class="noMargin helv"><b>What if I can't read my card security ID?</b></p>
+                    <p class="f12">If your card has a card security ID number but you cannot read it, you cannot use that card to complete your transaction. Please contact your credit or debit card issuer for assistance with the problematic card, or use another card.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script src="js/jquery.1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery-ui.js"></script>
+<script src="js/enquire.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

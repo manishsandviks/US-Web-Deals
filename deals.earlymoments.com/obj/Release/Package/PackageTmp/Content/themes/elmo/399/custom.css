@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900italic,900);
+
+body{background:url('/images/elmo/399/elmo_lrg_bkgrnd.jpg'); background-repeat:no-repeat; background-color:#03B6DE; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:top center; font-family: 'Lato', sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+header{max-width:960px !important; margin-left:0 !important; margin-right:0 !important;}
+.logo{padding-left:30px;padding-top:8px;vertical-align:top;}
+.burst{padding-top:6px;	padding-left:15px;}
+
+.mainWhiteBodyContainer{max-width:960px !important; background-color:#fff; padding-top:15px; padding-bottom:15px; -moz-border-radius: 15px;
+border-radius: 15px; position:relative;}
+
+.adjustContainer{margin-left:0; margin-right:0;}
+
+.leftTag img{margin-left:-36px; z-index:1; position:relative;}
+.leftProduct1 img{margin-left:-15px; margin-top:-50px;}
+.leftText{font-size:16px;}
+.leftText ul{padding-left:20px;}
+.leftText ul li{margin-bottom:15px;}
+.leftText ul li:last-child{margin-bottom:0;}
+
+.guaranteetext a:hover{text-decoration:none;}
+.guaranteetext h4{text-align:center;}
+
+.characters{margin-bottom:0;}
+.formContainer{font-size:12px; color:#000;}
+.formContainer span{color:#f00;}
+.formContainer .form-control{height:28px; font-size:11px; border-radius:0;}
+.formContainer label{font-weight:normal;}
+.formFieldGap{margin-bottom:10px;}
+.input-group-addon{padding:5px 12px; background-color:#fff;}
+.input-group-addon span{color:#000;}
+.childGender .input-group-addon{padding:2px 12px; background-color:transparent; border:none;}
+.close{opacity:1;}
+
+.formBonusOffer{border:1px solid #0192A7;}
+.formBonusOffer .panel-heading{background-color:#0192A7; text-align:center; padding:6px 15px; border:none;}
+.formBonusOffer h4{font-weight:900; color:#fff; margin:0;}
+.formBonusOffer .panel-body{background-color:#fff;}
+
+.learningGuide h3{font-size:18px; line-height:22px; color:#2a88c9; font-weight:900 !important; font-family:"Helvetica" !important;}
+
+#childGndr p{font-size:16px;}
+.togGuarantee{color:#C02043; text-decoration:underline;}
+.guaranteeBox .panel-heading:hover a h4, .togGuarantee:hover{color:#000;}
+.guaranteeBox{border:none; border-radius:0; color:#000;}
+.guaranteeBox .panel-heading{border:1px solid #999;}
+.guaranteeBox .panel-heading:hover{background-color:#ddd; cursor:pointer;}
+.guaranteeBox .panel-body{background-color:#FFC;}
+
+
+.required{font-size:14px !important;}

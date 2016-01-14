@@ -1,0 +1,103 @@
+﻿@model deals.earlymoments.com.Models.ShippingModels.ShippingAddress
+@{
+    //ViewBag.Title = "Four_for_1";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<link href="/Content/themes/seuss/4for1Calendar/custom.css" rel="stylesheet" />
+<link href="/Content/themes/seuss/4for1Calendar/media.css" rel="stylesheet" />
+<link href="/Content/prettyPhoto.css" rel="stylesheet" />
+<script src="/Script/jquery.prettyPhoto.js"></script>
+<script src="/script/seuss/4for1Calendar/main.js"></script>
+<script src="/script/Validation.js"></script>
+
+@using (Html.BeginForm("Four_for_1_Calendar", "Seuss", FormMethod.Post, new { @id = "form1" }))
+{
+  <!--  <img src="/Images/seuss/4for1Calendar/springformbkg.gif" class="responsiveImg formBgMain hideSmall">-->
+    <div class="rightFormDiv">
+        <img src="/Images/seuss/4for1Calendar/right_top1.png" class="responsiveImg hideSmall">
+        <div class="row orderForm roundedBorderBottom">
+            <p class="formStep1Bg"><img src="/Images/seuss/4for1Calendar/step1.png" class="responsiveImg formStep1"></p>
+
+            <div class="formContainer smallMarginBottom20 adjustMobileFormContainer">
+                @Html.Partial("_ShippingPartialPage", Model)
+            </div>
+
+            <p class="formStep2Bg"><img src="/Images/seuss/4for1Calendar/step2.png" class="responsiveImg formStep2"></p>
+
+            <div class="formContainer">
+                <div class="row marginTop20 marginBot30">
+                    <div class="col-md-6 col-sm-6 col-xs-5 text-center">
+                        <img src="/Images/seuss/4for1Calendar/bb.png" alt="bb" class="responsiveImg">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-7">
+                        <div class="radio stepOffer">
+                            <label>
+                                @Html.RadioButtonFor(model => model.isBonusSelected, true, new { @id = "radyes", @Checked = true })
+                                <strong><span>*</span> YES! Please send the 2016 Dr. Seuss Wall Calendar for just $6.99 — That's 50% off our regular price!</strong>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                @Html.RadioButtonFor(model => model.isBonusSelected, false, new { @id = "radno" })
+                                <strong>No, thank you</strong>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginBot6">
+                    <div class="col-md-12 text-center">
+                        <img src="/Images/seuss/4for1Calendar/button_1.png" alt="" class="cursor responsiveImg" id="btnSubmit">
+
+                        <!-- <input type="submit" value="Create" /> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        var err = '';
+
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            if (err.length > 0) {
+                $("#spnErrorMessage").text(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+
+    })
+</script>
+
+@section headerStrip {
+    <header class="row">
+        <div class="col-md-12 noPaddingLR">
+            <img src="/Images/seuss/4for1Calendar/header.jpg" alt="Get 4 Books for just $1!" class="responsiveImg" id="headerImage">
+        </div>
+    </header>
+}
+
+@section LeftPanel {
+    <!-- <img src="/Images/seuss/4for1Calendar/left_01.jpg" class="responsiveImg"><br>
+     <img src="/Images/seuss/4for1Calendar/left_02.jpg" class="responsiveImg"><br>
+     <img src="/Images/seuss/4for1Calendar/leftBottom.png" class="leftBotImg">
+     <p class="heightAdjustLeft"></p>
+        -->
+    <img src="/Images/seuss/4for1Calendar/left_01.jpg" class="responsiveImg leftImg1">
+    <a href="/Images/seuss/preetyphoto/01.png" rel="lightbox[group]">
+        <img src="/Images/seuss/4for1Calendar/leftBottom.png" class="leftBotImg">
+    </a>
+    <a href="/Images/seuss/preetyphoto/02.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/03.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/04.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/05.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/06.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/07.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/08.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/09.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/10.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/11.png" rel="lightbox[group]"></a>
+    <a href="/Images/seuss/preetyphoto/12.png" rel="lightbox[group]"></a>
+    <p class="heightAdjustLeft"></p>
+}

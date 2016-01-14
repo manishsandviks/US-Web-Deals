@@ -360,7 +360,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for99-secure-calendar");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-disney-4for99-secure-calendar");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
