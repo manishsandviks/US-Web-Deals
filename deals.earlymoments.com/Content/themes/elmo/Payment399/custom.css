@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+
+body{background:url('/images/elmo/payment399/elmo_lrg_bkgrnd.jpg'); background-repeat:no-repeat; background-color:#03B6DE; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:top center; font-family: 'Lato', sans-serif !important; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+header{max-width:960px !important; margin-left:0 !important; margin-right:0 !important;}
+.logo{padding-left:30px;padding-top:8px;vertical-align:top;}
+.burst{padding-top:6px;	padding-left:15px;}
+
+.mainWhiteBodyContainer{max-width:960px !important; background-color:#fff; padding-top:15px; padding-bottom:15px; -moz-border-radius: 15px;
+border-radius: 15px; position:relative;}
+
+.adjustContainer{margin-left:0; margin-right:0;}
+
+.leftTag img{margin-left:-36px; z-index:1; position:relative;}
+.leftProduct1 img{margin-left:-15px; margin-top:-50px;}
+.leftText{font-size:16px;}
+.leftText ul{padding-left:20px;}
+.leftText ul li{margin-bottom:15px;}
+.leftText ul li:last-child{margin-bottom:0;}
+
+.guaranteetext a:hover{text-decoration:none;}
+.guaranteetext h4{text-align:center;}
+
+.characters{margin-bottom:0;}
+.formContainer{font-size:12px;}
+.formContainer span{color:#f00;}
+.formContainer .form-control{height:28px; font-size:11px; border-radius:0;}
+.formContainer label{font-weight:normal;}
+.formFieldGap{margin-bottom:10px;}
+.input-group-addon{padding:5px 12px; background-color:#fff;}
+.input-group-addon span{color:#000;}
+.cvv .input-group-addon{padding:2px 12px; background-color:transparent; border:none;}
+.close{opacity:1;}
+
+.formBonusOffer{border:1px solid #0192A7;}
+.formBonusOffer .panel-heading{background-color:#0192A7; text-align:center; padding:6px 15px; border:none;}
+.formBonusOffer h4{font-weight:900; color:#fff; margin:0;}
+.formBonusOffer .panel-body{background-color:#fff;}
+
+.learningGuide h3{font-size:20px; line-height:22px; color:#2a88c9; font-weight:900;}
+
+/*payment*/
+
+.orderSummery h4{background-color:#0192A7; text-align:center; padding:6px 15px; border:none; font-weight:900; color:#fff; margin:0;}
+.orderSummery  table tr td{border:none; padding:3px;}
+.dashed{border-top: 1px dashed #231f20 !important; height:12px;}
+.smallTable{border:2px solid #0192A7; padding:10px;}
+.orderSummery .panel-body{padding:0;}
+.orderSummery{margin-bottom:0; border:none;}
+.orderSummery .panel-heading{padding:5px; text-align:center; border:none; margin-bottom:10px; margin-top:10px;}
+.orderSummery .panel-heading h5{margin:0;}
+
+
+/*style start for click to view stepAgreementBox*/
+#divViewTermsAndConditions{background:#c3c3c3; color:#000; padding:3px 5px; font-size:10px; cursor:pointer; margin-top:5px; text-align:center;}
+.fieldset-membership{background-color:#fff; padding:10px;}
+.stepAgreementBox{border:1px solid #333;}
+.stepAgreementBox .scroll{height:80px; overflow: auto; font-size: 11px; line-height: 13px; margin-top: 5px; padding:0 10px 0 7px;}
+.stepAgreementBox .tickAgree span{color:#f00;}
+/*style end for click to view stepAgreementBox*/
+
+.expDate select{height:28px;}
+
+#viewOrderSummeryBtn{border:1px solid #ddd; color:#C02043; text-decoration:underline;}
+#viewOrderSummeryBtn:hover{background-color:#CCC; color:#000;}
+
+.helv{font-family:"Helvetica" !important; font-weight:900 !important;}
