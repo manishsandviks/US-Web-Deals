@@ -71,7 +71,7 @@
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
                                 <div class="form-inline aDb">
-                                    <select id="adbdob" class="form-control">
+                                    <select id="optADOBMonth" class="form-control">
                                         <option value="">Month</option>
                                         <option value="01">Jan</option>
                                         <option value="02">Feb</option>
@@ -86,7 +86,7 @@
                                         <option value="11">Nov</option>
                                         <option value="12">Dec</option>
                                     </select>
-                                    <select id="adbD" class="form-control">
+                                    <select id="optADOBDay" class="form-control">
                                         <option value="">Day</option>
                                         <option value="01">1</option>
                                         <option value="02">2</option>
@@ -120,7 +120,7 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <select id="adbY" class="form-control">
+                                    <select id="optADOBYear" class="form-control">
                                         <option value="">Year</option>
                                         <option value="2016">2016</option>
                                         <option value="2015">2015</option>
@@ -176,9 +176,10 @@
     $(document).ready(function () {
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            //   console.log(err);
             if (err.length > 0) {
-                $("#spnErrorMessage").text(err.toString());
+                $("#spnErrorMessage").html(err.toString());
                 $("#dialog-message").modal("toggle");
             }
         }

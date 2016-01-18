@@ -237,7 +237,7 @@ namespace deals.earlymoments.com.Models
             string coupon_text = "<tr><td >Coupon/Discount</td><td >-!_discount_!</td></tr>";
             string tax = "<tr><td>&nbsp;&nbsp;Tax</td><td >!_tax_!</td></tr>";
             string bottom_extra_line = "<tr><td>!_extra_content_!</td></tr>";
-            string total = "<tfoot><tr><td class='paddingBT3 bold'>Total</td><td class='text-right bold'>!_total_!</td></tr></tfoot>";
+            string total = "<tfoot><tr><td class='bold'>Total</td><td class='bold'>!_total_!</td></tr></tfoot>";
             string end_product_list = "</table></div>";
             string prod = oVars.proj_desc;
 
@@ -257,7 +257,7 @@ namespace deals.earlymoments.com.Models
                 }
                 else
                 {
-                    start_product_list += title_text.Replace("!_productTitle_!", "" + oVars.ShipVars.FirstOrDefault().OfferVars.Count + "Books From" + oVars.proj_desc).Replace("!_FullCost_!", "");
+                    start_product_list += title_text.Replace("!_productTitle_!", "" + oVars.ShipVars.FirstOrDefault().OfferVars.Count + " Books From " + oVars.proj_desc).Replace("!_FullCost_!", "");
                     prod_list = "";
                     foreach (OrderEngine.ShippingVariables oShipVars in oVars.ShipVars)
                     {
@@ -273,7 +273,7 @@ namespace deals.earlymoments.com.Models
                                         "</td><td>" +
                                         ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) :
                                         GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost)) : String.Format("{0:c}", oOffers.item_cost)) + "</td></tr>";
-                                
+
                                 }
                                 // prod_list += space_column;
                             }
@@ -367,7 +367,6 @@ namespace deals.earlymoments.com.Models
                                         // + "<td>" + ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity) : "<strong>" + GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) + "</strong>") : String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity)) + "</td>"
                                         + "</tr>";
                                 }
-
                             }
                             else
                             {

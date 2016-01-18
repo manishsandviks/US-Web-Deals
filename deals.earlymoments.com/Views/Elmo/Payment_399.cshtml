@@ -174,9 +174,10 @@
     $(document).ready(function () {
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
             if (err.length > 0) {
-                $("#spnErrorMessage").text(err.toString());
+                $("#spnErrorMessage").html(err.toString());
                 $("#dialog-message").modal("toggle");
             }
         }
@@ -227,7 +228,7 @@
 
     </div>
     <div class="clearfix"></div><div>
-        <h4 class="text-center hideSmall bold f20">You Save $50.71!</h4>
+        <h4 class="text-center hideSmall bold f20">You Saved $<span id="spnSavedPrice">51.94</span>!</h4>
     </div>
     <div class="col-md-12 text-center hideSmall">
         <p><img src="/images/elmo/payment399/guarantee1.jpg" class="responsiveImg"></p>

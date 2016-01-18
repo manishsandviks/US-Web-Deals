@@ -176,10 +176,21 @@
     $(document).ready(function () {
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            console.log(err);
             if (err.length > 0) {
-                $("#spnErrorMessage").text(err.toString());
+                $("#spnErrorMessage").html(err.toString());
                 $("#dialog-message").modal("toggle");
+            }
+        }
+
+        if ('@ViewBag.IsBonusSelected' != null) {
+            var isBonusSelected = '@ViewBag.IsBonusSelected';
+            //alert(isBonusSelected);
+            if (isBonusSelected == true || isBonusSelected == 'true' || isBonusSelected == 'True') {
+                $("#spnSavedPrice").text('51.94');
+            } else {
+                $("#spnSavedPrice").text('26.50');
             }
         }
     })
@@ -252,7 +263,7 @@
                 </div>*@
         </div>
         <div class="clearfix"></div>
-        <h3 class="text-center hideSmall darkRed bold">You Saved $51.94!</h3>
+        <h3 class="text-center hideSmall darkRed bold">You Saved $<span id="spnSavedPrice">51.94</span>!</h3>
         <p><img src="/Images/seuss/Payment4for99/leftBottom.jpg" class="responsiveImg marginTop10"></p>
     </div>
 }

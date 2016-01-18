@@ -176,9 +176,10 @@
     $(document).ready(function () {
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            //   console.log(err);
             if (err.length > 0) {
-                $("#spnErrorMessage").text(err.toString());
+                $("#spnErrorMessage").html(err.toString());
                 $("#dialog-message").modal("toggle");
             }
         }
@@ -212,9 +213,9 @@
         </div>
         <div class="panel-body bold" id="viewOrderSummery">
             <p class="ordSummarytitle">Order Summary</p>
-            
-                @Html.Raw(ViewBag.CartSummary)
-            
+
+            @Html.Raw(ViewBag.CartSummary)
+
         </div>
         <div class="clearfix"></div>
         <h3 class="text-center hideSmall darkRed bold">You Saved $<span id="spnSavedPrice">51.94</span>!</h3>

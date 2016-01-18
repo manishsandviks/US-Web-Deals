@@ -35,7 +35,7 @@ namespace deals.earlymoments.com.Controllers
             {
                 if (ModelState.IsValid == false)
                 {
-                    var message = string.Join("<br/>", ModelState.Values
+                    var message = string.Join("<br>", ModelState.Values
                         .SelectMany(v => v.Errors)
                         .Select(e => e.ErrorMessage));
                     ViewBag.ErrorMsg = message.ToString();
@@ -87,8 +87,9 @@ namespace deals.earlymoments.com.Controllers
                                 //  string error_msg = string.Empty;
                                 //  error_msg = "alert('" + oVariables.err + "')";
                                 //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
+                                //oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                                 ViewBag.ErrorMsg = oVariables.err;
-                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                //oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                             }
                             else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                             {

@@ -103,7 +103,7 @@ namespace deals.earlymoments.com.Models
             }
         }
 
-        public static SelectList GetBirthYearList(int howMany = 15)
+        public static SelectList GetBirthYearList(int howMany = 18)
         {
             try
             {
@@ -117,6 +117,39 @@ namespace deals.earlymoments.com.Models
                     SelectListItem li = new SelectListItem();
                     li.Value = i.ToString();
                     li.Text = i.ToString();
+                    YrList.Add(li);
+                }
+                return new SelectList(YrList, "Value", "Text", 0);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static SelectList GetBirthDayList()
+        {
+            try
+            {
+
+                List<SelectListItem> YrList = new List<SelectListItem>();
+
+
+                for (int i = 1; i <= 31; i++)
+                {
+                    SelectListItem li = new SelectListItem();
+                    if (i < 10)
+                    {
+                        li.Value = "0" + i.ToString();
+                        li.Text = "0" + i.ToString();
+                    }
+                    else
+                    {
+                        li.Value = i.ToString();
+                        li.Text = i.ToString();
+                    }
+
+
                     YrList.Add(li);
                 }
                 return new SelectList(YrList, "Value", "Text", 0);

@@ -147,7 +147,8 @@ namespace deals.earlymoments.com.Controllers
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
-
+            ViewData["BirthDayList"] = UtilitiesModels.GetBirthDayList();
+            ViewData["BirthYearList"] = UtilitiesModels.GetBirthYearList();
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
