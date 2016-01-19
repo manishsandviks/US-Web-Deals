@@ -256,6 +256,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\Bye\confirm_header.gif" />
     <Content Include="Images\cc.png" />
     <Content Include="Images\cvv.jpg" />
     <Content Include="Images\disney\4for99Calendar\bb.png" />
@@ -281,6 +282,7 @@
     <Content Include="Images\disney\4for99Calendar\snowflake_bkgrnd.png" />
     <Content Include="Images\disney\4for99Calendar\step1.png" />
     <Content Include="Images\disney\4for99Calendar\step2.png" />
+    <Content Include="Images\disney\confirm_header.jpg" />
     <Content Include="Images\disney\Index\download.png" />
     <Content Include="Images\disney\Index\LogoWithSeal.jpg" />
     <Content Include="Images\disney\Payment4for99Calendar\bigChoice_1.png" />
@@ -326,6 +328,7 @@
     <Content Include="Images\elmo\399\leftTag1.png" />
     <Content Include="Images\elmo\399\lp_offer.gif" />
     <Content Include="Images\elmo\399\mobileHeader_LP1.png" />
+    <Content Include="Images\elmo\confirm_header.jpg" />
     <Content Include="Images\elmo\Payment399\bonusFormPic.jpg" />
     <Content Include="Images\elmo\Payment399\cc.png" />
     <Content Include="Images\elmo\Payment399\characters.png" />
@@ -447,7 +450,7 @@
     <Content Include="Images\seuss\4for99\step1Mob.png" />
     <Content Include="Images\seuss\4for99\step2.png" />
     <Content Include="Images\seuss\4for99\top.gif" />
-    <Content Include="Images\seuss\confirm_head.gif" />
+    <Content Include="Images\seuss\confirm_header.gif" />
     <Content Include="Images\seuss\Payment4for1\bb.png" />
     <Content Include="Images\seuss\Payment4for1\button_2.png" />
     <Content Include="Images\seuss\Payment4for1\cc.png" />
@@ -1112,6 +1115,7 @@
     <Content Include="Mockup\elmo\confirmation\js\jquery.1.11.3.min.js" />
     <Content Include="Content\prettyPhoto.css" />
     <Content Include="Script\disney\4for99Calendar\main.js" />
+    <Content Include="Script\disney\choice.js" />
     <Content Include="Script\disney\Payment4for99Calendar\main.js" />
     <Content Include="Script\elmo\399\main.js" />
     <Content Include="Script\elmo\Payment399\main.js" />

@@ -95,7 +95,6 @@ namespace deals.earlymoments.com.Controllers
             }
         }
 
-
         public ActionResult Image()
         {
             string agha = "";
@@ -107,7 +106,8 @@ namespace deals.earlymoments.com.Controllers
         public string GetRandomStringForImage()
         {
             Random oRndm = new Random();
-            string alphabet = "23456789ABCDEFGHIJKLMNPQRTUVWXYZ";
+            //string alphabet = "23456789ABCDEFGHIJKLMNPQRTUVWXYZ";
+            string alphabet = "23456789abcdefghijklmnpqrtuvwxyz";
             string strCode = "";
             for (int i = 1; i < 100; )
             {

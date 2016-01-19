@@ -146,7 +146,7 @@ function validate_form() {
         }
         else {
             if ($('#txtCVV').val().trim().length < 3 || $('#txtCVV').val().trim().length > 4) {
-                set_errs($("#txtCVV"), 'Credit Card security code should be minimum 4 chars and maximum 4.\n');
+                set_errs($("#txtCVV"), 'Credit Card security code should be minimum 3 chars and maximum 4.\n');
             }
         }
     }
@@ -222,12 +222,13 @@ function ValidateDOBDate() {
     var today = new Date();
     if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
         console.log("Valida Date" + tempDate);
-        if (expDate < today) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        //if (expDate < today) {
+        //    return false;
+        //}
+        //else {
+        //    return true;
+        //}
+        return true;
 
     }
     else {

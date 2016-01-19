@@ -10,6 +10,7 @@
 <script src="/Script/jquery.prettyPhoto.js"></script>
 <script src="/script/disney/4for99Calendar/main.js"></script>
 <script src="/script/Validation.js"></script>
+<script src="/script/Disney/choice.js"></script>
 
 @using (Html.BeginForm("Four_for_99_Calendar", "Disney", FormMethod.Post, new { @id = "form1" }))
 {
@@ -34,36 +35,36 @@
                     <div class="clearfix"></div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <figure>
-                            <img src="/Images/disney/4for99Calendar/choice_1.png" alt="Planes" class="responsiveImg">
+                            <img src="/Images/disney/4for99Calendar/choice_1.png" alt="Planes" class="responsiveImg" id="imgChoice1">
                             <figcaption>
-                                <input type="checkbox">
+                                <input type="checkbox" name="SelectedBooks" class="required chkChoice" id="chkChoice1" value="19631472" runat="server" onclick="selected_books(this)">
                                 <p>Planes</p>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <figure>
-                            <img src="/Images/disney/4for99Calendar/choice_2.png" alt="Inside Out" class="responsiveImg">
+                            <img src="/Images/disney/4for99Calendar/choice_2.png" alt="Inside Out" class="responsiveImg" id="imgChoice2">
                             <figcaption>
-                                <input type="checkbox">
+                                <input type="checkbox" name="SelectedBooks" class="required chkChoice" id="chkChoice2" value="19632347" runat="server" onclick="selected_books(this)">
                                 <p>Inside Out</p>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <figure>
-                            <img src="/Images/disney/4for99Calendar/choice_3.png" alt="Monsters University" class="responsiveImg">
+                            <img src="/Images/disney/4for99Calendar/choice_3.png" alt="Monsters University" class="responsiveImg" id="imgChoice3">
                             <figcaption>
-                                <input type="checkbox">
+                                <input type="checkbox" name="SelectedBooks" class="required chkChoice" id="chkChoice3" value="19631470" runat="server" onclick="selected_books(this)">
                                 <p>Monsters University</p>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <figure>
-                            <img src="/Images/disney/4for99Calendar/choice_4.png" alt="Frozen" class="responsiveImg">
+                            <img src="/Images/disney/4for99Calendar/choice_4.png" alt="Frozen" class="responsiveImg" id="imgChoice4">
                             <figcaption>
-                                <input type="checkbox">
+                                <input type="checkbox" name="SelectedBooks" class="required chkChoice" id="chkChoice4" value="19631471" runat="server" onclick="selected_books(this)">
                                 <p>Frozen</p>
                             </figcaption>
                         </figure>

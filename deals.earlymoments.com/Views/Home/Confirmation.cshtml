@@ -34,8 +34,29 @@
 <div class="clearfix"></div>
 <p>*Plus sales tax where applicable.</p>
 
+<script>
+    $(document).ready(function () {
+        var proj = '@ViewBag.Project';
+        alert(proj);
+        if (proj != null && proj != "" && proj == "BRP") {
+            $("#headerImage").attr("src", "/Images/Seuss/confirm_header.gif");
+        }
+        if (proj != null && proj != "" && proj == "DBU") {
+            $("#headerImage").attr("src", "/Images/disney/confirm_header.jpg");
+        }
+        if (proj != null && proj != "" && proj == "ELU") {
+            $("#headerImage").attr("src", "/Images/Seuss/confirm_header.jpg");
+        }
+        if (proj != null && proj != "" && proj == "BYE") {
+            $("#headerImage").attr("src", "/Images/bye/confirm_header.gif");
+        }
+    });
+
+</script>
+
+
 @section headerStrip {
-    <img src="/Images/Seuss/confirm_head.gif" alt="" class="responsiveImg" id="headerImage">
+    <img src="/Images/Seuss/confirm_header.gif" alt="" class="responsiveImg" id="headerImage">
 }
 
 @section rightPanel {

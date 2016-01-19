@@ -37,7 +37,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
-        public ActionResult Four_for_99(FormCollection form, ShippingModels.ShippingAddress shipping)
+        public ActionResult Four_for_99(FormCollection form, ShippingModels.ShippingAddress shipping, string SelectedBooks)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
@@ -342,7 +342,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
-        public ActionResult Four_for_99_Calendar(FormCollection form, ShippingModels.ShippingAddress shipping)
+        public ActionResult Four_for_99_Calendar(FormCollection form, ShippingModels.ShippingAddress shipping, string[] SelectedBooks)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
@@ -372,6 +372,14 @@ namespace deals.earlymoments.com.Controllers
                 oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
 
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
+
+                string choiceBooks = string.Join(",", SelectedBooks);
+
+                if (!string.IsNullOrEmpty(choiceBooks))
+                {
+                    oVariables.has_shopping_Cart = true;
+                    oVariables.shopping_cart_items = choiceBooks;
+                }
 
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 
