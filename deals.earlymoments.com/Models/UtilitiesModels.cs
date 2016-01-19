@@ -103,62 +103,62 @@ namespace deals.earlymoments.com.Models
             }
         }
 
-        public static SelectList GetBirthYearList(int howMany = 18)
-        {
-            try
-            {
+        //public static SelectList GetBirthYearList(int howMany = 18)
+        //{
+        //    try
+        //    {
 
-                List<SelectListItem> YrList = new List<SelectListItem>();
+        //        List<SelectListItem> YrList = new List<SelectListItem>();
 
-                int currentYear = DateTime.Now.Year;
-                int firstYear = currentYear - howMany;
-                for (int i = currentYear; i >= firstYear; i--)
-                {
-                    SelectListItem li = new SelectListItem();
-                    li.Value = i.ToString();
-                    li.Text = i.ToString();
-                    YrList.Add(li);
-                }
-                return new SelectList(YrList, "Value", "Text", 0);
-            }
-            catch
-            {
-                return null;
-            }
-        }
+        //        int currentYear = DateTime.Now.Year;
+        //        int firstYear = currentYear - howMany;
+        //        for (int i = currentYear; i >= firstYear; i--)
+        //        {
+        //            SelectListItem li = new SelectListItem();
+        //            li.Value = i.ToString();
+        //            li.Text = i.ToString();
+        //            YrList.Add(li);
+        //        }
+        //        return new SelectList(YrList, "Value", "Text", 0);
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public static SelectList GetBirthDayList()
-        {
-            try
-            {
+        //public static SelectList GetBirthDayList()
+        //{
+        //    try
+        //    {
 
-                List<SelectListItem> YrList = new List<SelectListItem>();
-
-
-                for (int i = 1; i <= 31; i++)
-                {
-                    SelectListItem li = new SelectListItem();
-                    if (i < 10)
-                    {
-                        li.Value = "0" + i.ToString();
-                        li.Text = "0" + i.ToString();
-                    }
-                    else
-                    {
-                        li.Value = i.ToString();
-                        li.Text = i.ToString();
-                    }
+        //        List<SelectListItem> YrList = new List<SelectListItem>();
 
 
-                    YrList.Add(li);
-                }
-                return new SelectList(YrList, "Value", "Text", 0);
-            }
-            catch
-            {
-                return null;
-            }
-        }
+        //        for (int i = 1; i <= 31; i++)
+        //        {
+        //            SelectListItem li = new SelectListItem();
+        //            if (i < 10)
+        //            {
+        //                li.Value = "0" + i.ToString();
+        //                li.Text = "0" + i.ToString();
+        //            }
+        //            else
+        //            {
+        //                li.Value = i.ToString();
+        //                li.Text = i.ToString();
+        //            }
+
+
+        //            YrList.Add(li);
+        //        }
+        //        return new SelectList(YrList, "Value", "Text", 0);
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+        //}
 
         public static SelectList GetCardExpiryYearList(int howMany = 10)
         {

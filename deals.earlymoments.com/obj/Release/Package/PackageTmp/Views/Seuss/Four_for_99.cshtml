@@ -57,9 +57,10 @@
     $(document).ready(function () {
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
-            err = '@ViewBag.ErrorMsg';
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            //   console.log(err);
             if (err.length > 0) {
-                $("#spnErrorMessage").text(err.toString());
+                $("#spnErrorMessage").html(err.toString());
                 $("#dialog-message").modal("toggle");
             }
         }

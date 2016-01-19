@@ -1376,6 +1376,7 @@
     <Content Include="Views\Elmo\Three_99.cshtml" />
     <Content Include="Views\Elmo\Payment_399.cshtml" />
     <Content Include="Views\Shared\_LayoutElmo.cshtml" />
+    <Content Include="Views\Shared\_ADOBPartialPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

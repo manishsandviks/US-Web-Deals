@@ -146,9 +146,7 @@ namespace deals.earlymoments.com.Controllers
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
-            ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
-            ViewData["BirthDayList"] = UtilitiesModels.GetBirthDayList();
-            ViewData["BirthYearList"] = UtilitiesModels.GetBirthYearList();
+            ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();           
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
@@ -201,7 +199,7 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult Payment4_for_1(FormCollection form, ShippingModels.BillingDetails billing)
         {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+         
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
@@ -506,8 +504,7 @@ namespace deals.earlymoments.com.Controllers
 
         [HttpPost]
         public ActionResult Payment4_for_99(ShippingModels.BillingDetails billing)
-        {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+        {           
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
@@ -812,8 +809,7 @@ namespace deals.earlymoments.com.Controllers
 
         [HttpPost]
         public ActionResult Payment4_for_99Calendar1(ShippingModels.BillingDetails billing)
-        {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+        {           
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
@@ -1118,8 +1114,7 @@ namespace deals.earlymoments.com.Controllers
 
         [HttpPost]
         public ActionResult Payment4_for_1Calendar(ShippingModels.BillingDetails billing)
-        {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+        {           
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();

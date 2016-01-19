@@ -79,9 +79,20 @@ function validate_form() {
 
     if ($('#chkShipState').exists()) { if ($('#chkShipState').val() == '') { set_errs($("#chkShipState"), 'Shipping state is required.\n'); } }
     if ($('#txtShipZipCode').exists()) { if ($('#txtShipZipCode').val() == '') { set_errs($("#txtShipZipCode"), 'Shipping Zip code is required.\n'); } }
-    if ($('#txtShipEmail').exists()) { if ($('#txtShipEmail').val().trim() == '') { set_errs($("#txtShipEmail"), 'eMail is required.\n'); } }
-    if ($('#txtShipConfirmEmail').exists()) { if ($('#txtShipConfirmEmail').val().trim().toLowerCase() != $('#txtShipEmail').val().trim().toLowerCase()) { set_errs($("#ConfEmail"), 'Confirmation eMail must match with original eMail.\n'); } }
+    //if ($('#txtShipEmail').exists()) { if ($('#txtShipEmail').val().trim() == '') { set_errs($("#txtShipEmail"), 'eMail is required.\n'); } }
+    if ($('#txtShipEmail').exists()) {
+        if ($('#txtShipEmail').val().trim() == '') {
+            set_errs($("#txtShipEmail"), 'eMail is required.\n');
+        }
+        else {
+            var emailtext = $('#txtShipEmail').val().trim().toString();
+            if (validateEmail(emailtext) == false) {
+                set_errs($("#txtShipEmail"), 'Enter valid eMail Address.\n');
+            }
+        }
+    }
 
+    if ($('#txtShipConfirmEmail').exists()) { if ($('#txtShipConfirmEmail').val().trim().toLowerCase() != $('#txtShipEmail').val().trim().toLowerCase()) { set_errs($("#txtShipConfirmEmail"), 'Confirmation eMail must match with original eMail.\n'); } }
 
     //if ($("#radbillno").is(":checked")) {
     //    if ($('#txtBillFirstName').exists()) {
@@ -163,4 +174,15 @@ function pleaseWait() {
     };
     var target = document.getElementById('loading');
     var spinner = new Spinner(opts).spin(target);
+}
+
+
+function validateEmail(sEmail) {
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (filter.test(sEmail)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }

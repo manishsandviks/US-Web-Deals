@@ -203,16 +203,33 @@ function ValidateDOBDate() {
     var ccDOBYear = $('#optADOBYear').val();
     var ccDOBMonth = $('#optADOBMonth').val();
     var ccDOBDay = $('#optADOBDay').val();
-    var expDate = new Date("mm/dd/yyyy", ccDOBYear, ccDOBMonth, ccDOBDay);
-    //expDate.setFullYear();
-    console.log(expDate);
-    // expDate.setDate(expDate.getDate() - 1);
-    var today = new Date();
+    console.log("Day " + ccDOBDay + "Month" + ccDOBMonth + "Year" + ccDOBYear)
+    var expDate = new Date(ccDOBYear + "/" + parseInt(ccDOBMonth) - 1 + "/" + parseInt(ccDOBDay));
 
-    if (expDate < today) {
-        return false;
+    var tempDate = ccDOBMonth + "/" + ccDOBDay + "/" + ccDOBYear;
+    var comp = tempDate.split('/');
+    var m = parseInt(comp[0], 10);
+    var d = parseInt(comp[1], 10);
+    var y = parseInt(comp[2], 10);
+    console.log("m" + m + "d" + d + "Y" + y);
+    var date = new Date(y, m - 1, d);
+    var today = new Date();
+    if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+        console.log("Valida Date" + tempDate);
+        if (expDate < today) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
     }
     else {
-        return true;
+        console.log("Invalid Date");
+        return false;
     }
+
+
+
+
 }

@@ -7,6 +7,12 @@ var bookString = '';
 jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
+    //alow numeric values
+    $('.ccnumeric').keyup(function () {
+        this.value = this.value.replace(/[^0-9\.]/g, '');
+    });
+
+
     //billing address-shipping address radio on-off
     $('#showBillInfo').hide();
     $('#radbillno').click(function () {
@@ -114,11 +120,37 @@ function validate_form() {
 
     }
 
-    if ($('#txtCreditCardNumber').exists()) { if ($('#txtCreditCardNumber').val() == '') { set_errs($("#txtCreditCardNumber"), 'Credit Card number is required.\n'); } }
+    if ($('#txtCreditCardNumber').exists()) {
+        if ($('#txtCreditCardNumber').val() == '') {
+            set_errs($("#txtCreditCardNumber"), 'Credit Card number is required.\n');
+        }
+        else {
+            if ($('#txtCreditCardNumber').val().trim().length < 15 || $('#txtCreditCardNumber').val().trim().length > 17) {
+                set_errs($("#txtCreditCardNumber"), 'Credit Card number should be minimum 15 chars and maximum 17.\n');
+            }
+        }
+    }
+
     if ($('#optCardExpiryMonth').exists()) { if ($('#optCardExpiryMonth').val() == '' || $('#optCardExpiryMonth').val() == 'Month') { set_errs($("#optCardExpiryMonth"), 'Credit Card expiration month is required.\n'); } }
     if ($('#optCardExpiryYear').exists()) { if ($('#optCardExpiryYear').val() == '' || $('#optCardExpiryYear').val() == 'Year') { set_errs($("#optCardExpiryYear"), 'Credit Card expiration year is required.\n'); } }
     if (!ValidateExpDate()) { err_message += i++ + '. ' + "Invalid Credit Card Expiration date.<br/>" }
-    if ($('#txtCVV').exists()) { if ($('#txtCVV').val() == '') { set_errs($("#txtCVV"), 'Credit Card security code (CVV) is required.\n'); } }
+    if ($('#txtCVV').exists()) {
+        if ($('#txtCVV').val() == '') {
+            set_errs($("#txtCVV"), 'Credit Card security code (CVV) is required.\n');
+        }
+        else {
+            if ($('#txtCVV').val().trim().length < 3 || $('#txtCVV').val().trim().length > 4) {
+                set_errs($("#txtCVV"), 'Credit Card security code should be minimum 4 chars and maximum 4.\n');
+            }
+        }
+    }
+
+    if ($('#optADOBMonth').exists()) { if ($('#optADOBMonth').val() == '' || $('#optADOBMonth').val() == 'Month') { set_errs($("#optADOBMonth"), 'Adult DOB month is required.\n'); } }
+    if ($('#optADOBDay').exists()) { if ($('#optADOBDay').val() == '' || $('#optADOBDay').val() == 'Year') { set_errs($("#optADOBDay"), 'Adult DOB Day is required.\n'); } }
+    if ($('#optADOBYear').exists()) { if ($('#optADOBYear').val() == '' || $('#optADOBYear').val() == 'Year') { set_errs($("#optADOBYear"), 'Adult DOB year is required.\n'); } }
+
+    if (!ValidateDOBDate()) { err_message += i++ + '. ' + "Invalid Adult Date Of Birth.<br/>" }
+
     if ($('#txtKey').exists()) { if ($('#txtKey').val() == '') { set_errs($("#txtCVV"), 'Security captcha is required.\n'); } }
     var age = document.getElementById("chkAge");
     if (age.checked == false) { set_errs(age, 'Agree to the terms and conditions of this offer.\n'); }
@@ -164,4 +196,40 @@ function ValidateExpDate() {
     else {
         return true;
     }
+}
+
+
+function ValidateDOBDate() {
+    var ccDOBYear = $('#optADOBYear').val();
+    var ccDOBMonth = $('#optADOBMonth').val();
+    var ccDOBDay = $('#optADOBDay').val();
+    console.log("Day " + ccDOBDay + "Month" + ccDOBMonth + "Year" + ccDOBYear)
+    var expDate = new Date(ccDOBYear + "/" + parseInt(ccDOBMonth) - 1 + "/" + parseInt(ccDOBDay));
+
+    var tempDate = ccDOBMonth + "/" + ccDOBDay + "/" + ccDOBYear;
+    var comp = tempDate.split('/');
+    var m = parseInt(comp[0], 10);
+    var d = parseInt(comp[1], 10);
+    var y = parseInt(comp[2], 10);
+    console.log("m" + m + "d" + d + "Y" + y);
+    var date = new Date(y, m - 1, d);
+    var today = new Date();
+    if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+        console.log("Valida Date" + tempDate);
+        if (expDate < today) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+    else {
+        console.log("Invalid Date");
+        return false;
+    }
+
+
+
+
 }

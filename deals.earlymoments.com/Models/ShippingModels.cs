@@ -172,20 +172,20 @@ namespace deals.earlymoments.com.Models
             [StringLength(10, MinimumLength = 5, ErrorMessage = "Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
             public string CCBillZipCode { get; set; }
 
-            [Required(ErrorMessage = "Adult DOB Day is required.")]
-            [DisplayName("Adult DOB Day")]
-            [StringLength(2, ErrorMessage = "Adult DOB Day can not be longer than 2 characters.")]
-            public string ADOB_Day { get; set; }
+            //[Required(ErrorMessage = "Adult DOB Day is required.")]
+            //[DisplayName("Adult DOB Day")]
+            //[StringLength(2, ErrorMessage = "Adult DOB Day can not be longer than 2 characters.")]
+            //public string ADOB_Day { get; set; }
 
-            [Required(ErrorMessage = "Adult DOB Month is required.")]
-            [DisplayName("Adult DOB Day")]
-            [StringLength(3, ErrorMessage = "Adult DOB Month can not be longer than 2 characters.")]
-            public string ADOB_Month { get; set; }
+            //[Required(ErrorMessage = "Adult DOB Month is required.")]
+            //[DisplayName("Adult DOB Day")]
+            //[StringLength(3, ErrorMessage = "Adult DOB Month can not be longer than 2 characters.")]
+            //public string ADOB_Month { get; set; }
 
-            [Required(ErrorMessage = "Adult DOB Year is required.")]
-            [DisplayName("Adult DOB Year")]
-            [StringLength(4, MinimumLength = 2, ErrorMessage = "Adult DOB Year cannot be longer than 4 characters.")]
-            public string ADOB_Year { get; set; }
+            //[Required(ErrorMessage = "Adult DOB Year is required.")]
+            //[DisplayName("Adult DOB Year")]
+            //[StringLength(4, MinimumLength = 2, ErrorMessage = "Adult DOB Year cannot be longer than 4 characters.")]
+            //public string ADOB_Year { get; set; }
 
             public string SecurityCaptch { get; set; }
 
@@ -205,9 +205,9 @@ namespace deals.earlymoments.com.Models
                 SecurityCode = "";
                 CCBillZipCode = "";
                 SecurityCaptch = "";
-                ADOB_Day = "";
-                ADOB_Month = "";
-                ADOB_Year = "";
+                //ADOB_Day = "";
+                //ADOB_Month = "";
+                //ADOB_Year = "";
             }
 
         }
