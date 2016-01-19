@@ -15,6 +15,12 @@ $(document).ready(function () {
 
     //billing address-shipping address radio on-off
     $('#showBillInfo').hide();
+
+    // console.log("radio bill no" + $("#radbillno").is(":checked"))
+    if ($("#radbillno").is(":checked")) {
+        $('#showBillInfo').slideDown(0);
+    }
+
     $('#radbillno').click(function () {
         $('#showBillInfo').slideDown(0);
 
