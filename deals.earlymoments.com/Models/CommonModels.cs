@@ -35,31 +35,31 @@ namespace deals.earlymoments.com.Models
             SmtpClient oSmtp;
             try
             {
-                //string smtpserverUrl = ConfigurationManager.AppSettings["SMTPConn"].ToString();
-                //if (smtp != "") { smtpserverUrl = smtp; }
-                //oMail = new MailMessage(from, to);
-                //oMail.Subject = subject;
-                //oMail.Body = body;
-                //oMail.IsBodyHtml = true;
-                //oSmtp = new SmtpClient(smtpserverUrl);
-                //oSmtp.Send(oMail);
+                string smtpserverUrl = ConfigurationManager.AppSettings["SMTPConn"].ToString();
+                if (smtp != "") { smtpserverUrl = smtp; }
+                oMail = new MailMessage(from, to);
+                oMail.Subject = subject;
+                oMail.Body = body;
+                oMail.IsBodyHtml = true;
+                oSmtp = new SmtpClient(smtpserverUrl);
+                oSmtp.Send(oMail);
 
-                MailMessage myMail = new MailMessage();
-                myMail.To.Add(to);
-                myMail.From = new MailAddress("manish.sf0103@gmail.com");
-                myMail.CC.Add("manish.singh@globsyn.com");
-                myMail.Subject = subject;
+                //MailMessage myMail = new MailMessage();
+                //myMail.To.Add(to);
+                //myMail.From = new MailAddress("manish.sf0103@gmail.com");
+                //myMail.CC.Add("manish.singh@globsyn.com");
+                //myMail.Subject = subject;
 
-                myMail.Body = body;
-                myMail.IsBodyHtml = true;
-                SmtpClient mySmtp = new SmtpClient();
-                mySmtp.Host = "smtp.gmail.com";
-                mySmtp.Port = 587;
-                mySmtp.UseDefaultCredentials = false;
-                mySmtp.Credentials = new System.Net.NetworkCredential
-                ("manish.sf0103@gmail.com", "GunjanSingh");// Enter seders User name and password  
-                mySmtp.EnableSsl = true;
-                mySmtp.Send(myMail);
+                //myMail.Body = body;
+                //myMail.IsBodyHtml = true;
+                //SmtpClient mySmtp = new SmtpClient();
+                //mySmtp.Host = "smtp.gmail.com";
+                //mySmtp.Port = 587;
+                //mySmtp.UseDefaultCredentials = false;
+                //mySmtp.Credentials = new System.Net.NetworkCredential
+                //("manish.sf0103@gmail.com", "GunjanSingh");// Enter seders User name and password  
+                //mySmtp.EnableSsl = true;
+                //mySmtp.Send(myMail);
             }
             catch
             {
