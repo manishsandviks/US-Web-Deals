@@ -37,7 +37,7 @@
                 <div class="clearfix"></div>
 
                 @RenderSection("MiddleFooter", required: false)
-                
+
             </div>
         </div>
     </div>
@@ -105,6 +105,64 @@
             </div>
         </div>
     </div>
+
+    <!---------------------------------------------------- Google Organic Pixel --------------------------------------------------->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol)
+? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost
++ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-8396281-1");
+            pageTracker._setDomainName("earlymoments.com"); pageTracker._trackPageview();
+        }
+        catch (err) { } </script>
+    <!----------------------------------------------------Google Organic Pixel --------------------------------------------------->
+    <!----------------------------------------------------UpSellIt --------------------------------------------------->
+    <script type="text/javascript">
+        function USI_installCode() {
+            var USI_headID = document.getElementsByTagName("head")[0];
+            var USI_installID = document.createElement('script'); USI_installID.type = 'text/javascript';
+            USI_installID.src = 'http' + (document.location.protocol == 'https:' ? 's://www'
+: '://www') + '.upsellit.com/custom/drdisney.jsp'; USI_headID.appendChild(USI_installID);
+        } if (window.addEventListener) {
+            window.addEventListener('load', USI_installCode,
+true);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', USI_installCode);
+        } else { USI_installCode(); } </script>
+    <!----------------------------------------------------UpSellIt --------------------------------------------------->
+    <!----------------------------------------------------Google Remarketing Pixel --------------------------------------------------->
+    <script type="text/javascript">
+        /* <![CDATA[ */ var google_conversion_id = 1033406327; var
+       google_custom_params = window.google_tag_params; var google_remarketing_only = true;
+        /* ]]> */ </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display: inline;">
+            <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1033406327/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+    <!---------------------------------------------------- GoogleRemarketing Pixel --------------------------------------------------->
+    <!-- MMD tracking Script -->
+    <script type="text/javascript">
+        maxmind_user_id = "35644";
+        (function () {
+            var loadDeviceJs = function () {
+                var element = document.createElement('script');
+                element.src = ('https:' == document.location.protocol ? 'https:' : 'http:')
+            + '//device.maxmind.com/js/device.js';
+                document.body.appendChild(element);
+            };
+            if (window.addEventListener) {
+                window.addEventListener('load', loadDeviceJs, false);
+            } else if (window.attachEvent) {
+                window.attachEvent('onload', loadDeviceJs);
+            }
+        })();
+    </script>
+    <!-- MMD tracking Script -->
 
 </body>
 </html>

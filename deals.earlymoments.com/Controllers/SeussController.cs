@@ -87,7 +87,7 @@ namespace deals.earlymoments.com.Controllers
                                 //  string error_msg = string.Empty;
                                 //  error_msg = "alert('" + oVariables.err + "')";
                                 //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
-                                ViewBag.ErrorMsg = oVariables.err.Replace("'", "");
+                                ViewBag.ErrorMsg = oVariables.err;
                                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                             }
                             else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
@@ -196,6 +196,7 @@ namespace deals.earlymoments.com.Controllers
             }
         }
 
+        [PreserveQueryString]
         [HttpPost]
         public ActionResult Payment4_for_1(FormCollection form, ShippingModels.BillingDetails billing)
         {
