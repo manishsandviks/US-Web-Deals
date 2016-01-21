@@ -224,6 +224,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\disney\4for99Calendar\custom.css" />
     <Content Include="Content\themes\disney\4for99Calendar\media.css" />
+    <Content Include="Content\themes\disney\4for99\common.css" />
+    <Content Include="Content\themes\disney\4for99\custom.css" />
+    <Content Include="Content\themes\disney\4for99\media.css" />
     <Content Include="Content\themes\disney\Index\common.css" />
     <Content Include="Content\themes\disney\Index\custom.css" />
     <Content Include="Content\themes\disney\Index\media.css" />
@@ -282,6 +285,16 @@
     <Content Include="Images\disney\4for99Calendar\snowflake_bkgrnd.png" />
     <Content Include="Images\disney\4for99Calendar\step1.png" />
     <Content Include="Images\disney\4for99Calendar\step2.png" />
+    <Content Include="Images\disney\4for99\bonusbooks.png" />
+    <Content Include="Images\disney\4for99\cc.png" />
+    <Content Include="Images\disney\4for99\choice_1.png" />
+    <Content Include="Images\disney\4for99\choice_2.png" />
+    <Content Include="Images\disney\4for99\choice_3.png" />
+    <Content Include="Images\disney\4for99\choice_4.png" />
+    <Content Include="Images\disney\4for99\download.png" />
+    <Content Include="Images\disney\4for99\form_product.jpg" />
+    <Content Include="Images\disney\4for99\form_product_sm.jpg" />
+    <Content Include="Images\disney\4for99\submit_button_on.gif" />
     <Content Include="Images\disney\confirm_header.jpg" />
     <Content Include="Images\disney\Index\download.png" />
     <Content Include="Images\disney\Index\LogoWithSeal.jpg" />
@@ -1116,6 +1129,7 @@
     <Content Include="Mockup\elmo\confirmation\js\jquery.1.11.3.min.js" />
     <Content Include="Content\prettyPhoto.css" />
     <Content Include="Script\disney\4for99Calendar\main.js" />
+    <Content Include="Script\disney\4for99\main.js" />
     <Content Include="Script\disney\choice.js" />
     <Content Include="Script\disney\Payment4for99Calendar\main.js" />
     <Content Include="Script\elmo\399\main.js" />
@@ -1343,6 +1357,7 @@
     <Content Include="Script\seuss\Payment4for99Calendar1\main.js" />
     <Content Include="Script\seuss\Payment4for99\main.js" />
     <Content Include="Script\Payment-Validation.js" />
+    <Content Include="Script\Shopping-Validation.js" />
     <Content Include="Script\Validation.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1384,14 +1399,13 @@
     <Content Include="Views\Shared\_ADOBPartialPage.cshtml" />
     <Content Include="Views\Shared\_SeussFooterPartialPage.cshtml" />
     <Content Include="Views\Shared\_DisneyFooterPartialPage.cshtml" />
+    <Content Include="Views\Shared\_LayoutDisneyShopping.cshtml" />
+    <Content Include="Views\Disney\Four_for_99.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\themes\disney\4for99\" />
     <Folder Include="Content\themes\disney\Payment4for99\" />
-    <Folder Include="Images\disney\4for99\" />
     <Folder Include="Images\disney\Payment4for99\" />
-    <Folder Include="Script\disney\4for99\" />
     <Folder Include="Script\disney\Index\" />
     <Folder Include="Script\disney\Payment4for99\" />
     <Folder Include="Views\Image\" />

@@ -33,19 +33,33 @@ namespace deals.earlymoments.com.Controllers
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
+            ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
+            ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
             return View();
         }
 
         [HttpPost]
-        public ActionResult Four_for_99(FormCollection form, ShippingModels.ShippingAddress shipping, string SelectedBooks)
+        public ActionResult Four_for_99(FormCollection form, ShippingModels.ShoppingOrder shipping, string[] SelectedBooks)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
+            ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
+            ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
             OrderProcess oProcess = new OrderProcess();
             CommonMethods oComm = new CommonMethods();
             OrderVariables oVariables = new OrderVariables();
             try
             {
+                if (shipping.isBillingSameToShipping)
+                {
+                    shipping.BillingFirstName = shipping.ShippingFirstName;
+                    shipping.BillingLastName = shipping.ShippingLastName;
+                    shipping.BillingAddress1 = shipping.ShippingAddress1;
+                    shipping.BillingCity = shipping.ShippingCity;
+                    shipping.BillingZipCode = shipping.ShippingZipCode;
+                    shipping.CCBillZipCode = shipping.BillingZipCode;
+                }
+
                 if (ModelState.IsValid == false)
                 {
                     var message = string.Join("<br/>", ModelState.Values
@@ -55,7 +69,7 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for99-secure");
+                oVariables = oProcess.GetOfferAndPageDetails("fosina-disney-4for99-secure-calendar");
 
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
@@ -66,7 +80,14 @@ namespace deals.earlymoments.com.Controllers
                 if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
                 oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
 
-                oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
+                oVariables = ShippingModels.AssignShoppingDetailsToOrderVariable(oVariables, shipping);
+                string choiceBooks = string.Join(",", SelectedBooks);
+
+                if (!string.IsNullOrEmpty(choiceBooks))
+                {
+                    oVariables.has_shopping_Cart = true;
+                    oVariables.shopping_cart_items = choiceBooks;
+                }
 
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 

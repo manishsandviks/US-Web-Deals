@@ -218,6 +218,150 @@ namespace deals.earlymoments.com.Models
             public PaymentDetails PaymentDetails { get; set; }
         }
 
+        public class ShoppingOrder
+        {
+
+            [Required(ErrorMessage = "Shipping First Name is required.")]
+            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
+            [DisplayName("First Name")]
+            public string ShippingFirstName { get; set; }
+
+            [Required(ErrorMessage = "Shipping Last Name is required.")]
+            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
+            [DisplayName("Last Name")]
+            public string ShippingLastName { get; set; }
+
+            [Required(ErrorMessage = "Shipping Address is required.")]
+            [StringLength(30, MinimumLength = 5, ErrorMessage = "Shipping Address1 cannot be longer than 30 char and less than 3 char.")]
+            [DisplayName("Street Address")]
+            public string ShippingAddress1 { get; set; }
+
+            [StringLength(30, ErrorMessage = "Shipping Address2 cannot be longer than 30 characters.")]
+            public string ShippingAddress2 { get; set; }
+
+            [Required(ErrorMessage = "Shipping City is required.")]
+            [StringLength(16, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
+            public string ShippingCity { get; set; }
+
+            [Required(ErrorMessage = "Shipping State is required.")]
+            [StringLength(2, MinimumLength = 2, ErrorMessage = "Shipping State code cannot be longer than 2 characters and less than 2 char.")]
+            public string ShippingState { get; set; }
+
+            [Required(ErrorMessage = "Shipping Zip Code is required.")]
+            [StringLength(10, MinimumLength = 5, ErrorMessage = "Shipping Zip Code cannot be longer than 10 char and less than 5 char..")]
+            public string ShippingZipCode { get; set; }
+
+            [StringLength(10, ErrorMessage = "Shipping Phone cannot be longer than 10 char.")]
+            public string ShippingPhone { get; set; }
+
+            [Required(ErrorMessage = "Shipping Email is required.")]
+            [StringLength(50, ErrorMessage = "Shipping Email cannot be longer than 50 characters.")]
+            public string ShippingEmail { get; set; }
+
+            [Required(ErrorMessage = "Shipping Confirm Email is required.")]
+            [StringLength(50, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
+            public string ShippingConfirmEmail { get; set; }
+
+            [StringLength(30, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
+            public string ChildName { get; set; }
+
+            public DateTime? ChildDOB { get; set; }
+            public string ChildGender { get; set; }
+
+            public bool isBonusSelected { get; set; }
+
+
+            [DisplayName("First Name")]
+            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
+            public string BillingFirstName { get; set; }
+
+
+            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
+            public string BillingLastName { get; set; }
+
+
+            [StringLength(30, MinimumLength = 5, ErrorMessage = "Billing Address1 cannot be longer than 30 char and less than 5 char.")]
+            public string BillingAddress1 { get; set; }
+
+            [StringLength(30, ErrorMessage = "Billing Address2 cannot be longer than 30 characters.")]
+            public string BillingAddress2 { get; set; }
+
+
+            [StringLength(30, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
+            public string BillingCity { get; set; }
+
+
+            [StringLength(2, MinimumLength = 2, ErrorMessage = "Billing State code can not be longer than 2 characters and less than 2 char")]
+            public string BillingState { get; set; }
+
+
+            [StringLength(10, ErrorMessage = "Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
+            public string BillingZipCode { get; set; }
+
+            [DisplayName("Is your billing address the same as your shipping address?")]
+            public bool isBillingSameToShipping { get; set; }
+
+            [Required(ErrorMessage = "Credit Card is required.")]
+            [DisplayName("Credit Card Number")]
+            [StringLength(17, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
+            public string CreditCardNumber { get; set; }
+
+            [Required(ErrorMessage = "Card Expiry Month is required.")]
+            [DisplayName("Expiry Month")]
+            [StringLength(3, ErrorMessage = "Card Expiry Month cannot be longer than 3 characters.")]
+            public string CardExpiryMonth { get; set; }
+
+            [Required(ErrorMessage = "Card Expiry Year is required.")]
+            [DisplayName("Expiry Year")]
+            [StringLength(4, MinimumLength = 2, ErrorMessage = "Card Expiry Year cannot be longer than 4 characters.")]
+            public string CardExpiryYear { get; set; }
+
+            [Required(ErrorMessage = "Security Code is required.")]
+            [DisplayName("Security Code")]
+            [StringLength(30, MinimumLength = 3, ErrorMessage = "Security Code cannot be longer than 4 char and less tha three char.")]
+            public string SecurityCode { get; set; }
+
+
+            [DisplayName("Billing Zip Code")]
+            [StringLength(10, ErrorMessage = "CC Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
+            public string CCBillZipCode { get; set; }
+
+            public string SecurityCaptch { get; set; }
+
+            public ShoppingOrder()
+            {
+                ShippingFirstName = "";
+                ShippingLastName = "";
+                ShippingAddress1 = "";
+                ShippingAddress2 = "";
+                ShippingCity = "";
+                ShippingState = "";
+                ShippingZipCode = "";
+                ShippingPhone = "";
+                ShippingEmail = "";
+                ShippingConfirmEmail = "";
+                ChildDOB = null;
+                ChildGender = "";
+                ChildName = "";
+                isBonusSelected = false;
+                isBillingSameToShipping = true;
+                BillingFirstName = "";
+                BillingLastName = "";
+                BillingAddress1 = "";
+                BillingAddress2 = "";
+                BillingCity = "";
+                BillingState = "";
+                BillingZipCode = "";
+                CreditCardNumber = "";
+                CardExpiryMonth = "";
+                CardExpiryYear = "";
+                SecurityCode = "";
+                CCBillZipCode = "";
+                SecurityCaptch = "";
+            }
+
+        }
+
         public static OrderVariables AssignShippingToOrderVariable(OrderVariables oVariables, ShippingAddress newShippingAddress)
         {
             CommonModels oComm = new CommonModels();
@@ -256,6 +400,7 @@ namespace deals.earlymoments.com.Models
         public static OrderVariables AssignBillingToOrderVariable(OrderVariables oVariables, BillingDetails billingDetails)
         {
             //Assigning Billing Address details to OVariable
+
             //if (billingDetails.isBillingSameToShipping)
             //{
             //    oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
@@ -271,6 +416,83 @@ namespace deals.earlymoments.com.Models
 
             //As we are setting billing and shipping address same on landing page 
             if (billingDetails.isBillingSameToShipping == false)
+            {
+                oVariables.bill_to_fname = billingDetails.BillingFirstName.Trim();
+                oVariables.bill_to_lname = billingDetails.BillingLastName.Trim();
+                oVariables.bill_to_address1 = billingDetails.BillingAddress1.Trim();
+                oVariables.bill_to_apt = (!string.IsNullOrEmpty(billingDetails.BillingAddress2)) ? billingDetails.BillingAddress2.Trim() : "";
+                oVariables.bill_to_city = billingDetails.BillingCity.Trim();
+                oVariables.bill_to_state = billingDetails.BillingState.Trim();
+                oVariables.bill_to_zipcode = billingDetails.BillingZipCode.Trim();
+            }
+
+            //Assigning Payment details to OVariable
+            oVariables.credit_rule = "CCC";
+            oVariables.err = "";
+
+            if (oVariables.CCVars.Count > 0)
+            {
+                oVariables.CCVars[0].number = billingDetails.CreditCardNumber.Trim();
+                oVariables.CCVars[0].type = "";
+                oVariables.CCVars[0].expdate = billingDetails.CardExpiryMonth.Trim() + billingDetails.CardExpiryYear.Trim();
+                oVariables.CCVars[0].cvv = billingDetails.SecurityCode.Trim();
+                oVariables.CCVars[0].zipcode = billingDetails.BillingZipCode.Trim();
+                oVariables.total_amt = 0.0;
+                oVariables.total_sah = 0.0;
+            }
+            else
+            {
+                CCProperties oCCVars = new OrderEngine.CCProperties();
+                oVariables.payment_type = "CC";
+                oCCVars.number = billingDetails.CreditCardNumber.Trim();
+                oCCVars.type = "";
+                oCCVars.expdate = billingDetails.CardExpiryMonth.Trim() + billingDetails.CardExpiryYear.Trim();
+                oCCVars.cvv = billingDetails.SecurityCode.Trim();
+                oCCVars.zipcode = (billingDetails.BillingZipCode != null && billingDetails.BillingZipCode != "") ? billingDetails.BillingZipCode.Trim() : "";// billingDetails.BillingZipCode.Trim();
+                oVariables.credit_rule = "CCC";
+                oVariables.CCVars.Add(oCCVars);
+                oVariables.total_amt = 0.0;
+                oVariables.total_sah = 0.0;
+            }
+
+            return oVariables;
+        }
+
+        public static OrderVariables AssignShoppingDetailsToOrderVariable(OrderVariables oVariables, ShoppingOrder billingDetails)
+        {
+            CommonModels oComm = new CommonModels();
+            //OrderVariables oVariables = new OrderVariables();
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname = billingDetails.ShippingFirstName;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname = billingDetails.ShippingLastName;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1 = billingDetails.ShippingAddress1;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt = billingDetails.ShippingAddress2;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = billingDetails.ShippingCity;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = billingDetails.ShippingState;
+            oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = billingDetails.ShippingZipCode;
+            oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
+
+            oVariables.ip_address = oComm.GetIPAddress();
+            oVariables.phone = billingDetails.ShippingPhone;
+            oVariables.email = billingDetails.ShippingEmail;
+            oVariables.bonus_option = false;
+
+            if (billingDetails.isBonusSelected)
+            {
+                oVariables.bonus_option = true;
+            }
+
+            //Assigning Billing Address details to OVariable
+            if (billingDetails.isBillingSameToShipping)
+            {
+                oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
+                oVariables.bill_to_lname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname;
+                oVariables.bill_to_address1 = oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1;
+                oVariables.bill_to_apt = oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt;
+                oVariables.bill_to_city = oVariables.ShipVars[oVariables.default_shp_id].ship_to_city;
+                oVariables.bill_to_state = oVariables.ShipVars[oVariables.default_shp_id].ship_to_state;
+                oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
+            }
+            else
             {
                 oVariables.bill_to_fname = billingDetails.BillingFirstName.Trim();
                 oVariables.bill_to_lname = billingDetails.BillingLastName.Trim();
