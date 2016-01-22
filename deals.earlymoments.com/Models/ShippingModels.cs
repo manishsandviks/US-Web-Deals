@@ -13,12 +13,12 @@ namespace deals.earlymoments.com.Models
         public class ShippingAddress
         {
             [Required(ErrorMessage = "Shipping First Name is required.")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
             [DisplayName("First Name")]
             public string ShippingFirstName { get; set; }
 
             [Required(ErrorMessage = "Shipping Last Name is required.")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
             [DisplayName("Last Name")]
             public string ShippingLastName { get; set; }
 
@@ -31,7 +31,7 @@ namespace deals.earlymoments.com.Models
             public string ShippingAddress2 { get; set; }
 
             [Required(ErrorMessage = "Shipping City is required.")]
-            [StringLength(16, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
+            [StringLength(50, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
             public string ShippingCity { get; set; }
 
             [Required(ErrorMessage = "Shipping State is required.")]
@@ -53,7 +53,7 @@ namespace deals.earlymoments.com.Models
             [StringLength(50, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
             public string ShippingConfirmEmail { get; set; }
 
-            [StringLength(30, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
+            [StringLength(50, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
             public string ChildName { get; set; }
 
             public DateTime? ChildDOB { get; set; }
@@ -118,11 +118,11 @@ namespace deals.earlymoments.com.Models
         {
             [Required(ErrorMessage = "Billing First Name is required.")]
             [DisplayName("First Name")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
             public string BillingFirstName { get; set; }
 
             [Required(ErrorMessage = "Billing Last Name is required.")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
             public string BillingLastName { get; set; }
 
             [Required(ErrorMessage = "Billing Address is required.")]
@@ -133,7 +133,7 @@ namespace deals.earlymoments.com.Models
             public string BillingAddress2 { get; set; }
 
             [Required(ErrorMessage = "Billing City is required.")]
-            [StringLength(30, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
+            [StringLength(50, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
             public string BillingCity { get; set; }
 
             [Required(ErrorMessage = "Billing State is required.")]
@@ -149,7 +149,7 @@ namespace deals.earlymoments.com.Models
 
             [Required(ErrorMessage = "Credit Card is required.")]
             [DisplayName("Credit Card Number")]
-            [StringLength(17, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
+            [StringLength(16, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
             public string CreditCardNumber { get; set; }
 
             [Required(ErrorMessage = "Card Expiry Month is required.")]
@@ -222,12 +222,12 @@ namespace deals.earlymoments.com.Models
         {
 
             [Required(ErrorMessage = "Shipping First Name is required.")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
             [DisplayName("First Name")]
             public string ShippingFirstName { get; set; }
 
             [Required(ErrorMessage = "Shipping Last Name is required.")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
             [DisplayName("Last Name")]
             public string ShippingLastName { get; set; }
 
@@ -240,7 +240,7 @@ namespace deals.earlymoments.com.Models
             public string ShippingAddress2 { get; set; }
 
             [Required(ErrorMessage = "Shipping City is required.")]
-            [StringLength(16, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
+            [StringLength(50, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
             public string ShippingCity { get; set; }
 
             [Required(ErrorMessage = "Shipping State is required.")]
@@ -262,7 +262,7 @@ namespace deals.earlymoments.com.Models
             [StringLength(50, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
             public string ShippingConfirmEmail { get; set; }
 
-            [StringLength(30, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
+            [StringLength(50, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
             public string ChildName { get; set; }
 
             public DateTime? ChildDOB { get; set; }
@@ -272,11 +272,11 @@ namespace deals.earlymoments.com.Models
 
 
             [DisplayName("First Name")]
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
             public string BillingFirstName { get; set; }
 
 
-            [StringLength(15, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
             public string BillingLastName { get; set; }
 
 
@@ -287,7 +287,7 @@ namespace deals.earlymoments.com.Models
             public string BillingAddress2 { get; set; }
 
 
-            [StringLength(30, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
+            [StringLength(50, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
             public string BillingCity { get; set; }
 
 
@@ -303,7 +303,7 @@ namespace deals.earlymoments.com.Models
 
             [Required(ErrorMessage = "Credit Card is required.")]
             [DisplayName("Credit Card Number")]
-            [StringLength(17, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
+            [StringLength(16, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
             public string CreditCardNumber { get; set; }
 
             [Required(ErrorMessage = "Card Expiry Month is required.")]
