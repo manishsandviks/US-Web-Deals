@@ -8,7 +8,7 @@ jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
     $("#btnSubmit").click(function () {
-
+        console.log("Hi");
         if (validate_form() == true) {
             // pleaseWait();
             $("#form1").submit();
@@ -39,7 +39,7 @@ function validate_form() {
             set_errs($("#txtShipFirstName"), 'Shipping first name is required.\n');
         }
         else {
-            if ($('#txtShipFirstName').val().trim().length < 3 || $('#txtShipFirstName').val().trim().length > 15) {
+            if ($('#txtShipFirstName').val().trim().length < 3 || $('#txtShipFirstName').val().trim().length > 50) {
                 set_errs($("#txtShipFirstName"), 'Shipping first name should be of minimum 3 chars and maximum 15.\n');
             }
         }
@@ -50,7 +50,7 @@ function validate_form() {
             set_errs($("#txtShipLastName"), 'Shipping last name is required.\n');
         }
         else {
-            if ($('#txtShipLastName').val().trim().length < 3 || $('#txtShipLastName').val().trim().length > 15) {
+            if ($('#txtShipLastName').val().trim().length < 3 || $('#txtShipLastName').val().trim().length > 50) {
                 set_errs($("#txtShipLastName"), 'Shipping last name should be minimum 3 chars and maximum 15.\n');
             }
         }
@@ -71,7 +71,7 @@ function validate_form() {
             set_errs($("#txtShipCity"), 'Shipping city is required.\n');
         }
         else {
-            if ($('#txtShipCity').val().trim().length < 3 || $('#txtShipCity').val().trim().length > 16) {
+            if ($('#txtShipCity').val().trim().length < 3 || $('#txtShipCity').val().trim().length > 50) {
                 set_errs($("#txtShipCity"), 'Shipping City should be minimum 3 chars and maximum 16.\n');
             }
         }

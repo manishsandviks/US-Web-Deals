@@ -20,17 +20,20 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(FormCollection form)
+        public ActionResult Index(FormCollection form, ShippingModels.ShippingAddress shipping)
         {
-            return RedirectToAction("Four_for_99", "Disney");
+
+            return RedirectToAction("Four_for_99", "Disney", new { email = shipping.ShippingEmail });
             //return View();
         }
 
         #region Four_for_99
 
         [PreserveQueryString]
-        public ActionResult Four_for_99()
+        public ActionResult Four_for_99(string email = "")
         {
+
+            ViewBag.Email = !string.IsNullOrEmpty(email) ? email : "";
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();

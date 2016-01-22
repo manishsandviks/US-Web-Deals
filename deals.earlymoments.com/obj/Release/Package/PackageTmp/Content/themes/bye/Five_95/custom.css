@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+body{background-color:#b0e0fd; margin:0; padding:0; font: normal 15px/18px Arial, Helvetica, sans-serif;}
+.masterContainer{width:1000px; margin: 0 auto;}
+.bodyContainer{width:960px; margin: 0 auto; background:#fff; padding-bottom:20px; float:left; margin-left:20px; margin-bottom:20px;}
+
+.leftCol{width:580px;}
+.rightCol{width:380px;}
+
+.imgLeft1 img{margin-left:-15px; margin-top:-35px; position:relative;}
+.leftCol h1{font-family: 'ArialRoundedMTBoldBold'; color:#0397D6; margin:0 0 0 30px; letter-spacing:-1px; font-size:32px;}
+.leftCol li{list-style-image:url(/images/bye/Five_95/checkmark.gif); font-size:18px; line-height:22px; font-weight:bold; margin:8px 75px 0 60px;}
+.easy123 img{margin-left:-20px; margin-top:-100px; position:relative; z-index:9;}
+.rightCol p{margin:0;}
+.step1 img{margin-top:-4px;}
+.formContainer{width:408px; background:url(/images/bye/Five_95/form_slice.png) repeat-y; position:relative; margin-top:0;}
+.formBody{padding:15px 40px 1px 25px; font-size:12px; color:#000;}
+.formLabel{text-align:right; padding-right:0;}
+.formLabel label{font-weight:700;}
+.formBody span{color:#f00;}
+.formBody .form-control{height:28px; font-size:11px; border-radius:0;}
+.childGender .input-group-addon{padding:2px 12px; background-color:transparent; border:none;}
+.close{opacity:1;}
+.submitButton{color:#fff;}
+.input-group-addon{padding:5px 12px; background-color:#fff;}
+.input-group-addon span{color:#000;}.phone .form-control:last-child, .childDob .form-control:last-child{margin-right:0;}
+	
+footer{width:960px; margin: 0 auto; margin-left:20px; margin-bottom:20px; text-align:center; font-size:12px;}
+
+.phone input, .zip input, .chDob select{width:32% !important;}
+.chDob select{padding:2px;}

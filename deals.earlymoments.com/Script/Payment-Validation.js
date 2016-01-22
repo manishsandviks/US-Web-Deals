@@ -83,7 +83,7 @@ function validate_form() {
                 set_errs($("#txtBillFirstName"), 'Billing first name is required.\n');
             }
             else {
-                if ($('#txtBillFirstName').val().trim().length < 3 || $('#txtBillFirstName').val().trim().length > 15) {
+                if ($('#txtBillFirstName').val().trim().length < 3 || $('#txtBillFirstName').val().trim().length > 50) {
                     set_errs($("#txtBillFirstName"), 'Billing first name should be of minimum 3 chars and maximum 15.\n');
                 }
             }
@@ -94,7 +94,7 @@ function validate_form() {
                 set_errs($("#txtBillLastName"), 'Billing last name is required.\n');
             }
             else {
-                if ($('#txtBillLastName').val().trim().length < 3 || $('#txtBillLastName').val().trim().length > 15) {
+                if ($('#txtBillLastName').val().trim().length < 3 || $('#txtBillLastName').val().trim().length > 50) {
                     set_errs($("#txtBillLastName"), 'Billing last name should be minimum 3 chars and maximum 15.\n');
                 }
             }
@@ -116,7 +116,7 @@ function validate_form() {
                 set_errs($("#txtBillCity"), 'Billing city is required.\n');
             }
             else {
-                if ($('#txtBillCity').val().trim().length < 3 || $('#txtBillCity').val().trim().length > 16) {
+                if ($('#txtBillCity').val().trim().length < 3 || $('#txtBillCity').val().trim().length > 50) {
                     set_errs($("#txtBillCity"), 'Billing City should be minimum 3 chars and maximum 16.\n');
                 }
             }
@@ -131,7 +131,7 @@ function validate_form() {
             set_errs($("#txtCreditCardNumber"), 'Credit Card number is required.\n');
         }
         else {
-            if ($('#txtCreditCardNumber').val().trim().length < 15 || $('#txtCreditCardNumber').val().trim().length > 17) {
+            if ($('#txtCreditCardNumber').val().trim().length < 15 || $('#txtCreditCardNumber').val().trim().length > 16) {
                 set_errs($("#txtCreditCardNumber"), 'Credit Card number should be minimum 15 chars and maximum 17.\n');
             }
         }

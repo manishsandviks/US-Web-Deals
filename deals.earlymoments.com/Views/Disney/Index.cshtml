@@ -1,4 +1,5 @@
-﻿@{
+﻿@model deals.earlymoments.com.Models.ShippingModels.ShippingAddress
+@{
     Layout = "~/Views/Shared/_LayoutDisneyShopping.cshtml";
 }
 
@@ -44,7 +45,7 @@
         <h4 class="marginTop20 bold">Step 1 of 2: Enter your email address</h4>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" id="txtEmail" placeholder="Email">
+            @Html.TextBoxFor(model => model.ShippingEmail, new { @id = "txtShipEmail", @maxlength = "50", @class = "form-control" })
         </div>
         <div class="form-group text-center">
             <button type="submit" class="btn button">Submit <span style="font-size:80%">▶</span></button>
