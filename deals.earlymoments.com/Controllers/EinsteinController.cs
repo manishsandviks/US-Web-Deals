@@ -21,7 +21,8 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
-        public ActionResult Five_95(FormCollection form, ShippingModels.ShippingAddress shipping, string[] SelectedBooks)
+        [PreserveQueryString]
+        public ActionResult Five_95(FormCollection form, ShippingModels.ShippingAddress shipping)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
@@ -51,14 +52,6 @@ namespace deals.earlymoments.com.Controllers
                 oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
 
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
-
-                string choiceBooks = string.Join(",", SelectedBooks);
-
-                if (!string.IsNullOrEmpty(choiceBooks))
-                {
-                    oVariables.has_shopping_Cart = true;
-                    oVariables.shopping_cart_items = choiceBooks;
-                }
 
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 
@@ -98,7 +91,7 @@ namespace deals.earlymoments.com.Controllers
                                 Session.Add("NewSBMDetails", oVariables);
                                 //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
                                 //   HttpContext.Current.ApplicationInstance.CompleteRequest();
-                                return RedirectToAction("Payment_595", "Disney");
+                                return RedirectToAction("Payment_595", "Einstein");
                             }
                             else
                             {
@@ -201,6 +194,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
+        [PreserveQueryString]
         public ActionResult Payment_595(ShippingModels.BillingDetails billing)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -324,6 +318,6 @@ namespace deals.earlymoments.com.Controllers
 
         }
 
-        #endregion //Four_for_99_Calendar
+        #endregion //Five_95
     }
 }

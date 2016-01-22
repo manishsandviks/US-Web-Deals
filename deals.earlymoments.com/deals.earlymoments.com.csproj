@@ -164,6 +164,7 @@
     <Content Include="Assets\emails\ornaments.txt" />
     <Content Include="Assets\emails\welcome.htm" />
     <Content Include="Assets\StateList.xml" />
+    <Content Include="Content\ArialRoundedMTBoldBold.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\common.css" />
     <Content Include="Content\confirmation.css" />
@@ -223,6 +224,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\bye\common.css" />
+    <Content Include="Content\themes\bye\Payment_Five_95\custom.css" />
+    <Content Include="Content\themes\bye\Five_95\custom.css" />
     <Content Include="Content\themes\disney\4for99Calendar\custom.css" />
     <Content Include="Content\themes\disney\4for99Calendar\media.css" />
     <Content Include="Content\themes\disney\4for99\common.css" />
@@ -255,12 +259,40 @@
     <Content Include="Content\themes\seuss\Payment4for99\custom.css" />
     <Content Include="Content\themes\seuss\Payment4for99\media.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\ArialRoundedMTBoldBold.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Bye\confirm_header.gif" />
+    <Content Include="Images\Bye\Five_95\bb.png" />
+    <Content Include="Images\Bye\Five_95\checkmark.gif" />
+    <Content Include="Images\Bye\Five_95\container_slice.png" />
+    <Content Include="Images\Bye\Five_95\easy123.png" />
+    <Content Include="Images\Bye\Five_95\formTop.png" />
+    <Content Include="Images\Bye\Five_95\form_bottom.png" />
+    <Content Include="Images\Bye\Five_95\form_slice.png" />
+    <Content Include="Images\Bye\Five_95\header.jpg" />
+    <Content Include="Images\Bye\Five_95\left_01.png" />
+    <Content Include="Images\Bye\Five_95\rushButton.png" />
+    <Content Include="Images\Bye\Five_95\step1.png" />
+    <Content Include="Images\Bye\Five_95\step2.png" />
+    <Content Include="Images\Bye\Payment_Five_95\bb.png" />
+    <Content Include="Images\Bye\Payment_Five_95\bullet.gif" />
+    <Content Include="Images\Bye\Payment_Five_95\button_2.png" />
+    <Content Include="Images\Bye\Payment_Five_95\container_slice.png" />
+    <Content Include="Images\Bye\Payment_Five_95\download.png" />
+    <Content Include="Images\Bye\Payment_Five_95\easy123.png" />
+    <Content Include="Images\Bye\Payment_Five_95\formTop.png" />
+    <Content Include="Images\Bye\Payment_Five_95\form_bottom.png" />
+    <Content Include="Images\Bye\Payment_Five_95\form_slice.png" />
+    <Content Include="Images\Bye\Payment_Five_95\guarantee.gif" />
+    <Content Include="Images\Bye\Payment_Five_95\header.jpg" />
+    <Content Include="Images\Bye\Payment_Five_95\left_01.png" />
+    <Content Include="Images\Bye\Payment_Five_95\rushButton.png" />
+    <Content Include="Images\Bye\Payment_Five_95\step3.jpg" />
+    <Content Include="Images\Bye\Payment_Five_95\subhead_lp2.gif" />
     <Content Include="Images\cc.png" />
     <Content Include="Images\cvv.jpg" />
     <Content Include="Images\disney\4for99Calendar\bb.png" />
@@ -1129,6 +1161,7 @@
     <Content Include="Mockup\elmo\confirmation\js\bootstrap.min.js" />
     <Content Include="Mockup\elmo\confirmation\js\jquery.1.11.3.min.js" />
     <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Script\bye\Five_95\main.js" />
     <Content Include="Script\disney\4for99Calendar\main.js" />
     <Content Include="Script\disney\4for99\main.js" />
     <Content Include="Script\disney\choice.js" />
@@ -1332,6 +1365,10 @@
     <Content Include="Mockup\elmo\confirmation\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Mockup\elmo\confirmation\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Mockup\elmo\confirmation\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\ArialRoundedMTBoldBold.eot" />
+    <Content Include="fonts\ArialRoundedMTBoldBold.ttf" />
+    <Content Include="fonts\ArialRoundedMTBoldBold.woff" />
+    <Content Include="fonts\ArialRoundedMTBoldBold.woff2" />
     <None Include="Properties\PublishProfiles\deal.earlymoments.com.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1403,6 +1440,7 @@
     <Content Include="Views\Shared\_LayoutDisneyShopping.cshtml" />
     <Content Include="Views\Disney\Four_for_99.cshtml" />
     <Content Include="Views\Einstein\Five_95.cshtml" />
+    <Content Include="Views\Einstein\Payment_595.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

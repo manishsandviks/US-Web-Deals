@@ -83,15 +83,14 @@
     margin-right: 10px;
 }
 
-.noMarginLR {
-    margin-left: 0;
-    margin-right: 0;
-}
 
 .noMarginLR {
     margin-left: 0;
     margin-right: 0;
 }
+
+.noMargin{margin:0;}
+.noMarginBottom{margin-bottom:0;}
 
 .noPaddingLR {
     padding-left: 0;

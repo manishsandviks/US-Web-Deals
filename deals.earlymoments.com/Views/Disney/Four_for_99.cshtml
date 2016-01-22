@@ -663,7 +663,9 @@
         <div class="form-group text-center formContainer">
             <p class="f12"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
             <img src="@Url.Action("Image","Image" ,new { agha = "foo bar" })" alt="" />
-            <p style="width:50%; margin:10px auto;"><input type="text" maxlength="5" class="form-control" id="txtKey"></p>
+            <p style="width:50%; margin:10px auto;">
+                @Html.TextBoxFor(model => model.SecurityCaptch, new { @id = "txtKey", @maxlength = "5", @class = "form-control" })
+            </p>
         </div>
         <div class="form-group text-center">
             <img src="/images/disney/4for99/submit_button_on.gif" alt="" class="responsiveImg buttonContinue" id="btnSubmit"><br>

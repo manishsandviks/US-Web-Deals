@@ -8,7 +8,7 @@ jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
     $("#btnSubmit").click(function () {
-
+        console.log("Hi");
         if (validate_form() == true) {
             // pleaseWait();
             $("#form1").submit();

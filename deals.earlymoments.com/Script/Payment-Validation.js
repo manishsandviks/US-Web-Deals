@@ -48,7 +48,7 @@ $(document).ready(function () {
 
 
     $("#btnSubmit1").click(function () {
-        //alert("Hi, submit Clicked.....");
+        console.log("Hi, submit Clicked.....");
         if (validate_form() == true) {
             // pleaseWait();
             $("#form1").submit();

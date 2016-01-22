@@ -24,7 +24,7 @@
             <label><span>*</span> First Name</label>
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
-            @Html.TextBoxFor(model => model.BillingFirstName, new { @id = "txtBillFirstName", @maxlength = "15", @class = "form-control" })
+            @Html.TextBoxFor(model => model.BillingFirstName, new { @id = "txtBillFirstName", @maxlength = "50", @class = "form-control" })
         </div>
     </div>
     <div class="row formFieldGap">
@@ -32,7 +32,7 @@
             <label><span>*</span> Last Name</label>
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
-            @Html.TextBoxFor(model => model.BillingLastName, new { @id = "txtBillLastName", @maxlength = "15", @class = "form-control" })
+            @Html.TextBoxFor(model => model.BillingLastName, new { @id = "txtBillLastName", @maxlength = "50", @class = "form-control" })
         </div>
     </div>
     <div class="row formFieldGap">
@@ -56,7 +56,7 @@
             <label><span>*</span> City</label>
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
-            @Html.TextBoxFor(model => model.BillingCity, new { @id = "txtBillCity", @maxlength = "16", @class = "form-control" })
+            @Html.TextBoxFor(model => model.BillingCity, new { @id = "txtBillCity", @maxlength = "50", @class = "form-control" })
         </div>
     </div>
     <div class="row formFieldGap">
@@ -72,7 +72,7 @@
             <label><span>*</span> Zip Code</label>
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
-            @Html.TextBoxFor(model => model.BillingZipCode, new { @id = "txtBillZipCode", @maxlength = "5", @class = "form-control" })
+            @Html.TextBoxFor(model => model.BillingZipCode, new { @id = "txtBillZipCode", @maxlength = "10", @class = "form-control" })
         </div>
     </div>
 </div>
