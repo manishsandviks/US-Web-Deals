@@ -192,7 +192,7 @@
                         <label><span>*</span> Zip Code</label>
                     </div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
-                        @Html.TextBoxFor(model => model.ShippingZipCode, new { @id = "txtShipZipCode", @maxlength = "5", @class = "form-control" })
+                        @Html.TextBoxFor(model => model.ShippingZipCode, new { @id = "txtShipZipCode", @maxlength = "10", @class = "form-control" })
                     </div>
                 </div>
             </div>
@@ -380,7 +380,7 @@
                             <label><span>*</span> Zip Code</label>
                         </div>
                         <div class="col-md-7 col-sm-7 col-xs-7">
-                            @Html.TextBoxFor(model => model.BillingZipCode, new { @id = "txtBillZipCode", @maxlength = "5", @class = "form-control" })
+                            @Html.TextBoxFor(model => model.BillingZipCode, new { @id = "txtBillZipCode", @maxlength = "10", @class = "form-control" })
                         </div>
                     </div>
                 </div>

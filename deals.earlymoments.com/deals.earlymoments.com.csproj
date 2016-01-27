@@ -336,6 +336,8 @@
     <Content Include="Images\disney\Payment4for99Calendar\bullet.gif" />
     <Content Include="Images\disney\Payment4for99Calendar\button_2.png" />
     <Content Include="Images\disney\Payment4for99Calendar\cc.png" />
+    <Content Include="Images\disney\Payment4for99Calendar\bigChoice_3.png" />
+    <Content Include="Images\disney\Payment4for99Calendar\bigChoice_4.png" />
     <Content Include="Images\disney\Payment4for99Calendar\download.png" />
     <Content Include="Images\disney\Payment4for99Calendar\formBg.gif" />
     <Content Include="Images\disney\Payment4for99Calendar\freeStar.png" />

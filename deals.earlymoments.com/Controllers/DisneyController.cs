@@ -513,18 +513,23 @@ namespace deals.earlymoments.com.Controllers
                     if ((string)Request.QueryString["shipall"] != null) { shipall = (string)Request.QueryString["shipall"]; }
                     if ((string)Request.QueryString["template"] != null) { template = (string)Request.QueryString["template"]; }
                     string cartId = oVariables.cart_id.ToString();
-                    conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
-                    cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
-                    total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
-                    ViewBag.IsBonusSelected = false;
-                    if (oVariables.bonus_option == true)
+
+                    if (oVariables != null)
                     {
-                        ViewBag.IsBonusSelected = true;
+                        conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
+                        cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
+                        total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
+                        ViewBag.IsBonusSelected = false;
+                        if (oVariables.bonus_option == true)
+                        {
+                            ViewBag.IsBonusSelected = true;
+                        }
+                        ViewBag.CartSummary = cart_details;
+                        ViewBag.Cart = cartId;
+                        ViewBag.Total = total;
+                        ViewBag.ConfPgTAC = conf_pg_tac;
+                        ViewBag.ChoiceBook = oVariables.shopping_cart_items;
                     }
-                    ViewBag.CartSummary = cart_details;
-                    ViewBag.Cart = cartId;
-                    ViewBag.Total = total;
-                    ViewBag.ConfPgTAC = conf_pg_tac;
                     return View();
                 }
                 else
