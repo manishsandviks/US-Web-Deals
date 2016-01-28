@@ -436,7 +436,7 @@ namespace deals.earlymoments.com.Models
                 oVariables.CCVars[0].type = "";
                 oVariables.CCVars[0].expdate = billingDetails.CardExpiryMonth.Trim() + billingDetails.CardExpiryYear.Trim();
                 oVariables.CCVars[0].cvv = billingDetails.SecurityCode.Trim();
-                oVariables.CCVars[0].zipcode = billingDetails.BillingZipCode.Trim();
+                oVariables.CCVars[0].zipcode = oVariables.bill_to_zipcode;// billingDetails.BillingZipCode.Trim();
                 oVariables.total_amt = 0.0;
                 oVariables.total_sah = 0.0;
             }
@@ -448,7 +448,7 @@ namespace deals.earlymoments.com.Models
                 oCCVars.type = "";
                 oCCVars.expdate = billingDetails.CardExpiryMonth.Trim() + billingDetails.CardExpiryYear.Trim();
                 oCCVars.cvv = billingDetails.SecurityCode.Trim();
-                oCCVars.zipcode = (billingDetails.BillingZipCode != null && billingDetails.BillingZipCode != "") ? billingDetails.BillingZipCode.Trim() : "";// billingDetails.BillingZipCode.Trim();
+                oCCVars.zipcode = oVariables.bill_to_zipcode;// (billingDetails.BillingZipCode != null && billingDetails.BillingZipCode != "") ? billingDetails.BillingZipCode.Trim() : oVariables.bill_to_zipcode; // billingDetails.BillingZipCode.Trim();
                 oVariables.credit_rule = "CCC";
                 oVariables.CCVars.Add(oCCVars);
                 oVariables.total_amt = 0.0;

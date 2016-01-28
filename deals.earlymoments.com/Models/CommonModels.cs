@@ -442,7 +442,7 @@ namespace deals.earlymoments.com.Models
                                 {
                                     eBooks = oOffers.offer_item == "EBOOK" ? true : false;
 
-                                    prod_list += "<tr><td>" + oShipVars.OfferVars.Count + "</td><td class='paddingBT3'>" +
+                                    prod_list += "<tr><td>" + 1 + "</td><td class='paddingBT3'>" +
                                         (eBooks ? "<strong>" + oOffers.item_desc + "</strong>" : oOffers.item_desc) +
                                         "</td><td class='text-right'>" +
                                         ((oOffers.item_cost == 0) ? ((GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) == "") ? String.Format("{0:c}", oOffers.item_cost) : "<strong>" +

@@ -40,15 +40,19 @@
         // alert(proj);
         if (proj != null && proj != "" && proj == "BRU") {
             $("#headerImage").attr("src", "/Images/Seuss/confirm_header.gif");
+            $("#footerSeuss").show();
         }
         if (proj != null && proj != "" && proj == "DBU") {
             $("#headerImage").attr("src", "/Images/disney/confirm_header.jpg");
+            $("#footerDisney").show();
         }
         if (proj != null && proj != "" && proj == "ELU") {
             $("#headerImage").attr("src", "/Images/elmo/confirm_header.jpg");
+            $("#footerElmo").show();
         }
         if (proj != null && proj != "" && proj == "BEU") {
             $("#headerImage").attr("src", "/Images/bye/confirm_header.gif");
+            $("#footerEinstien").show();
         }
     });
 
@@ -64,9 +68,23 @@
 }
 
 @section footerSection {
-    <p>
-        Dr. Seuss properties&trade; &amp; &copy; @System.DateTime.Now.Year, Dr. Seuss Enterprises, L.P. All Rights Reserved<br class="hideSmall">
-        Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 Copyright &copy; @System.DateTime.Now.Year
-    </p>
+    <div id="footerSeuss" style="display:none;">
+        @Html.Partial("_SeussFooterPartialPage")
+    </div>
+    <div id="footerDisney" style="display:none;">
+        @Html.Partial("_DisneyFooterPartialPage")
+    </div>
+    <div id="footerElmo" style="display:none;">
+        <p>
+            &ldquo;Sesame Workshop&rdquo;&reg;, &ldquo;Sesame Street&rdquo;&reg;, &ldquo;Elmo&rsquo;s Learning Adventure&rdquo;, and associated characters, trademarks, and design elements are owned and licensed by Sesame Workshop, &copy;@System.DateTime.Now.Year
+            Sesame Workshop. All rights reserved.
+        </p>
+    </div>
+    <div id="footerEinstien" style="display:none;">
+        <p>
+            &copy;@System.DateTime.Now.Year The Baby Einstein Company, LLC. All rights reserved. Baby Einstein is a trademark of The Baby<br> Einstein Company, LLC. EINSTEIN is a trademark of The Hebrew University of Jerusalem.<br>
+            Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 Copyright &copy;@System.DateTime.Now.Year
+        </p>
+    </div>
 }
 

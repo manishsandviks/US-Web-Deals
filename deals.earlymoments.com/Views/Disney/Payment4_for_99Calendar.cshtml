@@ -109,31 +109,26 @@
     var choicebooks = "";
     var booklist;
     $(document).ready(function () {
-        $(".choiceImages").each(function () {
-            var id = this.id;
-            console.log(id);
-            $(this).hide();
-        });
-
+        //$(".choiceImages").each(function () {
+        //    var id = this.id;
+        //    console.log(id);
+        //    $(this).hide();
+        //});
 
         if ('@ViewBag.ChoiceBook' != null) {
             choicebooks = '@ViewBag.ChoiceBook';
-            alert(choicebooks);
+            //alert(choicebooks);
             booklist = choicebooks.split(',');
         }
-
 
         $(".choiceImages").each(function () {
             console.log(booklist);
             var id = this.id;
             for (var i = 0; i < booklist.length; i++) {
-                if (booklist[i] == id.toString().replace('img_', ''))
+                if (booklist[i] == id.toString().replace('div_', ''))
                     $(this).show();
             }
-
-
-        })
-
+        });
 
         var err = '';
         if ('@ViewBag.ErrorMsg' != null) {
@@ -144,6 +139,7 @@
                 $("#dialog-message").modal("toggle");
             }
         }
+
         if ('@ViewBag.IsBonusSelected' != null) {
             var isBonusSelected = '@ViewBag.IsBonusSelected';
             // alert(isBonusSelected);
@@ -153,9 +149,6 @@
                 $("#spnSavedPrice").text('31.99');
             }
         }
-
-
-
     })
 </script>
 
@@ -176,13 +169,17 @@
         <div class="col-md-3 col-sm-3">
             <img src="/Images/disney/Payment4for99Calendar/offer_book2.png" alt="" class="responsiveImg">
         </div>
-        <div class="col-md-3 col-sm-3">
-            <img src="/Images/disney/Payment4for99Calendar/bigChoice_1.png" alt="" id="img_19632115" class="responsiveImg choiceImages">
-            <img src="/Images/disney/Payment4for99Calendar/bigChoice_3.png" alt="" id="img_19632117" class="responsiveImg choiceImages">
+        <div class="col-md-3 col-sm-3 choiceImages" id="div_19632115" style="display:none;">
+            <img src="/Images/disney/Payment4for99Calendar/bigChoice_1.png" alt="" id="img_19632115" class="responsiveImg">
         </div>
-        <div class="col-md-3 col-sm-3">
-            <img src="/Images/disney/Payment4for99Calendar/bigChoice_2.png" alt="" id="img_19632291" class="responsiveImg choiceImages">
-            <img src="/Images/disney/Payment4for99Calendar/bigChoice_4.png" alt="" id="img_19632118" class="responsiveImg choiceImages">
+        <div class="col-md-3 col-sm-3 choiceImages" id="div_19632117" style="display:none;">
+            <img src="/Images/disney/Payment4for99Calendar/bigChoice_3.png" alt="" id="img_19632117" class="responsiveImg">
+        </div>
+        <div class="col-md-3 col-sm-3 choiceImages" id="div_19632291" style="display:none;">
+            <img src="/Images/disney/Payment4for99Calendar/bigChoice_2.png" alt="" id="img_19632291" class="responsiveImg">
+        </div>
+        <div class="col-md-3 col-sm-3 choiceImages" id="div_19632118" style="display:none;">
+            <img src="/Images/disney/Payment4for99Calendar/bigChoice_4.png" alt="" id="img_19632118" class="responsiveImg">
         </div>
     </div>
     <div class="clearfix"></div>
