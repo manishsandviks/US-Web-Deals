@@ -8,7 +8,7 @@ jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
     $("#btnSubmit").click(function () {
-        console.log("Hi");
+        // console.log("Hi");
         if (validate_form() == true) {
             // pleaseWait();
             $("#form1").submit();
@@ -34,6 +34,14 @@ function validate_form() {
     err_message = '';
     err_field = tmp;
     i = 1;
+
+    if ($("#chkChoice1").exists()) {
+        var chkCount = $(".chkChoice:checked").length;
+        console.log("checkbox count" + chkCount + "book selected count " + choiceCount);
+
+        if (choiceCount < 2 || chkCount < 2) { set_errs($("#ShipFirstName"), 'Choose any two books from the choice of books listed.\n'); }
+    }
+
     if ($('#txtShipFirstName').exists()) {
         if ($('#txtShipFirstName').val().trim() == '') {
             set_errs($("#txtShipFirstName"), 'Shipping first name is required.\n');
