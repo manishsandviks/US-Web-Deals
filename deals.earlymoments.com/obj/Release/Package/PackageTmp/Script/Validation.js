@@ -8,7 +8,6 @@ jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
     $("#btnSubmit").click(function () {
-        console.log("Hi");
         if (validate_form() == true) {
             // pleaseWait();
             $("#form1").submit();
@@ -34,6 +33,14 @@ function validate_form() {
     err_message = '';
     err_field = tmp;
     i = 1;
+
+    if ($("#chkChoice1").exists()) {
+        var chkCount = $(".chkChoice:checked").length;
+        console.log("checkbox count" + chkCount + "book selected count " + choiceCount);
+
+        if (choiceCount < 2 || chkCount < 2) { set_errs($("#ShipFirstName"), 'Choose any two books from the choice of books listed.\n'); }
+    }
+
     if ($('#txtShipFirstName').exists()) {
         if ($('#txtShipFirstName').val().trim() == '') {
             set_errs($("#txtShipFirstName"), 'Shipping first name is required.\n');
@@ -94,54 +101,13 @@ function validate_form() {
 
     if ($('#txtShipConfirmEmail').exists()) { if ($('#txtShipConfirmEmail').val().trim().toLowerCase() != $('#txtShipEmail').val().trim().toLowerCase()) { set_errs($("#txtShipConfirmEmail"), 'Confirmation eMail must match with original eMail.\n'); } }
 
-    //if ($("#radbillno").is(":checked")) {
-    //    if ($('#txtBillFirstName').exists()) {
-    //        if ($('#txtBillFirstName').val() == '') {
-    //            set_errs($("#txtBillFirstName"), 'Billing first name is required.\n');
-    //        }
-    //        else {
-    //            if ($('#txtBillFirstName').val().trim().length < 3 || $('#txtBillFirstName').val().trim().length > 15) {
-    //                set_errs($("#txtBillFirstName"), 'Billing first name should be of minimum 3 chars and maximum 15.\n');
-    //            }
-    //        }
-    //    }
-
-    //    if ($('#txtBillLastName').exists()) {
-    //        if ($('#txtBillLastName').val().trim() == '') {
-    //            set_errs($("#txtBillLastName"), 'Billing last name is required.\n');
-    //        }
-    //        else {
-    //            if ($('#txtBillLastName').val().trim().length < 3 || $('#txtBillLastName').val().trim().length > 15) {
-    //                set_errs($("#txtBillLastName"), 'Billing last name should be minimum 3 chars and maximum 15.\n');
-    //            }
-    //        }
-    //    }
-
-    //    if ($('#txtBillStreet').exists()) {
-    //        if ($('#txtBillStreet').val().trim() == '') {
-    //            set_errs($("#txtBillStreet"), 'Billing address required.\n');
-    //        }
-    //        else {
-    //            if ($('#txtBillStreet').val().trim().length < 5 || $('#txtBillStreet').val().trim().length > 30) {
-    //                set_errs($("#txtBillStreet"), 'Billing address should be minimum 5 chars and maximum 30.\n');
-    //            }
-    //        }
-    //    }
-
-    //    if ($('#txtBillCity').exists()) {
-    //        if ($('#txtBillCity').val().trim() == '') {
-    //            set_errs($("#txtBillCity"), 'Billing city is required.\n');
-    //        }
-    //        else {
-    //            if ($('#txtBillCity').val().trim().length < 3 || $('#txtBillCity').val().trim().length > 16) {
-    //                set_errs($("#txtBillCity"), 'Billing City should be minimum 3 chars and maximum 16.\n');
-    //            }
-    //        }
-    //    }
-    //    if ($('#chkBillState').exists()) { if ($('#chkBillState').val() == '') { set_errs($("#chkBillState"), 'Billing state is required.\n'); } }
-    //    if ($('#txtBillZipCode').exists()) { if ($('#txtBillZipCode').val() == '') { set_errs($("#txtBillZipCode"), 'Billing Zip code is required.\n'); } }
-
-    //}
+    if ($('#txtShipChildDOB').exists()) {
+        if ($('#txtShipChildDOB').val() != '') {
+            if (isDate($('#txtShipChildDOB').val()) == false) {
+                set_errs($("#txtShipChildDOB"), 'Enter valid Child Date Of Birth.\n');
+            }
+        }
+    }
 
     // var age = document.getElementById("chkAge");
     //if (age.checked == false) { set_errs(age, 'Agree to the terms and conditions of this offer.\n'); }
@@ -185,4 +151,35 @@ function validateEmail(sEmail) {
     else {
         return false;
     }
+}
+
+function isDate(txtDate) {
+    var currVal = txtDate;
+    if (currVal == '')
+        return false;
+
+    //Declare Regex  
+    var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/;
+    var dtArray = currVal.match(rxDatePattern); // is format OK?
+
+    if (dtArray == null)
+        return false;
+
+    //Checks for mm/dd/yyyy format.
+    dtMonth = dtArray[1];
+    dtDay = dtArray[3];
+    dtYear = dtArray[5];
+
+    if (dtMonth < 1 || dtMonth > 12)
+        return false;
+    else if (dtDay < 1 || dtDay > 31)
+        return false;
+    else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+        return false;
+    else if (dtMonth == 2) {
+        var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+        if (dtDay > 29 || (dtDay == 29 && !isleap))
+            return false;
+    }
+    return true;
 }

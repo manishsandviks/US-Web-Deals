@@ -64,13 +64,10 @@ $(document).ready(function () {
 
 });
 
-
-
 function set_errs(field, message) {
     if (typeof err_field == 'undefined') { err_field = field; }
     err_message += i++ + '. ' + message + '<br/>';;
 }
-
 
 function validate_form() {
     err_message = '';
@@ -169,7 +166,6 @@ function validate_form() {
     }
 }
 
-
 function pleaseWait() {
     $("#loading").fadeIn();
     var opts = {
@@ -187,7 +183,6 @@ function pleaseWait() {
     var spinner = new Spinner(opts).spin(target);
 }
 
-
 function ValidateExpDate() {
     var ccExpYear = $('#optCardExpiryYear').val();
     var ccExpMonth = $('#optCardExpiryMonth').val();
@@ -203,7 +198,6 @@ function ValidateExpDate() {
         return true;
     }
 }
-
 
 function ValidateDOBDate() {
     var ccDOBYear = $('#optADOBYear').val();
@@ -235,8 +229,4 @@ function ValidateDOBDate() {
         console.log("Invalid Date");
         return false;
     }
-
-
-
-
 }

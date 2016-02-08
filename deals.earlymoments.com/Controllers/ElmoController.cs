@@ -221,7 +221,7 @@ namespace deals.earlymoments.com.Controllers
                 if (!strCaptch.Equals(billing.SecurityCaptch))
                 {
                     ViewBag.ErrorMsg = "Invalid Security Captch.";
-                    return View();
+                    //return View();
                 }
             }
             else
@@ -229,7 +229,7 @@ namespace deals.earlymoments.com.Controllers
                 if (string.IsNullOrEmpty(billing.SecurityCaptch))
                 {
                     ViewBag.ErrorMsg = "Security Captch is required.";
-                    return View();
+                    // return View();
                 }
             }
 
@@ -244,6 +244,31 @@ namespace deals.earlymoments.com.Controllers
 
                     if (oVariables != null)
                     {
+                        if (ViewBag.ErrorMsg != null && ViewBag.ErrorMsg != "")
+                        {
+                            //Setting values if page is getting back to the payment view only.
+                            Dictionary<string, string> d = oComm.GetOfferCreatives(oVariables);
+                            ViewBag.HeaderImageSrc = oComm.GetDictionaryValue("payment_header", d);
+                            if ((string)Request.QueryString["shipall"] != null) { shipall = (string)Request.QueryString["shipall"]; }
+                            if ((string)Request.QueryString["template"] != null) { template = (string)Request.QueryString["template"]; }
+                            string cartId = oVariables.cart_id.ToString();
+                            conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
+                            cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
+                            total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
+                            ViewBag.IsBonusSelected = false;
+                            if (oVariables.bonus_option == true)
+                            {
+                                ViewBag.IsBonusSelected = true;
+                            }
+                            ViewBag.CartSummary = cart_details;
+                            ViewBag.Cart = cartId;
+                            ViewBag.Total = total;
+                            ViewBag.ConfPgTAC = conf_pg_tac;
+
+                            return View();
+                        }
+
+
                         oVariables = ShippingModels.AssignBillingToOrderVariable(oVariables, billing);
                         oVariables = oProcess.OrderSubmit(oVariables);
                         if (oVariables != null)
