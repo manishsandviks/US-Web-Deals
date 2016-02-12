@@ -82,7 +82,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="bin/deals.earlymoments.com.dll">
-      <publishTime>02/08/2016 17:24:50</publishTime>
+      <publishTime>02/12/2016 16:40:29</publishTime>
     </File>
     <File Include="bin/MaxMindCCFraud.dll">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -160,7 +160,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:54</publishTime>
     </File>
     <File Include="Content/prettyPhoto.css">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>01/11/2016 23:12:54</publishTime>
@@ -573,6 +573,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/cc.png">
       <publishTime>01/11/2016 23:12:54</publishTime>
     </File>
+    <File Include="Images/close.png">
+      <publishTime>02/12/2016 16:39:08</publishTime>
+    </File>
     <File Include="Images/cvv.jpg">
       <publishTime>01/11/2016 23:12:54</publishTime>
     </File>
@@ -896,6 +899,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/key.jpg">
       <publishTime>01/11/2016 23:12:54</publishTime>
+    </File>
+    <File Include="Images/next_sm.png">
+      <publishTime>02/12/2016 16:39:08</publishTime>
+    </File>
+    <File Include="Images/pause.png">
+      <publishTime>02/12/2016 16:39:08</publishTime>
+    </File>
+    <File Include="Images/play.png">
+      <publishTime>02/12/2016 16:39:08</publishTime>
+    </File>
+    <File Include="Images/prev_sm.png">
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Images/seuss/4for1/bb.png">
       <publishTime>01/11/2016 23:12:54</publishTime>
@@ -1291,10 +1306,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
     <File Include="Images/sprite_next.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/09/2016 19:43:15</publishTime>
     </File>
     <File Include="Images/sprite_prev.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/09/2016 19:43:16</publishTime>
     </File>
     <File Include="Images/sprite_x.png">
       <publishTime>01/14/2016 18:27:30</publishTime>
@@ -3763,7 +3778,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/22/2016 23:09:57</publishTime>
     </File>
     <File Include="Script/disney/4for99Calendar/main.js">
-      <publishTime>01/14/2016 18:27:31</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Script/disney/choice.js">
       <publishTime>01/21/2016 23:31:05</publishTime>
@@ -3790,19 +3805,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 18:27:31</publishTime>
     </File>
     <File Include="Script/Payment-Validation.js">
-      <publishTime>02/04/2016 17:34:26</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Script/seuss/4for1/main.js">
       <publishTime>01/14/2016 15:35:09</publishTime>
     </File>
     <File Include="Script/seuss/4for1Calendar/main.js">
-      <publishTime>01/14/2016 18:27:31</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Script/seuss/4for99/main.js">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
     <File Include="Script/seuss/4for99Calendar1/main.js">
-      <publishTime>01/14/2016 18:27:31</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Script/seuss/Payment4for1/main.js">
       <publishTime>01/12/2016 22:26:29</publishTime>
@@ -3820,7 +3835,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/22/2016 23:09:57</publishTime>
     </File>
     <File Include="Script/Validation.js">
-      <publishTime>02/08/2016 16:15:53</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -3865,13 +3880,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2016 17:31:09</publishTime>
     </File>
     <File Include="Views/Disney/Four_for_99_Calendar.cshtml">
-      <publishTime>02/04/2016 17:15:37</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Views/Disney/Index.cshtml">
       <publishTime>01/22/2016 23:09:57</publishTime>
     </File>
     <File Include="Views/Disney/Payment4_for_99Calendar.cshtml">
-      <publishTime>01/28/2016 17:31:09</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Views/Einstein/Five_95.cshtml">
       <publishTime>01/22/2016 23:09:57</publishTime>
@@ -3880,7 +3895,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2016 17:31:09</publishTime>
     </File>
     <File Include="Views/Elmo/Payment_399.cshtml">
-      <publishTime>01/28/2016 17:31:09</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Views/Elmo/Three_99.cshtml">
       <publishTime>01/19/2016 15:30:59</publishTime>
@@ -3889,7 +3904,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="Views/Home/Confirmation.cshtml">
-      <publishTime>02/08/2016 16:11:56</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -3904,28 +3919,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="Views/Seuss/Four_for_1.cshtml">
-      <publishTime>02/08/2016 16:01:07</publishTime>
+      <publishTime>02/12/2016 16:36:24</publishTime>
     </File>
     <File Include="Views/Seuss/Four_for_1_Calendar.cshtml">
-      <publishTime>01/22/2016 23:09:57</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Views/Seuss/Four_for_99.cshtml">
       <publishTime>01/22/2016 23:09:57</publishTime>
     </File>
     <File Include="Views/Seuss/Four_for_99_Calendar1.cshtml">
-      <publishTime>01/22/2016 23:09:57</publishTime>
+      <publishTime>02/12/2016 16:39:08</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_1.cshtml">
-      <publishTime>02/04/2016 17:17:23</publishTime>
+      <publishTime>02/12/2016 16:35:44</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_1Calendar.cshtml">
-      <publishTime>02/04/2016 17:17:35</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_99.cshtml">
-      <publishTime>02/04/2016 17:17:50</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_99Calendar1.cshtml">
-      <publishTime>02/04/2016 17:18:07</publishTime>
+      <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/11/2016 23:12:55</publishTime>

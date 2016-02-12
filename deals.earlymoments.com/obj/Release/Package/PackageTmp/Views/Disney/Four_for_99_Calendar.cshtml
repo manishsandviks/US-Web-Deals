@@ -7,7 +7,7 @@
 <link href="/Content/themes/disney/4for99Calendar/custom.css" rel="stylesheet" />
 <link href="/Content/themes/disney/4for99Calendar/media.css" rel="stylesheet" />
 <link href="/Content/prettyPhoto.css" rel="stylesheet" />
-<script src="/Script/jquery.prettyPhoto.js"></script>
+@*<script src="/Script/jquery.prettyPhoto.js"></script>*@
 <script src="/script/disney/4for99Calendar/main.js"></script>
 <script src="/script/Validation.js"></script>
 <script src="/script/Disney/choice.js"></script>
@@ -116,7 +116,95 @@
             </div>
         </div>
     </div>
+    <!-- Modal PhotoViewer dialog-->
+    <div id="dialogue-prettyPhoto" title="Errors" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modalContainer">
+            <div class="modal-dialog">
+                <div class="modal-content modal-content-pic">
+                    <div class="modal-body prityPhotoContainer">
+                        <div id="myCarousel" class="carousel slide">
+                            <!-- Carousel items -->
+                            <div class="carousel-inner prityPhotoImageContainer">
+                                <div class="active item">
+                                    <img src="/images/disney/preetyphoto/01.png" alt="..." />
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/02.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/03.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/04.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/05.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/06.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/07.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/08.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/09.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/10.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/11.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="/images/disney/preetyphoto/12.png" alt="...">
+                                </div>
+                            </div>
+                            <!-- Carousel nav -->
+                            <a class="carousel-control carousel-control-pic left" href="#myCarousel" data-slide="prev">
+                                <img src="/images/sprite_prev.png" />
+                            </a>
+                            <a class="carousel-control carousel-control-pic right" href="#myCarousel" data-slide="next">
+                                <img src="/images/sprite_next.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="preetyphotoControl">
+                            <ul>
+                                <li id="playButton">
+                                    <img src="/images/play.png">
+                                </li>
+                                <li id="pauseButton">
+                                    <img src="/images/pause.png">
+                                </li>
+                                <li id="btnPrev" class="adjH">
+                                    <a href="#myCarousel" data-slide="prev">
+                                        <img src="/images/prev_sm.png">
+                                    </a>
+                                </li>
+                                <li id="btnNext" class="adjH">
+                                    <a href="#myCarousel" data-slide="next">
+                                        <img src="/images/next_sm.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="num"></div>
+                                </li>
 
+                                <li>
+                                    <img src="/images/close.png" data-dismiss="modal" aria-hidden="true">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-dialog -->
 }
 <script>
     $(document).ready(function () {
@@ -151,21 +239,25 @@
 
     <img src="/Images/disney/4for99Calendar/left_01.jpg" class="responsiveImg leftImg1">
     <img src="/Images/disney/4for99Calendar/left_02.jpg" class="responsiveImg">
-    <a href="preetyphoto/images/01.png" rel="lightbox[group]">
+    <a href="#dialogue-prettyPhoto" role="button" data-toggle="modal">
         <img src="/Images/disney/4for99Calendar/left_03.jpg" class="responsiveImg marginTop20">
     </a>
-    <a href="/Images/disney/preetyphoto/02.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/03.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/04.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/05.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/06.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/07.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/08.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/09.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/10.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/11.png" rel="lightbox[group]"></a>
-    <a href="/Images/disney/preetyphoto/12.png" rel="lightbox[group]"></a>
+
+    <!-- <a href="/Images/disney/preetyphoto/02.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/03.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/04.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/05.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/06.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/07.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/08.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/09.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/10.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/11.png" rel="lightbox[group]"></a>
+     <a href="/Images/disney/preetyphoto/12.png" rel="lightbox[group]"></a>-->
+
     <img src="/Images/disney/4for99Calendar/leftBottom.png" class="leftBotImg">
+
+
 }
 
 @section footerSection {
