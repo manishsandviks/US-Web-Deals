@@ -401,7 +401,7 @@ namespace deals.earlymoments.com.Models
 
         public string ResponsiveConfirmation_GiftingProducts(OrderVariables oVars, bool option = false, string template = "")
         {
-            string start_product_list = "<table id='tblCart' class='table table-striped bold'><tr><td>Item</td><td>Price</td></tr>";
+            string start_product_list = "<table id='tblCart' class='table table-striped bold'><tr><td>Item</td><td class='text-right'>Price</td></tr>";
             string prod_list = "<tr><td class='paddingBT3'>!_product_!</td><td class='text-right'>!_cost_!</td></tr>";
             string space_column = "<tr height='5px'><td colspan='2'></td></tr>";
             string dotted_line = "<tr><td colspan='2'><div style='border-bottom: dashed thin #999999; padding-top: 10px; margin-bottom: 10px;clear: both;'></div></td></tr><tr><td colspan='2'></td></tr><tr>";

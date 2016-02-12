@@ -263,7 +263,9 @@ namespace deals.earlymoments.com.Controllers
                             ViewBag.Cart = cartId;
                             ViewBag.Total = total;
                             ViewBag.ConfPgTAC = conf_pg_tac;
-
+                            // billing.SecurityCaptch = "";
+                            // ViewData.Model = billing;
+                            //return View(ViewData.Model);
                             return View();
                         }
 

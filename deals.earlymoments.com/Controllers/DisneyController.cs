@@ -641,7 +641,7 @@ namespace deals.earlymoments.com.Controllers
                             ViewBag.Cart = cartId;
                             ViewBag.Total = total;
                             ViewBag.ConfPgTAC = conf_pg_tac;
-
+                            ViewBag.ChoiceBook = oVariables.shopping_cart_items;
                             return View();
                         }
 
@@ -694,6 +694,7 @@ namespace deals.earlymoments.com.Controllers
                                 ViewBag.Cart = cartId;
                                 ViewBag.Total = total;
                                 ViewBag.ConfPgTAC = conf_pg_tac;
+                                ViewBag.ChoiceBook = oVariables.shopping_cart_items;
                             }
                         }
                         else
@@ -720,7 +721,6 @@ namespace deals.earlymoments.com.Controllers
                 oVariables = null;
                 oProcess = null;
             }
-
         }
 
         #endregion //Four_for_99_Calendar

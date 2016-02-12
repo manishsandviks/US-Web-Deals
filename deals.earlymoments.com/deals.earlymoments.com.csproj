@@ -294,6 +294,7 @@
     <Content Include="Images\Bye\Payment_Five_95\step3.jpg" />
     <Content Include="Images\Bye\Payment_Five_95\subhead_lp2.gif" />
     <Content Include="Images\cc.png" />
+    <Content Include="Images\close.png" />
     <Content Include="Images\cvv.jpg" />
     <Content Include="Images\disney\4for99Calendar\bb.png" />
     <Content Include="Images\disney\4for99Calendar\bonus-banner.jpg" />
@@ -402,6 +403,10 @@
     <Content Include="Images\elmo\Payment399\mobileHeader_LP1.png" />
     <Content Include="Images\fgcntoysrus500gc_274_hibrand.gif" />
     <Content Include="Images\key.jpg" />
+    <Content Include="Images\next_sm.png" />
+    <Content Include="Images\pause.png" />
+    <Content Include="Images\play.png" />
+    <Content Include="Images\prev_sm.png" />
     <Content Include="Images\seuss\4for1Calendar\bb.png" />
     <Content Include="Images\seuss\4for1Calendar\button_1.png" />
     <Content Include="Images\seuss\4for1Calendar\dot_pattern.gif" />
