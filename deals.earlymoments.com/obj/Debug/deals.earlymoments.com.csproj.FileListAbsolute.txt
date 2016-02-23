@@ -64,6 +64,7 @@ E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Antlr3.Runtime.
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json.xml
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.dll
 E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.pdb
+<<<<<<< 14ba94130c3fdbdc2e98580d73d54db43f5c4b1d
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\deals.earlymoments.com.dll.config
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\deals.earlymoments.com.dll
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\deals.earlymoments.com.pdb
@@ -104,3 +105,6 @@ D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\bin\Newtonsoft.Json
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.csprojResolveAssemblyReference.cache
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.dll
 D:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.pdb
+=======
+E:\Github\US-Web-EMDeals\US-Web-Deals\deals.earlymoments.com\obj\Debug\deals.earlymoments.com.csprojResolveAssemblyReference.cache
+>>>>>>> Add: Added new area Max and css and js files

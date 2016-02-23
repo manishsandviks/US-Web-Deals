@@ -130,6 +130,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Max\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Max\MaxAreaRegistration.cs" />
     <Compile Include="Controllers\DisneyController.cs" />
     <Compile Include="Controllers\EinsteinController.cs" />
     <Compile Include="Controllers\ElmoController.cs" />
@@ -1376,6 +1378,7 @@
     <Content Include="fonts\ArialRoundedMTBoldBold.ttf" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff2" />
+    <Content Include="Areas\Max\Views\web.config" />
     <None Include="Properties\PublishProfiles\deal.earlymoments.com.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1547,6 +1550,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Max\Models\" />
+    <Folder Include="Areas\Max\Views\Home\" />
+    <Folder Include="Areas\Max\Views\Shared\" />
     <Folder Include="Content\themes\disney\Payment4for99\" />
     <Folder Include="Images\disney\Payment4for99\" />
     <Folder Include="Script\disney\Index\" />
