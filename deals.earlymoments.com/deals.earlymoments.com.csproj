@@ -148,6 +148,19 @@
     <Compile Include="Utilities\ViewContextExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Max\Content\bootstrap.min.css" />
+    <Content Include="Areas\Max\Content\common.css" />
+    <Content Include="Areas\Max\Content\font-awesome.css" />
+    <Content Include="Areas\Max\Content\jquery-ui.css" />
+    <Content Include="Areas\Max\Content\style.css" />
+    <Content Include="Areas\Max\Script\bootstrap.min.js" />
+    <Content Include="Areas\Max\Script\enquire.min.js" />
+    <Content Include="Areas\Max\Script\jquery-ui.js" />
+    <Content Include="Areas\Max\Script\jquery.1.11.3.min.js" />
+    <Content Include="Areas\Max\Script\jquery.prettyPhoto.js" />
+    <Content Include="Areas\Max\Script\Payment-Validation.js" />
+    <Content Include="Areas\Max\Script\Shopping-Validation.js" />
+    <Content Include="Areas\Max\Script\Validation.js" />
     <Content Include="Assets\emails\cokerewards.htm" />
     <Content Include="Assets\emails\ebk_optout.htm" />
     <Content Include="Assets\emails\ebk_optout.txt" />
@@ -1379,6 +1392,8 @@
     <Content Include="fonts\ArialRoundedMTBoldBold.woff" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff2" />
     <Content Include="Areas\Max\Views\web.config" />
+    <Content Include="Areas\Max\Views\Shared\_LayoutMax.cshtml" />
+    <Content Include="Areas\Max\Views\Home\offers.cshtml" />
     <None Include="Properties\PublishProfiles\deal.earlymoments.com.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1551,8 +1566,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Max\Models\" />
-    <Folder Include="Areas\Max\Views\Home\" />
-    <Folder Include="Areas\Max\Views\Shared\" />
     <Folder Include="Content\themes\disney\Payment4for99\" />
     <Folder Include="Images\disney\Payment4for99\" />
     <Folder Include="Script\disney\Index\" />
