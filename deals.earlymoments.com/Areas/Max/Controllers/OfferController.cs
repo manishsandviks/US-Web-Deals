@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace deals.earlymoments.com.Areas.Max.Controllers
 {
-    public class HomeController : Controller
+    public class OfferController : Controller
     {
         //
         // GET: /Max/Home/
