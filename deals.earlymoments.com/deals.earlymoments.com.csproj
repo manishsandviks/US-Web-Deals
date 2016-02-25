@@ -257,10 +257,14 @@
     <Content Include="Content\themes\elmo\common.css" />
     <Content Include="Content\themes\elmo\Payment399\custom.css" />
     <Content Include="Content\themes\elmo\Payment399\media.css" />
+    <Content Include="Content\themes\seuss\4for1winter\custom.css" />
+    <Content Include="Content\themes\seuss\4for1winter\media.css" />
     <Content Include="Content\themes\seuss\4for1Calendar\custom.css" />
     <Content Include="Content\themes\seuss\4for1Calendar\media.css" />
     <Content Include="Content\themes\seuss\4for1\custom.css" />
     <Content Include="Content\themes\seuss\4for1\media.css" />
+    <Content Include="Content\themes\seuss\payment4for1winter\custom.css" />
+    <Content Include="Content\themes\seuss\payment4for1winter\media.css" />
     <Content Include="Content\themes\seuss\Payment4for1Calendar\custom.css" />
     <Content Include="Content\themes\seuss\Payment4for1Calendar\media.css" />
     <Content Include="Content\themes\seuss\Payment4for99Calendar1\custom.css" />
@@ -422,6 +426,18 @@
     <Content Include="Images\pause.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\prev_sm.png" />
+    <Content Include="Images\seuss\4for1winter\bb.png" />
+    <Content Include="Images\seuss\4for1winter\button_1.png" />
+    <Content Include="Images\seuss\4for1winter\leftBottom.png" />
+    <Content Include="Images\seuss\4for1winter\left_01.jpg" />
+    <Content Include="Images\seuss\4for1winter\left_02.jpg" />
+    <Content Include="Images\seuss\4for1winter\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for1winter\right_top1.png" />
+    <Content Include="Images\seuss\4for1winter\springformbkg.gif" />
+    <Content Include="Images\seuss\4for1winter\step1.png" />
+    <Content Include="Images\seuss\4for1winter\step1Mob.png" />
+    <Content Include="Images\seuss\4for1winter\step2.png" />
+    <Content Include="Images\seuss\4for1winter\top.gif" />
     <Content Include="Images\seuss\4for1Calendar\bb.png" />
     <Content Include="Images\seuss\4for1Calendar\button_1.png" />
     <Content Include="Images\seuss\4for1Calendar\dot_pattern.gif" />
@@ -437,6 +453,22 @@
     <Content Include="Images\seuss\4for99Calendar1\formBg - Copy.jpg" />
     <Content Include="Images\seuss\4for99Calendar1\top - Copy.gif" />
     <Content Include="Images\seuss\4for99Calendar1\top.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\bb.png" />
+    <Content Include="Images\seuss\payment4for1winter\button_2.png" />
+    <Content Include="Images\seuss\payment4for1winter\dot_pattern.gif" />
+    <Content Include="Images\seuss\payment4for1winter\download.png" />
+    <Content Include="Images\seuss\payment4for1winter\formBg.gif" />
+    <Content Include="Images\seuss\payment4for1winter\formBg.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\formBg1.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\header.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\key.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\leftBottom.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\left_01.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\left_02.jpg" />
+    <Content Include="Images\seuss\payment4for1winter\mobile_form_top.png" />
+    <Content Include="Images\seuss\payment4for1winter\mobile_headerfall.png" />
+    <Content Include="Images\seuss\payment4for1winter\right_top1.png" />
+    <Content Include="Images\seuss\payment4for1winter\step3.png" />
     <Content Include="Images\seuss\Payment4for1Calendar\bb.png" />
     <Content Include="Images\seuss\Payment4for1Calendar\button_2.png" />
     <Content Include="Images\seuss\Payment4for1Calendar\cc.png" />
@@ -1411,6 +1443,8 @@
     <Content Include="Script\enquire.min.js" />
     <Content Include="Script\jquery-ui.js" />
     <Content Include="Script\jquery.1.11.3.min.js" />
+    <Content Include="Script\seuss\4for1winter\main.js" />
+    <Content Include="Script\seuss\payment4for1winter\main.js" />
     <Content Include="Script\seuss\Payment4for1Calendar\main.js" />
     <Content Include="Script\seuss\4for1Calendar\main.js" />
     <Content Include="Script\seuss\4for1\main.js" />
@@ -1562,6 +1596,8 @@
     <Content Include="Views\Disney\Four_for_99.cshtml" />
     <Content Include="Views\Einstein\Five_95.cshtml" />
     <Content Include="Views\Einstein\Payment_595.cshtml" />
+    <Content Include="Views\Seuss\four_for_1_winter.cshtml" />
+    <Content Include="Views\Seuss\payment4_for_1_winter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
