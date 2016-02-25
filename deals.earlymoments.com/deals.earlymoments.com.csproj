@@ -130,7 +130,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Max\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Max\Controllers\OfferController.cs" />
     <Compile Include="Areas\Max\MaxAreaRegistration.cs" />
     <Compile Include="Controllers\DisneyController.cs" />
     <Compile Include="Controllers\EinsteinController.cs" />
@@ -257,12 +257,16 @@
     <Content Include="Content\themes\elmo\common.css" />
     <Content Include="Content\themes\elmo\Payment399\custom.css" />
     <Content Include="Content\themes\elmo\Payment399\media.css" />
+    <Content Include="Content\themes\seuss\4for1spring\custom.css" />
+    <Content Include="Content\themes\seuss\4for1spring\media.css" />
     <Content Include="Content\themes\seuss\4for1winter\custom.css" />
     <Content Include="Content\themes\seuss\4for1winter\media.css" />
     <Content Include="Content\themes\seuss\4for1Calendar\custom.css" />
     <Content Include="Content\themes\seuss\4for1Calendar\media.css" />
     <Content Include="Content\themes\seuss\4for1\custom.css" />
     <Content Include="Content\themes\seuss\4for1\media.css" />
+    <Content Include="Content\themes\seuss\payment4for1spring\custom.css" />
+    <Content Include="Content\themes\seuss\payment4for1spring\media.css" />
     <Content Include="Content\themes\seuss\payment4for1winter\custom.css" />
     <Content Include="Content\themes\seuss\payment4for1winter\media.css" />
     <Content Include="Content\themes\seuss\Payment4for1Calendar\custom.css" />
@@ -426,6 +430,18 @@
     <Content Include="Images\pause.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\prev_sm.png" />
+    <Content Include="Images\seuss\4for1spring\bb.png" />
+    <Content Include="Images\seuss\4for1spring\button_1.png" />
+    <Content Include="Images\seuss\4for1spring\leftBottom.png" />
+    <Content Include="Images\seuss\4for1spring\left_01.jpg" />
+    <Content Include="Images\seuss\4for1spring\left_02.jpg" />
+    <Content Include="Images\seuss\4for1spring\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for1spring\right_top1.png" />
+    <Content Include="Images\seuss\4for1spring\springformbkg.gif" />
+    <Content Include="Images\seuss\4for1spring\step1.png" />
+    <Content Include="Images\seuss\4for1spring\step1Mob.png" />
+    <Content Include="Images\seuss\4for1spring\step2.png" />
+    <Content Include="Images\seuss\4for1spring\top.gif" />
     <Content Include="Images\seuss\4for1winter\bb.png" />
     <Content Include="Images\seuss\4for1winter\button_1.png" />
     <Content Include="Images\seuss\4for1winter\leftBottom.png" />
@@ -453,6 +469,22 @@
     <Content Include="Images\seuss\4for99Calendar1\formBg - Copy.jpg" />
     <Content Include="Images\seuss\4for99Calendar1\top - Copy.gif" />
     <Content Include="Images\seuss\4for99Calendar1\top.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\bb.png" />
+    <Content Include="Images\seuss\payment4for1spring\button_2.png" />
+    <Content Include="Images\seuss\payment4for1spring\dot_pattern.gif" />
+    <Content Include="Images\seuss\payment4for1spring\download.png" />
+    <Content Include="Images\seuss\payment4for1spring\formBg.gif" />
+    <Content Include="Images\seuss\payment4for1spring\formBg.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\formBg1.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\header.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\key.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\leftBottom.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\left_01.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\left_02.jpg" />
+    <Content Include="Images\seuss\payment4for1spring\mobile_form_top.png" />
+    <Content Include="Images\seuss\payment4for1spring\mobile_headerfall.png" />
+    <Content Include="Images\seuss\payment4for1spring\right_top1.png" />
+    <Content Include="Images\seuss\payment4for1spring\step3.png" />
     <Content Include="Images\seuss\payment4for1winter\bb.png" />
     <Content Include="Images\seuss\payment4for1winter\button_2.png" />
     <Content Include="Images\seuss\payment4for1winter\dot_pattern.gif" />
@@ -1443,7 +1475,9 @@
     <Content Include="Script\enquire.min.js" />
     <Content Include="Script\jquery-ui.js" />
     <Content Include="Script\jquery.1.11.3.min.js" />
+    <Content Include="Script\seuss\4for1spring\main.js" />
     <Content Include="Script\seuss\4for1winter\main.js" />
+    <Content Include="Script\seuss\payment4for1spring\main.js" />
     <Content Include="Script\seuss\payment4for1winter\main.js" />
     <Content Include="Script\seuss\Payment4for1Calendar\main.js" />
     <Content Include="Script\seuss\4for1Calendar\main.js" />
@@ -1598,6 +1632,7 @@
     <Content Include="Views\Einstein\Payment_595.cshtml" />
     <Content Include="Views\Seuss\four_for_1_winter.cshtml" />
     <Content Include="Views\Seuss\payment4_for_1_winter.cshtml" />
+    <Content Include="Views\Seuss\four_for_1_spring.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
