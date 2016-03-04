@@ -1,0 +1,203 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(BurbankBigCondensedBold.css);
+@import url(font-awesome.css);
+@import url(common.css);
+@import url(media.css);
+/*@import url(booksGrid.css); */
+@import url(hover.css);
+@import url(animate.min.css);
+
+*{margin:0; padding:0;}
+
+body{background-color:#fff; overflow-x:hidden; font-family:"Helvetica", sans-serif !important; line-height:normal !important;}
+
+/*.navbar{min-height:60px; border-radius:0; border:none; background-color:#08AEE0; background-image:none; margin-bottom:0;} */
+.navbar{min-height:60px; border-radius:0; border:none; background-color:#c3c3c3; background-image:none; margin-bottom:0;}
+.collapseMenu{float:left; margin-left:15px; margin-top:13px;}
+.cartBox{margin-right:0;}
+.navbar-brand{float:none; text-align:center; padding:5px 0; height:60px;}
+.navbar-brand{float:none; text-align:center; padding:5px 0; height:60px;}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{background-color:transparent !important;}
+.navbar-default .navbar-toggle{border:none;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background-color:transparent;}
+.cartBox{margin-top:6px;}
+.navbar-default .navbar-toggle .icon-bar{background-color: #FFF;}
+.navbar-default .navbar-nav > li > a{color: #fff;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{background-color: #f2f2f2; color: #000;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background-color:#A2E8F0;}
+
+.topbarCart{position:absolute; top:17px; right:10px; font-size:12px;}
+.topbarCart i{margin:0 15px 0 0; font-size:24px; color:#fff;}
+#cartEdit{font-size:10px; line-height:12px;}
+#overlay{background-color:rgba(0,0,0,0.9); position:absolute; text-align:center; z-index:9999; width:100%; height:100%;}
+#overlay img{top:50%; left:50%; position:absolute;}
+.headerContainer, .customContainer{max-width:1060px;}
+
+  
+#headerImgBig, .footerImg{width:100%; border:none;}
+
+.bodyLeft{background-color:#fff;}
+
+.sameHeightContainer{overflow: hidden;}
+.highColumn{padding-bottom: 10000px; margin-bottom: -10000px;}
+
+.stepnumber{list-style-type:none; font-family: 'BurbankBigCondensedBold'; margin-bottom:0; margin-top:9px;}
+.stepnumber li{color:#bfc5d1; display:inline; text-align:left;}
+
+.stepnumber h2{font-size:1.250em; line-height: 130%; margin-top:0; margin-bottom:0; float:left; padding-right:28px;}
+.stepnumber h2 span{font-size:1.6em;}
+.stepnumber li p{
+	float:left;
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: red;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	padding:6px;	
+	font-size: 35px;
+	text-align: center;
+	margin-right:5px;
+}
+
+.booksPara{background-color: rgba(255,255,255,0.6); /* opacity: .5; border: 5px solid #62E714;border-radius: 20px 0 20px 0;*/}
+.booksPara img{border-radius: 20px 0 20px 0;}
+
+#divInterstetialDisplay .btn-default{background-color:#F72D17; color:#fff; border:none; border-radius:20px; font-family: 'BurbankBigCondensedBold'; text-transform:uppercase; font-size:20px; letter-spacing:1px;}
+.hvr-rectangle-out:before{border-radius:20px;}
+
+.colLeftHeader, .colRightHeader{min-height:60px;}
+.colRight{background:#ccd1df;}
+
+.colRightHeader h2{margin:0; font-family: 'BurbankBigCondensedBold' !important; padding-top:16px; color:#fff;text-transform:uppercase; text-align:center;}
+.removeBG{background:#a8afc4;}
+#divRemoveNote{padding:7px 0;}
+#divRemoveNote i{margin:0 8px;}
+
+.shoppingOrderBox{padding:10px;}
+.fieldset{background:#fff; padding:0; margin:10px 0;}
+.summary{display: block; padding: 0;  width: auto; font-size: 15px; line-height: 0px; font-weight: bold; color: #333333; border: 0;}
+.cart-txt{font-size: 13px;}
+.cartTitle{font-family: 'BurbankBigCondensedBold'; margin-bottom:0;}
+.border-dashed{border-bottom: dashed thin #999999; margin-bottom: 0px; border-top: dashed thin #999999;}
+#divViewOrderSummary{background:#c3c3c3; color:#000; padding:5px 10px; cursor:pointer; font-size:12px;}
+#RightColumnContent_cart table tr td{padding:3px 0;}
+
+/*style start for click to view stepOrderSummeryBox*/
+.stepOrderSummeryBox h2{margin-top:10px;}
+.stepOrderSummeryBox .fieldset{background:#d9f1fc; margin-top:0;}
+.stepOrderSummeryBox fieldset, .stepAgreementBox fieldset{border:1px solid #c0c0c0; padding:5px;}
+.stepOrderSummeryBox .summary{display: block; padding: 0; width: auto; font-size: 15px; line-height: 0px; font-weight: bold; color: #333333; border: 0;}
+.stepOrderSummeryBox table tr td{padding:3px 0;}
+/*style end for click to view stepOrderSummeryBox*/
+
+#divViewTermsAndConditions, #divViewOrderSummary, #divViewTermsAndConditionsM, #divViewOrderSummaryM{background:#c3c3c3; color:#000; padding:3px 5px; font-size:10px; cursor:pointer; margin-top:5px; text-align:center;}
+
+/*style start for click to view stepAgreementBox*/
+.fieldset-membership{background-color:#fff;}
+.stepAgreementBox legend{display: block; padding: 0; width: auto; font-size: 15px; font-weight: bold; color: #333333; border: 0; margin-bottom:5px;}
+.stepAgreementBox .scroll{min-height:80px; overflow: auto; font-size: 11px; line-height: 13px; margin-top: 5px; padding:0 10px 0 7px;}
+/*style end for click to view stepAgreementBox*/
+
+/*style start for click on radio to open form panel*/
+.controllForm .form-group{margin-bottom:10px;}
+.controllForm .form-group label{font-weight:normal; margin-bottom:1px; font-size:12px;}
+.controllForm .form-group input, .controllForm .form-group select{height:30px;}
+.controllForm p{line-height:15px; font-size:80%;}
+
+#divshowBillInfo h3{font-family: 'BurbankBigCondensedBold'; text-transform:uppercase; color:#fff; background-color:#F9A61A; padding:8px 10px 0 10px; margin:0 0 10px 0;}
+
+.trust ul{list-style-type:none;}
+.trust ul li{display:inline-block;}
+
+.formFieldHalf{width:70%;}
+
+.confirmation h2{font-family: 'BurbankBigCondensedBold'; margin:0; color:#fff;}
+.confirmation .panel-heading{background-color:#2474B6;}
+.confirmation .panel-body h4{font-size:14px; line-height:19px;}
+.confirmation .panel-default{margin-bottom:0;}
+
+.modal-footer-promo ul li {
+  display: inline;
+  padding-right: 20px;
+}
+.modal-footer-promo {
+  text-align: center !important;
+  padding: 6px 15px 0px !important;
+}
+.modal-footer-promo ul li a {
+  color: #000;
+}
+.modal-body-promo h2, .modal-body-promo h4 {
+  color: #0078BC;
+   font-family: 'BurbankBigCondensedBold' !important;
+}
+.modal-error h4{color:#ff0000;}
+
+.cursor{cursor:pointer;}
+.custom-border-top{border-top: 1px solid #CCD1DF;}
+.custom-border-bottom{border-bottom: 1px solid #CCD1DF;}
+.paddingTop10{padding-top:10px;}
+
+#divShipWaiver, #divShipWaiverMoreBook
+{
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: -25%;
+    left: 50%;
+    min-height: 70px;
+    margin-top: 150px;
+    -webkit-box-shadow: 10px 10px 20px -9px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 20px -9px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 20px -9px rgba(0,0,0,0.5);
+}
+
+#divShipWaiver p, #divShipWaiverMoreBook p
+{
+    padding-top: 4%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+  
+
+#trustBadges
+{
+    list-style-type: none; vertical-align:top;
+    text-align:center;
+}
+#trustBadges li
+{
+    display: inline-block;
+    margin-right: 5px;    
+}
+#trustBadges li:last-child
+{
+    margin-right: 0;
+}
+/* By Sumita */
+.large-expand{height:auto;}
+.collapse-class
+{
+    height: 0; /* 100px */
+    overflow: scroll;
+    text-align: justify;
+    padding: 0 10px;
+}
+/* For Elmo */
+.learnWithElmo ul{margin-left:40px;}
+.learnWithElmo ul li{margin-bottom:15px; line-height:20px; font-weight:700;}
+.addMarLR{margin-left:15px; margin-right:15px;}
+.learnText{line-height:20px; font-weight:700; margin-bottom:20px;}
+/* For Elmo */

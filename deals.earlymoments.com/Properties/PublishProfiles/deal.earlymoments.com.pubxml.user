@@ -9,6 +9,54 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>D:\Builds\EMDeals</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Max/Content/bootstrap.min.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Content/common.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Content/font-awesome.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Content/jquery-ui.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Content/style.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/bootstrap.min.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/enquire.min.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/jquery-ui.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/jquery.1.11.3.min.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/jquery.prettyPhoto.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/Payment-Validation.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/Shopping-Validation.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Script/Validation.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Views/Home/offers.cshtml">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Views/Shared/_LayoutMax.cshtml">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Areas/Max/Views/web.config">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Assets/emails/cokerewards.htm">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
@@ -82,7 +130,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="bin/deals.earlymoments.com.dll">
-      <publishTime>02/12/2016 17:00:48</publishTime>
+      <publishTime>03/04/2016 15:00:15</publishTime>
     </File>
     <File Include="bin/MaxMindCCFraud.dll">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -393,6 +441,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/seuss/4for1Calendar/media.css">
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
+    <File Include="Content/themes/seuss/4for1spring/custom.css">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for1spring/media.css">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for1winter/custom.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for1winter/media.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Content/themes/seuss/4for99/custom.css">
       <publishTime>01/12/2016 15:23:44</publishTime>
     </File>
@@ -404,6 +464,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/themes/seuss/4for99Calendar1/media.css">
       <publishTime>01/14/2016 18:27:30</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for99spring/custom.css">
+      <publishTime>03/04/2016 14:54:48</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for99spring/media.css">
+      <publishTime>03/04/2016 14:54:48</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for99winter/custom.css">
+      <publishTime>03/04/2016 14:54:48</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/4for99winter/media.css">
+      <publishTime>03/04/2016 14:54:48</publishTime>
     </File>
     <File Include="Content/themes/seuss/Payment4for1/custom.css">
       <publishTime>01/12/2016 18:47:10</publishTime>
@@ -417,6 +489,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/seuss/Payment4for1Calendar/media.css">
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
+    <File Include="Content/themes/seuss/payment4for1spring/custom.css">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for1spring/media.css">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for1winter/custom.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for1winter/media.css">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Content/themes/seuss/Payment4for99/custom.css">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
@@ -428,6 +512,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/themes/seuss/Payment4for99Calendar1/media.css">
       <publishTime>01/14/2016 18:27:30</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for99spring/custom.css">
+      <publishTime>03/04/2016 14:54:49</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for99spring/media.css">
+      <publishTime>03/04/2016 14:54:49</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for99winter/custom.css">
+      <publishTime>03/04/2016 14:54:49</publishTime>
+    </File>
+    <File Include="Content/themes/seuss/payment4for99winter/media.css">
+      <publishTime>03/04/2016 14:54:49</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -984,6 +1080,78 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/seuss/4for1Calendar/step2.png">
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
+    <File Include="Images/seuss/4for1spring/bb.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/button_1.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/leftBottom.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/left_01.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/left_02.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/mobile_headerfall.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/right_top1.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/springformbkg.gif">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/step1.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/step1Mob.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/step2.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1spring/top.gif">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/bb.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/button_1.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/leftBottom.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/left_01.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/left_02.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/mobile_headerfall.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/right_top1.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/springformbkg.gif">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/step1.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/step1Mob.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/step2.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/4for1winter/top.gif">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Images/seuss/4for99/arrow.png">
       <publishTime>01/12/2016 16:53:05</publishTime>
     </File>
@@ -1071,11 +1239,83 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/seuss/4for99Calendar1/ui-icons_454545_256x240.png">
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
+    <File Include="Images/seuss/4for99spring/bb.png">
+      <publishTime>03/04/2016 14:53:36</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/button_1.png">
+      <publishTime>03/04/2016 14:53:36</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/leftBottom.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/left_01.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/left_02.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/mobile_headerfall.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/right_top1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/springformbkg.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/step1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/step1Mob.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/step2.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99spring/top.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/bb.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/button_1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/leftBottom.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/left_01.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/left_02.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/mobile_headerfall.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/right_top1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/springformbkg.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/step1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/step1Mob.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/step2.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/4for99winter/top.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
     <File Include="Images/seuss/confirm_head.gif">
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="Images/seuss/confirm_header.gif">
-      <publishTime>01/21/2016 23:31:05</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Images/seuss/Payment4for1/bb.png">
       <publishTime>01/11/2016 23:12:55</publishTime>
@@ -1173,6 +1413,102 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/seuss/Payment4for1Calendar/step3.png">
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
+    <File Include="Images/seuss/payment4for1spring/bb.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/button_2.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/dot_pattern.gif">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/download.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/formBg.gif">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/formBg.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/formBg1.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/header.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/key.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/leftBottom.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/left_01.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/left_02.jpg">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/mobile_form_top.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/mobile_headerfall.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/right_top1.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1spring/step3.png">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/bb.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/button_2.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/dot_pattern.gif">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/download.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/formBg.gif">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/formBg.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/formBg1.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/header.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/key.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/leftBottom.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/left_01.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/left_02.jpg">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/mobile_form_top.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/mobile_headerfall.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/right_top1.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for1winter/step3.png">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Images/seuss/Payment4for99/bb.png">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
@@ -1265,6 +1601,102 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/seuss/Payment4for99Calendar1/step3.png">
       <publishTime>01/14/2016 18:27:30</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/bb.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/button_2.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/dot_pattern.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/download.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/formBg.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/formBg.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/formBg1.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/header.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/key.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/leftBottom.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/left_01.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/left_02.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/mobile_form_top.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/mobile_headerfall.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/right_top1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99spring/step3.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/bb.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/button_2.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/dot_pattern.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/download.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/formBg.gif">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/formBg.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/formBg1.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/header.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/key.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/leftBottom.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/left_01.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/left_02.jpg">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/mobile_form_top.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/mobile_headerfall.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/right_top1.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
+    </File>
+    <File Include="Images/seuss/payment4for99winter/step3.png">
+      <publishTime>03/04/2016 14:53:37</publishTime>
     </File>
     <File Include="Images/seuss/preetyphoto/01.png">
       <publishTime>01/14/2016 18:27:30</publishTime>
@@ -1444,10 +1876,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/babyeinsteinpayment/images/ui-icons_222222_256x240.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/babyeinsteinpayment/images/ui-icons_454545_256x240.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/babyeinsteinpayment/index.html">
       <publishTime>01/14/2016 18:27:30</publishTime>
@@ -1636,10 +2068,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 18:27:30</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/images/ui-icons_222222_256x240.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/images/ui-icons_454545_256x240.png">
-      <publishTime>01/14/2016 18:27:30</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Mockup/babyeinstein/index.html">
       <publishTime>01/14/2016 18:27:30</publishTime>
@@ -3427,7 +3859,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 18:27:31</publishTime>
     </File>
     <File Include="Mockup/drseuss/confirmation/images/confirm_head.gif">
-      <publishTime>01/14/2016 18:27:31</publishTime>
+      <publishTime>02/25/2016 20:33:45</publishTime>
     </File>
     <File Include="Mockup/drseuss/confirmation/images/fgcntoysrus500gc_274_hibrand.gif">
       <publishTime>01/14/2016 18:27:31</publishTime>
@@ -3813,11 +4245,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Script/seuss/4for1Calendar/main.js">
       <publishTime>02/12/2016 17:00:48</publishTime>
     </File>
+    <File Include="Script/seuss/4for1spring/main.js">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Script/seuss/4for1winter/main.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Script/seuss/4for99/main.js">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
     <File Include="Script/seuss/4for99Calendar1/main.js">
       <publishTime>02/12/2016 17:00:48</publishTime>
+    </File>
+    <File Include="Script/seuss/4for99spring/main.js">
+      <publishTime>03/04/2016 14:53:58</publishTime>
+    </File>
+    <File Include="Script/seuss/4for99winter/main.js">
+      <publishTime>03/04/2016 14:53:58</publishTime>
     </File>
     <File Include="Script/seuss/Payment4for1/main.js">
       <publishTime>01/12/2016 22:26:29</publishTime>
@@ -3825,11 +4269,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Script/seuss/Payment4for1Calendar/main.js">
       <publishTime>01/14/2016 18:27:31</publishTime>
     </File>
+    <File Include="Script/seuss/payment4for1spring/main.js">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Script/seuss/payment4for1winter/main.js">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Script/seuss/Payment4for99/main.js">
       <publishTime>01/12/2016 22:26:29</publishTime>
     </File>
     <File Include="Script/seuss/Payment4for99Calendar1/main.js">
       <publishTime>01/14/2016 18:27:31</publishTime>
+    </File>
+    <File Include="Script/seuss/payment4for99spring/main.js">
+      <publishTime>03/04/2016 14:53:58</publishTime>
+    </File>
+    <File Include="Script/seuss/payment4for99winter/main.js">
+      <publishTime>03/04/2016 14:53:58</publishTime>
     </File>
     <File Include="Script/Shopping-Validation.js">
       <publishTime>01/22/2016 23:09:57</publishTime>
@@ -3874,7 +4330,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 23:12:55</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>01/22/2016 23:09:57</publishTime>
+      <publishTime>03/04/2016 14:54:02</publishTime>
     </File>
     <File Include="Views/Disney/Four_for_99.cshtml">
       <publishTime>01/28/2016 17:31:09</publishTime>
@@ -3892,7 +4348,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2016 21:20:35</publishTime>
     </File>
     <File Include="Views/Einstein/Payment_595.cshtml">
-      <publishTime>02/22/2016 21:18:45</publishTime>
+      <publishTime>02/23/2016 14:20:28</publishTime>
     </File>
     <File Include="Views/Elmo/Payment_399.cshtml">
       <publishTime>02/12/2016 17:00:48</publishTime>
@@ -3924,11 +4380,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Seuss/Four_for_1_Calendar.cshtml">
       <publishTime>02/12/2016 17:00:48</publishTime>
     </File>
+    <File Include="Views/Seuss/four_for_1_spring.cshtml">
+      <publishTime>02/25/2016 22:05:37</publishTime>
+    </File>
+    <File Include="Views/Seuss/four_for_1_winter.cshtml">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Views/Seuss/Four_for_99.cshtml">
       <publishTime>01/22/2016 23:09:57</publishTime>
     </File>
     <File Include="Views/Seuss/Four_for_99_Calendar1.cshtml">
       <publishTime>02/12/2016 17:00:48</publishTime>
+    </File>
+    <File Include="Views/Seuss/four_for_99_spring.cshtml">
+      <publishTime>03/04/2016 14:59:32</publishTime>
+    </File>
+    <File Include="Views/Seuss/four_for_99_winter.cshtml">
+      <publishTime>03/04/2016 14:55:26</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_1.cshtml">
       <publishTime>02/12/2016 16:35:44</publishTime>
@@ -3936,11 +4404,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Seuss/Payment4_for_1Calendar.cshtml">
       <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
+    <File Include="Views/Seuss/payment4_for_1_winter.cshtml">
+      <publishTime>02/25/2016 18:55:03</publishTime>
+    </File>
     <File Include="Views/Seuss/Payment4_for_99.cshtml">
       <publishTime>02/08/2016 18:39:29</publishTime>
     </File>
     <File Include="Views/Seuss/Payment4_for_99Calendar1.cshtml">
       <publishTime>02/08/2016 18:39:29</publishTime>
+    </File>
+    <File Include="Views/Seuss/payment4_for_99_spring.cshtml">
+      <publishTime>03/04/2016 14:55:26</publishTime>
+    </File>
+    <File Include="Views/Seuss/payment4_for_99_winter.cshtml">
+      <publishTime>03/04/2016 14:55:26</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/11/2016 23:12:55</publishTime>
