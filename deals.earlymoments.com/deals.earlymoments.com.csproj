@@ -1755,6 +1755,7 @@
     <Content Include="Views\Seuss\payment4_for_99_winter.cshtml" />
     <Content Include="Views\Disney\four_for_99_bonus.cshtml" />
     <Content Include="Views\Disney\payment4_for_99_bonus.cshtml" />
+    <Content Include="Views\Seuss\payment4_for_1_spring.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

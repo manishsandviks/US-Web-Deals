@@ -51,7 +51,7 @@
 	
 	.formContainer{margin-top:10px;}
 	.formStep1{margin-left:6px; max-width:94%;margin-top:-12px;}
-	.formStep1Bg{background-color: #E33725; margin-top:-10px; border-right:3px solid #436125; border-top:3px solid #436125; padding-bottom:1px;}
+	.formStep1Bg{background-color: #35C2DE; margin-top:-10px; /*border-right:3px solid #BFD630;*/ border-top:2px solid #35C2DE; padding-bottom:1px;}
 	#headerImage{width:100%;}
 	.rightFormDiv{background-color:#FCF5AD; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px;}
 	.orderForm label{margin-bottom:0;}
@@ -63,7 +63,7 @@
 	.formHeader{background-color:#1A2944; text-align:center; -webkit-border-radius:20px 20px 0 0; -moz-border-radius:20px 20px 0 0; border-radius:20px 20px 0 0; -o-border-radius:20px 20px 0 0;}
 	.zip input, .aDb select{width:31% !important;}
 	.aDb select{padding:2px; display:inline !important;}
-	.borderedBox{border-left:3px solid #436125; border-right:3px solid #436125; border-bottom:3px solid #436125; margin-left:14px; margin-right:15px; margin-top:7px; padding-top:15px; padding-bottom:20px; -webkit-border-radius:0 0 20px 20px; -moz-border-radius:0 0 20px 20px; border-radius:0 0 20px 20px; -o-border-radius:0 0 20px 20px;}
+	.borderedBox{border-left:3px solid #BFD630; border-right:3px solid #BFD630; border-bottom:3px solid #BFD630; margin-left:14px; margin-right:15px; margin-top:2px; padding-top:15px; padding-bottom:20px; -webkit-border-radius:0 0 20px 20px; -moz-border-radius:0 0 20px 20px; border-radius:0 0 20px 20px; -o-border-radius:0 0 20px 20px;}
 	.formStep1{margin-top:-6px; margin-left:-5px;}
 	.formHeader{overflow:hidden;}
 	
@@ -86,7 +86,7 @@
 	/*.expDate select{width:40% !important;} */
 	.zip input, .aDb select{width:32% !important;}
 	.aDb select{padding:2px;}
-	.rightCol{background:url(/images/seuss/payment4for1winter/formBg.gif) no-repeat;}
+	.rightCol{background:url(/images/seuss/payment4for1spring/formBg.gif) no-repeat;}
 }
 
 
@@ -112,7 +112,7 @@
 	.formBgMain{position:relative; max-width:102%; left:-8px;}
 	.rightFormDiv{position:relative; top:-34px; left:-8px;}
 	.formStep1{margin-left:-7px; top:-22px; position:relative; max-width:97%;}
-	.orderForm{border-left:2px solid #436125; border-right:2px solid #436125; border-bottom:2px solid #436125; background-color:#FCF5AD; width:95%; margin-left:0;}
+	.orderForm{border-left:2px solid #BFD630; border-right:2px solid #BFD630; border-bottom:2px solid #BFD630; background-color:#F9FFA0; width:95%; margin-left:0;}
 	
 	/*payment*/
 	.orderSummery{margin-top:-188px; position:relative;}
