@@ -40,17 +40,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="as400request">
-      <HintPath>..\..\..\..\Sandviks Dll Library\as400request.dll</HintPath>
+      <HintPath>..\..\..\Library\US-Lib-OrderEngine\OrderEngine\bin\Debug\as400request.dll</HintPath>
     </Reference>
     <Reference Include="com.sandviks.sfmc">
-      <HintPath>..\..\..\..\Sandviks Dll Library\com.sandviks.sfmc.dll</HintPath>
+      <HintPath>..\..\..\Library\US-Lib-Salesforce\com.sandviks.sfmc\com.sandviks.sfmc\bin\Debug\com.sandviks.sfmc.dll</HintPath>
     </Reference>
     <Reference Include="dbConn">
-      <HintPath>..\..\..\..\Sandviks Dll Library\dbConn.dll</HintPath>
+      <HintPath>..\..\..\Library\US-Lib-OrderEngine\OrderEngine\bin\Debug\dbConn.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="OrderEngine">
-      <HintPath>..\..\..\US-Lib-OrderEngine\OrderEngine\bin\Debug\OrderEngine.dll</HintPath>
+      <HintPath>..\..\..\Library\US-Lib-OrderEngine\OrderEngine\bin\Debug\OrderEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -110,7 +110,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="webConn">
-      <HintPath>..\..\..\..\Sandviks Dll Library\webConn.dll</HintPath>
+      <HintPath>..\..\..\Lib.4.5\webConn\webConn\bin\Release\webConn.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -1702,7 +1702,9 @@
     <Content Include="tripwire\partials\thankyou.html" />
     <Content Include="tripwire\partials\upsell-offer1.html" />
     <Content Include="tripwire\partials\upsell-offer2.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
