@@ -51,7 +51,7 @@
 	
 	.formContainer{margin-top:10px;}
 	.formStep1{margin-left:6px; max-width:94%;margin-top:-12px;}
-	.formStep1Bg{background-color: #35C2DE; margin-top:-10px; /*border-right:3px solid #BFD630;*/ border-top:2px solid #35C2DE; padding-bottom:1px;}
+	.formStep1Bg{background-color: #35C2DE; margin-top:-10px; border-right:3px solid #BFD630; border-top:2px solid #35C2DE; padding-bottom:1px;}
 	#headerImage{width:100%;}
 	.rightFormDiv{background-color:#FCF5AD; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; -o-border-radius:20px;}
 	.orderForm label{margin-bottom:0;}
@@ -60,7 +60,7 @@
 	
 	/*payment*/
 	.rightFormContainer{padding-left:15px !important; padding-right:15px !important;}
-	.formHeader{background-color:#1A2944; text-align:center; -webkit-border-radius:20px 20px 0 0; -moz-border-radius:20px 20px 0 0; border-radius:20px 20px 0 0; -o-border-radius:20px 20px 0 0;}
+	.formHeader{background-color:#BED630; text-align:center; -webkit-border-radius:20px 20px 0 0; -moz-border-radius:20px 20px 0 0; border-radius:20px 20px 0 0; -o-border-radius:20px 20px 0 0;}
 	.zip input, .aDb select{width:31% !important;}
 	.aDb select{padding:2px; display:inline !important;}
 	.borderedBox{border-left:3px solid #BFD630; border-right:3px solid #BFD630; border-bottom:3px solid #BFD630; margin-left:14px; margin-right:15px; margin-top:2px; padding-top:15px; padding-bottom:20px; -webkit-border-radius:0 0 20px 20px; -moz-border-radius:0 0 20px 20px; border-radius:0 0 20px 20px; -o-border-radius:0 0 20px 20px;}

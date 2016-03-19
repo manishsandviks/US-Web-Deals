@@ -373,7 +373,7 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = newShippingAddress.ShippingCity;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
-            oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
+            //oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
 
             oVariables.ip_address = oComm.GetIPAddress();
             oVariables.phone = newShippingAddress.ShippingPhone;
