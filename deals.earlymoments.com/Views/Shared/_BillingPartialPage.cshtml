@@ -90,13 +90,13 @@
             @Html.TextBoxFor(model => model.CreditCardNumber, new { @id = "txtCreditCardNumber", @maxlength = "16", @class = "form-control ccnumeric" })
         </div>
     </div>
-    <div class="row formFieldGap">
+    <div class="row formFieldGap smallMarginTop10">
         <div class="col-md-4 col-sm-4 col-xs-4 formLabel">
             <label><span>*</span> Exp. Date</label>
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8 form-inline expDate">
             @Html.DropDownListFor(model => model.CardExpiryMonth, (IEnumerable<SelectListItem>)ViewData["MonthList"], "Month", new { @id = "optCardExpiryMonth" })
-            <span style="color:#000;">&nbsp; / &nbsp;</span>
+            @*<span style="color:#000;">&nbsp; / &nbsp;</span>*@
             @Html.DropDownListFor(model => model.CardExpiryYear, (IEnumerable<SelectListItem>)ViewData["YearList"], "Year", new { @id = "optCardExpiryYear" })
         </div>
     </div>
