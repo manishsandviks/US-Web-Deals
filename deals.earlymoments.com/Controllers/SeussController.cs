@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using deals.earlymoments.com.Models;
 using OrderEngine;
 using deals.earlymoments.com.Utilities;
+using deals.earlymoments.com.Services;
 
 namespace deals.earlymoments.com.Controllers
 {
@@ -1702,7 +1703,9 @@ namespace deals.earlymoments.com.Controllers
             {
                 Session["TrackingVariables"] = trackingcodes;
             }
-            return View();
+
+            OfferService offerService = new OfferService();
+            return View(offerService.GetDefaultCustomerInfo());
         }
 
         [PreserveQueryString]

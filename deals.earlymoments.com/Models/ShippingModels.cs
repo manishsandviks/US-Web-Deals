@@ -535,5 +535,4 @@ namespace deals.earlymoments.com.Models
             return oVariables;
         }
     }
-
 }

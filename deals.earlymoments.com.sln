@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deals.earlymoments.com", "deals.earlymoments.com\deals.earlymoments.com.csproj", "{95D4B4E1-FEA7-423E-B75F-56618CA0D4C7}"
 EndProject
