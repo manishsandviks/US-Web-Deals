@@ -6,6 +6,7 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using deals.earlymoments.com.Models;
 
 namespace deals.earlymoments.com.Utilities
 {
@@ -38,14 +39,24 @@ namespace deals.earlymoments.com.Utilities
             {
                 return;
             }
-
-            var query = HttpUtility.ParseQueryString(filterContext.HttpContext.Request.UrlReferrer.Query);
-            foreach (string key in query.Keys)
+            try
             {
-                if (!redirectResult.RouteValues.ContainsKey(key))
+                var query = HttpUtility.ParseQueryString(filterContext.HttpContext.Request.UrlReferrer.Query);
+                foreach (string key in query.Keys)
                 {
-                    redirectResult.RouteValues.Add(key, query[key]);
+                    if (!string.IsNullOrEmpty(key) && !redirectResult.RouteValues.ContainsKey(key))
+                    {
+                        redirectResult.RouteValues.Add(key, query[key]);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
+                CommonModels oCom = new CommonModels();
+                string s = "";// oCom.LogBrowserCapabilities(Request.Browser);
+                oCom.SendEmail(filterContext.HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
+                // return View();
             }
         }
     }
