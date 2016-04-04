@@ -1887,7 +1887,7 @@ namespace deals.earlymoments.com.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("four_for_1_spring", "Seuss");
+                    return RedirectToAction("four_for_1_spring", "seuss", routeValues: ViewContextExtensions.OptionalParamters(Request.QueryString));
                 }
             }
             catch (Exception ex)
@@ -2036,7 +2036,7 @@ namespace deals.earlymoments.com.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("four_for_1_spring", "Seuss");
+                    return RedirectToAction("four_for_1_spring", "seuss", routeValues: ViewContextExtensions.OptionalParamters(Request.QueryString));
                 }
 
             }

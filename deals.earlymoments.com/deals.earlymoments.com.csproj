@@ -49,8 +49,9 @@
       <HintPath>..\..\..\Sandviks Dll Library\dbConn.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="OrderEngine">
-      <HintPath>..\..\..\Sandviks Dll Library\OrderEngine\03-18-2016 updated\OrderEngine.dll</HintPath>
+    <Reference Include="OrderEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\OrderEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\UtilitiesModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\OfferService.cs" />
+    <Compile Include="Utilities\RegexLib.cs" />
     <Compile Include="Utilities\ViewContextExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

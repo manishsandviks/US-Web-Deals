@@ -13,6 +13,16 @@ namespace deals.earlymoments.com.Utilities
 
     public static class ViewContextExtensions
     {
+        public static RouteValueDictionary OptionalParamters(NameValueCollection c)
+        {
+            RouteValueDictionary r = new RouteValueDictionary();
+            foreach (string s in c.AllKeys)
+            {
+                r.Add(s, c[s]);
+            }
+            return r;
+        }
+
         public static RouteValueDictionary GetCombinedRouteValues(this ViewContext viewContext, object newRouteValues)
         {
             RouteValueDictionary combinedRouteValues = new RouteValueDictionary(viewContext.RouteData.Values);
