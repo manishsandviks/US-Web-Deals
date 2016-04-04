@@ -117,91 +117,127 @@ namespace deals.earlymoments.com.Controllers
 
         private void ProcessConfirmationEmail(OrderVariables oVariables, string ship_address, string bill_address, string shipall)
         {
-            StreamReader emailReader;
-            OrderProcess oProcess = new OrderEngine.OrderProcess();
-            CommonModels oComm = new CommonModels();
+            var oComm = new CommonModels();
             try
             {
-                if (oVariables.order_id > 0)
+                if (oVariables.order_id <= 0) return;
+                var oProcess = new OrderEngine.OrderProcess();
+
+
+                var tempBillFname = oVariables.bill_to_fname.Length > 0
+                    ? oVariables.bill_to_fname.ToUpper().Substring(0, 1) +
+                      oVariables.bill_to_fname.ToLower().Substring(1)
+                    : "";
+                string tempBillLname = oVariables.bill_to_lname.Length > 0
+                    ? oVariables.bill_to_lname.ToUpper().Substring(0, 1) +
+                      oVariables.bill_to_lname.ToLower().Substring(1)
+                    : "";
+
+                const string optoutText = "If you no longer want to receive this order, please click on the following link within 24 hours: <a href='http://www.earlymoments.com/optout'"
+                                           +
+                                           "target='_blank'>Cancel Order</a><br /><br />If you are unable to click on the above link, please copy and paste the below link"
+                                           + " in the browser: http://www.earlymoments.com/optout<br /><br />";
+
+                string projectSpecificText = "";
+
+                if (oVariables.project.In("DBU"))
                 {
-                    string emailHTML = "";
+                    projectSpecificText =
+                        "<br><div style='background-color: Yellow; padding: 15px;'><strong>Your companion ebooks are waiting for you!</strong><br />Your Disney ebooks are available now through the official Early Moments " +
+                        "<a href='https://services.earlymoments.com/ping/redirect.ashx?newUrl=https://itunes.apple.com/us/app/early-moments/id661335739?mt=8&source=7635&brand=e&data=!_OrderNumber_!&type=red'" +
+                        " target='_blank'>iPad app</a>. Download the FREE Early Moments app from <a href='https://services.earlymoments.com/ping/redirect.ashx?newUrl=https://itunes.apple.com/us/app/early-moments/id661335739?mt=8&source=7635&brand=e&data=!_OrderNumber_!&type=red' target='_blank'>iTunes</a>, and follow the instructions to login for the first time.<br />" +
+                        "<a href='https://services.earlymoments.com/ping/redirect.ashx?newUrl=https://itunes.apple.com/us/app/early-moments/id661335739?mt=8&source=7635&brand=e&data=!_OrderNumber_!&type=red' target='_blank'><img src='https://enrollments.earlymoments.com/assets/images/available_on_the_app_store.png' alt='Earlymoments.com' width='130' height='35' border='0' /></a>" +
+                        "<br /><br />If you are not using an iPad, <a href='https://services.earlymoments.com/ping/redirect.ashx?newUrl=https://ebooks.earlymoments.com/default.aspx?src=cemail&source=7636&brand=e&data=!_OrderNumber_!&type=red' target='_blank'>click here</a> and follow the instructions to use our eReader.<br /></div>";
 
+                    projectSpecificText = projectSpecificText.Replace("!_OrderNumber_!",
+                        Convert.ToString(oVariables.order_id));
+                }
 
-                    if (oVariables.email_template == "4")
+                const string nonOptputText = "Visit us online at <a href='http://www.earlymoments.com' target='_blank'>www.EarlyMoments.com</a><br />";
+
+                string tmpStr =
+                    "<tr bgcolor='#eeeeee'><td style='width: 293px;'><div style='color: #333333; float: left;'><strong>Item Description</strong></div></td><td width='60px' valign='middle' align='right'><div style='color: #333333; float: left; display:table-cell; vertical-align:middle;'><strong>Item Price</strong></div></td></tr>";
+                string space_column = "<tr height='5px''><td colspan='2'></td></tr>";
+
+                foreach (OrderEngine.ShippingVariables oShipVars in oVariables.ShipVars)
+                {
+                    if (oShipVars.selected)
                     {
-                        oProcess.ProcessConfirmationEmails(oVariables);
-                    }
-                    else
-                    {
-                        string tmp = oProcess.BuildConfirmationEmail(oVariables.email_template);
-
-                        if (tmp.Trim().Length == 0) { tmp = "general.htm"; }
-
-                        //string filePath = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "assets\\emails\\" + tmp;
-                        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Assets\emails\" + tmp);
-                        emailReader = new StreamReader(filePath);
-                        emailHTML = emailReader.ReadToEnd();
-                        if (emailHTML.Length > 0)
+                        if ((oComm.OfferItemsDisplayType(oShipVars.OfferVars) > 1) ||
+                            (oShipVars.OfferVars.Count == 1))
                         {
-                            string temp_bill_fname = oVariables.bill_to_fname.Length > 0 ? oVariables.bill_to_fname.ToUpper().Substring(0, 1) + oVariables.bill_to_fname.ToLower().Substring(1) : "";
-                            string temp_bill_lname = oVariables.bill_to_lname.Length > 0 ? oVariables.bill_to_lname.ToUpper().Substring(0, 1) + oVariables.bill_to_lname.ToLower().Substring(1) : "";
-
-                            string non_optput_text = "Visit us online at <a href='https://www.earlymoments.com' target='_blank'>www.earlymoments.com</a><br />";
-
-                            emailHTML = emailHTML.Replace("!_spl_optout_text_!", non_optput_text);
-
-                            emailHTML = emailHTML.Replace("!_BillName_!", temp_bill_fname);
-                            emailHTML = emailHTML.Replace("!_OrderNumber_!", Convert.ToString(oVariables.order_id));
-
-                            string tmp_str = "<tr bgcolor='#eeeeee'><td style='width: 293px;'><div style='color: #333333; float: left;'><strong>Item Description</strong></div></td><td width='60px' valign='middle' align='right'><div style='color: #333333; float: left; display:table-cell; vertical-align:middle;'><strong>Item Price</strong></div></td></tr>";
-                            string space_column = "<tr height='5px''><td colspan='2'></td></tr>";
-
-                            string prod = oVariables.proj_desc;
-
-                            if (Convert.ToBoolean(shipall)) { prod += "<br>(<span style='font-size:9px;'>Will be shipped all at once</span>)"; }
-
-                            tmp_str += "<tr><td style='width: 293px;' valign='top' align='left'>" + prod + "</td><td style='width: 60px;' valign='top' align='right'><div style='float: right; display:table-cell; vertical-align:middle;'>" + ((oVariables.ShipVars[0].unit_price == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oVariables.ShipVars[0].unit_price)) + "</div></td></tr>";
-
-                            string shipping = "<tr><td style='width: 293px;' valign='top' align='left'>Shipping and Handling</td><td style='width: 60px;' valign='top' align='right'><div style='float: right; display:table-cell; vertical-align:middle;'>!_ship_!</div></td></tr>";
-
-                            if (!oVariables.ship_item_listed) { tmp_str += shipping.Replace("!_ship_!", ((oVariables.total_sah == 0) ? "<strong>FREE</strong>" : String.Format("{0:c}", oVariables.total_sah))); }
-
-                            emailHTML = emailHTML.Replace("!_item_list_!", tmp_str);
-                            emailHTML = emailHTML.Replace("!_Discount_!", String.Format("{0:c}", oVariables.discount_amt));
-
-                            if (oVariables.discount_amt > 0)
-                                emailHTML = emailHTML.Replace("!_hidden_!", "block");
-                            else
-                                emailHTML = emailHTML.Replace("!_hidden_!", "none");
-
-                            emailHTML = emailHTML.Replace("!_Tax_!", String.Format("{0:c}", oVariables.tax_amt));
-                            emailHTML = emailHTML.Replace("!_GrandTotal_!", String.Format("{0:c}", oVariables.total_amt + oVariables.total_sah + oVariables.tax_amt));
-                            emailHTML = emailHTML.Replace("!_ShipAddress_!", ship_address);
-                            emailHTML = emailHTML.Replace("!_BillAddress_!", bill_address);
-                            emailHTML = emailHTML.Replace("!_conf_pg_tac_!", oVariables.PageVars[0].conf_pg_tac);
-                            emailHTML = emailHTML.Replace("!_reward_code_!", "");
-                            emailHTML = emailHTML.Replace("!_special_text_!", oVariables.special_text);
-                            emailHTML = emailHTML.Replace("!_email_!", oVariables.email);
-
-                            string pixel = "<iframe src='https://services.earlymoments.com/ping/p.ashx?source=7629&brand=e&data=" + oVariables.email.Trim() + "&type=ifr' height='1' width='1' frameborder='0'></iframe><br /><img src='https://services.earlymoments.com/ping/p.ashx?source=7629&brand=e&data=" + oVariables.email.Trim() + "&type=img' width='1' height='1' border='0' />";
-                            emailHTML = emailHTML.Replace("!_link_!", pixel);
-                            if ((oVariables.bill_to_fname.ToLower().Trim() == "xyz") && (oVariables.bill_to_lname.ToLower().Trim() == "xyz"))
-                            {
-                                oComm.SendEmail("\"Early Moments\"CustomerCare@Earlymoments.com", oVariables.email, "Confirmation of EarlyMoments Order # " + oVariables.order_id.ToString(), emailHTML, "");
-                            }
-                            else
-                            {
-                                try
-                                {
-                                    oProcess.LogConfirmationEmail(emailHTML, oVariables.cart_id.ToString());
-                                }
-                                catch (Exception ex)
-                                {
-                                    oComm.SendEmail("", "", "EM Confirmation Page: Important", "Error while logging Confirmation email to Database - error: " + ex.Message.ToString(), "");
-                                }
-                            }
+                            tmpStr = oShipVars.OfferVars.Aggregate(tmpStr,
+                                (current, oOffers) =>
+                                    current +
+                                    ("<tr><td style='width: 293px;' valign='top' align='left'>" +
+                                     oOffers.item_desc +
+                                     "</td><td style='width: 60px;' valign='top' align='right'><div style='float: right; display:table-cell; vertical-align:middle;'>" +
+                                     ((oOffers.item_cost == 0)
+                                         ? ((oComm.GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) ==
+                                             "")
+                                             ? String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity)
+                                             : "<strong>" +
+                                               oComm.GetPriceDisplayType(oOffers.oeprop, oOffers.item_cost) +
+                                               "</strong>")
+                                         : String.Format("{0:c}", oOffers.item_cost * oShipVars.quantity)) +
+                                     "</div></td></tr>"));
+                            tmpStr += space_column;
+                        }
+                        else
+                        {
+                            string tmpProdlist = oShipVars.OfferVars.Aggregate("",
+                                (current, oOffers) => current + (oOffers.item_desc + "<br />"));
+                            tmpStr += "<tr><td style='width: 293px;' valign='top' align='left'>" +
+                                       tmpProdlist +
+                                       "</td><td style='width: 60px;' valign='top' align='right'><div style='float: right; display:table-cell; vertical-align:middle;'>" +
+                                       ((oShipVars.unit_price == 0)
+                                           ? "<strong>FREE</strong>"
+                                           : String.Format("{0:c}", oShipVars.unit_price * oShipVars.quantity)) +
+                                       "</div></td></tr>";
+                            tmpStr += space_column;
                         }
                     }
+                }
+
+                const string shipping = "<tr><td style='width: 293px;' valign='top' align='left'>Shipping and Handling</td><td style='width: 60px;' valign='top' align='right'><div style='float: right; display:table-cell; vertical-align:middle;'>!_ship_!</div></td></tr>";
+
+                if (!oVariables.ship_item_listed)
+                {
+                    tmpStr += shipping.Replace("!_ship_!",
+                        ((oVariables.total_sah == 0)
+                            ? "<strong>FREE</strong>"
+                            : String.Format("{0:c}", oVariables.total_sah)));
+                }
+
+                var pixel =
+                    "<iframe src='https://services.earlymoments.com/ping/p.ashx?source=7629&brand=e&data=" +
+                    oVariables.email.Trim() +
+                    "&type=ifr' height='1' width='1' frameborder='0'></iframe><br /><img src='https://services.earlymoments.com/ping/p.ashx?source=7629&brand=e&data=" +
+                    oVariables.email.Trim() + "&type=img' width='1' height='1' border='0' />";
+
+                try
+                {
+                    oComm.ProcessConfirmationEmails(oVariables.email
+                        , tempBillFname
+                        , tempBillLname
+                        , oVariables.proj_desc
+                        , tmpStr
+                        , oVariables.special_text
+                        , (oVariables.opt_out == "Y" ? optoutText : nonOptputText)
+                        , bill_address
+                        , ship_address
+                        , oVariables.order_id.ToString()
+                        , pixel
+                        , String.Format("{0:c}", oVariables.tax_amt)
+                        ,
+                        String.Format("{0:c}", oVariables.total_amt + oVariables.total_sah + oVariables.tax_amt)
+                        , projectSpecificText);
+                }
+                catch (Exception ex)
+                {
+                    oComm.SendEmail("", "", "EM Confirmation Page: Important",
+                        "Error while logging Confirmation email to Database - error: " + ex.Message.ToString(),
+                        "");
                 }
             }
             catch (Exception ex)

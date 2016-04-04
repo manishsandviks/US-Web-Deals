@@ -130,7 +130,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/26/2015 14:44:30</publishTime>
     </File>
     <File Include="bin/deals.earlymoments.com.dll">
-      <publishTime>04/03/2016 00:21:51</publishTime>
+      <publishTime>04/04/2016 17:07:55</publishTime>
     </File>
     <File Include="bin/MaxMindCCFraud.dll">
       <publishTime>10/11/2009 22:06:24</publishTime>

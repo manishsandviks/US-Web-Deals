@@ -5,9 +5,7 @@ using System.Web;
 using System.Net.Mail;
 using System.Configuration;
 using OrderEngine;
-using System.IO;
-using System.Data;
-using System.Data.SqlClient;
+using com.sandviks.sfmc;
 
 namespace deals.earlymoments.com.Models
 {
@@ -27,6 +25,22 @@ namespace deals.earlymoments.com.Models
                 value = "0" + value;
             }
             return value;
+        }
+
+        public void ProcessConfirmationEmails(string email, string FirstName, string LastName, string Project, string ItemList, string SpecialText, string OptOutText, string BillingAddress, string ShippingAddress
+            , string OrderNumber, string SandviksTrackingLink, string Tax, string GrandTotal, string ProjectSpecificHtml)
+        {
+            CustomerConfirmations customerConfirmations = null;
+
+            try
+            {
+                customerConfirmations = new CustomerConfirmations();
+                customerConfirmations.TriggerConfirmationEmail(email, FirstName, LastName, Project, ItemList, SpecialText, OptOutText, BillingAddress, ShippingAddress, OrderNumber, SandviksTrackingLink, Tax, GrandTotal, ProjectSpecificHtml);
+            }
+            catch (Exception)
+            {
+                customerConfirmations = null;
+            }
         }
 
         public void SendEmail(string from, string to, string subject, string body, string smtp)
