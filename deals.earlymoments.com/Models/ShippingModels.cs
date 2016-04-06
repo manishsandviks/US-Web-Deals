@@ -76,7 +76,7 @@ namespace deals.earlymoments.com.Models
                 ChildDOB = null;
                 ChildGender = "";
                 ChildName = "";
-                isBonusSelected = false;
+                isBonusSelected = true;
             }
 
         }

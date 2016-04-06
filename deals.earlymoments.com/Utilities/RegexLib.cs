@@ -12,7 +12,7 @@ namespace deals.earlymoments.com.Utilities
             PatternState = @"^[a-zA-Z']{2}$";
             PatternCity = @"^[a-zA-Z.\s\-]*$";
             PatternEMail = @"^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$";
-            PatternAddress = @"[^{}<>!@%]";
+            PatternAddress = @"^[^{}<>!@%]+$";
             PatternName = @"^[a-zA-Z'.\s]{1,30}$";
         }
 
@@ -31,7 +31,8 @@ namespace deals.earlymoments.com.Utilities
 
             value = (string) value;
             var rgx = new Regex(pattern, options: RegexOptions.IgnoreCase);
-            return rgx.IsMatch(Convert.ToString(value)) ? (string) value : "";
+            var rtn = rgx.IsMatch(Convert.ToString(value)) ? (string) value : "";
+            return rgx.IsMatch(Convert.ToString(value)) ? (string)value : "";
         }
     }
 }
