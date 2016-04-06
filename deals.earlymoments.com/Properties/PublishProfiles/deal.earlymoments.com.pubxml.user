@@ -106,7 +106,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/17/2016 12:53:32</publishTime>
     </File>
     <File Include="Assets/emails/welcome.htm">
-      <publishTime>03/17/2016 12:53:32</publishTime>
+      <publishTime>04/06/2016 12:02:18</publishTime>
     </File>
     <File Include="Assets/StateList.xml">
       <publishTime>03/17/2016 12:02:03</publishTime>
@@ -130,7 +130,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/26/2015 14:44:30</publishTime>
     </File>
     <File Include="bin/deals.earlymoments.com.dll">
-      <publishTime>04/04/2016 17:07:55</publishTime>
+      <publishTime>04/06/2016 13:13:45</publishTime>
     </File>
     <File Include="bin/MaxMindCCFraud.dll">
       <publishTime>10/11/2009 22:06:24</publishTime>
@@ -4798,7 +4798,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/17/2016 12:02:04</publishTime>
     </File>
     <File Include="Views/Home/Confirmation.cshtml">
-      <publishTime>03/17/2016 12:53:39</publishTime>
+      <publishTime>04/06/2016 12:02:18</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>03/17/2016 12:02:04</publishTime>
