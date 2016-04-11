@@ -137,6 +137,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\SeussController.cs" />
+    <Compile Include="Controllers\TriwareController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1744,6 +1745,12 @@
     <Content Include="Views\Disney\four_for_99_bonus.cshtml" />
     <Content Include="Views\Disney\payment4_for_99_bonus.cshtml" />
     <Content Include="Views\Seuss\payment4_for_1_spring.cshtml" />
+    <Content Include="Views\Triware\home.cshtml" />
+    <Content Include="Views\Triware\shipping.cshtml" />
+    <Content Include="Views\Triware\upsell_offer1.cshtml" />
+    <Content Include="Views\Triware\upsell_offer2.cshtml" />
+    <Content Include="Views\Triware\thankyou.cshtml" />
+    <Content Include="Views\Shared\_LayoutTripware.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
