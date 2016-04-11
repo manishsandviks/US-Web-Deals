@@ -1,105 +1,108 @@
-﻿
+﻿@model deals.earlymoments.com.Models.ShippingModels.ShoppingOrder
 @{
     Layout = "~/Views/Shared/_LayoutTripware.cshtml";
 }
+<script src="~/Script/tripwire/main.js"></script>
 
-<div id="pageContainer" class="container-fluid">
-    <div id="pageContainerInner" class="pageContainerInner">
-        <div id="header" class="header row role-element leadstyle-container">
-            <div id="headerInner" class="headerInner">
-                <a id="logo" class="logo role-element leadstyle-image-link"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/disney-reading-small.png"></a>
-            </div>
-        </div>
-        <!--Header-->
-        <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
-            <div id="headlineInner" class="headlineInner inside" style="max-width:800px;">
-                <div id="subhead" class="subhead role-element leadstyle-text" style="display:none;">
-                    <div>
-                        Limited Time: <br>
-                        Get a Free Hardcover Copy of
-                    </div>
+@using (Html.BeginForm("shipping", "Triware", FormMethod.Post, new { @id = "form1" }))
+{
+    <div id="pageContainer" class="container-fluid">
+        <div id="pageContainerInner" class="pageContainerInner">
+            <div id="header" class="header row role-element leadstyle-container">
+                <div id="headerInner" class="headerInner">
+                    <a id="logo" class="logo role-element leadstyle-image-link"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/disney-reading-small.png"></a>
                 </div>
-                <div id="headline" class="headline role-element leadstyle-text">
-                    <div>
-                        Where Should We Ship Your Hardcover Book Today? <br>
-                        <span style="opacity:.7;">Just $5.95 shipping &amp; handling.</span>
-                    </div>
-                </div>
-
-
             </div>
-        </div>
-        <!--headlineWrap-->
-        <!--Section1-->
-
-        <div id="hero" class="hero row role-element leadstyle-container">
-            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="max-width:400px; display:none;">
-            <div class="sectionInner heroInner">
-
-                <div id="heroLeft" class="heroLeft role-element leadstyle-container">
-                    <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="width:95%;max-width:400px;">
-
-
-                    <div id="section2" class="section2 row role-element leadstyle-container">
-                        <div class="sectionInner">
-
-                            <div id="section2TestiWrap" class="section2TestiWrap">
-                                <div id="section2Testi1" class="testi role-element leadstyle-container" style="width:90%; margin-left: auto; margin-right:auto;">
-                                    <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial3.png" id="testiImg1" class="role-element leadstyle-image">
-                                    <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
-                                    <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
-                                </div>
-
-                            </div>
-                            <!--Section2 testi wrap-->
+            <!--Header-->
+            <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
+                <div id="headlineInner" class="headlineInner inside" style="max-width:800px;">
+                    <div id="subhead" class="subhead role-element leadstyle-text" style="display:none;">
+                        <div>
+                            Limited Time: <br>
+                            Get a Free Hardcover Copy of
                         </div>
-                        <!--Section Inner-->
+                    </div>
+                    <div id="headline" class="headline role-element leadstyle-text">
+                        <div>
+                            Where Should We Ship Your Hardcover Book Today? <br>
+                            <span style="opacity:.7;">Just $5.95 shipping &amp; handling.</span>
+                        </div>
                     </div>
 
 
                 </div>
+            </div>
+            <!--headlineWrap-->
+            <!--Section1-->
 
-                <div id="heroRight" class="heroRight role-element leadstyle-container">
-                    <div id="heroFormWrap" class="heroFormWrap">
-                        <div id="heroFormHeadline" class="heroFormheadline"></div>
-                        <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+            <div id="hero" class="hero row role-element leadstyle-container">
+                <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="max-width:400px; display:none;">
+                <div class="sectionInner heroInner">
 
-                            <ul class="nav nav-tabs orderform formTabHead">
-                                <li class="active" id="tab1"><a data-toggle="tab" href="#shipping">Shipping Info</a></li>
-                                <li id="tab2"><a data-toggle="tab" href="#billing">Billing Info</a></li>
-                            </ul>
+                    <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                        <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="width:95%;max-width:400px;">
 
-                            <div class="tab-content orderform">
-                                <div id="shipping" class="tab-pane fade in active">
-                                    <br />
-                                    <form name="shipform1" id="shipform" novalidate>
+
+                        <div id="section2" class="section2 row role-element leadstyle-container">
+                            <div class="sectionInner">
+
+                                <div id="section2TestiWrap" class="section2TestiWrap">
+                                    <div id="section2Testi1" class="testi role-element leadstyle-container" style="width:90%; margin-left: auto; margin-right:auto;">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial3.png" id="testiImg1" class="role-element leadstyle-image">
+                                        <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
+                                        <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
+                                    </div>
+
+                                </div>
+                                <!--Section2 testi wrap-->
+                            </div>
+                            <!--Section Inner-->
+                        </div>
+
+
+                    </div>
+
+                    <div id="heroRight" class="heroRight role-element leadstyle-container">
+                        <div id="heroFormWrap" class="heroFormWrap">
+                            <div id="heroFormHeadline" class="heroFormheadline"></div>
+                            <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                                <ul class="nav nav-tabs orderform formTabHead">
+                                    <li class="active" id="tab1"><a data-toggle="tab" href="#shipping">Shipping Info</a></li>
+                                    <li id="tab2"><a data-toggle="tab" href="#billing">Billing Info</a></li>
+                                </ul>
+
+                                <div class="tab-content orderform">
+                                    <div id="shipping" class="tab-pane fade in active">
+                                        <br />
+
                                         <div class="orderformcontainer">
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <input type="text" class="forminput" style="color:#666666; width:98%;" value="" name="firstname" placeholder="*First Name" ng-model="shipform.firstname" required ng-minlength="3" ng-maxlength="15"><br />
-                                                <span class="errMsg" ng-show="shipform1.firstname.$error.required">Please enter your first name</span>
-                                                <span class="err" ng-show="!shipform1.firstname.$error.required && (shipform1.firstname.$error.minlength || shipform1.firstname.$error.maxlength) && shipform1.firstname.$dirty">Name between 3 and 15 characters.</span>
+                                                @Html.TextBoxFor(model => model.ShippingFirstName, new { @id = "txtShipFirstName", @maxlength = "50", @class = "forminput", @placeholder = "*First Name", @style = "color:#666666; width:98%;" })
+                                                <!-- <input type="text" class="forminput" style="color:#666666; width:98%;" value="" name="firstname" placeholder="*First Name">-->
                                             </div>
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <input class="forminput" name="lastname" style="color:#666666;width:100%;" value="" placeholder="*Last Name" ng-model="shipform.lastname" required ng-minlength="3" ng-maxlength="15"><br />
-                                                <span class="errMsg" ng-show="shipform1.lastname.$error.required">Please enter your last name</span>
-                                                <span class="err" ng-show="!shipform1.lastname.$error.required && (shipform1.lastname.$error.minlength || shipform1.lastname.$error.maxlength) && shipform1.lastname.$dirty">Name between 3 and 15 characters.</span>
+                                                @Html.TextBoxFor(model => model.ShippingLastName, new { @id = "txtShipLastName", @maxlength = "50", @class = "forminput", @placeholder = "*Last Name", @style = "color:#666666; width:100%;" })
+                                                <!-- <input class="forminput" name="lastname" style="color:#666666;width:100%;" value="" placeholder="*Last Name"><br />-->
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="orderformcontainer">
-                                            <input type="text" class="forminput" style="color:#666666;" value="" name="streetaddress" placeholder="*Street Address" ng-model="shipform.streetaddress" required ng-minlength="5" ng-maxlength="30">
-                                            <span class="errMsg" ng-show="shipform1.streetaddress.$error.required">Please enter your street address</span>
-                                            <span class="err" ng-show="!shipform1.streetaddress.$error.required && (shipform1.streetaddress.$error.minlength || shipform1.streetaddress.$error.maxlength) && shipform1.streetaddress.$dirty">Must be between 5 and 30 characters.</span>
+                                            @Html.TextBoxFor(model => model.ShippingAddress1, new { @id = "txtShipStreet", @maxlength = "30", @class = "forminput", @placeholder = "*Street Address", @style = "color:#666666;" })
+                                            <!--<input type="text" class="forminput" style="color:#666666;" value="" name="streetaddress" placeholder="*Street Address">-->
                                         </div>
-                                        <div class="orderformcontainer"><input class="forminput" style="color:#666666;" value="" placeholder="Address 2" ng-model="shipform.address2"></div>
+                                        <div class="orderformcontainer">
+                                            @Html.TextBoxFor(model => model.ShippingAddress2, new { @id = "txtShipStreet2", @maxlength = "30", @class = "forminput", @placeholder = "Address 2", @style = "color:#666666;" })
+                                            <!--<input class="forminput" style="color:#666666;" value="" placeholder="Address 2">-->
+                                        </div>
                                         <div class="orderformcontainer">
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <input class="forminput" style="color:#666666; width:98%;" value="" placeholder="*City" name="city" ng-model="shipform.city" required ng-minlength="3" ng-maxlength="16"><br />
-                                                <span class="errMsg" ng-show="shipform1.city.$error.required">Please enter your city</span>
-                                                <span class="err" ng-show="!shipform1.city.$error.required && (shipform1.city.$error.minlength || shipform1.city.$error.maxlength) && shipform1.city.$dirty">Must be between 3 and 16 characters.</span>
+                                                @Html.TextBoxFor(model => model.ShippingCity, new { @id = "txtShipCity", @maxlength = "50", @class = "forminput", @placeholder = "*City", @style = "color:#666666; width:98%;" })
+                                                <!--<input class="forminput" style="color:#666666; width:98%;" value="" placeholder="*City" name="city">--><br />
                                             </div>
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state" ng-model="shipform.state" required>
+                                                @Html.DropDownListFor(model => model.ShippingState, (IEnumerable<SelectListItem>)ViewData["StatesList"], "Select State", new { @id = "chkShipState", @class = "forminput inputfloatleft", @style = "color:#666666; width:98%;" })
+                                                <!--select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state" required>
                                                     <option value="">*State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
@@ -163,48 +166,50 @@
                                                     <option value="AA">U.S. Armed Forces – Americas</option>
                                                     <option value="AE">U.S. Armed Forces – Europe</option>
                                                     <option value="AP">U.S. Armed Forces – Pacific</option>
-                                                </select><br />
-                                                <span class="errMsg" ng-show="shipform1.state.$error.required">Please enter your state</span>
+                                                </select-->
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="orderformcontainer">
-                                            <input type="text" class="forminput" style="color:#666666; width:49%;" value="*Zip Code" placeholder="*Zip Code" ng-model="shipform.zipcode" name="zipcode" ng-minlength="5" ng-maxlength="10" required ng-pattern="/^[0-9]{1,7}$/"><br />
-                                            <span class="errMsg" ng-show="shipform1.zipcode.$error.required">Please enter your zip code</span>
-                                            <span class="err" ng-show="!shipform1.zipcode.$error.required && !shipform1.zipcode.$valid">Zip code must be number</span>
-                                            <span class="err" ng-show="!shipform1.zipcode.$error.required && (shipform1.zipcode.$error.minlength || shipform1.zipcode.$error.maxlength) && shipform1.zipcode.$dirty">Must be between 5 and 10 digits.</span>
+                                            @Html.TextBoxFor(model => model.ShippingZipCode, new { @id = "txtShipZipCode", @maxlength = "10", @class = "forminput", @placeholder = "*Zip Code", @style = "color:#666666; width:49%;" })
+                                            <!--<input type="text" class="forminput" style="color:#666666; width:49%;" value="*Zip Code" placeholder="*Zip Code">-->
                                         </div>
                                         <div class="orderformcontainer">
-                                            <input class="forminput" style="color:#666666; width:49%" value="" placeholder="Phone" ng-model="shipform.phone"><br>
+                                            @Html.TextBoxFor(model => model.ShippingPhone, new { @id = "txtShipPhone", @maxlength = "10", @class = "forminput", @placeholder = "Phone", @style = "color:#666666; width:49%" })
+                                            <!--<input class="forminput" style="color:#666666; width:49%" value="" placeholder="Phone">-->
+                                            <br>
                                             <p style="margin-top:.5em;"><span style="font-size:.7em; display:block;line-height:1">Please provide the best phone number to reach you using our autodialer regarding your membership or to make you aware of special offers.</span></p>
                                         </div>
                                         <div class="orderformcontainer">
-                                            <input type="email" name="email" id="email" ng-model="shipform.email" required class="forminput" style="color:#666666;" value="" placeholder="*Email">
-                                            <span class="errMsg" ng-show="shipform1.email.$error.required">Please enter a valid email</span>
-                                            <span class="err" ng-show="!shipform1.email.$error.required && shipform1.email.$error.email && shipform1.email.$dirty">Invalid email</span>
+                                            @Html.TextBoxFor(model => model.ShippingEmail, new { @id = "txtShipEmail", @maxlength = "50", @class = "forminput", @placeholder = "*Email", @style = "color:#666666;" })
+                                            <!-- <input type="email" name="email" id="email" class="forminput" style="color:#666666;" value="" placeholder="*Email"> -->
                                         </div>
                                         <div class="orderformcontainer">
-                                            <input type="email" name="confirmemail" class="forminput" style="color:#666666;" value="" placeholder="*Confirm Email" ng-model="shipform.confirmemail" required match-validator="email">
-                                            <span class="errMsg" ng-show="shipform1.confirmemail.$error.required">Repeat the email again</span>
-                                            <span class="err" ng-show="!shipform1.confirmemail.$error.required && shipform1.confirmemail.$error.match && shipform1.confirmemail.$dirty">Email addresses don't match.</span>
-                                            <!--<span class="errMsg" ng-if="shipform1.confirmemail.$error">
-                                                <span ng-if="shipform1.confirmemail.$error.match">
-                                                    Email addresses don't match.
-                                                </span>
-                                            </span>-->
+                                            @Html.TextBoxFor(model => model.ShippingConfirmEmail, new { @id = "txtShipConfirmEmail", @maxlength = "50", @class = "forminput", @placeholder = "*Confirm Email", @style = "color:#666666;" })
+                                            <!-- <input type="email" name="confirmemail" class="forminput" style="color:#666666;" value="" placeholder="*Confirm Email"> -->
                                         </div>
                                         <div class="orderformcontainer">
                                             <table cellpadding="0" cellspacing="0">
-                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox" ng-model="shipform.checkbox1"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please keep me informed of other great offers from Early Moments.</p></td></tr>
-                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox" ng-model="shipform.checkbox2"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please let me know about offers from Early Moments partners you think might interest me</p></td></tr>
+                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please keep me informed of other great offers from Early Moments.</p></td></tr>
+                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please let me know about offers from Early Moments partners you think might interest me</p></td></tr>
                                             </table>
                                         </div>
 
-                                        <div class="orderformcontainer"><p>Optional</p><input class="forminput" style="color:#666666; width:39%;" value="" placeholder="Child Name" ng-model="shipform.childname"><div style="display:inline;">&nbsp;</div><input class="forminput" style="color:#666666;width:34%;" value="" placeholder="Child DOB" ng-model="shipform.childdob"><div style="display:inline;">&nbsp;</div><input class="forminput" style="color:#666666;width:24%;" value="" placeholder="Gender" ng-model="shipform.gender"></div>
+                                        <div class="orderformcontainer">
+                                            <p>Optional</p>
+                                            @Html.TextBoxFor(model => model.ChildName, new { @id = "txtShipChildName", @maxlength = "50", @class = "forminput", @placeholder = "Child Name", @style = "color:#666666; width:35%;" })
+                                            <!--<input class="forminput" style="color:#666666; width:39%;" value="" placeholder="Child Name">-->
+                                            @*<div style="display:inline;">&nbsp;</div>*@
+                                            @Html.TextBoxFor(model => model.ChildDOB, new { @id = "txtShipChildDOB", @maxlength = "10", @class = "forminput", @placeholder = "Child DOB", @style = "color:#666666;width:34%;" })
+                                            <!--<input class="forminput" style="color:#666666;width:34%;" value="" placeholder="Child DOB"> -->
+                                            @*<div style="display:inline;">&nbsp;</div>*@
+                                            @Html.DropDownListFor(model => model.ChildGender, (IEnumerable<SelectListItem>)ViewData["GenderList"], "Gender", new { @id = "chkShipGender", @class = "forminput", @style = "color:#666666;width:24%;" })
+                                            <!--<input class="forminput" style="color:#666666;width:24%;" value="" placeholder="Gender">-->
+                                        </div>
 
                                         <div class="orderform">
                                             <div id="section3Form" class="section3Form">
-                                                <div id="section3Button" class="newBtn2 btn role-element leadstyle-link" ng-click="saveShippingInfo()">Continue</div>
+                                                <div id="btnContinueShipping" class="newBtn2 btn role-element leadstyle-link">Continue</div>
                                                 <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;">
                                                     <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
                                                     <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals1.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals2.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals3.png">
@@ -212,42 +217,47 @@
                                             </div>
                                             <br>
                                         </div>
-                                    </form>
-                                </div>
-                                <div id="billing" class="tab-pane fade orderform">
-                                    <br />
-                                    <form name="billform1" id="billform" novalidate>
-                                        <div class="orderformcontainer">Is your billing address the same as your shipping address? <input type="radio" value="Yes" ng-model="isSameAddress" name="radio1" ng-checked="true" ng-click="getValue()"> Yes <input type="radio" value="No" ng-model="isSameAddress" name="radio1" ng-checked="false" ng-click="getValue()"> No </div>
-                                        <div class="orderformdivider" ng-show="showBillAdd">
 
+                                    </div>
+                                    <div id="billing" class="tab-pane fade orderform">
+                                        <br />
+                                        <div class="orderformcontainer">
+                                            Is your billing address the same as your shipping address?
+                                            @Html.RadioButtonFor(model => model.isBillingSameToShipping, true, new { @id = "radbillyes", @Checked = true })
+                                            <!-- <input type="radio" value="Yes" name="radio1" ng-checked="true" ng-click="getValue()">--> Yes
+                                            @Html.RadioButtonFor(model => model.isBillingSameToShipping, false, new { @id = "radbillno" })
+                                            <!--<input type="radio" value="No" ng-model="isSameAddress" name="radio1" ng-checked="false" ng-click="getValue()">--> No
+                                        </div>
+                                        <div class="orderformdivider" id="showBillInfo">
                                             <div class="orderformcontainer">
                                                 <p style="color:white;">Billing Address</p>
                                                 <div class="fl marginBot10" style="width:50%;">
-                                                    <input class="forminput" style="color:#666666; width:98%;" placeholder="*First Name" name="firstname" ng-model="firstname" required ng-minlength="3" ng-maxlength="15"><br />
-                                                    <span class="err" ng-show="billform1.firstname.$error.required && billform1.firstname.$dirty">Please enter your first name</span>
-                                                    <span class="err" ng-show="!billform1.firstname.$error.required && (billform1.firstname.$error.minlength || billform1.firstname.$error.maxlength) && billform1.firstname.$dirty">Name between 3 and 15 characters.</span>
+                                                    @Html.TextBoxFor(model => model.BillingFirstName, new { @id = "txtBillFirstName", @maxlength = "50", @class = "forminput", @placeholder = "*First Name", @style = "color:#666666; width:98%;" })
+                                                    <!-- <input class="forminput" style="color:#666666; width:98%;" placeholder="*First Name" name="firstname">-->
                                                 </div>
                                                 <div class="fl marginBot10" style="width:50%;">
-                                                    <input class="forminput" style="color:#666666;width:100%;" name="lastname" placeholder="*Last Name" ng-model="lastname" required ng-maxlength="15" ng-minlength="3"><br />
-                                                    <span class="err" ng-show="billform1.lastname.$error.required && billform1.lastname.$dirty">Please enter your last name</span>
-                                                    <span class="err" ng-show="!billform1.lastname.$error.required && (billform1.lastname.$error.minlength || billform1.lastname.$error.maxlength) && billform1.lastname.$dirty">Name between 3 and 15 characters.</span>
+                                                    @Html.TextBoxFor(model => model.BillingLastName, new { @id = "txtBillLastName", @maxlength = "50", @class = "forminput", @placeholder = "*Last Name", @style = "color:#666666;width:100%;" })
+                                                    <!--<input class="forminput" style="color:#666666;width:100%;" name="lastname" placeholder="*Last Name">-->
                                                 </div>
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="orderformcontainer">
-                                                <input class="forminput" style="color:#666666;" placeholder="*Street Address" value="" name="streetaddress" ng-model="streetaddress" required ng-maxlength="30" ng-minlength="5">
-                                                <span class="err" ng-show="billform1.streetaddress.$error.required && billform1.streetaddress.$dirty">Please enter your street address</span>
-                                                <span class="err" ng-show="!billform1.streetaddress.$error.required && (billform1.streetaddress.$error.minlength || billform1.streetaddress.$error.maxlength) && billform1.streetaddress.$dirty">Must be between 5 and 30 characters.</span>
+                                                @Html.TextBoxFor(model => model.BillingAddress1, new { @id = "txtBillStreet", @maxlength = "30", @class = "forminput", @placeholder = "*Street Address", style = "color:#666666;" })
+                                                <!--<input class="forminput" style="color:#666666;" placeholder="*Street Address" value="" name="streetaddress">-->
                                             </div>
-                                            <div class="orderformcontainer"><input class="forminput" style="color:#666666;" placeholder="Address 2" value="" ng-model="address2"></div>
+                                            <div class="orderformcontainer">
+                                                @Html.TextBoxFor(model => model.BillingAddress2, new { @id = "txtBillStreet2", @maxlength = "30", @class = "forminput", @placeholder = "Address 2", @style = "color:#666666;" })
+                                                <!--<input class="forminput" style="color:#666666;" placeholder="Address 2" value="">-->
+                                            </div>
                                             <div class="orderformcontainer">
                                                 <div class="fl marginBot10" style="width:50%;">
-                                                    <input class="forminput" style="color:#666666; width:98%;" placeholder="*City" value="" name="city" ng-model="city" required id="cityname" ng-maxlength="16" ng-minlength="3"><br />
-                                                    <span class="err" ng-show="billform1.city.$error.required && billform1.city.$dirty">Please enter your city</span>
-                                                    <span class="err" ng-show="!billform1.city.$error.required && (billform1.city.$error.minlength || billform1.city.$error.maxlength) && billform1.city.$dirty">Must be between 3 and 16 characters.</span>
+                                                    @Html.TextBoxFor(model => model.BillingCity, new { @id = "txtBillCity", @maxlength = "50", @class = "forminput", @placeholder = "*City", @style = "color:#666666;" })
+                                                    <!-- <input class="forminput" style="color:#666666; width:98%;" placeholder="*City" value="" name="city"> -->
+
                                                 </div>
                                                 <div class="fl marginBot10" style="width:50%;">
-                                                    <select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state" ng-model="state" required>
+                                                    @Html.DropDownListFor(model => model.BillingState, (IEnumerable<SelectListItem>)ViewData["StatesList"], "Select State", new { @id = "chkBillState", @class = "forminput inputfloatleft", @style = "color:#666666; width:50%;" })
+                                                    <!--<select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state">
                                                         <option value="">*State</option>
                                                         <option value="AL">Alabama</option>
                                                         <option value="AK">Alaska</option>
@@ -311,119 +321,108 @@
                                                         <option value="AA">U.S. Armed Forces – Americas</option>
                                                         <option value="AE">U.S. Armed Forces – Europe</option>
                                                         <option value="AP">U.S. Armed Forces – Pacific</option>
-                                                    </select><br />
-                                                    <span class="err" ng-show="billform1.state.$error.required && billform1.state.$dirty">Please enter your state</span>
+                                                    </select> -->
                                                 </div>
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="orderformcontainer">
-                                                <input type="text" class="forminput" style="color:#666666; width:49%;" placeholder="*Zip Code" value="" name="zipcode" ng-model="zipcode" required id="zip" ng-minlength="5" ng-maxlength="10" ng-pattern="/^[0-9]{1,7}$/"><br />
-                                                <span class="err" ng-show="billform1.zipcode.$error.required && billform1.zipcode.$dirty">Please enter your zip code</span>
-                                                <span class="err" ng-show="!billform1.zipcode.$error.required && !billform1.zipcode.$valid">Zip code must be number</span>
-                                                <span class="err" ng-show="!billform1.zipcode.$error.required && (billform1.zipcode.$error.minlength || billform1.zipcode.$error.maxlength) && billform1.zipcode.$dirty">Must be between 5 and 10 digits.</span>
+                                                @Html.TextBoxFor(model => model.BillingZipCode, new { @id = "txtBillZipCode", @maxlength = "10", @class = "forminput", @placeholder = "*Zip Code", @style = "color:#666666; width:49%;" })
+                                                <!--<input type="text" class="forminput" style="color:#666666; width:49%;" placeholder="*Zip Code" value="" name="zipcode">-->
                                             </div>
 
                                         </div>
                                         <div class="orderformcontainer">
                                             <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-visa.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-mc.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-amx.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-dc.png">
                                             <br><br>
-                                            <input type="text" class="forminput inputfloatleft" style="color:#666666;" placeholder="*Card Number" name="cardnumber" value="" ng-model="billform.cardnumber" required ng-minlength="14" ng-maxlength="16" ng-pattern="/^[0-9]+$/">
-                                            <span class="err" ng-show="billform1.cardnumber.$error.required && billform1.cardnumber.$dirty">Please enter your Card Number </span>
-                                            <span class="err" ng-show="!billform1.cardnumber.$error.required && !billform1.cardnumber.$valid">Must consist of numbers</span>
-                                            <span class="err" ng-show="!billform1.cardnumber.$error.required && (billform1.cardnumber.$error.minlength || billform1.cardnumber.$error.maxlength) && billform1.cardnumber.$dirty">Cardnumber between 14 and 16 digits.</span>
-                                            <!--<span class="err" ng-show="!billform1.cardnumber.$error.required && billform1.cardnumber.$error.invalid">Must be a valid Amex, Visa, Discover, or Master Card</span>-->
+                                            @Html.TextBoxFor(model => model.CreditCardNumber, new { @id = "txtCreditCardNumber", @maxlength = "16", @class = "forminput inputfloatleft ccnumeric", @placeholder = "*Card Number", @style = "color:#666666;" })
+                                            <!--<input type="text" class="forminput inputfloatleft" style="color:#666666;" placeholder="*Card Number" name="cardnumber" value="">-->
                                             <br><br>
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <select class="forminput inputfloatleft" style="color:#666666; width:98%;" name="expmonth" ng-model="billform.expmonth" required>
-                                                    <option value="">*Month</option>
-                                                    <option ng-repeat="n in range(1,12)" value="{{n}}">{{n}}</option>
-                                                </select><br />
-                                                <span class="err" ng-show="billform1.expmonth.$error.required && billform1.expmonth.$dirty">Please select a month</span>
+                                                @Html.DropDownListFor(model => model.CardExpiryMonth, (IEnumerable<SelectListItem>)ViewData["MonthList"], "Month", new { @id = "optCardExpiryMonth", @class = "forminput inputfloatleft", @style = "color:#666666; width:98%;" })
+                                                <!-- <select class="forminput inputfloatleft" style="color:#666666; width:98%;" name="expmonth">
+                                                     <option value="">*Month</option>
+                                                 </select> -->
                                             </div>
                                             <div class="fl marginBot10" style="width:50%;">
-                                                <select class="forminput inputfloatleft" style="color:#666666; width:100%;" name="expyear" ng-model="billform.expyear" required>
-                                                    <option value="">*Year</option>
-                                                    <option ng-repeat="n in range(2016,2031)" value="{{n}}">{{n}}</option>
-                                                </select><br />
-                                                <span class="err" ng-show="billform1.expyear.$error.required && billform1.expyear.$dirty">Please select a year</span>
+                                                @Html.DropDownListFor(model => model.CardExpiryYear, (IEnumerable<SelectListItem>)ViewData["YearList"], "Year", new { @id = "optCardExpiryYear", @class = "forminput inputfloatleft", @style = "color:#666666; width:100%;" })
+                                                <!-- <select class="forminput inputfloatleft" style="color:#666666; width:100%;" name="expyear">
+                                                     <option value="">*Year</option>
+                                                 </select> -->
                                             </div>
                                             <div class="clearfix"></div>
                                             <br />
-                                            <input type="text" class="forminput inputfloatleft" style="color:#666666;width:49%;" placeholder="*3-dig code" value="" name="cvv" ng-model="billform.cvv" required ng-minlength="3" ng-maxlength="4" ng-pattern="/^[0-9]{1,7}$/"><br>
-                                            <span class="err" ng-show="billform1.cvv.$error.required && billform1.cvv.$dirty">Please enter your CVV Code</span>
-                                            <span class="err" ng-show="!billform1.cvv.$error.required && !billform1.cvv.$valid">CVV must be a number</span>
-                                            <span class="err" ng-show="!billform1.cvv.$error.required && (billform1.cvv.$error.minlength || billform1.cvv.$error.maxlength) && billform1.cvv.$dirty">CVV between 3 and 4 digits.</span>
+                                            @Html.TextBoxFor(model => model.SecurityCode, new { @id = "txtCVV", @maxlength = "4", @class = "forminput ccnumeric", @style = "color:#666666;width:49%;", @placeholder = "*3-dig code" })
+                                            <!--<input type="text" class="forminput inputfloatleft" style="color:#666666;width:49%;" placeholder="*3-dig code" value="" name="cvv"><br>-->
                                             <div id="section3Form" class="section3Form">
-                                                <a id="section3Button" class="newBtn2 btn role-element leadstyle-link" ng-click="saveBillingInfo()">Submit</a>
+                                                <!--<img src="/images/disney/4for99/submit_button_on.gif" alt="" class="responsiveImg buttonContinue" id="btnSubmit">-->
+                                                <a class="newBtn2 btn role-element leadstyle-link" id="btnSubmit">Submit</a>
                                                 <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em; text-align:center;">
                                                     <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
                                                     <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals1.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals2.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals3.png">
                                                 </div>
                                             </div>
                                             <br>
-
-
                                         </div>
-                                    </form>
+
+                                    </div>
                                 </div>
+
                             </div>
-
                         </div>
                     </div>
+                    <!--Section Inner-->
                 </div>
-                <!--Section Inner-->
-            </div>
 
 
-            <!--Section2-->
-            <div id="section3" class="section3 row role-element leadstyle-container" style="margin-top:-50px; display:none;">
-                <div class="sectionInner">
-
-                    <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;">
-                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
-                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/trust-seals.png">
-                    </div>
-                </div>
-                <!--Section Inner-->
-            </div>
-            <!--Section 3-->
-
-
-            <div id="section2" class="section2 row role-element leadstyle-container">
-                <div class="sectionInner">
-
-                    <div id="section2TestiWrap" class="section2TestiWrap">
-                        <div id="section2Testi1" class="testi role-element leadstyle-container" style="display:none;">
-                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/smiling-woman-7.png" id="testiImg1" class="role-element leadstyle-image">
-                            <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
-                            <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
-                        </div>
-                        <div id="section2Testi2" class="testi role-element leadstyle-container">
-                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial5.png" id="testiImg2" class="role-element leadstyle-image">
-                            <p id="testiName2" class="role-element leadstyle-text"><strong>April </strong></p>
-                            <blockquote id="testiBlockquote2" class="role-element leadstyle-text"><div>&ldquo;Young Frozen fans will love this book! It does not disappoint, and is perfect for kids ages 4-8. It contains a summary of the movie in words and pictures featured in a first encyclopedia-type format.&rdquo;</div></blockquote>
-                        </div>
-                        <div id="section2Testi3" class="testi role-element leadstyle-container">
-                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial8.png" id="testiImg3" class="role-element leadstyle-image">
-                            <p id="testiName3" class="role-element leadstyle-text"><strong>Ann </strong></p>
-                            <blockquote id="testiBlockquote3" class="role-element leadstyle-text"><div>&ldquo;My daughter absolutely loves Frozen, so she is loving this book. It has a lot of detail and extra facts about the movie.&rdquo;</div></blockquote>
+                <!--Section2-->
+                <div id="section3" class="section3 row role-element leadstyle-container" style="margin-top:-50px; display:none;">
+                    <div class="sectionInner">
+                        <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;">
+                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
+                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/trust-seals.png">
                         </div>
                     </div>
-                    <!--Section2 testi wrap-->
+                    <!--Section Inner-->
                 </div>
-                <!--Section Inner-->
+                <!--Section 3-->
+
+
+                <div id="section2" class="section2 row role-element leadstyle-container">
+                    <div class="sectionInner">
+
+                        <div id="section2TestiWrap" class="section2TestiWrap">
+                            <div id="section2Testi1" class="testi role-element leadstyle-container" style="display:none;">
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/smiling-woman-7.png" id="testiImg1" class="role-element leadstyle-image">
+                                <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
+                                <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
+                            </div>
+                            <div id="section2Testi2" class="testi role-element leadstyle-container">
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial5.png" id="testiImg2" class="role-element leadstyle-image">
+                                <p id="testiName2" class="role-element leadstyle-text"><strong>April </strong></p>
+                                <blockquote id="testiBlockquote2" class="role-element leadstyle-text"><div>&ldquo;Young Frozen fans will love this book! It does not disappoint, and is perfect for kids ages 4-8. It contains a summary of the movie in words and pictures featured in a first encyclopedia-type format.&rdquo;</div></blockquote>
+                            </div>
+                            <div id="section2Testi3" class="testi role-element leadstyle-container">
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial8.png" id="testiImg3" class="role-element leadstyle-image">
+                                <p id="testiName3" class="role-element leadstyle-text"><strong>Ann </strong></p>
+                                <blockquote id="testiBlockquote3" class="role-element leadstyle-text"><div>&ldquo;My daughter absolutely loves Frozen, so she is loving this book. It has a lot of detail and extra facts about the movie.&rdquo;</div></blockquote>
+                            </div>
+                        </div>
+                        <!--Section2 testi wrap-->
+                    </div>
+                    <!--Section Inner-->
+                </div>
+
+
             </div>
-
-
+            <!--PageContainer Inner-->
+            <div id="footer" class="footer row role-element leadstyle-container">
+                <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
+            </div>
         </div>
-        <!--PageContainer Inner-->
-        <div id="footer" class="footer row role-element leadstyle-container">
-            <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
-        </div>
+        <!--Page Container-->
+        @*<modal title="Error Message" visible="showModal">
+                {{errormsg}}
+            </modal>*@
+
     </div>
-    <!--Page Container-->
-    @*<modal title="Error Message" visible="showModal">
-        {{errormsg}}
-    </modal>*@
-
-</div>
+}
