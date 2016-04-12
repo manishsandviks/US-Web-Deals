@@ -1592,6 +1592,9 @@
     <Content Include="Script\seuss\Payment4for99\main.js" />
     <Content Include="Script\Payment-Validation.js" />
     <Content Include="Script\Shopping-Validation.js" />
+    <Content Include="Script\tripwire\home.js" />
+    <Content Include="Script\tripwire\upsell2.js" />
+    <Content Include="Script\tripwire\upsell1.js" />
     <Content Include="Script\tripwire\main.js" />
     <Content Include="Script\Validation.js" />
     <Content Include="tripwire\css\style.css" />
