@@ -46,16 +46,18 @@
                                 <div class="orderformcontainer" style="padding-top:1em;">
                                     <p>Your Disney Wonderful World of Reading Welcome Package will be on its way to you and your child shortly. You will also receive a confirmation email.</p>
 
-                                    <p><strong>Confirmation #0000000</strong></p>
+                                    <p><strong>Confirmation #: @ViewBag.order_id</strong></p>
 
                                     <p>
                                         <strong>Shipping:</strong>
                                         <br>
-                                        xxx xxx<br>
-                                        Kolkata Saltlake
+                                        @Html.Raw(ViewBag.ShippingAddress)
                                     </p>
 
-                                    <p><strong>Billing:</strong><br>YYY ZZZ<br>Kolkata<br>Test Address</p>
+                                    <p>
+                                        <strong>Billing:</strong><br>
+                                        @Html.Raw(ViewBag.BillingAddress)
+                                    </p>
                                     <br>
 
                                 </div>

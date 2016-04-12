@@ -251,8 +251,8 @@ function validate_billingPayment() {
             set_errs($("#txtCVV"), 'Credit Card security code (CVV) is required.\n');
         }
         else {
-            if ($('#txtCVV').val().trim().length < 3 || $('#txtCVV').val().trim().length > 3) {
-                set_errs($("#txtCVV"), 'Credit Card security code should be 3 chars.\n');
+            if ($('#txtCVV').val().trim().length < 3 || $('#txtCVV').val().trim().length > 4) {
+                set_errs($("#txtCVV"), 'Credit Card security code should be 4 chars.\n');
             }
         }
     }
