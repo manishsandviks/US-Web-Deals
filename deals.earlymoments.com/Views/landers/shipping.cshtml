@@ -2,9 +2,9 @@
 @{
     Layout = "~/Views/Shared/_LayoutTripware.cshtml";
 }
-<script src="~/Script/tripwire/main.js"></script>
+<script src="~/Script/landers/main.js"></script>
 
-@using (Html.BeginForm("shipping", "Triware", FormMethod.Post, new { @id = "form1" }))
+@using (Html.BeginForm())
 {
     <div id="pageContainer" class="container-fluid">
         <div id="pageContainerInner" class="pageContainerInner">
@@ -426,3 +426,18 @@
 
     </div>
 }
+
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
+            if (err.length > 0) {
+                $("#spnErrorMessage").html(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+
+    })
+</script>

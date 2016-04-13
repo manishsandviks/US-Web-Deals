@@ -10,7 +10,7 @@ using webConn;
 using System.Web.Script.Serialization;
 namespace deals.earlymoments.com.Controllers
 {
-    public class TriwareController : Controller
+    public class landersController : Controller
     {
         //
         // GET: /Triwire/
@@ -29,7 +29,7 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult home(FormCollection form)
         {
-            return RedirectToAction("shipping", "Triware");
+            return RedirectToAction("shipping", "landers");
         }
 
         [PreserveQueryString]
@@ -86,13 +86,15 @@ namespace deals.earlymoments.com.Controllers
                 if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
                 // oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
 
-                string queryStr = "";
-                if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
-                {
-                    queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
-                    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
-                    oVariables.referring_url = ref_url + queryStr;
-                }
+                //string queryStr = "";
+                //if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
+                //{
+                //    queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
+                //    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                //    oVariables.referring_url = ref_url + queryStr;
+                //}
+                string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                oVariables.referring_url = ref_url;
 
                 oVariables = ShippingModels.AssignShoppingDetailsToOrderVariable(oVariables, shipping);
 
@@ -106,7 +108,7 @@ namespace deals.earlymoments.com.Controllers
                     if (oVariables.order_id > 0)
                     {
                         Session.Add("NewOrderDetails", oVariables);
-                        return RedirectToAction("upsell_offer1", "Triware");
+                        return RedirectToAction("upsell_offer1", "landers");
                     }
                     else
                     {
@@ -125,7 +127,7 @@ namespace deals.earlymoments.com.Controllers
                             {
                                 Session.Add("NewSBMDetails", oVariables);
                                 return View();
-                                //return RedirectToAction("upsell_offer1", "Triware");
+                                //return RedirectToAction("upsell_offer1", "landers");
                             }
                             else
                             {
@@ -148,8 +150,8 @@ namespace deals.earlymoments.com.Controllers
                 ViewBag.ErrorMsg = ex.Message.ToString();
                 string s = "";
                 oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
-                return RedirectToAction("shipping", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-                //return View();
+                //return RedirectToAction("shipping", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                return View();
             }
             finally
             {
@@ -157,8 +159,8 @@ namespace deals.earlymoments.com.Controllers
                 oComm = null;
                 oProcess = null;
             }
-            return RedirectToAction("shipping", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-            // return View();
+            // return RedirectToAction("shipping", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+            return View();
         }
 
         [PreserveQueryString]
@@ -174,11 +176,6 @@ namespace deals.earlymoments.com.Controllers
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
-            //bool isUpsellAdded = false;
-            //string campaign_id = "";
-            //string order_id = "";
-            //string offer_id = "19632368";
-            //string upsell_id = "";
             try
             {
                 if (Session["NewOrderDetails"] != null)
@@ -186,10 +183,6 @@ namespace deals.earlymoments.com.Controllers
                     oVariables = Session["NewOrderDetails"] as OrderVariables;
                     if (oVariables != null)
                     {
-                        // upsell_id = Convert.ToString(oVariables.upsellId);
-                        //  campaign_id = oVariables.campaign_id;
-                        //  order_id = Convert.ToString(oVariables.order_id);
-
                         if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
                         {
                             oVariables.applyDupeCheck = false;
@@ -221,7 +214,7 @@ namespace deals.earlymoments.com.Controllers
                                 if (oVariables.order_id > 0)
                                 {
                                     Session.Add("NewOrderDetails", oVariables);
-                                    return RedirectToAction("upsell_offer2", "Triware");
+                                    return RedirectToAction("upsell_offer2", "landers");
                                 }
                                 else
                                 {
@@ -239,8 +232,8 @@ namespace deals.earlymoments.com.Controllers
                                         else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                                         {
                                             Session.Add("NewSBMDetails", oVariables);
-                                            //return View();
-                                            return RedirectToAction("upsell_offer1", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                            return View();
+                                            // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
                                         }
                                         else
                                         {
@@ -257,7 +250,7 @@ namespace deals.earlymoments.com.Controllers
                             }
 
                         }
-                        return RedirectToAction("upsell_offer2", "Triware");
+                        return RedirectToAction("upsell_offer2", "landers");
                     }
                     else
                     {
@@ -268,7 +261,8 @@ namespace deals.earlymoments.com.Controllers
                 {
                     ViewBag.ErrorMsg = "Session Expired.";
                 }
-                return RedirectToAction("upsell_offer1", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                return View();
 
             }
             catch (Exception ex)
@@ -279,8 +273,8 @@ namespace deals.earlymoments.com.Controllers
                     oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                       + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 }
-                return RedirectToAction("upsell_offer1", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-                // return View();
+                //return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                return View();
             }
             finally
             {
@@ -290,7 +284,7 @@ namespace deals.earlymoments.com.Controllers
                 oProcess = null;
             }
 
-            //return RedirectToAction("upsell_offer1", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+            //return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
             // return View();
         }
 
@@ -307,11 +301,6 @@ namespace deals.earlymoments.com.Controllers
             OrderVariables oVariables = new OrderVariables();
             OrderProcess oProcess = new OrderProcess();
             CommonModels oComm = new CommonModels();
-            //bool isUpsellAdded = false;
-            //string campaign_id = "";
-            //string order_id = "";
-            //string offer_id = "19632368";
-            //string upsell_id = "";
             try
             {
                 if (Session["NewOrderDetails"] != null)
@@ -319,10 +308,6 @@ namespace deals.earlymoments.com.Controllers
                     oVariables = Session["NewOrderDetails"] as OrderVariables;
                     if (oVariables != null)
                     {
-                        // upsell_id = Convert.ToString(oVariables.upsellId);
-                        //  campaign_id = oVariables.campaign_id;
-                        //  order_id = Convert.ToString(oVariables.order_id);
-
                         if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
                         {
                             oVariables.applyDupeCheck = false;
@@ -354,7 +339,7 @@ namespace deals.earlymoments.com.Controllers
                                 if (oVariables.order_id > 0)
                                 {
                                     Session.Add("NewOrderDetails", oVariables);
-                                    return RedirectToAction("thankyou", "Triware");
+                                    return RedirectToAction("thankyou", "landers");
                                 }
                                 else
                                 {
@@ -372,8 +357,8 @@ namespace deals.earlymoments.com.Controllers
                                         else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                                         {
                                             Session.Add("NewSBMDetails", oVariables);
-                                            //return View();
-                                            return RedirectToAction("upsell_offer2", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                            return View();
+                                            //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
                                         }
                                         else
                                         {
@@ -390,7 +375,7 @@ namespace deals.earlymoments.com.Controllers
                             }
 
                         }
-                        return RedirectToAction("thankyou", "Triware");
+                        return RedirectToAction("thankyou", "landers");
                     }
                     else
                     {
@@ -401,7 +386,8 @@ namespace deals.earlymoments.com.Controllers
                 {
                     ViewBag.ErrorMsg = "Session Expired.";
                 }
-                return RedirectToAction("upsell_offer2", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                return View();
 
             }
             catch (Exception ex)
@@ -412,8 +398,8 @@ namespace deals.earlymoments.com.Controllers
                     oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                       + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 }
-                return RedirectToAction("upsell_offer2", "Triware", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-                // return View();
+                //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                return View();
             }
             finally
             {
@@ -477,6 +463,14 @@ namespace deals.earlymoments.com.Controllers
                         //    FirePostBackPixel(oVariables);
                         //}
                     }
+                    else
+                    {
+                        ViewBag.ErrorMsg = "Session Expired.";
+                    }
+                }
+                else
+                {
+                    ViewBag.ErrorMsg = "Session Expired.";
                 }
                 return View();
             }
