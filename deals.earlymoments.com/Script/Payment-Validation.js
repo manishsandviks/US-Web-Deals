@@ -51,7 +51,7 @@ $(document).ready(function () {
         console.log("Hi, submit Clicked.....");
         if (validate_form() == true) {
             // pleaseWait();
-            $("#form1").submit();
+            $("form").submit();
 
         }
         else {

@@ -9,7 +9,7 @@
 <script src="/Script/seuss/payment4for1spring/main.js"></script>
 <script src="/script/Payment-Validation.js"></script>
 
-@using (Html.BeginForm("payment4_for_1_spring", "Seuss", FormMethod.Post, new { @id = "form1" }))
+@using (Html.BeginForm())
 {
     <div class="rightFormDiv">
         <p class="formHeader"><img src="/Images/seuss/payment4for1spring/right_top1.png" class="responsiveImg" id="rightTopDesktop"></p>
@@ -166,7 +166,13 @@
                     @*<div class="text-center marginTop15"><img src="/Images/seuss/payment4for1spring/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit"></div>*@
                     <div class="text-center marginTop15"> <img src="/Images/seuss/payment4for1spring/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit1"></div>
 
-                    <p class="marginTop10 noMarginBottomSmall text-center"><img src="/Images/seuss/payment4for1spring/download.png" class="responsiveImg"></p>
+                    <p class="marginTop10 noMarginBottomSmall text-center">
+                        <!--- GeoTrust -->
+                        <!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+                        <script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+                        <!-- end GeoTrust Smart Icon tag -->
+                        <!--<img src="/Images/seuss/payment4for1spring/download.png" class="responsiveImg"> -->
+                    </p>
                 </div>
             </div>
         </div>

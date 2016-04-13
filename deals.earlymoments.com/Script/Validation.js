@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("#btnSubmit").click(function () {
         if (validate_form() == true) {
             // pleaseWait();
-            $("#form1").submit();
+            $("form").submit();
 
         }
         else {
