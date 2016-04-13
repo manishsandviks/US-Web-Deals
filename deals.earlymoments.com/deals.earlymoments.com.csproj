@@ -1555,8 +1555,8 @@
     <Content Include="fonts\ArialRoundedMTBoldBold.ttf" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff2" />
-    <None Include="Properties\PublishProfiles\deal.earlymoments.com.pubxml" />
     <None Include="Properties\PublishProfiles\EM-Deals.pubxml" />
+    <None Include="Properties\PublishProfiles\SriMachineDev1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
