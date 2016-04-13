@@ -1681,28 +1681,33 @@ namespace deals.earlymoments.com.Controllers
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
-            //set query string values in hidden variables
-            Dictionary<string, string> trackingcodes = new Dictionary<string, string>();
-            if ((string)Request.QueryString["vendorcode"] != null) { trackingcodes["vendorcode"] = (string)Request.QueryString["vendorcode"]; }
-            if ((string)Request.QueryString["key"] != null) { trackingcodes["key"] = (string)Request.QueryString["key"]; }
-            if ((string)Request.QueryString["vc"] != null) { trackingcodes["vc"] = (string)Request.QueryString["vc"]; }
-            if ((string)Request.QueryString["pc"] != null) { trackingcodes["pc"] = (string)Request.QueryString["pc"]; }
-            if ((string)Request.QueryString["aff_id"] != null) { trackingcodes["aff_id"] = (string)Request.QueryString["aff_id"]; }
-            if ((string)Request.QueryString["tracking"] != null) { trackingcodes["tracking"] = (string)Request.QueryString["tracking"]; }
-            if ((string)Request.QueryString["src"] != null) { trackingcodes["src"] = (string)Request.QueryString["src"]; }
-            if ((string)Request.QueryString["seg"] != null) { trackingcodes["seg"] = (string)Request.QueryString["seg"]; }
-            if ((string)Request.QueryString["aff_id2"] != null) { trackingcodes["aff_id2"] = (string)Request.QueryString["aff_id2"]; }
-            if ((string)Request.QueryString["tracking_id"] != null) { trackingcodes["tracking_id"] = (string)Request.QueryString["tracking_id"]; }
 
-            if (Session["TrackingVariables"] != null)
-            {
-                Session["TrackingVariables"] = null;
-                Session["TrackingVariables"] = trackingcodes;
-            }
-            else
-            {
-                Session["TrackingVariables"] = trackingcodes;
-            }
+            #region "Commented by Sri @ 04.12.2016"
+
+            ////set query string values in hidden variables
+            //Dictionary<string, string> trackingcodes = new Dictionary<string, string>();
+            //if ((string)Request.QueryString["vendorcode"] != null) { trackingcodes["vendorcode"] = (string)Request.QueryString["vendorcode"]; }
+            //if ((string)Request.QueryString["key"] != null) { trackingcodes["key"] = (string)Request.QueryString["key"]; }
+            //if ((string)Request.QueryString["vc"] != null) { trackingcodes["vc"] = (string)Request.QueryString["vc"]; }
+            //if ((string)Request.QueryString["pc"] != null) { trackingcodes["pc"] = (string)Request.QueryString["pc"]; }
+            //if ((string)Request.QueryString["aff_id"] != null) { trackingcodes["aff_id"] = (string)Request.QueryString["aff_id"]; }
+            //if ((string)Request.QueryString["tracking"] != null) { trackingcodes["tracking"] = (string)Request.QueryString["tracking"]; }
+            //if ((string)Request.QueryString["src"] != null) { trackingcodes["src"] = (string)Request.QueryString["src"]; }
+            //if ((string)Request.QueryString["seg"] != null) { trackingcodes["seg"] = (string)Request.QueryString["seg"]; }
+            //if ((string)Request.QueryString["aff_id2"] != null) { trackingcodes["aff_id2"] = (string)Request.QueryString["aff_id2"]; }
+            //if ((string)Request.QueryString["tracking_id"] != null) { trackingcodes["tracking_id"] = (string)Request.QueryString["tracking_id"]; }
+
+            //if (Session["TrackingVariables"] != null)
+            //{
+            //    Session["TrackingVariables"] = null;
+            //    Session["TrackingVariables"] = trackingcodes;
+            //}
+            //else
+            //{
+            //    Session["TrackingVariables"] = trackingcodes;
+            //}
+
+            #endregion
 
             OfferService offerService = new OfferService();
             return View(offerService.GetDefaultCustomerInfo());
@@ -1728,39 +1733,47 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                var value = HttpContext.Request.Params.Get("vendorcode");
-                //oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
                 oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
-                //set tracking codes in order variable
-                Dictionary<string, string> trackingcodes = new Dictionary<string, string>();
-                if (Session["TrackingVariables"] != null)
-                {
-                    trackingcodes = (Dictionary<string, string>)Session["TrackingVariables"];
-                }
-                Session["TrackingVariables"] = null;
+                #region "Commented by Sri @ 04.12.2016"
 
-                if (trackingcodes != null && trackingcodes.Count > 0)
-                {
-                    if (trackingcodes.ContainsKey("vendorcode") && trackingcodes["vendorcode"] != null) { oVariables.vendor_id = trackingcodes["vendorcode"]; }
-                    if (trackingcodes.ContainsKey("key") && trackingcodes["key"] != null) { oVariables.vendor_data2 = trackingcodes["key"]; }
-                    if (trackingcodes.ContainsKey("vc") && trackingcodes["vc"] != null) { oVariables.vendor_id = trackingcodes["vc"]; }
-                    if (trackingcodes.ContainsKey("pc") && trackingcodes["pc"] != null) { oVariables.promotion_code = trackingcodes["pc"]; }
-                    if (trackingcodes.ContainsKey("aff_id") && trackingcodes["aff_id"] != null) { oVariables.vendor_data1 = trackingcodes["aff_id"]; }
-                    if (trackingcodes.ContainsKey("tracking") && trackingcodes["tracking"] != null) { oVariables.vendor_cust_ref_id = trackingcodes["tracking"]; }
-                    if (trackingcodes.ContainsKey("src") && trackingcodes["src"] != null) { oVariables.pcode_pos_8 = trackingcodes["src"]; }
-                    if (trackingcodes.ContainsKey("seg") && trackingcodes["seg"] != null) { oVariables.pcode_segment = trackingcodes["seg"]; }
-                    if (trackingcodes.ContainsKey("aff_id2") && trackingcodes["aff_id2"] != null) { oVariables.vendor_data2 = trackingcodes["aff_id2"]; }
-                    if (trackingcodes.ContainsKey("tracking_id") && trackingcodes["tracking_id"] != null) { oVariables.transaction_id = trackingcodes["tracking_id"]; }
-                }
+                //var value = HttpContext.Request.Params.Get("vendorcode");
+                ////oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
+                //oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
 
-                if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
-                {
-                    string queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
-                    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
-                    oVariables.referring_url = ref_url + queryStr;
-                }
+                ////set tracking codes in order variable
+                //Dictionary<string, string> trackingcodes = new Dictionary<string, string>();
+                //if (Session["TrackingVariables"] != null)
+                //{
+                //    trackingcodes = (Dictionary<string, string>)Session["TrackingVariables"];
+                //}
+                //Session["TrackingVariables"] = null;
 
+                //if (trackingcodes != null && trackingcodes.Count > 0)
+                //{
+                //    if (trackingcodes.ContainsKey("vendorcode") && trackingcodes["vendorcode"] != null) { oVariables.vendor_id = trackingcodes["vendorcode"]; }
+                //    if (trackingcodes.ContainsKey("key") && trackingcodes["key"] != null) { oVariables.vendor_data2 = trackingcodes["key"]; }
+                //    if (trackingcodes.ContainsKey("vc") && trackingcodes["vc"] != null) { oVariables.vendor_id = trackingcodes["vc"]; }
+                //    if (trackingcodes.ContainsKey("pc") && trackingcodes["pc"] != null) { oVariables.promotion_code = trackingcodes["pc"]; }
+                //    if (trackingcodes.ContainsKey("aff_id") && trackingcodes["aff_id"] != null) { oVariables.vendor_data1 = trackingcodes["aff_id"]; }
+                //    if (trackingcodes.ContainsKey("tracking") && trackingcodes["tracking"] != null) { oVariables.vendor_cust_ref_id = trackingcodes["tracking"]; }
+                //    if (trackingcodes.ContainsKey("src") && trackingcodes["src"] != null) { oVariables.pcode_pos_8 = trackingcodes["src"]; }
+                //    if (trackingcodes.ContainsKey("seg") && trackingcodes["seg"] != null) { oVariables.pcode_segment = trackingcodes["seg"]; }
+                //    if (trackingcodes.ContainsKey("aff_id2") && trackingcodes["aff_id2"] != null) { oVariables.vendor_data2 = trackingcodes["aff_id2"]; }
+                //    if (trackingcodes.ContainsKey("tracking_id") && trackingcodes["tracking_id"] != null) { oVariables.transaction_id = trackingcodes["tracking_id"]; }
+                //}
+
+                //if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
+                //{
+                //    string queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
+                //    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                //    oVariables.referring_url = ref_url + queryStr;
+                //}
+
+                #endregion
+
+                var offerService = new OfferService();
+                oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
 
                 //Submitting shipping details to order engin for order process
