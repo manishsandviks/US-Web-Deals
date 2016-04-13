@@ -130,3 +130,18 @@
     </div>
 </div>
 <!--Page Container-->
+
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
+            if (err.length > 0) {
+                $("#spnErrorMessage").html(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+
+    })
+</script>

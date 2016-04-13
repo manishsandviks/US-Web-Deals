@@ -61,15 +61,16 @@ $(document).ready(function () {
     //Submit Button Click
     $("#btnSubmit").click(function () {
 
-        if (validate_billingPayment() == true) {
-            // pleaseWait();
-            $("#form1").submit();
+        if (validate_billingPayment() == true) {            
+            $("form").submit();
+            pleaseWait();
+            //$("#form1").submit();
 
         }
         else {
             if (err_message.length > 0) {
                 $("#spnErrorMessage").html(err_message.toString());
-                $("#dialog-message").modal("toggle");
+                $("#dialog-message").modal("toggle");                
             }
         }
     });

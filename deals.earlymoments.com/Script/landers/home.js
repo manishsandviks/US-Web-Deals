@@ -1,13 +1,14 @@
 ﻿$(document).ready(function () {
+
     //Submit Button Click
-    $("#btnaddupsell").click(function () {
-        $("#form1").submit();
+    $("#heroFormButton").click(function () {
+        $("form").submit();
+        pleaseWait();
     });
-    $("#btnaddupsell2").click(function () {
-        $("#form1").submit();
-    });
-    $("#btnNoUpsell").click(function () {
-        $("#form1").submit();
+
+    $("#section3Button").click(function () {
+        $("form").submit();
+        pleaseWait();
     });
 });
 
@@ -27,5 +28,3 @@ function pleaseWait() {
     var target = document.getElementById('loading');
     var spinner = new Spinner(opts).spin(target);
 }
-
-

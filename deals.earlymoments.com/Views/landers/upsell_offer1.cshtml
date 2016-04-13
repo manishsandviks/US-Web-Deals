@@ -1,8 +1,8 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutTripware.cshtml";
 }
-<script src="~/Script/tripwire/upsell1.js"></script>
-@using (Html.BeginForm("upsell_offer1", "Triware", FormMethod.Post, new { @id = "form1" }))
+<script src="~/Script/landers/upsell1.js"></script>
+@using (Html.BeginForm())
 {
     <div id="pageContainer" class="container-fluid">
         <div id="pageContainerInner" class="pageContainerInner">
@@ -481,3 +481,17 @@
         </div>
     </div>
 }
+
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
+            if (err.length > 0) {
+                $("#spnErrorMessage").html(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+    })
+</script>

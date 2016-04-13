@@ -12,9 +12,8 @@ $(document).ready(function () {
         //alert("HI");
         //alert(validate_form());
         if (validate_form() == true) {
-            // pleaseWait();
-
-            $("#form1").submit();
+             pleaseWait();
+            $("form").submit();
 
         }
         else {
@@ -26,7 +25,7 @@ $(document).ready(function () {
         }
     });
     $("#btnNoUpsell").click(function () {
-        $("#form1").submit();
+        $("form").submit();
     });
 });
 
