@@ -476,6 +476,7 @@
     <Content Include="Images\pause.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\prev_sm.png" />
+    <Content Include="Images\question_mark.gif" />
     <Content Include="Images\seuss\4for1spring\bb.png" />
     <Content Include="Images\seuss\4for1spring\button_1.png" />
     <Content Include="Images\seuss\4for1spring\leftBottom.png" />
