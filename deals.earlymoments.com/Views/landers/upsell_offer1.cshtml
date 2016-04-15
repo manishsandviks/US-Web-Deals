@@ -462,7 +462,7 @@
                         </div>
                         <br>
                         <div>
-                            <table cellpadding="0" cellspacing="0" style="width:90%; max-width:500px; margin-left:auto; margin-right:auto;"><tr><td valign="top"><input type="checkbox" value="yestac" id="chkAge">&nbsp;</td><td style="width:20px;">&nbsp;</td><td style="text-align:left;">* YES, I am over the age of 18, and I have read, understand and agree to the terms and conditions of this offer and your <a href="#">Terms Of Service</a>.</td></tr></table>
+                            <table cellpadding="0" cellspacing="0" style="width:90%; max-width:500px; margin-left:auto; margin-right:auto;"><tr><td valign="top"><input type="checkbox" value="yestac" id="chkAge">&nbsp;</td><td style="width:20px;">&nbsp;</td><td style="text-align:left;">* YES, I am over the age of 18, and I have read, understand and agree to the <a id="lnkTAC" href="#dialogue-TAC" role="button" data-toggle="modal">terms and conditions</a> of this offer and your <a onclick="OpenNewWindow('https://www.earlymoments.com/Terms-Of-Service/');" style="cursor: pointer;"><small style="font-size: 80%;">Terms Of Service</small></a>.</td></tr></table>
                         </div>
                         <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
                     </div>
@@ -481,7 +481,29 @@
         </div>
     </div>
 }
-
+<div id="dialogue-TAC" title="Terms" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <strong>Thank you for your interest in this Bonus Offer.</strong><br />
+                Due to technical difficulties, we are not able to add the bonus to your order.<br />
+                Please call us at 1-800-353-3140 to place an order via phone.<br />
+                Thank you again for your interest and understanding.
+            </section>
+            <section class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">
+                    Okay
+                </button>
+            </section>
+        </div>
+    </div>
+</div>
 <script>
     $(document).ready(function () {
         var err = '';

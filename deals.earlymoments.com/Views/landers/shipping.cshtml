@@ -352,6 +352,7 @@
                                             <div class="clearfix"></div>
                                             <br />
                                             @Html.TextBoxFor(model => model.SecurityCode, new { @id = "txtCVV", @maxlength = "4", @class = "forminput ccnumeric", @style = "color:#666666;width:49%;", @placeholder = "*3-dig code" })
+                                            &nbsp;&nbsp;<a href="#scode" role="button" data-toggle="modal"><img src="/images/question_mark.gif" /></a>
                                             <!--<input type="text" class="forminput inputfloatleft" style="color:#666666;width:49%;" placeholder="*3-dig code" value="" name="cvv"><br>-->
                                             <div id="section3Form" class="section3Form">
                                                 <!--<img src="/images/disney/4for99/submit_button_on.gif" alt="" class="responsiveImg buttonContinue" id="btnSubmit">-->
@@ -427,6 +428,25 @@
     </div>
 }
 
+<!--Credit Card Security Question Mark-->
+
+<div id="scode" title="Security Code" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4>Credit Card Verification (CCV) Code</h4>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <img src="/images/cvv.jpg" />
+            </section>           
+        </div>
+    </div>
+</div>
+<!--end of body section -->
 <script>
     $(document).ready(function () {
         var err = '';
