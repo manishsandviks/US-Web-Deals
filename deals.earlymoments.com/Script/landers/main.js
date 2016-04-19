@@ -7,6 +7,9 @@ var bookString = '';
 jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
+    //    $(window).scrollTop();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $("#txtShipFirstName").focus();
     //alow numeric values
     $('.ccnumeric').keyup(function () {
         this.value = this.value.replace(/[^0-9\.]/g, '');
@@ -48,12 +51,14 @@ $(document).ready(function () {
 
             $("#shipping").removeClass("active");
             $("#billing").addClass("active in");
-
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            $("#txtCreditCardNumber").focus();
         }
         else {
             if (err_message.length > 0) {
                 $("#spnErrorMessage").html(err_message.toString());
-                $("#dialog-message").modal("toggle");
+                $("#dialog-message").modal("toggle");                
+                $("html, body").animate({ scrollTop: 0 }, "slow");                
             }
         }
     });
@@ -61,7 +66,7 @@ $(document).ready(function () {
     //Submit Button Click
     $("#btnSubmit").click(function () {
 
-        if (validate_billingPayment() == true) {            
+        if (validate_billingPayment() == true) {
             $("form").submit();
             pleaseWait();
             //$("#form1").submit();
@@ -70,7 +75,7 @@ $(document).ready(function () {
         else {
             if (err_message.length > 0) {
                 $("#spnErrorMessage").html(err_message.toString());
-                $("#dialog-message").modal("toggle");                
+                $("#dialog-message").modal("toggle");
             }
         }
     });
