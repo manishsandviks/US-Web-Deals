@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     //Submit Button Click
     $("#btnaddupsell").click(function () {
         $("form").submit();

@@ -7,6 +7,7 @@ var bookString = '';
 jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     //Submit Button Click
     $("#btnaddupsell").click(function () {
         //alert("HI");
