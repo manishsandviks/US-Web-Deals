@@ -73,7 +73,7 @@ function pleaseWait() {
 }
 
 
-function OpenNewWindow(theURL) {
-    window.open(theURL, 'newwindow', 'toolbar=no,location=no,menubar=no,scrollbars=yes, resizable=no, top=100,left=100');
-    return false;
-}
+//function OpenNewWindow(theURL) {
+//    window.open(theURL, 'newwindow', 'toolbar=no,location=no,menubar=no,scrollbars=yes, resizable=no, top=100,left=100');
+//    return false;
+//}
