@@ -1,0 +1,435 @@
+﻿<div id="pageContainer" class="container-fluid">
+    <div id="pageContainerInner" class="pageContainerInner">
+        <div id="header" class="header row role-element leadstyle-container">
+            <div id="headerInner" class="headerInner">
+                <a id="logo" class="logo role-element leadstyle-image-link"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/disney-reading-small.png"></a>
+            </div>
+        </div>
+        <!--Header-->
+        <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
+            <div id="headlineInner" class="headlineInner inside" style="max-width:800px;">
+                <div id="subhead" class="subhead role-element leadstyle-text" style="display:none;">
+                    <div>
+                        Limited Time: <br>
+                        Get a Free Hardcover Copy of
+                    </div>
+                </div>
+                <div id="headline" class="headline role-element leadstyle-text">
+                    <div>
+                        Where Should We Ship Your Hardcover Book Today? <br>
+                        <span style="opacity:.7;">Just $5.95 shipping &amp; handling.</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--headlineWrap-->
+        <!--Section1-->
+
+        <div id="hero" class="hero row role-element leadstyle-container">
+            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="max-width:400px; display:none;">
+            <div class="sectionInner heroInner">
+
+                <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                    <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/frozen-essential-guide-starburst-group.png" class="role-element leadstyle-image" style="width:95%;max-width:400px;">
+
+
+                    <div id="section2" class="section2 row role-element leadstyle-container">
+                        <div class="sectionInner">
+
+                            <div id="section2TestiWrap" class="section2TestiWrap">
+                                <div id="section2Testi1" class="testi role-element leadstyle-container" style="width:90%; margin-left: auto; margin-right:auto;">
+                                    <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial3.png" id="testiImg1" class="role-element leadstyle-image">
+                                    <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
+                                    <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
+                                </div>
+
+                            </div>
+                            <!--Section2 testi wrap-->
+                        </div>
+                        <!--Section Inner-->
+                    </div>
+
+
+                </div>
+
+                <div id="heroRight" class="heroRight role-element leadstyle-container">
+                    <div id="heroFormWrap" class="heroFormWrap">
+                        <div id="heroFormHeadline" class="heroFormheadline"></div>
+                        <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                            <ul class="nav nav-tabs orderform formTabHead">
+                                <li class="active" id="tab1"><a data-toggle="tab" href="#shipping">Shipping Info</a></li>
+                                <li id="tab2"><a data-toggle="tab" href="#billing">Billing Info</a></li>
+                            </ul>
+                            
+                            <div class="tab-content orderform">
+                                <div id="shipping" class="tab-pane fade in active">
+                                    <br />
+                                    <form name="shipform1" id="shipform" novalidate>
+                                        <div class="orderformcontainer">
+                                            <div class="fl marginBot10" style="width:50%;">
+                                                <input type="text" class="forminput" style="color:#666666; width:98%;" value="" name="firstname" placeholder="*First Name" ng-model="shipform.firstname" required ng-minlength="3" maxlength="15">
+                                            </div>
+                                            <div class="fl marginBot10" style="width:50%;">
+                                                <input class="forminput" name="lastname" style="color:#666666;width:100%;" value="" placeholder="*Last Name" ng-model="shipform.lastname" required ng-minlength="3" maxlength="15"><br />
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="orderformcontainer">
+                                            <input type="text" class="forminput" style="color:#666666;" value="" name="streetaddress" placeholder="*Street Address" ng-model="shipform.streetaddress" required ng-minlength="5" maxlength="30">
+                                        </div>
+                                        <div class="orderformcontainer"><input class="forminput" style="color:#666666;" value="" placeholder="Address 2" ng-model="shipform.address2"></div>
+                                        <div class="orderformcontainer">
+                                            <div class="fl marginBot10" style="width:50%;">
+                                                <input class="forminput" style="color:#666666; width:98%;" value="" placeholder="*City" name="city" ng-model="shipform.city" required ng-minlength="3" maxlength="16"><br />
+                                            </div>
+                                            <div class="fl marginBot10" style="width:50%;"> 
+                                                <select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state" ng-model="shipform.state" required>
+                                                    <option value="">*State</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="AZ">Arizona</option>
+                                                    <option value="AR">Arkansas</option>
+                                                    <option value="CA">California</option>
+                                                    <option value="CO">Colorado</option>
+                                                    <option value="CT">Connecticut</option>
+                                                    <option value="DC">District of Columbia</option>
+                                                    <option value="DE">Delaware</option>
+                                                    <option value="FL">Florida</option>
+                                                    <option value="GA">Georgia</option>
+                                                    <option value="HI">Hawaii</option>
+                                                    <option value="ID">Idaho</option>
+                                                    <option value="IL">Illinois</option>
+                                                    <option value="IN">Indiana</option>
+                                                    <option value="IA">Iowa</option>
+                                                    <option value="KS">Kansas</option>
+                                                    <option value="KY">Kentucky</option>
+                                                    <option value="LA">Louisiana</option>
+                                                    <option value="ME">Maine</option>
+                                                    <option value="MD">Maryland</option>
+                                                    <option value="MA">Massachusetts</option>
+                                                    <option value="MI">Michigan</option>
+                                                    <option value="MN">Minnesota</option>
+                                                    <option value="MS">Mississippi</option>
+                                                    <option value="MO">Missouri</option>
+                                                    <option value="MT">Montana</option>
+                                                    <option value="NE">Nebraska</option>
+                                                    <option value="NV">Nevada</option>
+                                                    <option value="NH">New Hampshire</option>
+                                                    <option value="NJ">New Jersey</option>
+                                                    <option value="NM">New Mexico</option>
+                                                    <option value="NY">New York</option>
+                                                    <option value="NC">North Carolina</option>
+                                                    <option value="ND">North Dakota</option>
+                                                    <option value="OH">Ohio</option>
+                                                    <option value="OK">Oklahoma</option>
+                                                    <option value="OR">Oregon</option>
+                                                    <option value="PA">Pennsylvania</option>
+                                                    <option value="RI">Rhode Island</option>
+                                                    <option value="SC">South Carolina</option>
+                                                    <option value="SD">South Dakota</option>
+                                                    <option value="TN">Tennessee</option>
+                                                    <option value="TX">Texas</option>
+                                                    <option value="UT">Utah</option>
+                                                    <option value="VT">Vermont</option>
+                                                    <option value="VA">Virginia</option>
+                                                    <option value="WA">Washington</option>
+                                                    <option value="WV">West Virginia</option>
+                                                    <option value="WI">Wisconsin</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="GU">Guam</option>
+                                                    <option value="PW">Palau</option>
+                                                    <option value="AS">American Samoa</option>
+                                                    <option value="FM">Federated States of Micronesia</option>
+                                                    <option value="MP">Northern Mariana Islands</option>
+                                                    <option value="MH">Marshall Islands</option>
+                                                    <option value="PR">Puerto Rico</option>
+                                                    <option value="VI">Virgin Islands</option>
+                                                    <option value="AA">U.S. Armed Forces – Americas</option>
+                                                    <option value="AE">U.S. Armed Forces – Europe</option>
+                                                    <option value="AP">U.S. Armed Forces – Pacific</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="orderformcontainer">
+                                            <input type="text" class="forminput" style="color:#666666; width:49%;" value="*Zip Code" placeholder="*Zip Code" ng-model="shipform.zipcode" name="zipcode" ng-minlength="5" maxlength="10" required ng-pattern="/^[0-9]{1,7}$/"><br />
+                                            </div>
+                                        <div class="orderformcontainer">
+                                            <input class="forminput" style="color:#666666; width:49%" value="" placeholder="Phone" ng-model="shipform.phone"><br>
+                                            <p style="margin-top:.5em;"><span style="font-size:.7em; display:block;line-height:1">Please provide the best phone number to reach you using our autodialer regarding your membership or to make you aware of special offers.</span></p>
+                                        </div>
+                                        <div class="orderformcontainer">
+                                            <input type="email" name="email" id="email" ng-model="shipform.email" required class="forminput" style="color:#666666;" value="" placeholder="*Email">
+                                        </div>
+                                        <div class="orderformcontainer">
+                                            <input type="email" name="confirmemail" class="forminput" style="color:#666666;" value="" placeholder="*Confirm Email" ng-model="shipform.confirmemail" required match-validator="email">
+                                         </div>
+                                        <div class="orderformcontainer">
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox" ng-model="shipform.checkbox1"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please keep me informed of other great offers from Early Moments.</p></td></tr>
+                                                <tr><td valign="top"><div style="margin-top:-.3em;"><input type="checkbox" ng-model="shipform.checkbox2"></div></td><td>&nbsp;</td><td valign="top"><p style="font-size:.7em; display:block; line-height:1">Please let me know about offers from Early Moments partners you think might interest me</p></td></tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="orderformcontainer"><p>Optional</p><input class="forminput" style="color:#666666; width:39%;" value="" placeholder="Child Name" ng-model="shipform.childname"><div style="display:inline;">&nbsp;</div><input class="forminput" style="color:#666666;width:34%;" value="" placeholder="Child DOB" ng-model="shipform.childdob"><div style="display:inline;">&nbsp;</div><input class="forminput" style="color:#666666;width:24%;" value="" placeholder="Gender" ng-model="shipform.gender"></div>
+
+                                        <div class="orderform">
+                                            <div id="section3Form" class="section3Form">
+                                                <div id="section3Button" class="newBtn2 btn role-element leadstyle-link" ng-click="saveShippingInfo()">Continue</div>
+                                                <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;">
+                                                    <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
+                                                    <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals1.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals2.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals3.png">
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="billing" class="tab-pane fade orderform">
+                                    <br />
+                                    <form name="billform1" id="billform" novalidate>
+                                        <div class="orderformcontainer">Is your billing address the same as your shipping address? <input type="radio" value="Yes" ng-model="isSameAddress" name="radio1" ng-checked="true" ng-click="getValue()"> Yes <input type="radio" value="No" ng-model="isSameAddress" name="radio1" ng-checked="false" ng-click="getValue()"> No </div>
+                                        <div class="orderformdivider" ng-show="showBillAdd">
+
+                                                    <div class="orderformcontainer">
+                                                         <p style="color:white;">Billing Address</p>
+                                                         <div class="fl marginBot10" style="width:50%;">
+                                                             <input class="forminput" style="color:#666666; width:98%;" placeholder="*First Name" name="firstname" ng-model="firstname" required ng-minlength="3" maxlength="15">
+                                                             </div>
+                                                         <div class="fl marginBot10" style="width:50%;">
+                                                             <input class="forminput" style="color:#666666;width:100%;" name="lastname" placeholder="*Last Name" ng-model="lastname" required ng-minlength="3" maxlength="15">
+                                                         </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="orderformcontainer">
+                                                        <input class="forminput" style="color:#666666;" placeholder="*Street Address" value="" name="streetaddress" ng-model="streetaddress" required ng-minlength="5" maxlength="30">
+                                                    </div>
+                                                    <div class="orderformcontainer"><input class="forminput" style="color:#666666;" placeholder="Address 2" value="" ng-model="address2"></div>
+                                                    <div class="orderformcontainer">
+                                                        <div class="fl marginBot10" style="width:50%;">
+                                                            <input class="forminput" style="color:#666666; width:98%;" placeholder="*City" value="" name="city" ng-model="city" required id="cityname" ng-minlength="3" maxlength="16"><br />
+                                                        </div>
+                                                        <div class="fl marginBot10" style="width:50%;">
+                                                            <select class="forminput inputfloatleft" style="color:#666666; width:50%;" name="state" ng-model="state" required>
+                                                                <option value="">*State</option>
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="AK">Alaska</option>
+                                                                <option value="AZ">Arizona</option>
+                                                                <option value="AR">Arkansas</option>
+                                                                <option value="CA">California</option>
+                                                                <option value="CO">Colorado</option>
+                                                                <option value="CT">Connecticut</option>
+                                                                <option value="DC">District of Columbia</option>
+                                                                <option value="DE">Delaware</option>
+                                                                <option value="FL">Florida</option>
+                                                                <option value="GA">Georgia</option>
+                                                                <option value="HI">Hawaii</option>
+                                                                <option value="ID">Idaho</option>
+                                                                <option value="IL">Illinois</option>
+                                                                <option value="IN">Indiana</option>
+                                                                <option value="IA">Iowa</option>
+                                                                <option value="KS">Kansas</option>
+                                                                <option value="KY">Kentucky</option>
+                                                                <option value="LA">Louisiana</option>
+                                                                <option value="ME">Maine</option>
+                                                                <option value="MD">Maryland</option>
+                                                                <option value="MA">Massachusetts</option>
+                                                                <option value="MI">Michigan</option>
+                                                                <option value="MN">Minnesota</option>
+                                                                <option value="MS">Mississippi</option>
+                                                                <option value="MO">Missouri</option>
+                                                                <option value="MT">Montana</option>
+                                                                <option value="NE">Nebraska</option>
+                                                                <option value="NV">Nevada</option>
+                                                                <option value="NH">New Hampshire</option>
+                                                                <option value="NJ">New Jersey</option>
+                                                                <option value="NM">New Mexico</option>
+                                                                <option value="NY">New York</option>
+                                                                <option value="NC">North Carolina</option>
+                                                                <option value="ND">North Dakota</option>
+                                                                <option value="OH">Ohio</option>
+                                                                <option value="OK">Oklahoma</option>
+                                                                <option value="OR">Oregon</option>
+                                                                <option value="PA">Pennsylvania</option>
+                                                                <option value="RI">Rhode Island</option>
+                                                                <option value="SC">South Carolina</option>
+                                                                <option value="SD">South Dakota</option>
+                                                                <option value="TN">Tennessee</option>
+                                                                <option value="TX">Texas</option>
+                                                                <option value="UT">Utah</option>
+                                                                <option value="VT">Vermont</option>
+                                                                <option value="VA">Virginia</option>
+                                                                <option value="WA">Washington</option>
+                                                                <option value="WV">West Virginia</option>
+                                                                <option value="WI">Wisconsin</option>
+                                                                <option value="WY">Wyoming</option>
+                                                                <option value="GU">Guam</option>
+                                                                <option value="PW">Palau</option>
+                                                                <option value="AS">American Samoa</option>
+                                                                <option value="FM">Federated States of Micronesia</option>
+                                                                <option value="MP">Northern Mariana Islands</option>
+                                                                <option value="MH">Marshall Islands</option>
+                                                                <option value="PR">Puerto Rico</option>
+                                                                <option value="VI">Virgin Islands</option>
+                                                                <option value="AA">U.S. Armed Forces – Americas</option>
+                                                                <option value="AE">U.S. Armed Forces – Europe</option>
+                                                                <option value="AP">U.S. Armed Forces – Pacific</option>
+                                                            </select><br />
+                                                             </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="orderformcontainer">
+                                                        <input type="text" class="forminput" style="color:#666666; width:49%;" placeholder="*Zip Code" value="" name="zipcode" ng-model="zipcode" required ng-minlength="5" maxlength="10" ng-pattern="/^[0-9]{1,7}$/"><br />
+                                                        </div>
+
+                                                </div>
+                                                <div class="orderformcontainer">
+                                                    <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-visa.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-mc.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-amx.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/creditcardsymbols-dc.png">
+                                                    <br><br>
+                                                    <input type="text" class="forminput inputfloatleft" style="color:#666666;" placeholder="*Card Number" name="cardnumber" credit-card-type value="" ng-model="billform.cardnumber" required ng-minlength="14" maxlength="16" ng-pattern="/^[0-9]+$/">
+                                                    <br><br>
+                                                    <div class="fl marginBot10" style="width:50%;">
+                                                        <select class="forminput inputfloatleft" style="color:#666666; width:98%;" name="expmonth" ng-model="billform.expmonth" required card-expiration>
+                                                            <option value="">*Month</option>
+                                                            <option ng-repeat="n in range(1,12)" value="{{n}}">{{n}}</option>
+                                                        </select><br />
+                                                        </div>
+                                                    <div class="fl marginBot10" style="width:50%;">
+                                                        <select class="forminput inputfloatleft" style="color:#666666; width:100%;" name="expyear" ng-model="billform.expyear" required>
+                                                            <option value="">*Year</option>
+                                                            <option ng-repeat="n in range(currentYear,currentYear+13)" value="{{n}}">{{n}}</option>
+                                                        </select><br />
+                                                         </div>
+                                                    <div class="clearfix"></div>
+                                                    <br />
+                                                    <input type="text" class="forminput inputfloatleft" style="color:#666666;width:49%;" placeholder="*3-dig code" value="" name="cvv" ng-model="billform.cvv" required ng-minlength="3" maxlength="4" ng-pattern="/^[0-9]{1,7}$/"><br>
+                                                       <div id="section3Form" class="section3Form">
+                                                            <a id="section3Button" class="newBtn2 btn role-element leadstyle-link" ng-click="saveBillingInfo()">Submit</a>
+                                                            <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em; text-align:center;">
+                                                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
+                                                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals1.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals2.png"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/trustseals/trustseals3.png">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+
+
+                                                    </div>
+                                    </form>
+                                </div>
+                            </div>                           
+
+                        </div>
+                    </div>
+                </div>
+                <!--Section Inner-->
+            </div>
+
+
+            <!--Section2-->
+            <div id="section3" class="section3 row role-element leadstyle-container" style="margin-top:-50px; display:none;">
+                <div class="sectionInner">
+
+                    <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;">
+                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
+                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/cart/trust-seals.png">
+                    </div>
+                </div>
+                <!--Section Inner-->
+            </div>
+            <!--Section 3-->
+
+
+            <div id="section2" class="section2 row role-element leadstyle-container">
+                <div class="sectionInner">
+
+                    <div id="section2TestiWrap" class="section2TestiWrap">
+                        <div id="section2Testi1" class="testi role-element leadstyle-container" style="display:none;">
+                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/tripwire/smiling-woman-7.png" id="testiImg1" class="role-element leadstyle-image">
+                            <p id="testiName1" class="role-element leadstyle-text"><strong>Michelle </strong></p>
+                            <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This book beautifully summarizes the characters of the movie, Frozen. I purchased it for my daughter, but the whole family enjoys it. A must buy, even for adults!&rdquo;</div></blockquote>
+                        </div>
+                        <div id="section2Testi2" class="testi role-element leadstyle-container">
+                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial5.png" id="testiImg2" class="role-element leadstyle-image">
+                            <p id="testiName2" class="role-element leadstyle-text"><strong>April </strong></p>
+                            <blockquote id="testiBlockquote2" class="role-element leadstyle-text"><div>&ldquo;Young Frozen fans will love this book! It does not disappoint, and is perfect for kids ages 4-8. It contains a summary of the movie in words and pictures featured in a first encyclopedia-type format.&rdquo;</div></blockquote>
+                        </div>
+                        <div id="section2Testi3" class="testi role-element leadstyle-container">
+                            <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial8.png" id="testiImg3" class="role-element leadstyle-image">
+                            <p id="testiName3" class="role-element leadstyle-text"><strong>Ann </strong></p>
+                            <blockquote id="testiBlockquote3" class="role-element leadstyle-text"><div>&ldquo;My daughter absolutely loves Frozen, so she is loving this book. It has a lot of detail and extra facts about the movie.&rdquo;</div></blockquote>
+                        </div>
+                    </div>
+                    <!--Section2 testi wrap-->
+                </div>
+                <!--Section Inner-->
+            </div>
+
+
+        </div>
+        <!--PageContainer Inner-->
+        <div id="footer" class="footer row role-element leadstyle-container">
+            <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
+        </div>
+    </div>
+    <!--Page Container-->
+    <modal title="Error!!" visible="showModal">
+        <p  ng-show="shipform1.firstname.$error.required">Please enter your first name</p>
+        <p  ng-show="!shipform1.firstname.$error.required && (shipform1.firstname.$error.minlength)">First name between 3 and 15 characters.</p>
+        <p  ng-show="shipform1.lastname.$error.required">Please enter your last name</p>
+        <p  ng-show="!shipform1.lastname.$error.required && (shipform1.lastname.$error.minlength)">Last name between 3 and 15 characters.</p>
+        <p  ng-show="shipform1.streetaddress.$error.required">Please enter your street address</p>
+        <p  ng-show="!shipform1.streetaddress.$error.required && (shipform1.streetaddress.$error.minlength)">Street address must be between 5 and 30 characters.</p>
+        <p  ng-show="shipform1.city.$error.required">Please enter your city</p>
+        <p  ng-show="!shipform1.city.$error.required && (shipform1.city.$error.minlength)">City must be between 3 and 16 characters.</p>
+        <p  ng-show="shipform1.state.$error.required">Please enter your state</p>
+        <p  ng-show="shipform1.zipcode.$error.required">Please enter your zip code</p>
+        <p  ng-show="!shipform1.zipcode.$error.required && !shipform1.zipcode.$valid">Zip code must be number</p>
+        <p  ng-show="!shipform1.zipcode.$error.required && (shipform1.zipcode.$error.minlength)">Zip code must be between 5 and 10 digits.</p>
+        <p  ng-show="shipform1.email.$error.required">Please enter your email</p>
+        <p  ng-show="!shipform1.email.$error.required && shipform1.email.$error.email">Invalid email</p>
+        <p  ng-show="shipform1.confirmemail.$error.required">Repeat the email again</p>
+        <p  ng-show="!shipform1.confirmemail.$error.required && shipform1.confirmemail.$error.match">Email addresses don't match.</p>
+    </modal>
+
+    <modal title="Error!!" visible="showBillingModal">
+        <div ng-show="!billform1.$valid">
+            <p ng-show="billform1.firstname.$error.required">Please enter your first name</p>
+            <p ng-show="!billform1.firstname.$error.required && (billform1.firstname.$error.minlength)">First name between 3 and 15 characters.</p>
+            <p ng-show="billform1.lastname.$error.required">Please enter your last name</p>
+            <p ng-show="!billform1.lastname.$error.required && (billform1.lastname.$error.minlength)">Last name between 3 and 15 characters.</p>
+            <p ng-show="billform1.streetaddress.$error.required">Please enter your street address</p>
+            <p ng-show="!billform1.streetaddress.$error.required && (billform1.streetaddress.$error.minlength)">Street Adress must be between 5 and 30 characters.</p>
+            <p ng-show="billform1.city.$error.required">Please enter your city</p>
+            <p ng-show="!billform1.city.$error.required && (billform1.city.$error.minlength)">City must be between 3 and 16 characters.</p>
+            <p ng-show="billform1.state.$error.required">Please enter your state</p>
+            <p ng-show="billform1.zipcode.$error.required">Please enter your zip code</p>
+            <p ng-show="!billform1.zipcode.$error.required && (billform1.zipcode.$error.minlength)">zipcode must be between 5 and 10 digits.</p>
+
+            <p ng-show="billform1.cardnumber.$error.required">Please enter your Card Number </p>
+            <p ng-show="billform1.cardnumber.$error.invalid">Credit card must be a valid Amex, Visa, Discover, or Master Card</p>
+            <p ng-show="billform1.cardnumber.$error.pattern">Credit card must consist of only numbers</p>
+            <p ng-show="billform1.cardnumber.$error.minlength">Cardnumber between 14 and 16 digits.</p>
+
+            <p ng-show="billform1.expmonth.$error.required">Please select a month</p>
+            <p ng-show="billform1.expmonth.$error.invalid">Provided expiration date is invalid</p>
+
+            <p ng-show="billform1.expyear.$error.required">Please select a year</p>
+            <p ng-show="billform1.cvv.$error.required">Please enter your CVV Code</p>
+            <p ng-show="!billform1.cvv.$error.required && !billform1.cvv.$valid">CVV must be a number</p>
+            <p ng-show="!billform1.cvv.$error.required && (billform1.cvv.$error.minlength)">CVV between 3 and 4 digits.</p>
+        </div>
+    </modal>
+
+    <modal title="" visible="showWaitingModal">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="http://preloaders.net/images/ajax-loader.gif" />
+                Processing...
+            </div>
+        </div>
+    </modal>
+</div>
+	
