@@ -22,6 +22,10 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult home()
         {
+            if (Session["NewOrderDetails"] != null)
+            {
+                ViewBag.OrderPlaced = true;
+            }
             return View();
         }
 
