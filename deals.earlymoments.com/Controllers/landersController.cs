@@ -22,10 +22,6 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult home()
         {
-            if (Session["NewOrderDetails"] != null)
-            {
-                ViewBag.OrderPlaced = true;
-            }
             return View();
         }
 
@@ -33,12 +29,21 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult home(FormCollection form)
         {
+            if (Session["NewOrderDetails"] != null)
+            {
+                return RedirectToAction("upsell_offer1", "landers");
+            }
             return RedirectToAction("shipping", "landers");
         }
 
         [PreserveQueryString]
         public ActionResult shipping()
         {
+            if (Session["NewOrderDetails"] != null)
+            {
+                return RedirectToAction("home", "landers");
+            }
+
             // ViewBag.Email = !string.IsNullOrEmpty(email) ? email : "";
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
@@ -170,6 +175,10 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult upsell_offer1()
         {
+            if (Session["NewOrderDetails"] == null)
+            {
+                return RedirectToAction("home", "landers");
+            }
             return View();
         }
 
@@ -295,6 +304,10 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult upsell_offer2()
         {
+            if (Session["NewOrderDetails"] == null)
+            {
+                return RedirectToAction("home", "landers");
+            }
             return View();
         }
 
