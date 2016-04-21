@@ -22,7 +22,11 @@ namespace deals.earlymoments.com.Controllers
 
         [PreserveQueryString]
         public ActionResult home()
-        {          
+        {
+            if (Session["NewOrderDetails"] != null)
+            {
+                ViewBag.ButtonText = "My FREE Frozen Essential Guide is already on its way.  Continue with my order.";
+            }
             return View();
         }
 
@@ -154,7 +158,7 @@ namespace deals.earlymoments.com.Controllers
             catch (Exception ex)
             {
                 string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
-                
+
                 ViewBag.ErrorMsg = ex.Message.ToString();
                 string s = "";
                 oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
@@ -179,6 +183,10 @@ namespace deals.earlymoments.com.Controllers
                 oVariables = Session["NewOrderDetails"] as OrderVariables;
                 if (oVariables.lastPageClientOn != "upsell_offer1")
                     return RedirectToAction(oVariables.lastPageClientOn, "landers");
+            }
+            if (Session["NewOrderDetails"] == null)
+            {
+                return RedirectToAction("home", "landers");
             }
 
             return View();
@@ -304,6 +312,10 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult upsell_offer2()
         {
+            if (Session["NewOrderDetails"] == null)
+            {
+                return RedirectToAction("home", "landers");
+            }
             return View();
         }
 

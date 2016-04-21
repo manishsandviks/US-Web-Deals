@@ -39,16 +39,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="as400request">
+    <Reference Include="as400request, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\as400request.dll</HintPath>
     </Reference>
-    <Reference Include="com.sandviks.sfmc">
+    <Reference Include="com.sandviks.sfmc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\com.sandviks.sfmc.dll</HintPath>
     </Reference>
-    <Reference Include="dbConn">
+    <Reference Include="dbConn, Version=1.0.1494.17748, Culture=neutral, PublicKeyToken=470f53bbcc3e9c96">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\dbConn.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OrderEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\OrderEngine.dll</HintPath>
@@ -110,7 +117,8 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="webConn">
+    <Reference Include="webConn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\webConn.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
@@ -120,11 +128,6 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

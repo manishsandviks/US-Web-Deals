@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <button id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link" style="width:100%;">Rush Me My Free Hardcover Copy</button>
+                                    <button id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link" style="width:100%;">Rush Me My Free Hardcover Book</button>
                                     <p style="text-align:center;">Just Pay Shipping</p>
                                 </div>
                             </div>
@@ -596,10 +596,13 @@
 }
 
 <script>
-    var isOrderPlaced = false;
-    isOrderPlaced = '@ViewBag.OrderPlaced';
+    var isButtonText = "Rush Me My Free Hardcover Book";
+    isButtonText = '@ViewBag.ButtonText';
     $(document).ready(function () {
-        console.log("Order Placed: " + isOrderPlaced);
+        console.log("Button Text" + $("#heroFormButton").text());
+        if (isButtonText != '')
+            $("#heroFormButton").text(isButtonText)
+        console.log("Order Placed: " + isButtonText);
     });
 
 </script>
