@@ -12,12 +12,13 @@ namespace deals.earlymoments.com.Controllers
 {
     public class landersController : Controller
     {
-        //
-        // GET: /Triwire/
-        public ActionResult Index()
-        {
-            return View();
-        }
+        OrderProcess oProcess = new OrderProcess();
+        CommonMethods oComm = new CommonMethods();
+        OrderVariables oVariables = new OrderVariables();
+        CommonModels oCom = new CommonModels();
+
+        const string genericCustomerServiceMsg =
+            "We're sorry we were unable to process your request, please try again or call Customer Care toll-free at 866-984-0188 Monday-Friday between 8am and 4pm east coast time.";
 
         [PreserveQueryString]
         public ActionResult home()
@@ -31,7 +32,8 @@ namespace deals.earlymoments.com.Controllers
         {
             if (Session["NewOrderDetails"] != null)
             {
-                return RedirectToAction("upsell_offer1", "landers");
+                oVariables = Session["NewOrderDetails"] as OrderVariables;
+                return RedirectToAction(oVariables.lastPageClientOn, "landers");
             }
             return RedirectToAction("shipping", "landers");
         }
@@ -59,9 +61,6 @@ namespace deals.earlymoments.com.Controllers
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
-            OrderProcess oProcess = new OrderProcess();
-            CommonMethods oComm = new CommonMethods();
-            OrderVariables oVariables = new OrderVariables();
             try
             {
                 if (shipping.isBillingSameToShipping)
@@ -115,6 +114,7 @@ namespace deals.earlymoments.com.Controllers
                 {
                     if (oVariables.order_id > 0)
                     {
+                        oVariables.lastPageClientOn = "upsell_offer1";
                         Session.Add("NewOrderDetails", oVariables);
                         return RedirectToAction("upsell_offer1", "landers");
                     }
@@ -154,7 +154,7 @@ namespace deals.earlymoments.com.Controllers
             catch (Exception ex)
             {
                 string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
-                CommonModels oCom = new CommonModels();
+                
                 ViewBag.ErrorMsg = ex.Message.ToString();
                 string s = "";
                 oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
@@ -174,6 +174,13 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult upsell_offer1()
         {
+            if (Session["NewOrderDetails"] != null)
+            {
+                oVariables = Session["NewOrderDetails"] as OrderVariables;
+                if (oVariables.lastPageClientOn != "upsell_offer1")
+                    return RedirectToAction(oVariables.lastPageClientOn, "landers");
+            }
+
             return View();
         }
 
@@ -181,9 +188,6 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult upsell_offer1(string SubmitButton, FormCollection form)
         {
-            OrderVariables oVariables = new OrderVariables();
-            OrderProcess oProcess = new OrderProcess();
-            CommonModels oComm = new CommonModels();
             try
             {
                 if (Session["NewOrderDetails"] != null)
@@ -221,6 +225,7 @@ namespace deals.earlymoments.com.Controllers
                             {
                                 if (oVariables.order_id > 0)
                                 {
+                                    oVariables.lastPageClientOn = "upsell_offer2";
                                     Session.Add("NewOrderDetails", oVariables);
                                     return RedirectToAction("upsell_offer2", "landers");
                                 }
@@ -262,12 +267,12 @@ namespace deals.earlymoments.com.Controllers
                     }
                     else
                     {
-                        ViewBag.ErrorMsg = "Session Expired.";
+                        ViewBag.ErrorMsg = genericCustomerServiceMsg;
                     }
                 }
                 else
                 {
-                    ViewBag.ErrorMsg = "Session Expired.";
+                    ViewBag.ErrorMsg = genericCustomerServiceMsg;
                 }
                 // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
                 return View();
@@ -278,7 +283,7 @@ namespace deals.earlymoments.com.Controllers
                 ViewBag.ErrorMsg = ex.Message.ToString();
                 if (oVariables != null)
                 {
-                    oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                    oCom.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                       + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 }
                 //return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
@@ -306,9 +311,6 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult upsell_offer2(string SubmitButton, FormCollection form)
         {
-            OrderVariables oVariables = new OrderVariables();
-            OrderProcess oProcess = new OrderProcess();
-            CommonModels oComm = new CommonModels();
             try
             {
                 if (Session["NewOrderDetails"] != null)
@@ -346,6 +348,7 @@ namespace deals.earlymoments.com.Controllers
                             {
                                 if (oVariables.order_id > 0)
                                 {
+                                    oVariables.lastPageClientOn = "thankyou";
                                     Session.Add("NewOrderDetails", oVariables);
                                     return RedirectToAction("thankyou", "landers");
                                 }
@@ -387,12 +390,12 @@ namespace deals.earlymoments.com.Controllers
                     }
                     else
                     {
-                        ViewBag.ErrorMsg = "Session Expired.";
+                        ViewBag.ErrorMsg = genericCustomerServiceMsg;
                     }
                 }
                 else
                 {
-                    ViewBag.ErrorMsg = "Session Expired.";
+                    ViewBag.ErrorMsg = genericCustomerServiceMsg;
                 }
                 //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
                 return View();
@@ -403,7 +406,7 @@ namespace deals.earlymoments.com.Controllers
                 ViewBag.ErrorMsg = ex.Message.ToString();
                 if (oVariables != null)
                 {
-                    oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                    oCom.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                       + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 }
                 //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
@@ -421,9 +424,6 @@ namespace deals.earlymoments.com.Controllers
         [PreserveQueryString]
         public ActionResult thankyou()
         {
-            OrderVariables oVariables = new OrderVariables();
-            OrderProcess oProcess = new OrderProcess();
-            CommonModels oComm = new CommonModels();
             string template = "";
             string shipall = "";
             string orderSummary = "";
@@ -449,12 +449,12 @@ namespace deals.earlymoments.com.Controllers
                         ViewBag.CreditCardNumber = EncryptCreditCard(CCNumber);
                         string ccExpiryDate = oVariables.CCVars[0] != null ? oVariables.CCVars[0].expdate : "";
                         ViewBag.CardExpiry = FormatCCExpiryDate(ccExpiryDate);
-                        shipping_address = oComm.Confirmation_ShippingAddress(oVariables);
+                        shipping_address = oCom.Confirmation_ShippingAddress(oVariables);
                         ViewBag.ShippingAddress = shipping_address;
-                        billing_address = oComm.Confirmation_BillingAddress(oVariables, template);
+                        billing_address = oCom.Confirmation_BillingAddress(oVariables, template);
                         ViewBag.BillingAddress = billing_address;
 
-                        orderSummary = oComm.ResponsiveConfirmation_GiftingProducts(oVariables);
+                        orderSummary = oCom.ResponsiveConfirmation_GiftingProducts(oVariables);
 
                         ViewBag.Cart = orderSummary;
                         string email = oVariables.email.ToString();
@@ -473,18 +473,18 @@ namespace deals.earlymoments.com.Controllers
                     }
                     else
                     {
-                        ViewBag.ErrorMsg = "Session Expired.";
+                        ViewBag.ErrorMsg = genericCustomerServiceMsg;
                     }
                 }
                 else
                 {
-                    ViewBag.ErrorMsg = "Session Expired.";
+                    ViewBag.ErrorMsg = genericCustomerServiceMsg;
                 }
                 return View();
             }
             catch (Exception ex)
             {
-                oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                oCom.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                   + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
                 return View();
             }
