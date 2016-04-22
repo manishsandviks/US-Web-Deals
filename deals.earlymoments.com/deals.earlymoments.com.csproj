@@ -475,11 +475,13 @@
     <Content Include="Images\elmo\Payment399\mobileHeader_LP1.png" />
     <Content Include="Images\fgcntoysrus500gc_274_hibrand.gif" />
     <Content Include="Images\key.jpg" />
+    <Content Include="Images\landers\hardcover-group-2.png" />
     <Content Include="Images\next_sm.png" />
     <Content Include="Images\pause.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\prev_sm.png" />
     <Content Include="Images\question_mark.gif" />
+    <Content Include="Images\question_mark.png" />
     <Content Include="Images\seuss\4for1spring\bb.png" />
     <Content Include="Images\seuss\4for1spring\button_1.png" />
     <Content Include="Images\seuss\4for1spring\leftBottom.png" />

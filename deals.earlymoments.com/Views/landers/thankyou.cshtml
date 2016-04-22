@@ -47,30 +47,31 @@
                                     <p>Your Disney Wonderful World of Reading Welcome Package will be on its way to you and your child shortly. You will also receive a confirmation email.</p>
 
                                     <p><strong>Confirmation #: @ViewBag.order_id</strong></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>
+                                                <strong>Shipping:</strong>
+                                                <br>
+                                                @Html.Raw(ViewBag.ShippingAddress)
+                                            </p>
 
-                                    <p>
-                                        <strong>Shipping:</strong>
-                                        <br>
-                                        @Html.Raw(ViewBag.ShippingAddress)
-                                    </p>
-
-                                    <p>
-                                        <strong>Billing:</strong><br>
-                                        @Html.Raw(ViewBag.BillingAddress)
-                                    </p>
-                                    <br>
-
+                                            <p>
+                                                <strong>Billing:</strong><br>
+                                                @Html.Raw(ViewBag.BillingAddress)
+                                            </p>
+                                            <br>
+                                        </div>
+                                        <div class="col-md-6" style="color: #595757;">
+                                            <strong>Cart Details:</strong>
+                                            <div class="table-responsive noBorder orderDetails">
+                                                @Html.Raw(ViewBag.Cart)
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
-
-
-
                         </div>
-
-
                     </div>
-
                 </div>
 
             </div>

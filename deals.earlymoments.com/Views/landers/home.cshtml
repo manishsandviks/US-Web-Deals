@@ -596,13 +596,18 @@
 }
 
 <script>
-    var isButtonText = "Rush Me My Free Hardcover Book";
-    isButtonText = '@ViewBag.ButtonText';
+    var FirstButtonText = "Rush Me My Free Hardcover Book";
+    FirstButtonText = '@ViewBag.ButtonText';
+    var LastButtonText = "Click This Button to View Order Page";
+    LastButtonText = '@ViewBag.LastButtonText';
     $(document).ready(function () {
         console.log("Button Text" + $("#heroFormButton").text());
-        if (isButtonText != '')
-            $("#heroFormButton").text(isButtonText)
-        console.log("Order Placed: " + isButtonText);
+        console.log("Below button text" + $("#section3Button").text());
+        if (FirstButtonText != '') {
+            $("#heroFormButton").text(FirstButtonText);
+            if (LastButtonText != '')
+                $("#section3Button").text(LastButtonText);
+        }
     });
 
 </script>
