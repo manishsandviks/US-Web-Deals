@@ -12,6 +12,7 @@ using System.Net;
 using System.Data;
 using webConn;
 using System.Web.Script.Serialization;
+using deals.earlymoments.com.Services;
 
 namespace deals.earlymoments.com.Controllers
 {
@@ -93,26 +94,30 @@ namespace deals.earlymoments.com.Controllers
                 }
 
                 oVariables = oProcess.GetOfferAndPageDetails("disney_tripwire");
+                #region "Commented by Sri @ 04.12.2016"
+                //if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
+                //if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
+                //if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
+                //if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
+                //if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
+                //if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
+                //if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
 
-                if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
-                if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
-                if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
-                if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
-                if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
-                if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
-                if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
+                //// oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
 
-                // oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                ////string queryStr = "";
+                ////if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
+                ////{
+                ////    queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
+                ////    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                ////    oVariables.referring_url = ref_url + queryStr;
+                ////}
+                //string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                //oVariables.referring_url = ref_url;
+                #endregion
 
-                //string queryStr = "";
-                //if (System.Web.HttpContext.Current.Request.UrlReferrer != null)
-                //{
-                //    queryStr = System.Web.HttpContext.Current.Request.UrlReferrer.Query;
-                //    string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
-                //    oVariables.referring_url = ref_url + queryStr;
-                //}
-                string ref_url = System.Web.HttpContext.Current.Request.Url.ToString();
-                oVariables.referring_url = ref_url;
+                var offerService = new OfferService();
+                oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
 
                 oVariables = ShippingModels.AssignShoppingDetailsToOrderVariable(oVariables, shipping);
 
