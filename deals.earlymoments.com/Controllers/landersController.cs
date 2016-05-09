@@ -483,6 +483,10 @@ namespace deals.earlymoments.com.Controllers
                         ViewBag.Cart = orderSummary;
                         string email = oVariables.email.ToString();
                         ViewBag.email = email;
+                        string spltext = "";
+                        if (!string.IsNullOrEmpty(oVariables.special_text))
+                            spltext = oVariables.special_text;
+                        ViewBag.SpecialText = spltext;
 
                         if (!string.IsNullOrEmpty(email))
                         {

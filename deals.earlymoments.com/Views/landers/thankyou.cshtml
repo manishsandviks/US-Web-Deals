@@ -45,7 +45,7 @@
 
                                 <div class="orderformcontainer" style="padding-top:1em;">
                                     <p>Your Disney Wonderful World of Reading Welcome Package will be on its way to you and your child shortly. You will also receive a confirmation email.</p>
-
+                                    <div id="divSpecialText">@Html.Raw(ViewBag.SpecialText)</div>
                                     <p><strong>Confirmation #: @ViewBag.order_id</strong></p>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -128,6 +128,30 @@
     <!--PageContainer Inner-->
     <div id="footer" class="footer row role-element leadstyle-container">
         <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
+    </div>
+</div>
+
+<!--Download links Dialogue-->
+<div id="divDownload" title="Downloads" class="modal bs-example-modal-lg fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <!--  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                      ×
+                  </button> -->
+                <h4>Downloads</h4>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <div id="downloadText" style="overflow:auto;">
+                </div>
+            </section>
+            <section class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary" id="btnDownLoadCancel">
+                    Okay
+                </button>
+            </section>
+        </div>
     </div>
 </div>
 <!--Page Container-->

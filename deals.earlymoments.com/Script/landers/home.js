@@ -10,6 +10,9 @@
         $("form").submit();
         pleaseWait();
     });
+    $("#btnDownLoadCancel").click(function () {
+        $('#downloadText').empty();
+    });
 });
 
 function pleaseWait() {
