@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\emails\cokerewards.htm" />
+    <Content Include="Assets\emails\download.htm" />
     <Content Include="Assets\emails\ebk_optout.htm" />
     <Content Include="Assets\emails\ebk_optout.txt" />
     <Content Include="Assets\emails\emdoubleupsell.htm" />

@@ -314,6 +314,7 @@
                                             <div id="section3Form" class="section3Form">
                                                 <!--<img src="/images/disney/4for99/submit_button_on.gif" alt="" class="responsiveImg buttonContinue" id="btnSubmit">-->
                                                 <a class="newBtn2 btn role-element leadstyle-link" id="btnSubmit">Submit</a>
+                                                <a class="newBtn2 btn role-element leadstyle-link" id="btnDownload" href="#divDownload" role="button" data-toggle="modal">Download</a>
                                                 <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em; text-align:center;">
                                                     <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;
                                                     <!--- GeoTrust -->
@@ -423,6 +424,33 @@
         </div>
     </div>
 </div>
+
+<!--Download links Dialogue-->
+<div id="divDownload" title="Downloads" class="modal bs-example-modal-lg fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <!--  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                      ×
+                  </button> -->
+                <h4>Downloads</h4>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <div id="downloadText" style="overflow:auto;">
+                </div>
+            </section>
+            <section class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary" id="btnDownLoadCancel">
+                    Okay
+                </button>
+            </section>
+        </div>
+    </div>
+</div>
+<!--Ends Download links Dialogue-->
+
+
 <!--end of body section -->
 <script>
     $(document).ready(function () {

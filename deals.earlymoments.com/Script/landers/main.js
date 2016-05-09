@@ -7,6 +7,7 @@ var bookString = '';
 jQuery.fn.exists = function () { return this.length > 0; }
 
 $(document).ready(function () {
+    // $('#downloadText').load('download.htm');
     //    $(window).scrollTop();
     $("html, body").animate({ scrollTop: 0 }, "slow");
     $("#txtShipFirstName").focus();
@@ -57,20 +58,18 @@ $(document).ready(function () {
         else {
             if (err_message.length > 0) {
                 $("#spnErrorMessage").html(err_message.toString());
-                $("#dialog-message").modal("toggle");                
-                $("html, body").animate({ scrollTop: 0 }, "slow");                
+                $("#dialog-message").modal("toggle");
+                $("html, body").animate({ scrollTop: 0 }, "slow");
             }
         }
     });
 
     //Submit Button Click
     $("#btnSubmit").click(function () {
-
         if (validate_billingPayment() == true) {
             $("form").submit();
             pleaseWait();
             //$("#form1").submit();
-
         }
         else {
             if (err_message.length > 0) {
@@ -78,6 +77,14 @@ $(document).ready(function () {
                 $("#dialog-message").modal("toggle");
             }
         }
+    });
+
+    $("#btnDownload").click(function () {
+        $('#downloadText').load('/Assets/emails/download.htm');
+    });
+
+    $("#btnDownLoadCancel").click(function () {
+        $('#downloadText').empty();
     });
 });
 
