@@ -1793,9 +1793,11 @@ namespace deals.earlymoments.com.Controllers
                             // page_log += "Order is NOT processed. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
                             if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                             {
+                                //Variables.error_code
                                 //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
                                 //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
                                 // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                Session.Add("NewOrderDetails", oVariables);
                                 return RedirectToAction("orderstatus", "Home");
                             }
                             else if (oVariables.err.Length > 0)
@@ -2006,6 +2008,7 @@ namespace deals.earlymoments.com.Controllers
                                     if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                                     {
                                         Session["NewSBMDetails"] = null;
+                                        Session.Add("NewOrderDetails", oVariables);
                                         return RedirectToAction("orderstatus", "Home");
                                     }
                                     else

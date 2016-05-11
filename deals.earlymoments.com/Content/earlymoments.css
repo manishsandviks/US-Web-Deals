@@ -1,0 +1,263 @@
+﻿/* CSS Document */
+
+label{
+font-size: 11px;
+font-style: normal;
+color: #212121;
+line-height: 13px;
+float: left;
+width: 120px;
+padding-top: 5px;
+margin-left:10px;
+
+}
+
+.scroll {
+height:80px;
+width:240px;
+overflow: auto;
+font-family:Arial, Helvetica, sans-serif;
+color: #000000;
+font-size: 10px;
+line-height: 13px;
+background-color: #ffffff;
+border: 1px solid #999999;
+padding-left: 3px;
+}
+
+.Required {
+color:#cc0000;
+}
+
+.RequiredWhite {
+color:#ffffff;
+font-size:9px;
+padding-bottom: 8px;
+padding-right: 15px;
+}
+
+.RequiredRed {
+color:red;
+font-size:9px;
+padding-bottom: 20px;
+padding-right: 415px;
+}
+
+
+.Asterisk {
+font-family:Arial, Helvetica, sans-serif;
+color:#cc0000;
+font-size:10px;
+padding-right:15px;
+padding-bottom:8px;
+}
+
+.FormTable {
+font-size:11px;
+color:#212121;
+line-height:13px;
+background-color:#FFF;
+}
+
+.copyright_white {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+	width: 972px;
+}
+
+.FormHeader {
+font-size:12px;
+color:#31579f;
+line-height:14px;
+}
+
+.RowTint {
+	background-color:#eef7fc;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.NoTint {
+	background-color:#ffffff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.Steps {
+font-size:18px;
+font-weight:bold;
+color:#de2118;
+line-height:17px;
+padding-left:10px;
+padding-top:2px;
+padding:10px;
+}
+
+.StepsSmall {
+font-size:15px;
+font-weight:bold;
+color:#de2118;
+line-height:14px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+.Divider
+{
+height:10px;
+}
+
+body {
+background-color:#a5deef;
+margin-left:24px;
+margin-top:0px;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-style: normal;
+color: #212121;
+line-height: 13px;
+
+}
+
+.join {
+font-size:12px;
+color:#31579f;
+line-height:14px;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:8px;
+
+}
+
+.join_white {
+font-size:12px;
+color:#ffffff;
+line-height:14px;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:8px;
+
+}
+
+.join_white_lesspadding {
+font-size:12px;
+color:#ffffff;
+line-height:14px;
+padding-right:8px;
+padding-top:10px;
+
+
+}
+
+.join_white_nopadding {
+font-size:12px;
+color:#ffffff;
+line-height:14px;
+padding-right:8px;
+
+}
+
+.join_bullets {
+font-size:12px;
+color:#ffffff;
+line-height:14px;
+padding-right:8px;
+
+}
+.CVV {
+font-size:9px;
+color:#0099cc;
+line-height:10px;
+
+}
+
+a.CVV:link {
+text-decoration:underline;
+}
+
+.purple {
+color: #dbb1f9;
+font-size:12px;
+
+}
+
+a.purple:link {
+text-decoration:underline;
+}
+.COPA {
+font-size:9px;
+color:#666666;
+line-height:11px;
+}
+
+.age {
+font-size:9px;
+color:#000000;
+line-height:10px;
+}
+
+.bye_tac {
+	background-image: url(images/0609_bye_popup_bkg.jpg);
+	background-repeat: repeat-y;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.bye_tac_text {
+	width: 440px;
+	color: #31579f;
+	text-align: left;
+	font-size: 11px;
+	line-height: 14px;
+	margin-left: 25px;
+}
+
+.bye_tac_copyright {
+	text-align: left;
+	font-size: 9px;
+	line-height: 12px;
+	color: #7c7e80;
+	width: 445px;
+	margin-left: 25px;
+	margin-right: 100px;
+	float: left;
+}
+
+/* Popup Stuff */
+
+.enlargeDiv
+{
+	width:414px;
+	height:458px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#441300;
+    position : absolute;
+    background : #FFFFFF; 
+    visibility : hidden;
+    z-index:2;
+	font-size:10px;
+	color:#31579f;
+	line-height:10px;
+	text-align:left;
+	padding:10px;
+    
+}
+
+
+#cover {
+	display:none;
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:1575px;
+	background:gray;
+	filter:alpha(Opacity=50);
+	opacity:0.5;
+	-moz-opacity:0.5;
+	-khtml-opacity:0.5
+}

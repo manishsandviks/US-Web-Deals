@@ -105,10 +105,48 @@ namespace deals.earlymoments.com.Controllers
                 oComm = null;
                 oProcess = null;
             }
+
         }
 
+        [PreserveQueryString]
         public ActionResult OrderStatus()
         {
+            OrderVariables oVariables = new OrderVariables();
+            CommonModels oComm = new CommonModels();
+            try
+            {
+                int errorCode = 0;
+                if (Session["NewOrderDetails"] != null)
+                {
+                    oVariables = new OrderVariables();
+                    oVariables = Session["NewOrderDetails"] as OrderVariables;
+                   
+                    if (oVariables != null)
+                    {
+                        errorCode = oVariables.error_code;
+                    }
+                    ViewBag.ErrorMessage = GetError(errorCode.ToString());
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = GetError(errorCode.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                if (oVariables != null)
+                {
+                    oComm.SendEmail("Page_Load() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                      + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
+                }
+            }
+            finally
+            {
+                Session["NewOrderDetails"] = null;
+                oVariables = null;
+                oComm = null;
+
+            }
             return View();
         }
 
@@ -480,6 +518,48 @@ namespace deals.earlymoments.com.Controllers
             }
         }
 
-        
+
+        public static string GetError(string errorcode)
+        {
+            string errMessage =
+                "<div align=\'center\' class=\'FormTable\' style=\'padding-top: 10px;color:red; font-weight:400; font-size:16px; text-align:center; line-height:20px;\' id=\'status\' runat=\'server\'>\r\n" +
+                "<strong>Thank you for your interest in Our Products.</strong><br />\r\n    </div>\r\n    <div align=\'center\' style=\'font-weight:300; font-size:14px; text-align:center; line-height:20px;\'>\r\n\t\t!_errorMessage_!\r\n</div>";
+
+            string default_message =
+                "Due to technical difficulties, we are not able to process your order.<br />\r\nPlease call us at the number below to place an order via phone.<br />\r\n" +
+                "Thank you again for your interest and understanding. Phone: <a href=\'https://www.earlymoments.com/Customer-Care/\'>\r\n1-800-353-3140</a>";
+            object result = null;
+
+            try
+            {
+                if (!string.IsNullOrEmpty(errorcode))
+                {
+                    if (Convert.ToInt32(errorcode) > 0)
+                    {
+                        string serviceUrl = System.Configuration.ConfigurationManager.AppSettings["iservice"].ToString();
+                        serviceUrl += "errorMessage?ErrorCode=" + errorcode + "&format=json";
+                        connectIServices connectIServices = new connectIServices();
+                        string obj = connectIServices.returnJson(serviceUrl);
+                        var yourOjbect = new JavaScriptSerializer().DeserializeObject(obj);
+                        List<object> resultList = new List<object>();
+                        Dictionary<string, object> dictStr = new Dictionary<string, object>();
+                        dictStr = (Dictionary<string, object>)yourOjbect;
+
+                        //var errorcd = dictStr.Where(b => b.Key == "ErrorCode").Select(b => b.Value).FirstOrDefault();
+                        result = dictStr.Where(b => b.Key == "Message").Select(b => b.Value).FirstOrDefault();
+                    }
+                }
+
+                if (Convert.ToInt32(errorcode) <= 0)
+                {
+                    result = default_message;
+                }
+            }
+            catch (Exception)
+            {
+                result = default_message;
+            }
+            return errMessage.Replace("!_errorMessage_!", result != null ? Convert.ToString(result) : "");
+        }
     }
 }

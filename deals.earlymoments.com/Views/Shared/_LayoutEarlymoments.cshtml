@@ -4,16 +4,15 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="/CSS/earlymoments.css" rel="stylesheet" />
+    <link href="/Content/earlymoments.css" rel="stylesheet" />
 </head>
 <body>
     <div>
-        <div style="width: 804px; margin: 150px auto;">
+        <div style="width: 804px; margin: 50px auto;">
             <div style="float: left; width: 800px; border-left: solid 2px #d4d4d4; border-right: solid 2px #d4d4d4;
                 background-color: #FFF">
                 <div align="center">
-                    <asp:Image ID="imgHeader" runat="server" AlternateText="Order Confirmation" Width="800"
-                               Height="118" />
+                    <img src="/Images/bfd_confirm_head.gif" id="imgHeader" alt="Order Confirmation" class="responsiveImg" style="width:800px;height:118px;" />
                 </div>
                 <div>
                     @RenderBody()
@@ -32,6 +31,5 @@
             <!-- Close Container Div-->
         </div>
     </div>
-
 </body>
 </html>

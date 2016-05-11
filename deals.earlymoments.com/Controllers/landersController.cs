@@ -140,6 +140,7 @@ namespace deals.earlymoments.com.Controllers
                         {
                             if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                             {
+                                Session.Add("NewOrderDetails", oVariables);
                                 return RedirectToAction("orderstatus", "Home");
                             }
                             else if (oVariables.err.Length > 0)
@@ -255,6 +256,7 @@ namespace deals.earlymoments.com.Controllers
                                     {
                                         if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                                         {
+                                            Session.Add("NewOrderDetails", oVariables);
                                             return RedirectToAction("orderstatus", "Home");
                                         }
                                         else if (oVariables.err.Length > 0)
@@ -382,6 +384,7 @@ namespace deals.earlymoments.com.Controllers
                                     {
                                         if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                                         {
+                                            Session.Add("NewOrderDetails", oVariables);
                                             return RedirectToAction("orderstatus", "Home");
                                         }
                                         else if (oVariables.err.Length > 0)
