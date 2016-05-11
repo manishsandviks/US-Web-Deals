@@ -57,7 +57,7 @@
       <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OrderEngine">
-      <HintPath>..\Utilities\OrderEngine.dll</HintPath>
+      <HintPath>..\..\Disney-Max-Choice\US-Web-Disney-MaxChoice\Utilities\OrderEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
