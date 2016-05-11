@@ -256,6 +256,9 @@
     <Content Include="Content\themes\elmo\Payment399\custom.css" />
     <Content Include="Content\themes\elmo\Payment399\media.css" />
     <Content Include="Content\themes\landers\style.css" />
+    <Content Include="Content\themes\seuss\4for1spring2\common.css" />
+    <Content Include="Content\themes\seuss\4for1spring2\custom.css" />
+    <Content Include="Content\themes\seuss\4for1spring2\media.css" />
     <Content Include="Content\themes\seuss\4for1spring\custom.css" />
     <Content Include="Content\themes\seuss\4for1spring\media.css" />
     <Content Include="Content\themes\seuss\4for1winter\custom.css" />
@@ -483,6 +486,25 @@
     <Content Include="Images\prev_sm.png" />
     <Content Include="Images\question_mark.gif" />
     <Content Include="Images\question_mark.png" />
+    <Content Include="Images\seuss\4for1spring2\bb.png" />
+    <Content Include="Images\seuss\4for1spring2\button_1.png" />
+    <Content Include="Images\seuss\4for1spring2\button_2.png" />
+    <Content Include="Images\seuss\4for1spring2\header.jpg" />
+    <Content Include="Images\seuss\4for1spring2\left-Bottom.jpg" />
+    <Content Include="Images\seuss\4for1spring2\leftBottom.png" />
+    <Content Include="Images\seuss\4for1spring2\left_01.jpg" />
+    <Content Include="Images\seuss\4for1spring2\left_02.jpg" />
+    <Content Include="Images\seuss\4for1spring2\left_1.jpg" />
+    <Content Include="Images\seuss\4for1spring2\left_2.jpg" />
+    <Content Include="Images\seuss\4for1spring2\mobile_form_top.png" />
+    <Content Include="Images\seuss\4for1spring2\mobile_headerfall.png" />
+    <Content Include="Images\seuss\4for1spring2\right_top1.png" />
+    <Content Include="Images\seuss\4for1spring2\springformbkg.gif" />
+    <Content Include="Images\seuss\4for1spring2\step1.png" />
+    <Content Include="Images\seuss\4for1spring2\step1Mob.png" />
+    <Content Include="Images\seuss\4for1spring2\step2.png" />
+    <Content Include="Images\seuss\4for1spring2\step3.png" />
+    <Content Include="Images\seuss\4for1spring2\top.gif" />
     <Content Include="Images\seuss\4for1spring\bb.png" />
     <Content Include="Images\seuss\4for1spring\button_1.png" />
     <Content Include="Images\seuss\4for1spring\leftBottom.png" />
@@ -1585,6 +1607,7 @@
     <Content Include="Script\jquery-ui.js" />
     <Content Include="Script\jquery.1.11.3.min.js" />
     <Content Include="Script\landers\bootstrap.min.js" />
+    <Content Include="Script\seuss\4for1spring2\main.js" />
     <Content Include="Script\seuss\4for1spring\main.js" />
     <Content Include="Script\seuss\4for1winter\main.js" />
     <Content Include="Script\seuss\4for99spring\main.js" />
@@ -1767,6 +1790,7 @@
     <Content Include="Views\landers\upsell_offer2.cshtml" />
     <Content Include="Views\landers\thankyou.cshtml" />
     <Content Include="Views\Shared\_LayoutTripware.cshtml" />
+    <Content Include="Views\Seuss\four_for_1_spring2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

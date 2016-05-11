@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('#radbillno').click(function () {
         $('#showBillInfo').slideDown(0);
 
-    });
+    })
     $('#radbillyes').click(function () {
         $('#showBillInfo').slideUp(0);
     });

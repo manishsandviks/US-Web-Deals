@@ -343,7 +343,7 @@ namespace deals.earlymoments.com.Models
                 ChildDOB = null;
                 ChildGender = "";
                 ChildName = "";
-                isBonusSelected = false;
+                isBonusSelected = true;
                 isBillingSameToShipping = true;
                 BillingFirstName = "";
                 BillingLastName = "";
@@ -358,6 +358,147 @@ namespace deals.earlymoments.com.Models
                 SecurityCode = "";
                 CCBillZipCode = "";
                 SecurityCaptch = "";
+            }
+
+        }
+
+        public class ShippingBillingOrder
+        {
+
+            [Required(ErrorMessage = "Shipping First Name is required.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping First Name cannot be longer than 15 char and less than 3 char.")]
+            [DisplayName("First Name")]
+            public string ShippingFirstName { get; set; }
+
+            [Required(ErrorMessage = "Shipping Last Name is required.")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Shipping Last Name  cannot be longer than 15 char and less than 3 char.")]
+            [DisplayName("Last Name")]
+            public string ShippingLastName { get; set; }
+
+            [Required(ErrorMessage = "Shipping Address is required.")]
+            [StringLength(30, MinimumLength = 5, ErrorMessage = "Shipping Address1 cannot be longer than 30 char and less than 3 char.")]
+            [DisplayName("Street Address")]
+            public string ShippingAddress1 { get; set; }
+
+            [StringLength(30, ErrorMessage = "Shipping Address2 cannot be longer than 30 characters.")]
+            public string ShippingAddress2 { get; set; }
+
+            [Required(ErrorMessage = "Shipping City is required.")]
+            [StringLength(50, ErrorMessage = "Shipping City cannot be longer than 16 characters.")]
+            public string ShippingCity { get; set; }
+
+            [Required(ErrorMessage = "Shipping State is required.")]
+            [StringLength(2, MinimumLength = 2, ErrorMessage = "Shipping State code cannot be longer than 2 characters and less than 2 char.")]
+            public string ShippingState { get; set; }
+
+            [Required(ErrorMessage = "Shipping Zip Code is required.")]
+            [StringLength(10, MinimumLength = 5, ErrorMessage = "Shipping Zip Code cannot be longer than 10 char and less than 5 char..")]
+            public string ShippingZipCode { get; set; }
+
+            [StringLength(10, ErrorMessage = "Shipping Phone cannot be longer than 10 char.")]
+            public string ShippingPhone { get; set; }
+
+            [Required(ErrorMessage = "Shipping Email is required.")]
+            [StringLength(50, ErrorMessage = "Shipping Email cannot be longer than 50 characters.")]
+            public string ShippingEmail { get; set; }
+
+            [Required(ErrorMessage = "Shipping Confirm Email is required.")]
+            [StringLength(50, ErrorMessage = "Shipping Confirm Email cannot be longer than 50 characters.")]
+            public string ShippingConfirmEmail { get; set; }
+
+            [StringLength(50, ErrorMessage = "Child Name cannot be longer than 50 characters.")]
+            public string ChildName { get; set; }
+
+            public DateTime? ChildDOB { get; set; }
+            public string ChildGender { get; set; }
+
+            public bool isBonusSelected { get; set; }
+
+
+            [DisplayName("First Name")]
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing First Name cannot be longer than 15 char and less than 3 char.")]
+            public string BillingFirstName { get; set; }
+
+
+            [StringLength(50, MinimumLength = 3, ErrorMessage = "Billing Last Name cannot be longer than 15 char and less than 3 char.")]
+            public string BillingLastName { get; set; }
+
+
+            [StringLength(30, MinimumLength = 5, ErrorMessage = "Billing Address1 cannot be longer than 30 char and less than 5 char.")]
+            public string BillingAddress1 { get; set; }
+
+            [StringLength(30, ErrorMessage = "Billing Address2 cannot be longer than 30 characters.")]
+            public string BillingAddress2 { get; set; }
+
+
+            [StringLength(50, ErrorMessage = "Billing City cannot be longer than 16 characters.")]
+            public string BillingCity { get; set; }
+
+
+            [StringLength(2, MinimumLength = 2, ErrorMessage = "Billing State code can not be longer than 2 characters and less than 2 char")]
+            public string BillingState { get; set; }
+
+
+            [StringLength(10, ErrorMessage = "Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
+            public string BillingZipCode { get; set; }
+
+            [DisplayName("Is your billing address the same as your shipping address?")]
+            public bool isBillingSameToShipping { get; set; }
+           
+            [DisplayName("Credit Card Number")]
+            [StringLength(16, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
+            public string CreditCardNumber { get; set; }
+          
+            [DisplayName("Expiry Month")]
+            [StringLength(3, ErrorMessage = "Card Expiry Month cannot be longer than 3 characters.")]
+            public string CardExpiryMonth { get; set; }
+            
+            [DisplayName("Expiry Year")]
+            [StringLength(4, MinimumLength = 2, ErrorMessage = "Card Expiry Year cannot be longer than 4 characters.")]
+            public string CardExpiryYear { get; set; }
+           
+            [DisplayName("Security Code")]
+            [StringLength(30, MinimumLength = 3, ErrorMessage = "Security Code cannot be longer than 4 char and less tha three char.")]
+            public string SecurityCode { get; set; }
+
+            [DisplayName("Billing Zip Code")]
+            [StringLength(10, ErrorMessage = "CC Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
+            public string CCBillZipCode { get; set; }
+            public string SecurityCaptch { get; set; }
+            public int stepNumber {get;set;}
+
+
+            public ShippingBillingOrder()
+            {
+                ShippingFirstName = "";
+                ShippingLastName = "";
+                ShippingAddress1 = "";
+                ShippingAddress2 = "";
+                ShippingCity = "";
+                ShippingState = "";
+                ShippingZipCode = "";
+                ShippingPhone = "";
+                ShippingEmail = "";
+                ShippingConfirmEmail = "";
+                ChildDOB = null;
+                ChildGender = "";
+                ChildName = "";
+                isBonusSelected = true;
+                isBillingSameToShipping = true;
+                BillingFirstName = "";
+                BillingLastName = "";
+                BillingAddress1 = "";
+                BillingAddress2 = "";
+                BillingCity = "";
+                BillingState = "";
+                BillingZipCode = "";
+                CreditCardNumber = "";
+                CardExpiryMonth = "";
+                CardExpiryYear = "";
+                SecurityCode = "";
+                CCBillZipCode = "";
+                SecurityCaptch = "";
+                stepNumber = 0;
             }
 
         }
