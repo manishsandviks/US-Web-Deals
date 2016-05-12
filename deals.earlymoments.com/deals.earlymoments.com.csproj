@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlliantDataProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\AlliantDataProxy.dll</HintPath>
+    </Reference>
     <Reference Include="as400request, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\as400request.dll</HintPath>
@@ -47,9 +51,25 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\com.sandviks.sfmc.dll</HintPath>
     </Reference>
+    <Reference Include="CustServiceProxy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=426109a22f3e5396, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\CustServiceProxy.dll</HintPath>
+    </Reference>
     <Reference Include="dbConn, Version=1.0.1494.17748, Culture=neutral, PublicKeyToken=470f53bbcc3e9c96">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\dbConn.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMindCCFraud, Version=1.0.3571.37912, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\MaxMindCCFraud.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMindCCFraudAPI, Version=0.1.1672.26728, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\MaxMindCCFraudAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMindMinFraud, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\MaxMindMinFraud.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -58,6 +78,14 @@
     </Reference>
     <Reference Include="OrderEngine">
       <HintPath>..\Utilities\OrderEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="PaymentTechService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\PaymentTechService.dll</HintPath>
+    </Reference>
+    <Reference Include="SAHUtils, Version=1.0.1837.27925, Culture=neutral, PublicKeyToken=4b08909ddac7c428">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilities\SAHUtils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
