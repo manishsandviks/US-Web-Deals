@@ -148,6 +148,11 @@ namespace deals.earlymoments.com.Controllers
                                 ViewBag.ErrorMsg = oVariables.err;
                                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                             }
+                            else if (oVariables.isSoftDeclined)
+                            {
+                                Session["NewSBMDetails"] = null;
+                                return RedirectToAction("ThankYou", "home");
+                            }
                             else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                             {
                                 Session.Add("NewSBMDetails", oVariables);
@@ -160,6 +165,7 @@ namespace deals.earlymoments.com.Controllers
                                 oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                             }
                         }
+
                     }
                 }
                 else
