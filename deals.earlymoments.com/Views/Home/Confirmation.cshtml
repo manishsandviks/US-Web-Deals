@@ -3,6 +3,33 @@
     Layout = "~/Views/Shared/_LayoutConfirmation.cshtml";
 }
 
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1122629181099927');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase');</script>
+<noscript>
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Taboola conversion Code script -->
+<script type="text/javascript">
+    window._tfa = window._tfa || [];
+    _tfa.push({ notify: "action", name: 'subscription_successful' });
+</script>
+<script src="//cdn.taboola.com/libtrc/polleverywhere-sc/tfa.js"></script>
+<!-- Ends Taboola conversion code -->
+
 <h1 class="bold">Thank you for your order from Early Moments!</h1>
 <p>Your @ViewBag.product shipment will be on its way to you and your child shortly.</p>
 <p class="noMargin">You can print this order confirmation for your records.</p>
