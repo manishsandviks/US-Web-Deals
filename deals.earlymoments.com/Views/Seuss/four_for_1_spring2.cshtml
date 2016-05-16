@@ -14,6 +14,7 @@
     <title>:: Kids Love Dr. Seuss &amp; His Friends ::</title>
     <link href="/Content/bootstrap.min.css" rel="stylesheet">
     <link href="/Content/font-awesome.css" rel="stylesheet">
+    <link href="/Content/spinn.css" rel="stylesheet" />
     <!--<link href="css/custom.css" rel="stylesheet"> -->
     <link href="/Content/themes/seuss/4for1spring2/common.css" rel="stylesheet" />
     <link href="/Content/themes/seuss/4for1spring2/custom.css" rel="stylesheet" />
@@ -33,9 +34,10 @@
     <script src="/script/bootstrap.min.js"></script>
 
     <script src="/script/jquery-ui.js"></script>
-    <script src="/script/enquire.min.js"></script>
-    <script src="/script/Shopping-Validation.js"></script>
+    <script src="/script/enquire.min.js"></script>  
+    <script src="/Script/seuss/4for1spring2/Validation.js"></script>
     <script src="/script/seuss/4for1spring2/main.js"></script>
+    <script src="/Script/spin.min.js"></script>
 </head>
 
 <body>
@@ -431,6 +433,8 @@
                                 </div>
                                 <div class="row marginBot6">
                                     <div class="col-md-12 text-center">
+                                        <input type="submit" name="SubmitButton" id="btnShippingSubmit" value="Rush my books">
+
                                         <img src="/images/seuss/4for1spring2/button_1.png" alt="" class="responsiveImg hand" onclick="showPayment();">
 
                                     </div>
@@ -904,7 +908,10 @@
                                     </div>
                                 </div>
 
-                                <p class="text-center marginTop15"><img src="/images/seuss/4for1spring2/button_2.png" alt="" class="responsiveImg buttonContinue hand"></p>
+                                <p class="text-center marginTop15">
+                                <img src="/images/seuss/4for1spring2/button_2.png" alt="" class="responsiveImg buttonContinue hand">
+                                    <input type="submit" name="SubmitButton" id="btnPaymentSubmit" value="Submit Order">
+                                </p>
                                 <!--<p class="marginTop10 text-center"><img src="/images/seuss/4for1spring2/download.png" class="responsiveImg"></p>-->
                                 <p class="marginTop10 noMarginBottomSmall text-center">
                                     <!--- GeoTrust -->
@@ -982,6 +989,13 @@
                     </button>
                 </section>
             </div>
+        </div>
+    </div>
+    <div id="loading">
+        <div id="loadingcontent" style="">
+            <p id="loadingspinner">
+                <strong>Please wait while we process your order.</strong>
+            </p>
         </div>
     </div>
 </body>

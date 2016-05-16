@@ -444,19 +444,19 @@ namespace deals.earlymoments.com.Models
 
             [DisplayName("Is your billing address the same as your shipping address?")]
             public bool isBillingSameToShipping { get; set; }
-           
+
             [DisplayName("Credit Card Number")]
             [StringLength(16, MinimumLength = 15, ErrorMessage = "Credit Card Number cannot be longer than 17 digits and less than 15 digits")]
             public string CreditCardNumber { get; set; }
-          
+
             [DisplayName("Expiry Month")]
             [StringLength(3, ErrorMessage = "Card Expiry Month cannot be longer than 3 characters.")]
             public string CardExpiryMonth { get; set; }
-            
+
             [DisplayName("Expiry Year")]
             [StringLength(4, MinimumLength = 2, ErrorMessage = "Card Expiry Year cannot be longer than 4 characters.")]
             public string CardExpiryYear { get; set; }
-           
+
             [DisplayName("Security Code")]
             [StringLength(30, MinimumLength = 3, ErrorMessage = "Security Code cannot be longer than 4 char and less tha three char.")]
             public string SecurityCode { get; set; }
@@ -465,7 +465,7 @@ namespace deals.earlymoments.com.Models
             [StringLength(10, ErrorMessage = "CC Billing Zip Code cannot be longer than 10 char and less than 5 char.")]
             public string CCBillZipCode { get; set; }
             public string SecurityCaptch { get; set; }
-            public int stepNumber {get;set;}
+            public int stepNumber { get; set; }
 
 
             public ShippingBillingOrder()
@@ -674,6 +674,92 @@ namespace deals.earlymoments.com.Models
             }
 
             return oVariables;
+        }
+
+        public static OrderVariables AssignShippingBillingToOrderVariables(OrderVariables oVariables, ShippingBillingOrder newShippingAddress)
+        {
+            if (newShippingAddress != null && newShippingAddress.stepNumber == 1)
+            {
+                CommonModels oComm = new CommonModels();
+                //OrderVariables oVariables = new OrderVariables();
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname = newShippingAddress.ShippingFirstName;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname = newShippingAddress.ShippingLastName;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1 = newShippingAddress.ShippingAddress1;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt = newShippingAddress.ShippingAddress2;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = newShippingAddress.ShippingCity;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
+                oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
+                //oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
+
+                oVariables.ip_address = oComm.GetIPAddress();
+                oVariables.phone = newShippingAddress.ShippingPhone;
+                oVariables.email = newShippingAddress.ShippingEmail;
+                oVariables.bonus_option = false;
+
+                if (newShippingAddress.isBonusSelected)
+                {
+                    oVariables.bonus_option = true;
+                }
+
+                //Setting billing Address by default same as shipping address.
+                // later on payment page it will be updated if shipping and biling not same
+                oVariables.bill_to_fname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_fname;
+                oVariables.bill_to_lname = oVariables.ShipVars[oVariables.default_shp_id].ship_to_lname;
+                oVariables.bill_to_address1 = oVariables.ShipVars[oVariables.default_shp_id].ship_to_address1;
+                oVariables.bill_to_apt = oVariables.ShipVars[oVariables.default_shp_id].ship_to_apt;
+                oVariables.bill_to_city = oVariables.ShipVars[oVariables.default_shp_id].ship_to_city;
+                oVariables.bill_to_state = oVariables.ShipVars[oVariables.default_shp_id].ship_to_state;
+                oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
+                return oVariables;
+            }
+            else if (newShippingAddress != null && newShippingAddress.stepNumber == 1)
+            {
+                //As we are setting billing and shipping address same on landing page 
+                if (newShippingAddress.isBillingSameToShipping == false)
+                {
+                    oVariables.bill_to_fname = newShippingAddress.BillingFirstName.Trim();
+                    oVariables.bill_to_lname = newShippingAddress.BillingLastName.Trim();
+                    oVariables.bill_to_address1 = newShippingAddress.BillingAddress1.Trim();
+                    oVariables.bill_to_apt = (!string.IsNullOrEmpty(newShippingAddress.BillingAddress2)) ? newShippingAddress.BillingAddress2.Trim() : "";
+                    oVariables.bill_to_city = newShippingAddress.BillingCity.Trim();
+                    oVariables.bill_to_state = newShippingAddress.BillingState.Trim();
+                    oVariables.bill_to_zipcode = newShippingAddress.BillingZipCode.Trim();
+                }
+
+                //Assigning Payment details to OVariable
+                oVariables.credit_rule = "CCC";
+                oVariables.err = "";
+
+                if (oVariables.CCVars.Count > 0)
+                {
+                    oVariables.CCVars[0].number = newShippingAddress.CreditCardNumber.Trim();
+                    oVariables.CCVars[0].type = "";
+                    oVariables.CCVars[0].expdate = newShippingAddress.CardExpiryMonth.Trim() + newShippingAddress.CardExpiryYear.Trim();
+                    oVariables.CCVars[0].cvv = newShippingAddress.SecurityCode.Trim();
+                    oVariables.CCVars[0].zipcode = oVariables.bill_to_zipcode;// newShippingAddress.BillingZipCode.Trim();
+                    oVariables.total_amt = 0.0;
+                    oVariables.total_sah = 0.0;
+                }
+                else
+                {
+                    CCProperties oCCVars = new OrderEngine.CCProperties();
+                    oVariables.payment_type = "CC";
+                    oCCVars.number = newShippingAddress.CreditCardNumber.Trim();
+                    oCCVars.type = "";
+                    oCCVars.expdate = newShippingAddress.CardExpiryMonth.Trim() + newShippingAddress.CardExpiryYear.Trim();
+                    oCCVars.cvv = newShippingAddress.SecurityCode.Trim();
+                    oCCVars.zipcode = oVariables.bill_to_zipcode;// (billingDetails.BillingZipCode != null && billingDetails.BillingZipCode != "") ? billingDetails.BillingZipCode.Trim() : oVariables.bill_to_zipcode; // billingDetails.BillingZipCode.Trim();
+                    oVariables.credit_rule = "CCC";
+                    oVariables.CCVars.Add(oCCVars);
+                    oVariables.total_amt = 0.0;
+                    oVariables.total_sah = 0.0;
+                }
+
+                
+                return oVariables;
+            }
+            else
+                return null;
         }
     }
 }

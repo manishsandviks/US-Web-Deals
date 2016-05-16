@@ -2772,89 +2772,102 @@ namespace deals.earlymoments.com.Controllers
             OrderProcess oProcess = new OrderProcess();
             CommonMethods oComm = new CommonMethods();
             OrderVariables oVariables = new OrderVariables();
-            //try
-            //{
-            //    if (ModelState.IsValid == false)
-            //    {
-            //        var message = string.Join("<br/>", ModelState.Values
-            //            .SelectMany(v => v.Errors)
-            //            .Select(e => e.ErrorMessage));
-            //        ViewBag.ErrorMsg = message.ToString();
-            //        return View();
-            //    }
 
-            //    oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
+            try
+            {
 
-            //    var offerService = new OfferService();
-            //    oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
-            //    oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
+                if (!string.IsNullOrEmpty(SubmitButton))
+                {
+                    switch (SubmitButton.ToLower())
+                    {
+                        case "rush my books":
+                            oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
+                           // oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
+                            break;
+                    }
+                }
 
-            //    //Submitting shipping details to order engin for order process
-            //    //Code commented for passing to payment page. 
-            //    oVariables = oProcess.OrderSubmit(oVariables);
-            //    if (oVariables != null)
-            //    {
-            //        if (oVariables.order_id > 0)
-            //        {
-            //            Session.Add("NewOrderDetails", oVariables);
-            //            return RedirectToAction("Confirmation", "Home");
-            //        }
-            //        else
-            //        {
-            //            if (oVariables.err.Length >= 0)
-            //            {
-            //                // page_log += "Order is NOT processed. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-            //                if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
-            //                {
-            //                    //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-            //                    //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
-            //                    // HttpContext.Current.ApplicationInstance.CompleteRequest();
-            //                    return RedirectToAction("orderstatus", "Home");
-            //                }
-            //                else if (oVariables.err.Length > 0)
-            //                {                               
-            //                    ViewBag.ErrorMsg = oVariables.err;
-            //                    oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-            //                }
-            //                else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
-            //                {
-            //                    //  page_log += "Order is NOT processed with NO ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-            //                    Session.Add("NewSBMDetails", oVariables);
-            //                    //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
-            //                    //   HttpContext.Current.ApplicationInstance.CompleteRequest();
-            //                    return RedirectToAction("payment4_for_1_spring", "Seuss");
-            //                }
-            //                else
-            //                {                              
+                //    if (ModelState.IsValid == false)
+                //    {
+                //        var message = string.Join("<br/>", ModelState.Values
+                //            .SelectMany(v => v.Errors)
+                //            .Select(e => e.ErrorMessage));
+                //        ViewBag.ErrorMsg = message.ToString();
+                //        return View();
+                //    }
 
-            //                    ViewBag.ErrorMsg = oVariables.err;
-            //                    oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-            //                }
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        //page_log += "Order is NOT processed, Order Process returned NULL.<br>";
-            //        Session["NewSBMDetails"] = null;
-            //        return RedirectToAction("orderstatus", "Home");
-            //    }
-            //    //ends Submitting shipping details to order engin for order process              
-            //}
-            //catch (Exception ex)
-            //{
-            //    string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
-            //    CommonModels oCom = new CommonModels();
-            //    string s = "";// oCom.LogBrowserCapabilities(Request.Browser);
-            //    oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
-            //    return View();
-            //}
-            //finally
-            //{
-            //    oVariables = null;
-            //    oComm = null;
-            //    oProcess = null;
-            //}
+                //    oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
+
+                //    var offerService = new OfferService();
+                //    oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
+                //    oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
+
+                //    //Submitting shipping details to order engin for order process
+                //    //Code commented for passing to payment page. 
+                //    oVariables = oProcess.OrderSubmit(oVariables);
+                //    if (oVariables != null)
+                //    {
+                //        if (oVariables.order_id > 0)
+                //        {
+                //            Session.Add("NewOrderDetails", oVariables);
+                //            return RedirectToAction("Confirmation", "Home");
+                //        }
+                //        else
+                //        {
+                //            if (oVariables.err.Length >= 0)
+                //            {
+                //                // page_log += "Order is NOT processed. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                //                if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                //                {
+                //                    //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                //                    //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
+                //                    // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                //                    return RedirectToAction("orderstatus", "Home");
+                //                }
+                //                else if (oVariables.err.Length > 0)
+                //                {                               
+                //                    ViewBag.ErrorMsg = oVariables.err;
+                //                    oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                //                }
+                //                else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
+                //                {
+                //                    //  page_log += "Order is NOT processed with NO ERROR. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
+                //                    Session.Add("NewSBMDetails", oVariables);
+                //                    //   Response.Redirect("../" + oVariables.redirect_page + oComm.GetURIString() + "&template=club", false);
+                //                    //   HttpContext.Current.ApplicationInstance.CompleteRequest();
+                //                    return RedirectToAction("payment4_for_1_spring", "Seuss");
+                //                }
+                //                else
+                //                {                              
+
+                //                    ViewBag.ErrorMsg = oVariables.err;
+                //                    oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                //                }
+                //            }
+                //        }
+                //    }
+                //    else
+                //    {
+                //        //page_log += "Order is NOT processed, Order Process returned NULL.<br>";
+                //        Session["NewSBMDetails"] = null;
+                //        return RedirectToAction("orderstatus", "Home");
+                //    }
+                //    //ends Submitting shipping details to order engin for order process              
+            }
+            catch (Exception ex)
+            {
+                string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
+                CommonModels oCom = new CommonModels();
+                string s = "";// oCom.LogBrowserCapabilities(Request.Browser);
+                oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
+                return View();
+            }
+            finally
+            {
+                oVariables = null;
+                oComm = null;
+                oProcess = null;
+            }
             return View();
         }
 

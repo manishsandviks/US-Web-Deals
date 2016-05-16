@@ -1637,6 +1637,7 @@
     <Content Include="Script\jquery.1.11.3.min.js" />
     <Content Include="Script\landers\bootstrap.min.js" />
     <Content Include="Script\seuss\4for1spring2\main.js" />
+    <Content Include="Script\seuss\4for1spring2\Validation.js" />
     <Content Include="Script\seuss\4for1spring\main.js" />
     <Content Include="Script\seuss\4for1winter\main.js" />
     <Content Include="Script\seuss\4for99spring\main.js" />
