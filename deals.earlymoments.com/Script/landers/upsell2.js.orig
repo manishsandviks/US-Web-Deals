@@ -12,12 +12,8 @@
 <<<<<<< HEAD
   
 =======
-    $("#btnNoUpsell").click(function () {
-        // $("form").submit();
-        window.location.href = "/home/confirmation";
-        pleaseWait();
-    });
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+   
+>>>>>>> update: Apple device issue fixes
 });
 
 function pleaseWait() {

@@ -226,17 +226,8 @@ namespace deals.earlymoments.com.Controllers
                     if (oVariables != null)
                     {
 <<<<<<< HEAD
-<<<<<<< HEAD
                         //  if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
                         //  {
-=======
-                        // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
-                        // {
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
-                        // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
-                        // {
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                         oVariables.applyDupeCheck = false;
                         oVariables.applyEnhancedCTI = false;
                         oVariables.has_shopping_Cart = true;
@@ -253,18 +244,12 @@ namespace deals.earlymoments.com.Controllers
                         oVariables.cancelOriginalOrder = true;
                         oVariables.originalOrderId = oVariables.order_id;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                         oVariables.promotion_code = oVariables.promotion_code.Length >= 6
                             ? oVariables.promotion_code.Substring(0, 6)
                             : oVariables.promotion_code;
 
                         oVariables.pcode_pos_7 = "U";
 
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                         oProcess.OrderSubmit(oVariables);
 
                         //code for adding upsell by api call commented
@@ -275,10 +260,10 @@ namespace deals.earlymoments.com.Controllers
                         //}
                         if (oVariables != null)
                         {
-<<<<<<< HEAD
                             if (oVariables.order_id > 0)
 =======
-<<<<<<< HEAD
+                       // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
+                       // {
                             oVariables.applyDupeCheck = false;
                             oVariables.applyEnhancedCTI = false;
                             oVariables.has_shopping_Cart = true;
@@ -310,10 +295,7 @@ namespace deals.earlymoments.com.Controllers
                             //    Session["NewOrderDetails"] = oVariables;
                             //}
                             if (oVariables != null)
-=======
-                            if (oVariables.order_id > 0)
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+>>>>>>> update: Apple device issue fixes
                             {
                                 oVariables.lastPageClientOn = "upsell_offer2";
                                 Session.Add("NewOrderDetails", oVariables);
@@ -324,10 +306,6 @@ namespace deals.earlymoments.com.Controllers
                                 if (oVariables.err.Length >= 0)
                                 {
                                     if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                                     {
                                         Session.Add("NewOrderDetails", oVariables);
                                         return RedirectToAction("orderstatus", "Home");
@@ -339,22 +317,6 @@ namespace deals.earlymoments.com.Controllers
                                     }
                                     else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                                     {
-<<<<<<< HEAD
-=======
-                                    {
-                                        Session.Add("NewOrderDetails", oVariables);
-                                        return RedirectToAction("orderstatus", "Home");
-                                    }
-                                    else if (oVariables.err.Length > 0)
-                                    {
-                                        ViewBag.ErrorMsg = oVariables.err;
-                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                                    }
-                                    else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
-                                    {
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                                         Session.Add("NewSBMDetails", oVariables);
                                         return View();
                                         // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
@@ -366,6 +328,7 @@ namespace deals.earlymoments.com.Controllers
                                     }
                                 }
                             }
+<<<<<<< HEAD
                         }
                         else
                         {
@@ -375,6 +338,16 @@ namespace deals.earlymoments.com.Controllers
 
                         // }
                         // return RedirectToAction("upsell_offer2", "landers");
+=======
+                            else
+                            {
+                                Session["NewSBMDetails"] = null;
+                                return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                            }
+
+                       // }
+                       // return RedirectToAction("upsell_offer2", "landers");
+>>>>>>> update: Apple device issue fixes
                     }
                     else
                     {
@@ -434,23 +407,12 @@ namespace deals.earlymoments.com.Controllers
                     if (oVariables != null)
                     {
 <<<<<<< HEAD
-<<<<<<< HEAD
                         //  if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
                         //  {
-=======
-                        // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
-                        // {
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
-                        // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
-                        // {
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                         oVariables.applyDupeCheck = false;
                         oVariables.applyEnhancedCTI = false;
                         oVariables.has_shopping_Cart = true;
                         //oVariables.shopping_cart_items_remove = "19632366,19632367";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                         oVariables.promotion_code = oVariables.promotion_code.Length >= 6
                             ? oVariables.promotion_code.Substring(0, 6)
@@ -458,10 +420,6 @@ namespace deals.earlymoments.com.Controllers
 
                         oVariables.pcode_pos_7 = oVariables.shopping_cart_items.In("19632368") ? "W" : "E";
 
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                         oVariables.shopping_cart_items = "19632370,19632371";
 
                         oVariables.err = "";
@@ -484,10 +442,10 @@ namespace deals.earlymoments.com.Controllers
                         //}
                         if (oVariables != null)
                         {
-<<<<<<< HEAD
                             if (oVariables.order_id > 0)
 =======
-<<<<<<< HEAD
+                       // if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
+                       // {
                             oVariables.applyDupeCheck = false;
                             oVariables.applyEnhancedCTI = false;
                             oVariables.has_shopping_Cart = true;
@@ -520,10 +478,7 @@ namespace deals.earlymoments.com.Controllers
                             //    Session["NewOrderDetails"] = oVariables;
                             //}
                             if (oVariables != null)
-=======
-                            if (oVariables.order_id > 0)
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+>>>>>>> update: Apple device issue fixes
                             {
                                 oVariables.lastPageClientOn = "thankyou";
                                 Session.Add("NewOrderDetails", oVariables);
@@ -556,6 +511,7 @@ namespace deals.earlymoments.com.Controllers
                                     }
                                 }
                             }
+<<<<<<< HEAD
                         }
                         else
                         {
@@ -563,18 +519,18 @@ namespace deals.earlymoments.com.Controllers
                             return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
                         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                         // }
                         // return RedirectToAction("thankyou", "landers");
 =======
-                        //  }
-                        //  return RedirectToAction("thankyou", "landers");
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
-=======
-                        //  }
-                        //  return RedirectToAction("thankyou", "landers");
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+                            else
+                            {
+                                Session["NewSBMDetails"] = null;
+                                return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                            }
+
+                       // }
+                       // return RedirectToAction("thankyou", "landers");
+>>>>>>> update: Apple device issue fixes
                     }
                     else
                     {

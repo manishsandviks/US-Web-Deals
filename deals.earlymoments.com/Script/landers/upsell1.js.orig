@@ -24,15 +24,12 @@ $(document).ready(function () {
                 return false;
             }
         }
-    });
 <<<<<<< HEAD
+    });
  
 =======
-    $("#btnNoUpsell").click(function () {
-        // $("form").submit();       
-       window.location.href="/landers/upsell_offer1";
-    });
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+    });      
+>>>>>>> update: Apple device issue fixes
 });
 
 

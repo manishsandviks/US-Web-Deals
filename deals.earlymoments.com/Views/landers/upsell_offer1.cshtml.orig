@@ -458,15 +458,9 @@
                 <div id="section3" class="section3 row role-element leadstyle-container ">
                     <div class="sectionInner inside">
                         <div id="section3Form" class="section3Form">
-<<<<<<< HEAD
                             <!--<input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" />-->
                             <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping</button>
 
-=======
-                            <!--input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" /-->
-                            <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping</button>
-                            <!--<button id="btnaddupsell" name="SubmitButon" class="newBtn2 btn role-element leadstyle-link">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping<button>-->
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
                         </div>
                         <br>
                         <div>
@@ -479,11 +473,10 @@
                 <!--Section 3-->
 <<<<<<< HEAD
                 <!--<input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />-->
-                <button style="font-size:.7em;" class="inside" id="btnNoUpsell">No thank you. I do not want to take advantage of this limited time discount offer.</button>
 =======
-                <input type="button" id="btnNoUpsell" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />
-                <!--<button style="font-size:.7em;" class="inside" id="btnNoUpsell1" name="SubmitButton">No thank you. I do not want to take advantage of this limited time discount offer.</button>-->
->>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+                <!--<input type="button" id="btnNoUpsell" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />-->
+>>>>>>> update: Apple device issue fixes
+                <button style="font-size:.7em;" class="inside" id="btnNoUpsell">No thank you. I do not want to take advantage of this limited time discount offer.</button>
 
 
             </div>
@@ -687,7 +680,10 @@
                 $("#dialog-message").modal("toggle");
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> update: Apple device issue fixes
         $("#btnNoUpsell").click(function () {
             //alert("Hello");
 
