@@ -124,6 +124,7 @@ namespace deals.earlymoments.com.Controllers
                 oVariables.has_shopping_Cart = true;
 
                 oVariables.pcode_pos_7 = "N";
+                oVariables.order_Src = "EMS";
 
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 
