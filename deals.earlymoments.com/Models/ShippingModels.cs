@@ -814,7 +814,7 @@ namespace deals.earlymoments.com.Models
                 oVariables.bill_to_zipcode = oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode;
                 return oVariables;
             }
-            else if (newShippingAddress != null && newShippingAddress.stepNumber == 1)
+            else if (newShippingAddress != null && newShippingAddress.stepNumber == 2)
             {
                 //As we are setting billing and shipping address same on landing page 
                 if (newShippingAddress.isBillingSameToShipping == false)
