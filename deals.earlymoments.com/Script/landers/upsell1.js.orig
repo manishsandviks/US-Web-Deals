@@ -13,7 +13,7 @@ $(document).ready(function () {
         //alert("HI");
         //alert(validate_form());
         if (validate_form() == true) {
-            pleaseWait();
+             pleaseWait();
             $("form").submit();
 
         }
@@ -29,9 +29,8 @@ $(document).ready(function () {
  
 =======
     $("#btnNoUpsell").click(function () {
-        // $("form").submit();        
-        window.location.href = "/landers/upsell_offer2";
-        pleaseWait();
+        // $("form").submit();       
+       window.location.href="/landers/upsell_offer1";
     });
 >>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
 });
