@@ -1,0 +1,711 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutTripware.cshtml";
+}
+<script src="~/Script/landers/upsell1.js"></script>
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1122629181099927');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase');</script>
+<noscript>
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Taboola conversion Code script -->
+<script type="text/javascript">
+    window._tfa = window._tfa || [];
+    _tfa.push({ notify: "action", name: 'subscription_successful' });
+</script>
+<script src="//cdn.taboola.com/libtrc/polleverywhere-sc/tfa.js"></script>
+<!-- Ends Taboola conversion code -->
+@using (Html.BeginForm())
+{
+    <div id="pageContainer" class="container-fluid">
+        <div id="pageContainerInner" class="pageContainerInner">
+            <div id="header" class="header row role-element leadstyle-container">
+                <div id="headerInner" class="headerInner">
+                    <a id="logo" class="logo role-element leadstyle-image-link"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/disney-reading-small.png"></a>
+                </div>
+            </div>
+            <!--Header-->
+            <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
+                <div id="headlineInner" class="headlineInner">
+
+                    <p><strong>You made a great decision.</strong> </p>
+                    <p>Now your young reader can dive deeper into the characters and story they love, to enjoy an immersive, interactive reading experience.</p>
+
+                    <p>But how would you like to expand that experience to include more of the most beloved characters from Disney•Pixar... and as a valued customer, get all this at a huge discount?</p>
+
+                    <!--<p>And here's why... because you clearly want your young reader to dive deeper into the characters and story they love, to enjoy an immersive, interactive reading experience. </p>
+
+                    <p>And that's exactly what you got with the free Disney•Pixar <em>Frozen: The Essential Guide</em> and the free bonus sticker activity book.</p>
+
+                    <p>But how would you like to expand that experience to include more of the most beloved characters from Disney•Pixar... and as a valued customer, get all this at a huge discount?</p>
+                        -->
+                    <br>
+
+
+                    <div id="headline" class="headline role-element leadstyle-text">
+                        <div>
+                            <h3>Here&rsquo;s Your &ldquo;Thank You&rdquo; Discount...</h3>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--headlineWrap-->
+                <div id="hero" class="hero row role-element leadstyle-container darkbkgd">
+                    <div id="headline" class="headline role-element leadstyle-text inside">
+                        <div>
+                            <span style="color:red;"><em>While Supplies Last:</em></span> <br>
+                            Now You Can Get 3 More Disney•Pixar Favorites And a Ton of Free Bonuses
+                            For Just $7 <br>
+                            &amp; Free Shipping
+                        </div><p style="text-align:center; font-size:.8em;">(That's Over 75% Off)</p>
+                    </div>
+                    <div class="sectionInner heroInner" style="margin-top:-40px;">
+
+                        <img class="heroimage" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/3-thin-books-2.png" class="role-element leadstyle-image" style="max-width:700px;">
+
+
+
+
+                    </div>
+                    <!--Section Inner-->
+                </div>
+                <!--Section1-->
+
+
+
+
+                <div id="section2" class="section2 row role-element leadstyle-container inside">
+                    <div class="sectionInner">
+                        <h2>Here's What You Get With Your Discount:</h2><br>
+                        <div id="section2TestiHeadline" class="section2TestiHeadline role-element leadstyle-text"><h1>Three More Hardcovers Shipped Right to Your Door</h1></div>
+
+                        <!--Section2 testi wrap-->
+                    </div>
+                    <!--Section Inner-->
+                </div>
+
+
+
+                <div id="hero" class="hero row role-element leadstyle-container inside">
+
+
+
+
+                    <div class="sectionInner heroInner">
+
+
+                        <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/frozen-.png" class="role-element leadstyle-image" style="max-width:200px;">
+                        </div>
+
+                        <div id="heroRight" class="heroRight role-element leadstyle-container">
+                            <div id="heroFormWrap" class="heroFormWrap">
+                                <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                                    <p>The perfect companion to your Essential Guide, this story introduces Princess Elsa, a young girl who can magically make snow and ice appear! But because she can’t control her powers, Elsa hides them from everyone. She even pushes her younger sister Anna away. When Elsa is crowned queen and her powers are revealed, the kingdom is left in a frozen mess! The vivid illustrations and simply-told story remind us that true love is the greatest power of all.</p>
+
+                                    <p><span style=" opacity:.7; text-decoration:line-through;"><em>Value: $4.99</em></span></p><p><strong>Your Price: $2.33 (Free Shipping)</strong></p>
+
+                                    <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">Rush Me My Free Hardcover Copy</a>
+                                    <p style="text-align:center;">Just Pay $5.95 s/h</p>
+                                    -->
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="sectionInner heroInner">
+
+
+                        <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/inside-out.png" class="role-element leadstyle-image" style="max-width:200px;">
+                        </div>
+
+                        <div id="heroRight" class="heroRight role-element leadstyle-container">
+                            <div id="heroFormWrap" class="heroFormWrap">
+                                <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                                    <p>This retelling of the film is a story about Five Emotions that work together at Headquarters inside Riley’s mind. The Emotions guide Riley’s everyday actions. But when Riley moves from Minnesota to San Francisco, her Emotions struggle to keep things under control. Beautifully illustrated in eye-popping colors, this imaginative tale is sure to touch your emotions at storybook time.</p>
+
+                                    <p><span style=" opacity:.7; text-decoration:line-through;"><em>Value: $4.99</em></span></p><p><strong>Your Price: $2.33 (Free Shipping)</strong></p>
+                                    <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">Rush Me My Free Hardcover Copy</a>
+                                    <p style="text-align:center;">Just Pay $5.95 s/h</p>
+                                    -->
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sectionInner heroInner">
+
+
+                        <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/good-dinosaur.png" class="role-element leadstyle-image" style="max-width:200px;">
+                        </div>
+
+                        <div id="heroRight" class="heroRight role-element leadstyle-container">
+                            <div id="heroFormWrap" class="heroFormWrap">
+                                <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                                    <p>Disney•Pixar's The Good Dinosaur is a humorous and exciting original story about Arlo, a lively Apatosaurus with a big heart.  After a traumatic event unsettles Arlo's family, he sets out on a remarkable journey, gaining an unlikely companion along the way--a human boy. Boys and girls ages 2 to 5 will love this retelling of the film.</p>
+
+                                    <p><span style=" opacity:.7; text-decoration:line-through;"><em>Value: $4.99</em></span></p><p><strong>Your Price: $2.33 (Free Shipping)</strong></p>
+
+                                    <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">Rush Me My Free Hardcover Copy</a>
+                                    <p style="text-align:center;">Just Pay $5.95 s/h</p>
+                                    -->
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--Section Inner-->
+                </div>
+
+                <!--Hero--><p style="text-align:center;">Not only that, but you&rsquo;ll also receive:</p>
+                <div class="darkbkgd" style="margin-left:0px; margin-right:0px; width:100%; padding:1em;">
+                    <div style="margin-left:auto; margin-right:auto; width:95%; max-width:700px;" id="section1Headline" class="section1Headline role-element leadstyle-text">
+                        <h1>
+                            <span style="color:red;"><em>Free Bonus #1:</em></span><br>
+                            Downloadable E-Book Versions, So You Can Access Each Book Right Away
+                        </h1>
+                    </div>
+
+                </div>
+                <div id="section1" class="section1 row role-element leadstyle-container">
+                    <div class="sectionInner">
+
+
+                        <!--headlineWrap-->
+                        <!--headlineWrap-->
+
+                        <div id="hero" class="hero2 row role-element leadstyle-container" style="width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+
+
+                            <!--Section Inner-->
+                        </div>
+
+
+                        <div align="center" style="text-align:center;">
+                            <center>
+
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/frozen-ipad-starburst.png" style="width:200px;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/inside-out-ipad-starburst.png" style="width:200px;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/dino-ipad-starburst.png" style="width:200px;">
+                            </center>
+                            <br>
+
+                            <div id="section1Headline" class="section1Headline role-element leadstyle-text" style=" width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+                                <p style="text-align:center;"><span style="text-decoration:line-through; opacity:.7"><em>Value: $4.99 Each</em></span></p>
+                                <p style="text-align:center;"><strong>Your Price: Free</strong></p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="darkbkgd" style="margin-left:0px; margin-right:0px; width:100%; padding:1em;">
+                    <div style="margin-left:auto; margin-right:auto; width:95%; max-width:700px;" id="section1Headline" class="section1Headline role-element leadstyle-text">
+                        <h1>
+                            <span style="color:red;"><em>Free Bonus #2:</em></span><br>
+                            Downloadable Coloring Pages for Each Story
+                        </h1>
+                    </div>
+
+                </div>
+                <div id="section1" class="section1 row role-element leadstyle-container">
+                    <div class="sectionInner">
+
+
+
+
+
+
+
+                        <div align="center" style="text-align:center;">
+                            <center>
+
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/activity-sheet-1.png" class="heroimage" style="max-width:300px">
+                            </center>
+                            <br>
+
+                            <div id="section1Headline" class="section1Headline role-element leadstyle-text" style=" width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+                                <p style="text-align:center;"><span style="text-decoration:line-through; opacity:.7"><em>Retail Value: $0.99 Each</em></span></p>
+                                <p style="text-align:center;"><strong>Your Price: Free</strong></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="darkbkgd" style="margin-left:0px; margin-right:0px; width:100%; padding:1em;">
+                    <div style="margin-left:auto; margin-right:auto; width:95%; max-width:700px;" id="section1Headline" class="section1Headline role-element leadstyle-text">
+                        <h1>
+                            <span style="color:red;"><em>Free Bonus #3:</em></span><br>
+                            Downloadable Activity Pages for Each Story
+                        </h1>
+                    </div>
+
+                </div>
+
+                <div id="section1" class="section1 row role-element leadstyle-container">
+                    <div class="sectionInner">
+
+
+
+
+
+
+
+                        <div align="center" style="text-align:center;">
+                            <center>
+
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/activity-sheet-2.png" class="heroimage" style="max-width:300px">
+                            </center>
+                            <br>
+
+                            <div id="section1Headline" class="section1Headline role-element leadstyle-text" style=" width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+                                <p style="text-align:center;"><span style="text-decoration:line-through; opacity:.7"><em>Retail Value: $0.99 Each</em></span></p>
+                                <p style="text-align:center;"><strong>Your Price: Free</strong></p>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="darkbkgd" style="margin-left:0px; margin-right:0px; width:100%; padding:1em;">
+                    <div style="margin-left:auto; margin-right:auto; width:95%; max-width:700px;" id="section1Headline" class="section1Headline role-element leadstyle-text">
+                        <h1>
+                            <span style="color:red;"><em>Limited Time Offer:</em></span> <br>
+                            <strong>Get All This for $7</strong> <br>
+                            When You Try the Disney Wonderful World of Reading Book Club with No Commitment
+                        </h1>
+                    </div>
+
+                </div>
+
+                <div id="section1" class="section1 row role-element leadstyle-container">
+                    <div class="sectionInner">
+
+
+
+                        <div id="section1Headline" class="section1Headline role-element leadstyle-text" style="width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+
+
+                            <center>
+
+                                <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/membership-shot.png" class="heroimage" style="max-width:700px">
+                            </center>
+                            <br>
+                        </div>
+
+
+
+
+
+                        <div id="section1Headline" class="section1Headline role-element leadstyle-text" style=" width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+
+
+                            <div id="heroBulletsWrap" class="heroBulletsWrap">
+                                <p>When you try the Disney Wonderful World of Reading Book Club, you&rsquo;ll receive:</p>
+                                <ul id="heroBulletList" class="heroBulletList role-element leadstyle-text">
+                                    <li id="heroBullet1" class="heroBullet">High-Quality, Hardcover Editions of Your Child's Favorite Disney Classics</li>
+
+                                    <li id="heroBullet3" class="heroBullet">100% Satisfaction Guaranteed on Everything You Receive, With Zero Commitment</li>
+
+                                    <li id="heroBullet3" class="heroBullet">3 Books Per Month Shipped Right to Your Door, So You'll Always Have Books to Share</li>
+                                    <li id="heroBullet3" class="heroBullet">Online Account Access, So You Can Instantly Update Your Preferences</li>
+                                    <li id="heroBullet3" class="heroBullet">The Chance For Your Child Discover the Joys of Reading and Become a Lifelong Learner</li>
+                                </ul>
+                                <p>And there's absolutely no commitment. You can cancel anytime, for any reason, or for no reason at all. Absolutely no questions asked.</p>
+                            </div>
+                        </div>
+
+
+                        <div id="section2" class="section2 row role-element leadstyle-container inside">
+                            <div class="sectionInner">
+
+                                <div id="section2TestiWrap" class="section2TestiWrap">
+
+                                    <div id="section2Testi1" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial6.png" id="testiImg1" class="role-element leadstyle-image">
+                                        <p id="testiName1" class="role-element leadstyle-text"><strong>Caressa </strong></p>
+                                        <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;Finally got mine today! My daughter was so excited!&rdquo;</div></blockquote>
+                                    </div>
+                                    <div id="section2Testi2" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial9.png" id="testiImg2" class="role-element leadstyle-image">
+                                        <p id="testiName2" class="role-element leadstyle-text"><strong>Ashley </strong></p>
+                                        <blockquote id="testiBlockquote2" class="role-element leadstyle-text"><div>&ldquo;This company is great! Good deals and amazing customer service. I highly recommend them!&rdquo;</div></blockquote>
+                                    </div>
+                                    <div id="section2Testi3" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial10.png" id="testiImg3" class="role-element leadstyle-image">
+                                        <p id="testiName3" class="role-element leadstyle-text"><strong>Alyese </strong></p>
+                                        <blockquote id="testiBlockquote3" class="role-element leadstyle-text"><div>&ldquo;I love Early Moments. As both a parent and a teacher, I can attest to the fact that the books provide an excellent beginning to a life-long love of learning.&rdquo;</div></blockquote>
+                                    </div>
+                                </div>
+                                <!--Section2 testi wrap-->
+                            </div>
+                            <!--Section Inner-->
+                        </div>
+                    </div>
+                    <!--Section Inner-->
+                </div>
+
+                <div class="darkbkgd" style="margin-left:0px; margin-right:0px; width:100%; padding:1em;">
+                    <div style="width:95%; margin-left:auto; margin-right:auto; max-width:700px;">
+                        <h3><span style="text-decoration:line-through; opacity:.7"><em>Total Value For Everything You See Here: $35.88 + s/h</em></span></h3>
+                        <div id="section1Headline" class="section1Headline role-element leadstyle-text" style=" width:95%; margin-left:auto; margin-right:auto;padding-left:1em; padding-right:1em; max-width:700px;">
+
+                            <h1>Your Price Today For All This:<br>Just $7 Plus FREE Shipping!</h1>
+                            <p style="text-align:center;">(That's a Savings of Over 75%!)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hero" class="hero row role-element leadstyle-container">
+                    <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell1/big-group-shot.png" class="role-element leadstyle-image heroimage inside">
+                    <div class="darkbkgd" style="padding:1em;">
+                        <div id="section1Headline" class="section1Headline role-element leadstyle-text" style="max-width:700px; margin-left:auto; margin-right:auto; padding-left:auto; padding-right:auto;"> <h1>Not Only All This, But You&rsquo;ll Also Get Our 30-Day &ldquo;No Questions Asked&rdquo; 100% Satisfaction Guarantee</h1></div>
+                        <div class="sectionInner heroInner">
+                            <div id="heroRight" class="heroRight role-element leadstyle-container">
+                                <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" class="role-element leadstyle-image">
+                            </div>
+                            <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                                <div id="heroFormWrap" class="heroFormWrap">
+                                    <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                    <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+                                        <p>Your complete satisfaction is guaranteed.</p>
+
+                                        <p>If for any reason your three hardcover books don't tickle your little one's funny bone, simply return them to us at your expense with a note marked "cancel." We'll gladly refund the purchase price, no questions asked, and your book club membership will be cancelled.</p>
+
+                                        <p>There is no purchase commitment.</p>
+                                        <a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link" style="display:none;">Rush Me My Free Hardcover Copy</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--darkbkgd-->
+                    <!--Section Inner-->
+                    <div class="sectionInner heroInner inside">
+
+
+                        <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial11.png" class="role-element leadstyle-image" style="max-width:200px;">
+                        </div>
+
+                        <div id="heroRight" class="heroRight role-element leadstyle-container">
+                            <div id="heroFormWrap" class="heroFormWrap">
+                                <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+
+                                    <h1>&ldquo;We love these books. My kids can't wait to open the package and see what books we got.&rdquo;</h1><p style="text-align:center;">&ndash;Nicole E.</p>
+
+
+                                    <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">Rush Me My Free Hardcover Copy</a>
+                                    <p style="text-align:center;">Just Pay $5.95 s/h</p>
+                                    -->
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Section2-->
+                <div id="section3" class="section3 row role-element leadstyle-container ">
+                    <div class="sectionInner inside">
+                        <div id="section3Form" class="section3Form">
+<<<<<<< HEAD
+                            <!--<input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" />-->
+                            <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping</button>
+
+=======
+                            <!--input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" /-->
+                            <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping</button>
+                            <!--<button id="btnaddupsell" name="SubmitButon" class="newBtn2 btn role-element leadstyle-link">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping<button>-->
+>>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+                        </div>
+                        <br>
+                        <div>
+                            <table cellpadding="0" cellspacing="0" style="width:90%; max-width:500px; margin-left:auto; margin-right:auto;"><tr><td valign="top"><input type="checkbox" value="yestac" id="chkAge">&nbsp;</td><td style="width:20px;">&nbsp;</td><td style="text-align:left;">* YES, I am over the age of 18, and I have read, understand and agree to the <a id="lnkTAC" href="#dialogue-TAC" role="button" data-toggle="modal">terms and conditions</a> of this offer and your <a id="lnkTAC" href="#dialogue-TOS" role="button" data-toggle="modal">Terms Of Service</a>.</td></tr></table>
+                        </div>
+                        <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
+                    </div>
+                    <!--Section Inner-->
+                </div>
+                <!--Section 3-->
+<<<<<<< HEAD
+                <!--<input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />-->
+                <button style="font-size:.7em;" class="inside" id="btnNoUpsell">No thank you. I do not want to take advantage of this limited time discount offer.</button>
+=======
+                <input type="button" id="btnNoUpsell" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />
+                <!--<button style="font-size:.7em;" class="inside" id="btnNoUpsell1" name="SubmitButton">No thank you. I do not want to take advantage of this limited time discount offer.</button>-->
+>>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+
+
+            </div>
+            <!--PageContainer Inner-->
+            <div id="footer" class="footer row role-element leadstyle-container">
+                <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
+            </div>
+        </div>
+    </div>
+}
+
+<div id="dialogue-TAC" title="Terms" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4>Terms and Conditions</h4>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <div style="height:250px; overflow-y:scroll">
+                    <strong>It's easy to share the gift of reading with your child.</strong> We'll enroll you in the Disney Wonderful World of Readingbook club, and send you a Welcome Package with your 3 Disney Storybooks for just $7, plus a FREE Activity Book and Stickers! Shipping is FREE!
+                    <br /><br /><strong>
+                        Encourage a lifelong love of reading.
+                    </strong> About once each month you'll receive three more storybooks for just $4.99 per book — a GIANT savings of 35% off the retail price of $7.99 — plus $3.99 shipping and handling for the package.
+                    <br /><br /><strong>
+                        Your complete satisfaction is guaranteed.
+                    </strong> If for any reason the books in your Welcome Package don't tickle your little one's funny bone, simply return them to us at your expense with a note marked "cancel." We'll gladly refund the purchase price, no questions asked, and your membership will be cancelled. Any free items you received as part of your Welcome Package are truly yours to keep with our thanks for giving the club a try.
+                    You always have the right to cancel your membership, for any reason, and keep all of the books that you’ve purchased—including those in the Welcome Package. There is no purchase commitment.  <br /><br />
+                    Your exclusive membership benefits allow you to return any book package that does not delight you within 30 days of its original ship date. Use the simple instructions within the shipment to return the package at your expense, and we'll refund the purchase price, less shipping and handling.
+                    <br /><br /><strong>
+                        Exclusive FREE preview privileges.
+                    </strong> As a member of Disney Wonderful World of Reading, you will also be automatically enrolled in our separate Free Preview Program to receive, up to four times a year, 7-day free previews of Disney products to complement your club. We will always notify you first with offer details, price (usually about $15.00 plus shipping and handling), a reply form and a toll-free number. Simply tell us within 10 days if you choose not to receive the package announced, or do nothing and it will be sent. As always, your satisfaction is guaranteed and if you do not wish to keep any Preview package you receive, you may return it at our expense. You may cancel your Free Preview membership at any time. Club and Free Preview accounts must be canceled separately; see Free Preview invoice for cancellation instructions.
+                    <br /><br /><strong>
+                        Other qualification details and important information:
+                    </strong> You must be 18 years of age or older to order and all orders are subject to approval. Limitone per household. Out-of-stock titles and free items may be replaced by alternate selections.
+                    .<br /><br />
+                    For your convenience, please note that the Welcome Package, all future club shipments and Free Preview shipments will be charged to the credit card you provided at sign-up. Sales tax will be added for members in CT, PA and IL. Please pay on time. A late charge will be added to overdue payments to help cover the cost of sending recurring bills. Overpayments on cancelled accounts are subject to a $1 per month fee. Future contact may include e-mail if your account is overdue. Customers may occasionally receive information on products, services, special deals, and e-newsletters. Users who no longer wish to receive any marketing or promotional materials from us or our partners may opt-out of receiving these communications using the link located on the bottom of all such promotional e-mails. We may contact with our autodialer using the phone number you provided regarding your membership or to make you aware of special offers. <a style="color: #000000;" href="https://www.earlymoments.com/Privacy-Policy/">Click here to read our Privacy Policy</a>.<br /><br />
+                </div>
+            </section>
+            <section class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">
+                    Okay
+                </button>
+            </section>
+        </div>
+    </div>
+</div>
+<div id="dialogue-TOS" title="Terms of Service" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="modal-header text-left">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4>Terms of Service</h4>
+            </section>
+            <section class="modal-body modal-body-alt text-left">
+                <div style="height:250px; overflow-y:scroll">
+                    <div class="post" style="background-color: #fff;">
+                        <div style="max-width: 550px; padding-top: 15px; text-align: justify; padding-right: 15px;">
+                            <div class="entry">
+                                <p>These Terms of Service govern the use of the products and services ("Services") offered by Sandvik Publishing Inc. ("SPI") and its related subsidiaries affiliates and concerns (collectively "Company") including, but not limited to all websites, native applications, mobile applications, tools, modules, services residing on servers owned and/or operated by third parties  as provided by SPI.</p>
+                                <p>Our Privacy Policy, any other policies, rules or guidelines that may be applicable to particular offers or features of the Services are also incorporated into these terms and are hereinafter referred to as this "Agreement."</p>
+                                <p>Our Services are diverse; we sometimes add additional terms or product requirements (including age requirements) that may apply. Additional terms will be available with the relevant Services, and those additional terms become part of this Agreement with us if you use those Services.</p>
+                                <p>YOUR USE OF THE SERVICES CONSTITUTES YOUR ACCEPTANCE TO BE LEGALLY BOUND BY ALL OF THE TERMS AND CONDITIONS IN THIS AGREEMENT.</p>
+                                <p>If you object to anything in this Agreement you are not permitted to use the SERVICES.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>1.	ACCOUNT REGISTRATION, PASSWORD, AND SECURITY</strong></p>
+                                <p>You are required to register for an account to use and access certain features of the Services. Your account username may not include the name of another person with the intent to impersonate that person, or be offensive, vulgar or obscene. Your account username and password are personal to you. You will be responsible for the confidentiality and use of your username and password, and for all activities (including commercial transactions) that are conducted through your account. You may not transfer or sell access to your account. We will not be liable for any harm related to disclosure of your username or password or the use by anyone else of your username or password. You may not use another user's account without that user's permission. You will immediately notify us in writing if you discover any unauthorized use of your account or other account-related security breach. We may require you to change your username and/or password if we believe your account is no longer secure or if we receive a complaint that your username violates someone else's rights. You will have no ownership in your account or your username. We may refuse registration, cancel an account or deny access to the Services for any reason.</p>
+                                <p>If enabled, you may register for an account using third party authentication credentials, such as but not limited to Facebook, Twitter, OpenId or other social login credentials. If you do so, you authorize us to access and store certain account information, such as your public profile (consistent with your privacy settings for that account), your email address registered with that account, and other data associated with that account. For more information regarding the information we collect from you and how we use it, please consult our Privacy Policy.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>2.	ACCEPTABLE USE OF THE SERVICE</strong></p>
+                                <p>We grant you a limited, conditional, no-cost, non-exclusive, non-transferable, non-sub-licensable license to view or use the Services as permitted by these Terms, as a condition precedent, you agree that you will not:</p>
+                                <ul class="addBottomMargin">
+                                    <li>Submit any software or other materials that contain any viruses, worms, Trojan horses, defects, date bombs, time bombs or other items of a destructive nature;</li>
+                                    <li>Engage in any activity that may cause the Services to be interrupted, damaged or impaired in any way;</li>
+                                    <li>Manipulate identifiers, including by forging headers, in order to disguise the origin of any actions conduct with or through the Services; </li>
+                                    <li>Accessing third party data using the Services, where authorized access has not been granted;</li>
+                                    <li>Modify, adapt, sub-license, translate, sell, reverse engineer, decompile or disassemble any portion of the Services or otherwise attempt to derive any source code or underlying ideas or algorithms of any part of the Services;</li>
+                                    <li>Remove any copyright, trademark or other proprietary rights notices contained on/in the Services;</li>
+                                    <li>Take any action that imposes or may impose (in our sole discretion) an unreasonable or disproportionately large load on our infrastructure;</li>
+                                    <li>Reproduce, copy, display, publicly perform, distribute or create derivative works of the Services or content supplied therein;</li>
+                                    <li>Use the Services in an attempt to, or in conjunction with, any device, program or service designed to circumvent any technological measure that effectively controls access to, or the rights in, the Services and/or Proprietary Material as defined Section 4 of this Agreement, in any way including, without limitation, by manual or automatic device or process, for any purpose;</li>
+                                    <li>Use the Services for any unlawful purpose;</li>
+                                    <li>Probe, scan, or test the vulnerability of any system or network used to access data or services related to the Services;</li>
+                                    <li>Breach or otherwise circumvent any security or authentication measures;</li>
+                                    <li>Interfere with or disrupt any user, host, or network, for example by sending a virus, overloading, flooding, spamming, or mail-bombing any part of the Services;</li>
+                                    <li>Access, search, or create accounts for the Services by any means other than our publicly supported interfaces (for example, "scraping" or creating accounts in bulk);</li>
+                                    <li>Send unsolicited communications, promotions or advertisements, or spam;</li>
+                                    <li>Send altered, deceptive or false source-identifying information, including "spoofing" or "phishing";</li>
+                                    <li>Submit (a) any content or information that is unlawful, fraudulent, libelous, defamatory, or otherwise objectionable, or infringes our or any third party's intellectual property or other rights; (b) any non-public information about companies without authorization; or (c) any advertisements, solicitations, chain letters, pyramid schemes, surveys, contests, investment opportunities or other unsolicited commercial communication;</li>
+                                    <li>Submit or share materials that are unlawfully pornographic or indecent, or that contain extreme acts of violence;</li>
+                                    <li>Advocate bigotry or hatred against any person or group of people based on their race, religion, ethnicity, sex, gender identity, sexual preference, disability, or impairment;</li>
+                                    <li>Violate the law in any way, including using the Services for storing, publishing or sharing material that's fraudulent, defamatory, or misleading;</li>
+                                    <li>Violate the privacy or infringe the rights of others;</li>
+                                    <li>Harvest or collect information about Services users;</li>
+                                    <li>Use or derive data to determine the Services’ functionality, user information, aggregate statistics on the Services’ performance, or the performance of third party data integration partners of the Company;</li>
+                                    <li>Use the Services for any non-approved commercial use.</li>
+                                    <li>Link to any portion of the Services other than the URL assigned to the home page of our Site or a URL for user storage located within the Apps;</li>
+                                    <li>"Frame" or "mirror" any part of the Services;</li>
+                                    <li>Use any robot, spider, offline reader, search/retrieval Services or other manual or automatic device, tool, or process to retrieve, index, data mine or in any way reproduce or circumvent the navigational structure or presentation of the Services or its contents, including with respect to any CAPTCHA displayed on the Services;</li>
+                                    <li>Access, tamper with, or use non-public areas or parts of the Services, or shared areas of the Services you haven't been invited.</li>
+                                </ul>
+                                <p>This license is expressly conditioned on your preexisting agreement to comply with, and your actual compliance with, each of the provisions described in this Agreement. This license exists only so long as you strictly comply with each of the provisions described in this section. You understand and agree that the Services is provided "as-is" without any warranty of any kind. You understand that the Company will not be responsible for the action of any Users with respect to any information or materials posted.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>3. TERMINATION AND SUSPENSION</strong></p>
+                                <p>Company may terminate or suspend your right to use the Services at any time for any or no reason by providing you with written or email notice of such termination, and termination will be effective immediately upon delivery of such notice.</p>
+                                <p>Without limitation, Company may terminate or suspend your right to use the Services if you breach any term of this Agreement or any policy of Company posted through the Services from time to time, or if Company otherwise finds that you have engaged in inappropriate and/or offensive behavior. If Company terminates or suspends your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, Company reserves the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.</p>
+                                <p>Even after your right to use the Services is terminated or suspended, this Agreement will remain enforceable against you.</p>
+                                <p>You may terminate this Agreement at any time by ceasing all use of the Services. All sections which by their nature should survive the expiration or termination of this Agreement shall continue in full force and effect subsequent to and notwithstanding the expiration or termination of this Agreement.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>4. Ownership of Data, Content and Grant of Conditional License</strong></p>
+                                <p>All text, graphics, editorial content, data, formatting, graphs, designs, HTML, look and feel, photographs, music, sounds, images, software, videos, designs, typefaces and other content (collectively "Proprietary Material") that Users see or read through the Services is owned by Company or its licensees.  Proprietary Material is protected in all forms, media and technologies now known or hereinafter developed. Company owns all Proprietary Material, as well as the coordination, selection, arrangement and enhancement of such Proprietary Materials as a Collective Work under the United States Copyright Act, as amended. The Proprietary Material is protected by the domestic and international laws of copyright, patents, and other proprietary rights and laws. Users may not copy, download, use, redesign, reconfigure, or retransmit anything from the Services without Company's express prior written consent and, if applicable, the holder of the rights to the User Generated Content. Any use of such Proprietary Material, other than as permitted therein, is expressly prohibited without the prior permission of Company and, if applicable, the holder of the rights to the User Generated Content.</p>
+                                <p>We may change the Proprietary Material and features of the Services at any time. Any use of the Services or Proprietary Material by you or anyone acting on your behalf that does not strictly comply with each and every provision in this section exceeds the scope of the license granted to you herein, constitutes unauthorized reproduction, display, or creation of unauthorized derivative versions of the Services and Proprietary Material, and infringes our copyrights and other rights in the Services and Proprietary Material. You will not acquire any ownership rights by using the Services or the Proprietary Material.</p>
+                                <p>The registered and unregistered trademarks, logos and service marks displayed in the Proprietary Material or Services are owned by us or our licensors. You may not use our trademarks, logos and service marks in any way without our prior written permission.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>5. YOUR INFORMATION AND LIKENESS</strong></p>
+                                <p>Company does not claim ownership rights over any information, data, text, files, media, or other materials and content you make available or use in connection with the Services or use in connection with your account ("Info"). You remain the owner of all Info that you submit to the Services. Such information will be known as "Private Information". The Company does not claim any ownership or license rights in or to any Private Information, and will not use any Private Information except as set forth in this Agreement (Privacy Policy specifically).</p>
+                                <p>"Your Information" is defined as any information and materials you provide to Company or other Users in connection with your registration for and use of the Services, its social media channels or by direct communication, including without limitation that posted or transmitted for use on our website on publicly accessible areas, on or to our social media accounts or received by our customer service representatives and partners. You are solely responsible for Your Information, and we act merely as a passive conduit for your online distribution and publication of Your Information. The information and materials described in this Section, as provided by each User, is collectively referred to herein as "User Generated Content." You hereby represent and warrant to Company that Your Information will not create liability for Company or cause Company to lose (in whole or in part) the services of its ISPs or other partners or suppliers. You agree that Company is not liable for any User Generated Content.</p>
+                                <p>You hereby grant Company a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sublicensable (through multiple tiers) right to use, reproduce, modify, create derivative works of, distribute, publicly perform, display, archive and commercialize your User Content, in our sole discretion, in all formats and in all media channels now known or hereinafter discovered, without any compensation or acknowledgment to you or anyone else. This license will not affect your ownership in Your Information, including the right to grant additional licenses to your User Generated Content, except if it conflicts with these Terms.  We are not obligated to post, display or otherwise use any User Generated Content, or to attribute your User Generated Content to you. You will not make or authorize any claim against us that our use of your User Generated Content infringes any of your rights..</p>
+                                <p>&nbsp;</p>
+                                <p><strong>6. LINKS TO OTHER WEBSITES</strong></p>
+                                <p>Links (such as hyperlinks) from the Services to other sites on the Web do not constitute the endorsement by Company of those sites or their content. Such links are provided as an information service, for reference and convenience only. Company does not control any such sites, and is not responsible for their content. The existence of links on the Services  to such websites (including without limitation external websites that are framed by the Services  as well as any advertisements displayed in connection therewith) does not mean that Company endorses any of the material on such websites, or has any association with their operators. It is your responsibility to evaluate the content and usefulness of the information obtained from those sites. The use of any site is governed by the terms and conditions of use and privacy policy of that site. You hereby agree to hold Company harmless from any liability that may result from the use of links that may appear on the Services. By accessing these third party sites you do so at your own risk.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>7. PROPER USE OF SITE</strong></p>
+                                <p>The Services are intended to be accessed and used only for non-time-critical functions, and information. Our aim is to provide a reliable and readily available Services, however, the Services, including certain features thereof (e.g. remote access and mobile notifications) are not intended or guaranteed to be reliable or available 100% of the time. In addition, some features of the Services may be subject to sporadic interruptions and failures for reasons beyond Company control, including but not limited to Wi-Fi intermittency, service provider uptime, mobile notifications and carriers. We cannot and do not guarantee that you will receive notifications or have access to the Services in any given time or at all.</p>
+                                <p>You acknowledge that Customer Care and Support contacts cannot be considered and are not a lifesaving solution for people at risk, and they are no substitute for emergency services. All life threatening and emergency events should be directed to the appropriate response services in your area.</p>
+                                <p>System Requirements. Certain features of the Services may not be accessible without :(i) a working Wi-Fi network in your home that is positioned to communicate reliably with the applicable Product; (ii) a registered Services account; (iii) mobile clients such as a supported phone or tablet (required for some functionality); (iv) always-on broadband Internet access in your home; and (v) other system elements that may be specified by Company. It is your responsibility to ensure that you have all required system elements and that they are compatible and properly configured. You accept that the Services may not work as described if the requirements and compatibility have not been met.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>8. COPYRIGHT COMPLAINTS AND COPYRIGHT AGENT</strong></p>
+                                <p>Company respects the intellectual property of others, and expects Users to do the same. If you believe, in good faith, that any materials provided on or in connection with the Services infringe upon your copyright or other intellectual property right, please send the following information to Company's Copyright Agent via email at <a class="linkMail" href="mailto:CustomerCare@EarlyMoments.com">CustomerCare@EarlyMoments.com:</a></p>
+                                <ul class="addBottomMargin">
+                                    <li>A description of the copyrighted work that you claim has been infringed, including the URL (Internet address) or other specific location on the Service where the material you claim is infringed is located. Include enough information to allow Company to locate the material, and explain why you think an infringement has taken place;</li>
+                                    <li>A description of the location where the original or an authorized copy of the copyrighted work exists -- for example, the URL (Internet address) where it is posted or the name of the book in which it has been published;</li>
+                                    <li>Your address, telephone number, and e-mail address;</li>
+                                    <li>A statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</li>
+                                    <li>A statement by you, made under penalty of perjury, that the information in your notice is accurate, and that you are the copyright owner or authorized to act on the copyright owner's behalf; and</li>
+                                    <li>An electronic or physical signature of the owner of the copyright or the person authorized to act on behalf of the owner of the copyright interest.</li>
+                                </ul>
+                                <p>&nbsp;</p>
+                                <p><strong>9. DISCLAIMER OF WARRANTIES</strong></p>
+                                <p>USE OF THE SERVICE IS ENTIRELY AT YOUR OWN RISK.</p>
+                                <p>COMPANY ATTEMPTS TO BE AS ACCURATE AS POSSIBLE, BUT WE DO NOT WARRANTY THAT PRODUCT DESCRIPTIONS OR OTHER CONTENT ON THE SITE OR SERVICE IS ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE.</p>
+                                <p>THE SERVICE IS PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. COMPANY MAKES NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE CONTENT PROVIDED THROUGH THE SERVICE OR THE CONTENT OF ANY SITES LINKED TO THE SERVICE AND ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT, (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICE, (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN. COMPANY DOES NOT WARRANT, ENDORSE, GUARANTEE OR ASSUME RESPONSIBILITY FOR ANY SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICE OR ANY HYPERLINKED WEBSITE OR FEATURED IN ANY BANNER OR OTHER ADVERTISING AND COMPANY WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES, OTHER THAN AS PROVIDED HEREIN. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.</p>
+                                <p>WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ITS AFFILIATES OR LICENSORS WARRANT THAT ACCESS TO THE SERVICE WILL BE UNINTERRUPTED OR THAT THE SERVICE WILL BE ERROR-FREE; NOR DO THEY MAKE ANY WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SERVICE PROVIDED THROUGH OR IN CONNECTION WITH THE USE OF THE SERVICE.</p>
+                                <p>NEITHER COMPANY NOR ITS AFFILIATES OR LICENSORS IS RESPONSIBLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OF ANY USER.</p>
+                                <p>NEITHER COMPANY NOR ITS AFFILIATES OR LICENSORS WARRANT THAT THE SERVICE IS FREE FROM VIRUSES, WORMS, TROJAN HORSES, OR OTHER HARMFUL COMPONENTS.</p>
+                                <p>COMPANY AND ITS AFFILIATES AND LICENSORS CANNOT AND DO NOT GUARANTEE THAT ANY PERSONAL INFORMATION SUPPLIED BY YOU WILL NOT BE MISAPPROPRIATED, INTERCEPTED, DELETED, DESTROYED OR USED BY OTHERS.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>10.	NO LIABILITY.</strong></p>
+                                <p>UNDER NO CIRCUMSTANCES WILL THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS BE LIABLE TO YOU FOR ANY LOSS OR DAMAGES OF ANY KIND (INCLUDING, WITHOUT LIMITATION, FOR ANY DIRECT, INDIRECT, ECONOMIC, EXEMPLARY, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL LOSSES OR DAMAGES) THAT ARE DIRECTLY OR INDIRECTLY RELATED TO: (A) THE SERVICE; (B) THE COMPANY CONTENT; (C) USER CONTENT; (D) YOUR USE OF, INABILITY TO USE, OR THE PERFORMANCE OF THE SERVICE; (E) ANY ACTION TAKEN IN CONNECTION WITH AN INVESTIGATION BY THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS OR LAW ENFORCEMENT AUTHORITIES REGARDING YOUR OR ANY OTHER PARTY'S USE OF THE SERVICE; (F) ANY ACTION TAKEN IN CONNECTION WITH COPYRIGHT OR OTHER INTELLECTUAL PROPERTY OWNERS; (G) ANY ERRORS OR OMISSIONS IN THE SERVICE'S OPERATION; OR (H) ANY DAMAGE TO ANY USER'S COMPUTER, MOBILE DEVICE, OR OTHER EQUIPMENT OR TECHNOLOGY INCLUDING, WITHOUT LIMITATION, DAMAGE FROM ANY SECURITY BREACH TO A USERS COMPUTER OR TO A USERS DATA VIA A SECURITY BREACH TO A THIRD PARTY HOST, OR FROM ANY VIRUS, BUGS, TAMPERING, HACKING, FRAUD, ERROR, OMISSION, INTERRUPTION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMPUTER LINE OR NETWORK FAILURE OR ANY OTHER TECHNICAL OR OTHER MALFUNCTION, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOST PROFITS, LOSS OF GOODWILL, LOSS OF DATA, WORK STOPPAGE, ACCURACY OF RESULTS, OR COMPUTER FAILURE OR MALFUNCTION, EVEN IF FORESEEABLE OR EVEN IF THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS HAVE BEEN ADVISED OF OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, STRICT LIABILITY OR TORT (INCLUDING, WITHOUT LIMITATION, WHETHER CAUSED IN WHOLE OR IN PART BY NEGLIGENCE, ACTS OF GOD, TELECOMMUNICATIONS FAILURE, OR THEFT OR DESTRUCTION OF THE SERVICE). IN NO EVENT WILL THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS BE LIABLE TO YOU OR ANYONE ELSE FOR LOSS, DAMAGE OR INJURY, INCLUDING, WITHOUT LIMITATION, DEATH OR PERSONAL INJURY. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU. IN NO EVENT WILL THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS TOTAL LIABILITY TO YOU FOR ALL DAMAGES, LOSSES OR CAUSES OR ACTION EXCEED ONE UNITED STATES DOLLAR ($1.00).</p>
+                                <p>YOU AGREE THAT IN THE EVENT YOU INCUR ANY DAMAGES, LOSSES OR INJURIES THAT ARISE OUT OF COMPANY'S ACTS OR OMISSIONS, THE DAMAGES, IF ANY, CAUSED TO YOU ARE NOT IRREPARABLE OR SUFFICIENT TO ENTITLE YOU TO AN INJUNCTION PREVENTING ANY EXPLOITATION OF ANY WEB SITE, SERVICE, PROPERTY, PRODUCT OR OTHER CONTENT OWNED OR CONTROLLED BY THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS, AND YOU WILL HAVE NO RIGHTS TO ENJOIN OR RESTRAIN THE DEVELOPMENT, PRODUCTION, DISTRIBUTION, ADVERTISING, EXHIBITION OR EXPLOITATION OF ANY WEB SITE, PROPERTY, PRODUCT, SERVICE, OR OTHER CONTENT OWNED OR CONTROLLED BY THE COMPANY, ITS AFFILIATES, ITS LICENSORS, OR ANY OF SUCH PARTIES’ AGENTS, EMPLOYEES, OFFICERS, DIRECTORS, CORPORATE PARTNERS, OR PARTICIPANTS.</p>
+                                <p>BY ACCESSING THE SERVICE, YOU UNDERSTAND THAT YOU MAY BE WAIVING RIGHTS WITH RESPECT TO CLAIMS THAT ARE AT THIS TIME UNKNOWN OR UNSUSPECTED.</p>
+                                <p>YOU ARE SOLELY RESPONSIBLE FOR YOUR INTERACTIONS WITH OTHER USERS. YOU UNDERSTAND THAT THE COMPANY CURRENTLY DOES NOT CONDUCT CRIMINAL BACKGROUND CHECKS OR SCREENINGS ON ITS USERS. THE COMPANY ALSO DOES NOT INQUIRE INTO THE BACKGROUNDS OF ALL OF ITS USERS OR ATTEMPT TO VERIFY THE STATEMENTS OF ITS USERS. THE COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE CONDUCT OF USERS OR THEIR COMPATIBILITY WITH ANY CURRENT OR FUTURE USERS. THE COMPANY RESERVES THE RIGHT TO CONDUCT ANY CRIMINAL BACKGROUND CHECK OR OTHER SCREENINGS (SUCH AS SEX OFFENDER REGISTER SEARCHES), AT ANY TIME AND USING AVAILABLE PUBLIC RECORDS.</p>
+                                <p>COMPANY IS NOT RESPONSIBLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US, OUR DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY CONNECTED WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>11. INDEMNIFICATION.</strong></p>
+                                <p>You hereby agree to indemnify, defend, and hold harmless Company, its directors, officers, employees, agents, licensors, attorneys, independent contractors, providers, subsidiaries, and affiliates from and against any and all claim, loss, expense or demand of liability, including attorneys' fees and costs incurred, in connection with (i) your use or inability to use the Services, or (ii) any content submitted by you or using your account to the Services, including, but not limited to the extent such content may infringe on the intellectual rights of a third party or otherwise be illegal or unlawful. Company reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to your indemnification. You will not, in any event, settle any claim or matter without the written consent of Company.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>12.	GOVERNING LAW</strong></p>
+                                <p>This Agreement is governed by and construed in accordance with the internal laws of the State of New York without giving effect to any choice or conflict of law provision or rule. Any legal suit, action or proceeding arising out of or related to this Agreement or the Services shall be instituted exclusively in the federal courts of the United States or the courts of the State of Pennsylvania. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>13. IN APP PURCHASES &amp; SPECIAL PROMOTIONS</strong></p>
+                                <p>From time to time, the Company may offer additional products and services for purchase through the Apple App Store, Google Play or other application platforms ("In App Purchases"). If you choose to make an in app purchase, you will be prompted to enter details for your account with the mobile platform you are using (e.g., Apple, Android, etc.) (your "IAP Account"), and your IAP Account will be charged for the in app purchase in accordance with the terms disclosed to you at the time of purchase as well as the general terms for in app purchases that apply to your IAP Account. In all cases, please refer to the terms of your application platform which apply to your in app purchases.</p>
+                                <p>Company may from time to time provide certain promotional opportunities, sweepstakes and contests to Users. All such promotions will be run at the sole discretion of Company, and can be activated, modified or removed at any time by Company without advance notification and the liability of any of Company’s partners pursuant to such promotional opportunities, sweepstakes and contests shall be limited pursuant to these Terms of Service.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>14. NO AGENCY</strong></p>
+                                <p>No agency, partnership, joint venture, employer-employee or franchiser-franchisee relationship is intended or created by this Agreement.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>15. GENERAL PROVISIONS</strong></p>
+                                <p>Failure by Company to enforce any provision(s) of this Agreement will not be construed as a waiver of any provision or right. This Agreement will be governed by and construed in accordance with the laws of the State of New Jersey, without regard to its conflict of laws rules. This Agreement constitutes the entire agreement between you and Company with respect to its subject matter. If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions will be enforced to the fullest extent possible, and the remaining provisions will remain in full force and effect. This Agreement will inure to the benefit of Company, its successors and assigns.</p>
+                                <p>&nbsp;</p>
+                                <p><strong>16.	CHANGES TO THIS AGREEMENT AND THE SERVICE</strong></p>
+                                <p>Company reserves the right, at its sole and absolute discretion, to change, modify, add to, supplement or delete any of the terms and conditions of this Agreement (including the Privacy Policy) and review, improve, modify or discontinue, temporarily or permanently, the Services or any content or information through the Services at any time, effective with or without prior notice and without any liability to Company. Company will endeavor to notify you of these changes by email, but will not be liable for any failure to do so. If any future changes to this Agreement are unacceptable to you or cause you to no longer be in compliance with this Agreement, you must terminate, and immediately stop using, the Services. Your continued use of the Services following any revision to this Agreement constitutes your complete and irrevocable acceptance of any and all such changes. Company may change, modify, suspend, or discontinue any aspect of the Services at any time without notice or liability. Company may also impose limits on certain features or restrict your access to parts or all of the Services without notice or liability.</p>
+                                <p>I HEREBY ACKNOWLEDGE THAT I HAVE READ AND UNDERSTAND THE FOREGOING TERMS OF SERVICE AND PRIVACY POLICY AND AGREE THAT MY USE OF THE SERVICE IS AN ACKNOWLEDGMENT OF MY AGREEMENT TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">
+                    Okay
+                </button>
+            </section>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
+            if (err.length > 0) {
+                $("#spnErrorMessage").html(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+
+        $("#btnNoUpsell").click(function () {
+            //alert("Hello");
+
+
+            var fullurl = window.location;
+            var cnt = fullurl.toString().indexOf('?', 0);
+            var params = window.location.toString().substr(cnt, fullurl.toString().length);
+            console.log(params + window.location.host);
+            if (params.length > 1) {
+                //alert(window.location.host + "/landers/upsell_offer2" + params);
+                window.location.href = "/landers/upsell_offer2" + params;
+            }
+            else {
+                window.location.href = "/landers/upsell_offer2";
+            }
+            pleaseWait();
+            return false;
+
+        });
+    });
+</script>

@@ -1,0 +1,404 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutTripware.cshtml";
+}
+<script src="~/Script/landers/upsell2.js"></script>
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1122629181099927');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+@using (Html.BeginForm("upsell_offer2", "landers", FormMethod.Post, new { @id = "form1" }))
+{
+    <div id="pageContainer" class="container-fluid">
+        <div id="pageContainerInner" class="pageContainerInner">
+            <div id="header" class="header row role-element leadstyle-container">
+                <div id="headerInner" class="headerInner">
+                    <a id="logo" class="logo role-element leadstyle-image-link"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/disney-reading-small.png"></a>
+                </div>
+            </div>
+            <!--Header-->
+            <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
+
+                <div id="headlineInner2" class="headlineInner2">
+
+
+                    <div id="headlineInner" class="headlineInner">
+
+                        <p><strong>We're getting your order ready.</strong></p>
+                        <p>In a few minutes, you'll receive info about your Book Club trial and the hardcover books that we're rushing to your door.</p>
+
+                        <p>You'll be thrilled with your 64-page <em>Frozen: The Essential Guide</em> and its companion storybook copy of <em>Frozen</em>.</p>
+
+                        <p><strong>But before you go...</strong> Do you want your <em>Inside Out</em> and <em>Good Dinosaur</em> storybooks to have matching 64-page Essential Guides as well?</p>
+
+                    </div>
+
+
+                    <div id="headlineWrap" class="row headlineWrap role-element leadstyle-container">
+
+                        <div class="darkbkgd ">
+                            <div class="inside" style=" max-width:1200px;">
+                                <div id="headlineInner" class="headlineInner">
+                                    <div id="headline" class="headline role-element leadstyle-text">
+                                        <div><span style="color:red;"><em>Finally:</em></span> You Can Complete Your Collection With These Two Hardcover Essential Guides</div>
+
+
+                                    </div>
+                                </div>
+                                <!--headlineWrap-->
+                                <div id="hero" class="hero2 row role-element leadstyle-container">
+                                    <div class="sectionInner heroInner">
+                                        <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                                            <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell2/hardcover-group-1b.png" class="role-element leadstyle-image" style="width:90%; max-width:400px;">
+                                        </div>
+
+                                        <div id="heroRight" class="heroRight role-element leadstyle-container">
+                                            <div id="heroFormWrap" class="heroFormWrap">
+                                                <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                                <div id="heroFormButtonWrap" class="heroFormButtonWrap">
+                                                    <div id="heroBulletsWrap" class="heroBulletsWrap">
+                                                        <ul id="heroBulletList" class="heroBulletList role-element leadstyle-text">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            <li id="heroBullet1" class="heroBullet"><span style="text-decoration:underline;"><em><strong>TWO</strong></em></span> 64-page jumbo (8” X 10”) hard cover keepsake edition</li>
+
+                                                            <li id="heroBullet3" class="heroBullet">The characters and sets come to life with high-quality movie stills and new illustrations, exclusive insights and little-known facts from the movie</li>
+                                                            <li id="heroBullet3" class="heroBullet">Details and insights on every character, so you can get to know them as if they were your best friends</li>
+                                                            <li id="herBullet3" class="heroBullet"><span style="text-decoration:underline;"><em><strong>TWO</strong></em></span> beautifully illustrated reference books that will become a family keepsake</li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                    <!--Section Inner-->
+
+                                    <div style="max-width:800px; margin-left:auto; margin-right:auto; padding-left:1em; padding-right:1em;">
+                                        <!--<input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn  role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping" />-->
+                                        <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn  role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping">YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping</button>
+<<<<<<< HEAD
+=======
+                                        <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping</a>-->
+>>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+                                        <br>
+                                        <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
+                                    </div>
+                                </div>
+                                <!--Section1-->
+                            </div>
+                        </div>
+                        <!--inside-->
+
+
+                        <div id="section2" class="section2 row role-element leadstyle-container ">
+                            <div class="sectionInner inside">
+
+                                <div id="section2TestiWrap" class="section2TestiWrap">
+
+                                    <div id="section2Testi1" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial12.png" id="testiImg1" class="role-element leadstyle-image">
+                                        <p id="testiName1" class="role-element leadstyle-text"><strong>Cheryl </strong></p>
+                                        <blockquote id="testiBlockquote1" class="role-element leadstyle-text"><div>&ldquo;This <em>Essential Guide</em> is wonderful, my 6 year old boy loved it from the very first look. Every page is high quality. The hardcover is a plus. Every page worth the price.&rdquo;</div></blockquote>
+                                    </div>
+                                    <div id="section2Testi2" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial13.png" id="testiImg2" class="role-element leadstyle-image">
+                                        <p id="testiName2" class="role-element leadstyle-text"><strong>Krystal </strong></p>
+                                        <blockquote id="testiBlockquote2" class="role-element leadstyle-text"><div>&ldquo;Sounds good, I need to start her book collection.&rdquo;</div></blockquote>
+                                    </div>
+                                    <div id="section2Testi3" class="testi role-element leadstyle-container">
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/testimonials/testimonial14.png" id="testiImg3" class="role-element leadstyle-image">
+                                        <p id="testiName3" class="role-element leadstyle-text"><strong>Diana </strong></p>
+                                        <blockquote id="testiBlockquote3" class="role-element leadstyle-text"><div>&ldquo;Early Moments has created many happy moments for my daughter and me together, sharing the fun of learning and discovering her learning abilities as we receive new books each month. Thank you.&rdquo;</div></blockquote>
+                                    </div>
+                                </div>
+                                <!--Section2 testi wrap-->
+                            </div>
+                            <!--Section Inner-->
+                        </div>
+
+
+
+
+                        <div id="hero" class="hero row role-element leadstyle-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!--Section Inner-->
+                        </div>
+
+
+
+
+
+
+
+
+                        <!--Hero-->
+                        <div id="section1" class="section1 row role-element leadstyle-container darkbkgd">
+                            <div class="sectionInner">
+
+
+                                <!--headlineWrap-->
+                                <!--headlineWrap-->
+                                <div id="hero" class="hero2 row role-element leadstyle-container inside">
+
+                                    <div id="section1Headline" class="section1Headline role-element leadstyle-text" style="margin-top:-30px;">
+                                        <h1>
+                                            <span style="color:red;"><em>Free Bonus:</em></span><br>
+                                            Each Essential Guide Comes with an In-Depth Sticker Activity Book
+                                        </h1>
+                                    </div>
+
+
+                                    <!--Section Inner-->
+                                </div>
+
+
+                                <div align="center" style="text-align:center; " class="inside">
+                                    <center>
+
+                                        <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell2/dino-sticker-starburst.png" style="width:300px;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell2/inside-out-sticker-3D-starburst.png" style="width:300px;">
+                                    </center>
+
+                                    <div class="inside">
+                                        <p>Each sticker book is packed with more than 60 reusable stickers featuring beloved characters and icons from <em>Inside Out</em> and <em>Good Dinosaur</em>. Kids will be able to re-create their favorite scenes from the movie while learning fun and interesting movie facts.</p>
+
+                                        <p>Both of these books ship <em><strong>free</strong></em> with your two Essential Guides.</p>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                            <!--Section Inner-->
+
+
+
+
+
+                        </div>
+
+
+
+                        <div id="hero" class="hero row role-element leadstyle-container ">
+
+
+                            <div id="section1Headline" class="section1Headline role-element leadstyle-text inside"> <h1>Not Only All This, But You&rsquo;ll Also Get Our 30-Day &ldquo;No Questions Asked&rdquo; 100% Satisfaction Guarantee</h1></div>
+                            <div class="sectionInner heroInner">
+
+
+                                <div id="heroRight" class="heroRight role-element leadstyle-container">
+                                    <img id="heroLeftImg" src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" class="role-element leadstyle-image" style="max-width:200px;">
+                                </div>
+
+                                <div id="heroLeft" class="heroLeft role-element leadstyle-container">
+                                    <div id="heroFormWrap" class="heroFormWrap">
+                                        <div id="heroFormHeadline" class="heroFormheadline"></div>
+                                        <div id="heroFormButtonWrap" class="heroFormButtonWrap inside">
+                                            <p>Your complete satisfaction is guaranteed.</p>
+
+                                            <p>If for any reason your hardcover books don't tickle your little one's funny bone, simply return them to us at your expense with a note marked "cancel." We'll gladly refund the purchase price, no questions asked.</p>
+
+
+
+
+
+
+
+                                            <a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link" style="display:none;">Rush Me My Free Hardcover Copy</a>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div id="hero" class="hero row role-element leadstyle-container inside">
+
+                                <div id="section1Headline" class="section1Headline role-element leadstyle-text" style="max-width:800px; margin-left:auto; margin-right:auto; padding-left:1em; padding-right:1em;">
+                                    <h1>
+                                        Total Price For <em><strong>Two</strong></em> 64-Page Hardcover Essential Guides and <em><strong>Two</strong></em> Sticker Activity Books You See Here: <br>
+                                        $32 + Free Shipping
+                                    </h1>
+                                </div>
+
+
+                                <!--Section Inner-->
+                            </div>
+
+
+                            <div id="hero" class="hero row role-element leadstyle-container inside">
+                                <div class="sectionInner heroInner">
+                                    <div class=" role-element leadstyle-container">
+                                        <!-- <img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/upsell2/hardcover-group-2.png" class="role-element leadstyle-image" style="width:80%; max-width:600px;">-->
+                                        <img src="/Images/landers/hardcover-group-2.png" class="role-element leadstyle-image" style="width:80%; max-width:600px;">
+                                    </div>
+
+
+                                </div>
+                                <!--Section Inner-->
+                            </div>
+
+
+
+
+
+                            <!--Section Inner-->
+
+                        </div>
+
+
+                        <!--Section2-->
+                        <div id="section3" class="section3 row role-element leadstyle-container" style="margin-top:-40px;">
+                            <div class="sectionInner ">
+                                <div id="section3Form" class="section3Form inside" style="">
+                                    <input type="submit" name="SubmitButton" id="btnaddupsell2" class="newBtn2 btn role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping" />
+
+
+                                </div>
+
+                                <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
+
+
+                            </div>
+                            <!--Section Inner-->
+                        </div>
+                        <!--Section 3-->
+                        <div class="inside">
+<<<<<<< HEAD
+                            <!--<input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer.">-->
+                            <button id="btnNoUpsell" style="font-size:.7em;" class="inside">No thank you. I do not want to take advantage of this limited time discount offer.</button>
+=======
+                            <input type="button" id="btnNoUpsell" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer.">
+                            <!--<a href="#/thankyou" style="font-size:.7em;" class="inside">No thank you. I do not want to take advantage of this limited time discount offer.</a>-->
+>>>>>>> update: issue fixes for apple device submit issue on upsell pages tripwire
+                        </div>
+
+                    </div>
+                    <!--PageContainer Inner-->
+                    <div id="footer" class="footer row role-element leadstyle-container">
+                        <div id="footerText" class="footerText role-element leadstyle-text"><div>&#169; Early Moments 2016</div></div>
+                    </div>
+                </div>
+                <!--Page Container-->
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        var err = '';
+        if ('@ViewBag.ErrorMsg' != null) {
+            err = '@Html.Raw(ViewBag.ErrorMsg)';
+            // console.log(err);
+            if (err.length > 0) {
+                $("#spnErrorMessage").html(err.toString());
+                $("#dialog-message").modal("toggle");
+            }
+        }
+
+        $("#btnNoUpsell").click(function () {
+            var fullurl = window.location;
+            var cnt = fullurl.toString().indexOf('?', 0);
+            var params = window.location.toString().substr(cnt, fullurl.toString().length);
+            if (params.length > 1) {
+                window.location.href = "/landers/thankyou" + params;
+            }
+            else {
+                window.location.href = "/landers/thankyou";
+            }
+            pleaseWait();
+            return false;
+        });
+
+    });
+</script>
