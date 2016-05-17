@@ -123,6 +123,8 @@ namespace deals.earlymoments.com.Controllers
 
                 oVariables.has_shopping_Cart = true;
 
+                oVariables.pcode_pos_7 = "N";
+
                 //Submitting shipping details to order engin for order process
                 //Code commented for passing to payment page. 
                 oVariables = oProcess.OrderSubmit(oVariables);
@@ -240,6 +242,12 @@ namespace deals.earlymoments.com.Controllers
                             oVariables.cancelOriginalOrder = true;
                             oVariables.originalOrderId = oVariables.order_id;
 
+                            oVariables.promotion_code = oVariables.promotion_code.Length >= 6
+                                ? oVariables.promotion_code.Substring(0, 6)
+                                : oVariables.promotion_code;
+
+                            oVariables.pcode_pos_7 = "U";
+
                             oProcess.OrderSubmit(oVariables);
 
                             //code for adding upsell by api call commented
@@ -356,6 +364,13 @@ namespace deals.earlymoments.com.Controllers
                             oVariables.applyEnhancedCTI = false;
                             oVariables.has_shopping_Cart = true;
                             //oVariables.shopping_cart_items_remove = "19632366,19632367";
+
+                            oVariables.promotion_code = oVariables.promotion_code.Length >= 6
+                                ? oVariables.promotion_code.Substring(0, 6)
+                                : oVariables.promotion_code;
+
+                            oVariables.pcode_pos_7 = oVariables.shopping_cart_items.In("19632368") ? "W" : "E";
+
                             oVariables.shopping_cart_items = "19632370,19632371";
 
                             oVariables.err = "";
