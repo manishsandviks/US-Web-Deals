@@ -225,82 +225,82 @@ namespace deals.earlymoments.com.Controllers
                     oVariables = Session["NewOrderDetails"] as OrderVariables;
                     if (oVariables != null)
                     {
-                        if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
+                        //  if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.Contains("Yes"))
+                        //  {
+                        oVariables.applyDupeCheck = false;
+                        oVariables.applyEnhancedCTI = false;
+                        oVariables.has_shopping_Cart = true;
+                        // oVariables.shopping_cart_items_remove = oVariables.shopping_cart_items;
+                        oVariables.shopping_cart_items = "19632368";
+
+                        oVariables.err = "";
+                        oVariables.payment_type = "CC";
+                        oVariables.total_amt = 0.00;
+                        oVariables.total_sah = 0.00;
+                        oVariables.order_status = "N";
+
+                        oVariables.isOrderUpgraded = true;
+                        oVariables.cancelOriginalOrder = true;
+                        oVariables.originalOrderId = oVariables.order_id;
+
+                        oVariables.promotion_code = oVariables.promotion_code.Length >= 6
+                            ? oVariables.promotion_code.Substring(0, 6)
+                            : oVariables.promotion_code;
+
+                        oVariables.pcode_pos_7 = "U";
+
+                        oProcess.OrderSubmit(oVariables);
+
+                        //code for adding upsell by api call commented
+                        //isUpsellAdded = addUpsellToCart(order_id, campaign_id, offer_id, upsell_id);
+                        //if (isUpsellAdded)
+                        //{
+                        //    Session["NewOrderDetails"] = oVariables;
+                        //}
+                        if (oVariables != null)
                         {
-                            oVariables.applyDupeCheck = false;
-                            oVariables.applyEnhancedCTI = false;
-                            oVariables.has_shopping_Cart = true;
-                            // oVariables.shopping_cart_items_remove = oVariables.shopping_cart_items;
-                            oVariables.shopping_cart_items = "19632368";
-
-                            oVariables.err = "";
-                            oVariables.payment_type = "CC";
-                            oVariables.total_amt = 0.00;
-                            oVariables.total_sah = 0.00;
-                            oVariables.order_status = "N";
-
-                            oVariables.isOrderUpgraded = true;
-                            oVariables.cancelOriginalOrder = true;
-                            oVariables.originalOrderId = oVariables.order_id;
-
-                            oVariables.promotion_code = oVariables.promotion_code.Length >= 6
-                                ? oVariables.promotion_code.Substring(0, 6)
-                                : oVariables.promotion_code;
-
-                            oVariables.pcode_pos_7 = "U";
-
-                            oProcess.OrderSubmit(oVariables);
-
-                            //code for adding upsell by api call commented
-                            //isUpsellAdded = addUpsellToCart(order_id, campaign_id, offer_id, upsell_id);
-                            //if (isUpsellAdded)
-                            //{
-                            //    Session["NewOrderDetails"] = oVariables;
-                            //}
-                            if (oVariables != null)
+                            if (oVariables.order_id > 0)
                             {
-                                if (oVariables.order_id > 0)
-                                {
-                                    oVariables.lastPageClientOn = "upsell_offer2";
-                                    Session.Add("NewOrderDetails", oVariables);
-                                    return RedirectToAction("upsell_offer2", "landers");
-                                }
-                                else
-                                {
-                                    if (oVariables.err.Length >= 0)
-                                    {
-                                        if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
-                                        {
-                                            Session.Add("NewOrderDetails", oVariables);
-                                            return RedirectToAction("orderstatus", "Home");
-                                        }
-                                        else if (oVariables.err.Length > 0)
-                                        {
-                                            ViewBag.ErrorMsg = oVariables.err;
-                                            oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                                        }
-                                        else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
-                                        {
-                                            Session.Add("NewSBMDetails", oVariables);
-                                            return View();
-                                            // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-                                        }
-                                        else
-                                        {
-                                            ViewBag.ErrorMsg = oVariables.err;
-                                            oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                                        }
-                                    }
-                                }
+                                oVariables.lastPageClientOn = "upsell_offer2";
+                                Session.Add("NewOrderDetails", oVariables);
+                                return RedirectToAction("upsell_offer2", "landers");
                             }
                             else
                             {
-                                Session["NewSBMDetails"] = null;
-                                return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                if (oVariables.err.Length >= 0)
+                                {
+                                    if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                                    {
+                                        Session.Add("NewOrderDetails", oVariables);
+                                        return RedirectToAction("orderstatus", "Home");
+                                    }
+                                    else if (oVariables.err.Length > 0)
+                                    {
+                                        ViewBag.ErrorMsg = oVariables.err;
+                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                    }
+                                    else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
+                                    {
+                                        Session.Add("NewSBMDetails", oVariables);
+                                        return View();
+                                        // return RedirectToAction("upsell_offer1", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                    }
+                                    else
+                                    {
+                                        ViewBag.ErrorMsg = oVariables.err;
+                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                    }
+                                }
                             }
-
                         }
-                        return RedirectToAction("upsell_offer2", "landers");
+                        else
+                        {
+                            Session["NewSBMDetails"] = null;
+                            return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                        }
+
+                        // }
+                        // return RedirectToAction("upsell_offer2", "landers");
                     }
                     else
                     {
@@ -359,83 +359,83 @@ namespace deals.earlymoments.com.Controllers
                     oVariables = Session["NewOrderDetails"] as OrderVariables;
                     if (oVariables != null)
                     {
-                        if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
+                        //  if (!string.IsNullOrEmpty(SubmitButton) && SubmitButton.IndexOf("Yes", StringComparison.OrdinalIgnoreCase) >= 0)
+                        //  {
+                        oVariables.applyDupeCheck = false;
+                        oVariables.applyEnhancedCTI = false;
+                        oVariables.has_shopping_Cart = true;
+                        //oVariables.shopping_cart_items_remove = "19632366,19632367";
+
+                        oVariables.promotion_code = oVariables.promotion_code.Length >= 6
+                            ? oVariables.promotion_code.Substring(0, 6)
+                            : oVariables.promotion_code;
+
+                        oVariables.pcode_pos_7 = oVariables.shopping_cart_items.In("19632368") ? "W" : "E";
+
+                        oVariables.shopping_cart_items = "19632370,19632371";
+
+                        oVariables.err = "";
+                        oVariables.payment_type = "CC";
+                        oVariables.total_amt = 0.00;
+                        oVariables.total_sah = 0.00;
+                        oVariables.order_status = "N";
+
+                        oVariables.isOrderUpgraded = true;
+                        oVariables.cancelOriginalOrder = true;
+                        oVariables.originalOrderId = oVariables.order_id;
+
+                        oProcess.OrderSubmit(oVariables);
+
+                        //code for adding upsell by api call commented
+                        //isUpsellAdded = addUpsellToCart(order_id, campaign_id, offer_id, upsell_id);
+                        //if (isUpsellAdded)
+                        //{
+                        //    Session["NewOrderDetails"] = oVariables;
+                        //}
+                        if (oVariables != null)
                         {
-                            oVariables.applyDupeCheck = false;
-                            oVariables.applyEnhancedCTI = false;
-                            oVariables.has_shopping_Cart = true;
-                            //oVariables.shopping_cart_items_remove = "19632366,19632367";
-
-                            oVariables.promotion_code = oVariables.promotion_code.Length >= 6
-                                ? oVariables.promotion_code.Substring(0, 6)
-                                : oVariables.promotion_code;
-
-                            oVariables.pcode_pos_7 = oVariables.shopping_cart_items.In("19632368") ? "W" : "E";
-
-                            oVariables.shopping_cart_items = "19632370,19632371";
-
-                            oVariables.err = "";
-                            oVariables.payment_type = "CC";
-                            oVariables.total_amt = 0.00;
-                            oVariables.total_sah = 0.00;
-                            oVariables.order_status = "N";
-
-                            oVariables.isOrderUpgraded = true;
-                            oVariables.cancelOriginalOrder = true;
-                            oVariables.originalOrderId = oVariables.order_id;
-
-                            oProcess.OrderSubmit(oVariables);
-
-                            //code for adding upsell by api call commented
-                            //isUpsellAdded = addUpsellToCart(order_id, campaign_id, offer_id, upsell_id);
-                            //if (isUpsellAdded)
-                            //{
-                            //    Session["NewOrderDetails"] = oVariables;
-                            //}
-                            if (oVariables != null)
+                            if (oVariables.order_id > 0)
                             {
-                                if (oVariables.order_id > 0)
-                                {
-                                    oVariables.lastPageClientOn = "thankyou";
-                                    Session.Add("NewOrderDetails", oVariables);
-                                    return RedirectToAction("thankyou", "landers");
-                                }
-                                else
-                                {
-                                    if (oVariables.err.Length >= 0)
-                                    {
-                                        if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
-                                        {
-                                            Session.Add("NewOrderDetails", oVariables);
-                                            return RedirectToAction("orderstatus", "Home");
-                                        }
-                                        else if (oVariables.err.Length > 0)
-                                        {
-                                            ViewBag.ErrorMsg = oVariables.err;
-                                            oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                                        }
-                                        else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
-                                        {
-                                            Session.Add("NewSBMDetails", oVariables);
-                                            return View();
-                                            //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
-                                        }
-                                        else
-                                        {
-                                            ViewBag.ErrorMsg = oVariables.err;
-                                            oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
-                                        }
-                                    }
-                                }
+                                oVariables.lastPageClientOn = "thankyou";
+                                Session.Add("NewOrderDetails", oVariables);
+                                return RedirectToAction("thankyou", "landers");
                             }
                             else
                             {
-                                Session["NewSBMDetails"] = null;
-                                return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                if (oVariables.err.Length >= 0)
+                                {
+                                    if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
+                                    {
+                                        Session.Add("NewOrderDetails", oVariables);
+                                        return RedirectToAction("orderstatus", "Home");
+                                    }
+                                    else if (oVariables.err.Length > 0)
+                                    {
+                                        ViewBag.ErrorMsg = oVariables.err;
+                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                    }
+                                    else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
+                                    {
+                                        Session.Add("NewSBMDetails", oVariables);
+                                        return View();
+                                        //return RedirectToAction("upsell_offer2", "landers", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                                    }
+                                    else
+                                    {
+                                        ViewBag.ErrorMsg = oVariables.err;
+                                        oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                    }
+                                }
                             }
-
                         }
-                        return RedirectToAction("thankyou", "landers");
+                        else
+                        {
+                            Session["NewSBMDetails"] = null;
+                            return RedirectToAction("orderstatus", "Home", new { uniqueUri = Request.RequestContext.RouteData.Values["uniqueUri"] });
+                        }
+
+                        // }
+                        // return RedirectToAction("thankyou", "landers");
                     }
                     else
                     {

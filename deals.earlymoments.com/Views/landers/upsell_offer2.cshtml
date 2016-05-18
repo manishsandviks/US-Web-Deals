@@ -21,7 +21,6 @@
          src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
 </noscript>
 <!-- End Facebook Pixel Code -->
-
 @using (Html.BeginForm("upsell_offer2", "landers", FormMethod.Post, new { @id = "form1" }))
 {
     <div id="pageContainer" class="container-fluid">
@@ -112,8 +111,8 @@
                                     <!--Section Inner-->
 
                                     <div style="max-width:800px; margin-left:auto; margin-right:auto; padding-left:1em; padding-right:1em;">
-                                        <input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn  role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping" />
-                                        <!--<a id="heroFormButton" class="newBtn2 btn  role-element leadstyle-link">YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping</a>-->
+                                        <!--<input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn  role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping" />-->
+                                        <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn  role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping">YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping</button>
                                         <br>
                                         <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
                                     </div>
@@ -338,7 +337,8 @@
                             <div class="sectionInner ">
                                 <div id="section3Form" class="section3Form inside" style="">
                                     <input type="submit" name="SubmitButton" id="btnaddupsell2" class="newBtn2 btn role-element leadstyle-link" value="YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping" />
-                                    <!--<a href="" ng-click="addSecondOffer()" id="section3Button" class="newBtn2 btn role-element leadstyle-link">YES! Please Rush Me Everything I See Here, Directly to My Door For Just $32 And Free Shipping</a>-->
+
+
                                 </div>
 
                                 <div style="margin-left:auto; margin-right:auto; margin-bottom:1em; margin-top:1em;"><img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/100-secure-seal.png" style="width:100px;">&nbsp;<img src="https://s3-us-west-2.amazonaws.com/brinkeroptimizer/disney/images/satisfaction-guarantee-seal.png" style="width:100px;"></div>
@@ -349,8 +349,8 @@
                         </div>
                         <!--Section 3-->
                         <div class="inside">
-                            <input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer.">
-                            <!--<a href="#/thankyou" style="font-size:.7em;" class="inside">No thank you. I do not want to take advantage of this limited time discount offer.</a>-->
+                            <!--<input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer.">-->
+                            <button id="btnNoUpsell" style="font-size:.7em;" class="inside">No thank you. I do not want to take advantage of this limited time discount offer.</button>
                         </div>
 
                     </div>
@@ -377,5 +377,19 @@
             }
         }
 
-    })
+        $("#btnNoUpsell").click(function () {
+            var fullurl = window.location;
+            var cnt = fullurl.toString().indexOf('?', 0);
+            var params = window.location.toString().substr(cnt, fullurl.toString().length);
+            if (params.length > 1) {
+                window.location.href = "/landers/thankyou" + params;
+            }
+            else {
+                window.location.href = "/landers/thankyou";
+            }
+            pleaseWait();
+            return false;
+        });
+
+    });
 </script>

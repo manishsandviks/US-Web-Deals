@@ -458,8 +458,9 @@
                 <div id="section3" class="section3 row role-element leadstyle-container ">
                     <div class="sectionInner inside">
                         <div id="section3Form" class="section3Form">
-                            <input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" />
-                            <!--<button id="btnaddupsell" name="SubmitButon" class="newBtn2 btn role-element leadstyle-link">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping<button>-->
+                            <!--<input type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping" />-->
+                            <button type="submit" id="btnaddupsell" name="SubmitButton" class="newBtn2 btn role-element leadstyle-link" value="Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping">Yes, Please Send Me My Three Books and Everything Else I see Here For Just $7 Today and Free Shipping</button>
+
                         </div>
                         <br>
                         <div>
@@ -470,8 +471,8 @@
                     <!--Section Inner-->
                 </div>
                 <!--Section 3-->
-                <input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />
-                <!--<button style="font-size:.7em;" class="inside" id="btnNoUpsell1" name="SubmitButton">No thank you. I do not want to take advantage of this limited time discount offer.</button>-->
+                <!--<input type="submit" id="btnNoUpsell" name="SubmitButton" style="font-size:.7em;" class="inside" value="No thank you. I do not want to take advantage of this limited time discount offer." />-->
+                <button style="font-size:.7em;" class="inside" id="btnNoUpsell">No thank you. I do not want to take advantage of this limited time discount offer.</button>
 
 
             </div>
@@ -675,5 +676,25 @@
                 $("#dialog-message").modal("toggle");
             }
         }
-    })
+
+        $("#btnNoUpsell").click(function () {
+            //alert("Hello");
+
+
+            var fullurl = window.location;
+            var cnt = fullurl.toString().indexOf('?', 0);
+            var params = window.location.toString().substr(cnt, fullurl.toString().length);
+            console.log(params + window.location.host);
+            if (params.length > 1) {
+                //alert(window.location.host + "/landers/upsell_offer2" + params);
+                window.location.href = "/landers/upsell_offer2" + params;
+            }
+            else {
+                window.location.href = "/landers/upsell_offer2";
+            }
+            pleaseWait();
+            return false;
+
+        });
+    });
 </script>

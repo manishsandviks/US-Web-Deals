@@ -25,9 +25,7 @@ $(document).ready(function () {
             }
         }
     });
-    $("#btnNoUpsell").click(function () {
-        $("form").submit();
-    });
+ 
 });
 
 

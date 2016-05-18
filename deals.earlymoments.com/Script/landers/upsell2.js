@@ -9,10 +9,7 @@
         $("form").submit();
         pleaseWait();
     });
-    $("#btnNoUpsell").click(function () {
-        $("form").submit();
-        pleaseWait();
-    });
+  
 });
 
 function pleaseWait() {
