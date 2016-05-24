@@ -2788,6 +2788,7 @@ namespace deals.earlymoments.com.Controllers
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
             OrderProcess oProcess = new OrderProcess();
             CommonMethods oComm = new CommonMethods();
+            CommonModels oCom = new CommonModels();
             OrderVariables oVariables = new OrderVariables();
             string cart_details, conf_pg_tac, total = "";
             string shipall = "false";
@@ -2878,13 +2879,13 @@ namespace deals.earlymoments.com.Controllers
                                     if (ViewBag.ErrorMsg != null && ViewBag.ErrorMsg != "")
                                     {
                                         //Setting values if page is getting back to the payment view only.
-                                        Dictionary<string, string> d = oComm.GetOfferCreatives(oVariables);
+                                        Dictionary<string, string> d = oCom.GetOfferCreatives(oVariables);
                                         ViewBag.HeaderImageSrc = oComm.GetDictionaryValue("payment_header", d);
                                         if ((string)Request.QueryString["shipall"] != null) { shipall = (string)Request.QueryString["shipall"]; }
                                         if ((string)Request.QueryString["template"] != null) { template = (string)Request.QueryString["template"]; }
                                         string cartId = oVariables.cart_id.ToString();
                                         conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
-                                        cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
+                                        cart_details = oCom.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
                                         total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
                                         ViewBag.IsBonusSelected = false;
                                         if (oVariables.bonus_option == true)
@@ -2902,7 +2903,7 @@ namespace deals.earlymoments.com.Controllers
                                     }
 
 
-                                    oVariables = ShippingModels.AssignBillingToOrderVariable(oVariables, billing);
+                                    oVariables = ShippingModels.AssignShippingBillingToOrderVariables(oVariables, shipping);
                                     oVariables = oProcess.OrderSubmit(oVariables);
                                     if (oVariables != null)
                                     {
@@ -2935,13 +2936,13 @@ namespace deals.earlymoments.com.Controllers
                                                 return RedirectToAction("ThankYou", "home");
                                             }
                                             //Setting values if page is getting back to the payment view only.
-                                            Dictionary<string, string> d = oComm.GetOfferCreatives(oVariables);
+                                            Dictionary<string, string> d = oCom.GetOfferCreatives(oVariables);
                                             ViewBag.HeaderImageSrc = oComm.GetDictionaryValue("payment_header", d);
                                             if ((string)Request.QueryString["shipall"] != null) { shipall = (string)Request.QueryString["shipall"]; }
                                             if ((string)Request.QueryString["template"] != null) { template = (string)Request.QueryString["template"]; }
                                             string cartId = oVariables.cart_id.ToString();
                                             conf_pg_tac = oVariables.PageVars[0].conf_pg_tac;
-                                            cart_details = oComm.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
+                                            cart_details = oCom.ResponsivePayment_GiftingProducts(oVariables, Convert.ToBoolean(shipall), template);
                                             total = String.Format("{0:c}", oVariables.total_amt + oVariables.tax_amt + oVariables.total_sah);
                                             ViewBag.IsBonusSelected = false;
                                             if (oVariables.bonus_option == true)
@@ -3039,7 +3040,6 @@ namespace deals.earlymoments.com.Controllers
             catch (Exception ex)
             {
                 string page_log = "Exception raised. Exception: " + ex.Message.ToString() + "<br>";
-                CommonModels oCom = new CommonModels();
                 string s = "";// oCom.LogBrowserCapabilities(Request.Browser);
                 oCom.SendEmail(HttpContext.Request.Url.ToString() + "<br>ex.message = " + ex.Message.ToString() + "<br> Additional Information - " + page_log + ".<br> Browser Details....<br>" + s);
                 return View();
