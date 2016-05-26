@@ -33,17 +33,17 @@ namespace deals.earlymoments.com.Models
                 List<SelectListItem> genderList = new List<SelectListItem>();
 
                 SelectListItem li = new SelectListItem();
-                li.Value = "M";
+                li.Value = "1";
                 li.Text = "Boy";
                 genderList.Add(li);
 
                 SelectListItem li2 = new SelectListItem();
-                li2.Value = "F";
+                li2.Value = "2";
                 li2.Text = "Girl";
                 genderList.Add(li2);
 
                 SelectListItem li3 = new SelectListItem();
-                li3.Value = "X";
+                li3.Value = "0";
                 li3.Text = "I don't know yet";
                 genderList.Add(li3);
 

@@ -74,7 +74,7 @@ namespace deals.earlymoments.com.Models
                 ShippingEmail = "";
                 ShippingConfirmEmail = "";
                 ChildDOB = null;
-                ChildGender = "";
+                ChildGender = "0";
                 ChildName = "";
                 isBonusSelected = true;
             }
@@ -514,6 +514,7 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = newShippingAddress.ShippingCity;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
+            oVariables.ShipVars[oVariables.default_shp_id].child_gender = newShippingAddress.ChildGender;
             //oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
 
             oVariables.ip_address = oComm.GetIPAddress();
@@ -610,6 +611,8 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = billingDetails.ShippingCity;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = billingDetails.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = billingDetails.ShippingZipCode;
+            oVariables.ShipVars[oVariables.default_shp_id].child_gender = billingDetails.ChildGender;
+
             //oVariables.referring_url = HttpContext.Current.Request.Url.ToString();
 
             oVariables.ip_address = oComm.GetIPAddress();
@@ -755,7 +758,7 @@ namespace deals.earlymoments.com.Models
                     oVariables.total_sah = 0.0;
                 }
 
-                
+
                 return oVariables;
             }
             else
