@@ -514,8 +514,8 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = newShippingAddress.ShippingCity;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = newShippingAddress.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = newShippingAddress.ShippingZipCode;
-            
-            if (newShippingAddress.ChildGender == "")
+
+            if (string.IsNullOrEmpty(newShippingAddress.ChildGender) || newShippingAddress.ChildGender == "")
                 oVariables.ShipVars[oVariables.default_shp_id].child_gender = "0";
             else
                 oVariables.ShipVars[oVariables.default_shp_id].child_gender = newShippingAddress.ChildGender;
@@ -615,7 +615,8 @@ namespace deals.earlymoments.com.Models
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_city = billingDetails.ShippingCity;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_state = billingDetails.ShippingState;
             oVariables.ShipVars[oVariables.default_shp_id].ship_to_zipcode = billingDetails.ShippingZipCode;
-            if (billingDetails.ChildGender == "")
+
+            if (string.IsNullOrEmpty(billingDetails.ChildGender) || billingDetails.ChildGender == "")
                 oVariables.ShipVars[oVariables.default_shp_id].child_gender = "0";
             else
                 oVariables.ShipVars[oVariables.default_shp_id].child_gender = billingDetails.ChildGender;
