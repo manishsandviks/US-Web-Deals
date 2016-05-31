@@ -38,6 +38,20 @@
     <script src="/Script/seuss/4for1spring2/Validation.js"></script>
     <script src="/script/seuss/4for1spring2/main.js"></script>
     <script src="/Script/spin.min.js"></script>
+    <script>
+        var isPaymentVisible = false;
+        var orderSummary = '@ViewBag.CartSummary';    
+       
+       
+        $(document).ready(function () {
+            console.log('Visible' + isPaymentVisible);
+            if (orderSummary != null && orderSummary != '' && orderSummary != undefined && orderSummary != 'undefined') {
+                isPaymentVisible=true;
+                showPayment();
+            }
+        });
+
+    </script>
 </head>
 
 <body>
