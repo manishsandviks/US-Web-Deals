@@ -2774,7 +2774,9 @@ namespace deals.earlymoments.com.Controllers
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
             OfferService offerService = new OfferService();
-            return View(offerService.GetCustomerInfo());
+            ShippingModels.ShippingBillingOrder customerdata = new ShippingModels.ShippingBillingOrder();
+            customerdata = offerService.GetCustomerInfo();
+            return View(customerdata);
             // return View();
         }
 

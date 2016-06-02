@@ -46,12 +46,12 @@ $(document).ready(function () {
     //end of toggle view membership agreement
 
     $("#btnShippingSubmit").click(function () {
-        alert(validate_shipping_form());
-       // return false;
+        //  alert(validate_shipping_form());
+        // return false;
         if (validate_shipping_form() == true) {
             pleaseWait();
             return true;
-          
+
         }
         else {
             if (err_message.length > 0) {
@@ -64,8 +64,8 @@ $(document).ready(function () {
 
     $("#btnPaymentSubmit").click(function () {
         if (validate_payment_form() == true) {
-            return true;
             pleaseWait();
+            return true;
         }
         else {
             if (err_message.length > 0) {
@@ -261,9 +261,9 @@ function validate_payment_form() {
         }
     }
 
-  //  if ($('#optADOBMonth').exists()) { if ($('#optADOBMonth').val() == '' || $('#optADOBMonth').val() == 'Month') { set_errs($("#optADOBMonth"), 'Adult DOB month is required.\n'); } }
-   // if ($('#optADOBDay').exists()) { if ($('#optADOBDay').val() == '' || $('#optADOBDay').val() == 'Year') { set_errs($("#optADOBDay"), 'Adult DOB Day is required.\n'); } }
-   // if ($('#optADOBYear').exists()) { if ($('#optADOBYear').val() == '' || $('#optADOBYear').val() == 'Year') { set_errs($("#optADOBYear"), 'Adult DOB year is required.\n'); } }
+    //  if ($('#optADOBMonth').exists()) { if ($('#optADOBMonth').val() == '' || $('#optADOBMonth').val() == 'Month') { set_errs($("#optADOBMonth"), 'Adult DOB month is required.\n'); } }
+    // if ($('#optADOBDay').exists()) { if ($('#optADOBDay').val() == '' || $('#optADOBDay').val() == 'Year') { set_errs($("#optADOBDay"), 'Adult DOB Day is required.\n'); } }
+    // if ($('#optADOBYear').exists()) { if ($('#optADOBYear').val() == '' || $('#optADOBYear').val() == 'Year') { set_errs($("#optADOBYear"), 'Adult DOB year is required.\n'); } }
 
     //if (!ValidateDOBDate()) { err_message += i++ + '. ' + "Invalid Adult Date Of Birth.<br/>" }
 
@@ -280,7 +280,7 @@ function validate_payment_form() {
 }
 
 function pleaseWait() {
-  //  alert("Please wait");
+   // alert("Please wait");
     $("#loading").fadeIn();
     var opts = {
         lines: 12, // The number of lines to draw
