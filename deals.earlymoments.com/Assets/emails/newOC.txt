@@ -1,0 +1,38 @@
+﻿<table width="598" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+    <tbody>
+        <tr>
+            <td align="center" valign="middle" bgcolor="#FFFFFF" style="font-family: Helvetica, Arial, tahoma, 'Open Sans'; font-size:21px; margin-top:0px; margin-bottom:0px;  -webkit-text-size-adjust:none;">
+
+
+                <p style="text-align:center; font-family:'Open Sans', Helvetica, tahoma; font-size:20px;  margin-left:35px; margin-right:35px; margin-top:0px;  color:#1a5eab; font-weight:bold;"><span style="font-family:'Open Sans', Helvetica, tahoma; !important;">Great news,<br>
+       *[tr_customerFirstName]*,
+     </span>
+
+                    <p style="text-align:left; font-family:'Open Sans', Helvetica, tahoma; font-size:14px; line-height: 1.3; margin-left:35px; margin-right:35px; margin-top:0px;  color:#1a5eab;"><span style="font-family:'Open Sans', Helvetica, tahoma; !important;">Congratulations on giving *[tr_childName]* the gift of reading. Your Order *[tr_orderNumber]* has been received. We will send a USPS tracking number after your Welcome Package has shipped. Please allow 7 &ndash; 14 business days for delivery.</span></p>
+
+                    *[tr_specialText]*
+					*[tr_optOutText]*
+
+                    <p style="text-align:left; font-family:'Open Sans', Helvetica, tahoma; font-size:14px; line-height: 1.3; margin-left:35px; margin-right:35px; margin-top:0px; margin-bottom:20px; color:#1a5eab;"><span style="font-family:'Open Sans', Helvetica, tahoma; !important;">If you need anything at all, <a href="https://www.earlymoments.com/mypage" target="_blank" style="color: #c65696;">please let us know</a>.</span></p>
+
+                    <p style="text-align:left; font-family:'Open Sans', Helvetica, tahoma; font-size:14px; line-height: 1.3; margin-left:35px; margin-right:35px; margin-top:0px; margin-bottom:20px; color:#1a5eab;"></p>
+
+                    <!-- Order Summary -->
+                    *[tr_orderSummary]*
+                    <!-- End Order Summary -->
+					*[tr_adSpace]*
+                    <p style="text-align:center; font-family:'Open Sans', Helvetica, tahoma; font-size:14px; line-height: 1.3; margin-left:35px; margin-right:35px; margin-top:5px; margin-bottom:20px; color:#1a5eab;">
+
+                        <table width="90%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 20px;">
+                            <tr>
+                                <td align="center" bgcolor="#1f5ead">
+                                    <img src="https://www.earlymoments.com/upload/EarlyMoments/Email/Conf/Conf_kids.jpg" width="456" height="327" alt="Brave" style="margin-top: 20px; margin-bottom: 200px;" /> <br />&nbsp;&nbsp;<br />*[tr_specialPromotionalText]*
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p style="text-align:center; font-family:'Oswald', Helvetica, tahoma; font-size:17px;  margin-left:0px; margin-right:0px; margin-top:1px; margin-bottom:0px;  color:#FFFFFF; font-weight:bold;">&nbsp;</p>
+                    </p>
+            </td>
+        </tr>
+</table>

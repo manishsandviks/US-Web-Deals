@@ -8,11 +8,14 @@
     </WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ProjectView>ProjectFiles</ProjectView>
-<<<<<<< 2dc2f0becc2286e86a6a33be052c606885203497
     <NameOfLastUsedPublishProfile>SriMachineDev1</NameOfLastUsedPublishProfile>
-=======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
->>>>>>> update: updates for tripwire pages
+<<<<<<< HEAD
+    <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
+=======
+    <NameOfLastUsedPublishProfile>SriMachineDev1</NameOfLastUsedPublishProfile>
+    <UseIISExpress>true</UseIISExpress>
+>>>>>>> c22c5ae... new confirmaiton email process thru ES
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
