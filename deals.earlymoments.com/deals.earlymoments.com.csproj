@@ -48,6 +48,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\as400request.dll</HintPath>
     </Reference>
+    <Reference Include="CLConfirmationEmail">
+      <HintPath>..\Utilities\CLConfirmationEmail.dll</HintPath>
+    </Reference>
     <Reference Include="com.sandviks.sfmc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\com.sandviks.sfmc.dll</HintPath>
@@ -77,7 +80,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OrderEngine">
+    <Reference Include="OrderEngine, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\OrderEngine.dll</HintPath>
     </Reference>
     <Reference Include="PaymentTechService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
