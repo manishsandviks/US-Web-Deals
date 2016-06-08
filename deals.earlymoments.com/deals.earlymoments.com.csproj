@@ -48,7 +48,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\as400request.dll</HintPath>
     </Reference>
-    <Reference Include="CLConfirmationEmail">
+    <Reference Include="CLConfirmationEmail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\CLConfirmationEmail.dll</HintPath>
     </Reference>
     <Reference Include="com.sandviks.sfmc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -79,6 +80,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\Utilities\NLog.dll</HintPath>
     </Reference>
     <Reference Include="OrderEngine, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -1623,6 +1627,9 @@
     <Content Include="fonts\ArialRoundedMTBoldBold.ttf" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff" />
     <Content Include="fonts\ArialRoundedMTBoldBold.woff2" />
+    <Content Include="NLog.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\EM-Deals.pubxml" />
     <None Include="Properties\PublishProfiles\SriMachineDev1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
