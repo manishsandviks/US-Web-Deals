@@ -14,9 +14,7 @@
     <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
 =======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
-=======
-    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
->>>>>>> update:order status page is updated to responsive
+>>>>>>> update: pulled Srikanths changes
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
