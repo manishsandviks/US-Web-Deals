@@ -25,6 +25,7 @@
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 =======
 >>>>>>> update: pulled Srikanths changes
@@ -35,6 +36,14 @@
 >>>>>>> update: pulled Srikanths changes
 >>>>>>> update:order status page is updated to responsive
 >>>>>>> update:order status page is updated to responsive
+=======
+    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
+>>>>>>> update:order status page is updated to responsive
+=======
+    <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
+>>>>>>> update: pulled Srikanths changes
+>>>>>>> update: pulled Srikanths changes
+>>>>>>> update: pulled Srikanths changes
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
