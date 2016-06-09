@@ -2805,6 +2805,8 @@ namespace deals.earlymoments.com.Controllers
                         case "rush my books":
                             oVariables = oProcess.GetOfferAndPageDetails("fosina-seuss-4for1-secure-activity");
                             shipping.stepNumber = 1;
+                            var offerService = new OfferService();
+                            oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
                             oVariables = ShippingModels.AssignShippingBillingToOrderVariables(oVariables, shipping);
                             oVariables = oProcess.OrderSubmit(oVariables);
                             if (oVariables != null)
