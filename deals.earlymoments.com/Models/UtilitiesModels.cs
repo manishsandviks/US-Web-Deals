@@ -234,7 +234,7 @@ namespace deals.earlymoments.com.Models
                 SelectListItem li9 = new SelectListItem();
                 li9.Value = "09";
                 li9.Text = "09";
-                monthList.Add(li3);
+                monthList.Add(li9);
 
                 SelectListItem li10 = new SelectListItem();
                 li10.Value = "10";
