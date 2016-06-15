@@ -58,7 +58,7 @@
     </Reference>
     <Reference Include="customtracking.earlymoments.lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Library\US-Lib-OrderEngine\OrderEngine\bin\Debug\customtracking.earlymoments.lib.dll</HintPath>
+      <HintPath>..\Utilities\customtracking.earlymoments.lib.dll</HintPath>
     </Reference>
     <Reference Include="CustServiceProxy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=426109a22f3e5396, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -90,7 +90,7 @@
     </Reference>
     <Reference Include="OrderEngine, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Library\US-Lib-OrderEngine\OrderEngine\bin\Debug\OrderEngine.dll</HintPath>
+      <HintPath>..\Utilities\OrderEngine.dll</HintPath>
     </Reference>
     <Reference Include="PaymentTechService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

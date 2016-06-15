@@ -89,7 +89,10 @@ namespace deals.earlymoments.com.Controllers
                             //internalPixel = "<iframe src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=ifr' height='1' width='1' frameborder='0'></iframe><br /><img src='https://services.earlymoments.com/ping/p.ashx?source=7630&brand=e&data=" + oVariables.order_id.ToString() + "&type=img' width='1' height='1' border='0' />";
                             //Session["IsPostBack"] = true;
 
-                            FirePostBackPixel(oVariables);
+                            if (!oVariables.vendor_id.Contains("QIN") && !oVariables.vendor_id.Contains("FLT"))
+                            {
+                                FirePostBackPixel(oVariables);
+                            }
                         }
                     }
                 }
