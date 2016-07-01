@@ -11,11 +11,7 @@
     <NameOfLastUsedPublishProfile>SriMachineDev1</NameOfLastUsedPublishProfile>
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 =======
@@ -37,6 +33,7 @@
 =======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 >>>>>>> update: pulled Srikanths changes
+>>>>>>> update:order status page is updated to responsive
 >>>>>>> update:order status page is updated to responsive
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
