@@ -13,9 +13,9 @@
 <<<<<<< HEAD
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 =======
-    <NameOfLastUsedPublishProfile>SriMachineDev1</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
+>>>>>>> update:order status page is updated to responsive
     <UseIISExpress>true</UseIISExpress>
->>>>>>> c22c5ae... new confirmaiton email process thru ES
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
