@@ -1,0 +1,19 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@import url(font-awesome.css);
+@import url(commonstyle.css);
+@import url(media.css);
+
+html, body, .customContainer{height:100%;}
+
+
+body{background-color:#A5DEEF; font-family:'Arial', Helvetica, sans-serif !important; font-size:14px; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+
+.bodyContainer{background-color:#fff; padding-top:40px; padding-bottom:40px;}
+footer{background-color:#154B78; padding-top:30px; padding-bottom:30px;}
+
+.customContainer{display:table;}
+.verticalCenterRow{display: table-cell; vertical-align: middle;}
+a{color:#03F; text-decoration:underline;}
+

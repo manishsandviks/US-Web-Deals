@@ -3,16 +3,6 @@
     Layout = "~/Views/Shared/_LayoutEarlymoments.cshtml";
 }
 
-<div align="center" class="FormTable" style="padding-top: 30px; height: 200px;" id="status"
-     runat="server">
-    <div style="display:none;">
-        <strong>Thank you for your interest in Our Products.</strong><br />
-        Due to technical difficulties, we are not able to process your order.<br />
-        Please call us at the number below to place an order via phone.<br />
-        Thank you again for your interest and understanding. Phone: <a href="https://www.earlymoments.com/Customer-Care/">
-            1-800-353-3140
-        </a>
-    </div>
-
+<div align="center" id="status" runat="server">
     @Html.Raw(ViewBag.ErrorMessage)
 </div>

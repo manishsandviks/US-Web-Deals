@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:991px){
+}
+
+@media screen and (max-width:800px){
+	
+}
+
+@media screen and (max-width:767px){
+	::-webkit-input-placeholder{color:#fff !important;}
+	:-moz-placeholder{color:#fff !important;}
+	::-moz-placeholder{color:#fff !important;}
+	::-ms-input-placeholder{color:#fff !important;}
+	.rightPaddingSmallOff{padding-right:0;}
+	.paddingLRoffSm{padding-left:0; padding-right:0;}
+	.smallMarginTopBot{margin-top:15px; margin-bottom:15px;}
+	.smallMarginTop5{margin-top:5px;}
+	.smallMarginTop10{margin-top:10px;}
+	.smallMarginTop20{margin-top:20px;}
+	.smallMarginBottom5{margin-bottom:5px;}
+	.smallMarginBottom10{margin-bottom:10px;}
+	.smallMarginBottom20{margin-bottom:20px;}
+	.noMarginLRsmall{margin-left:0; margin-right:0;}
+	.noLeftPaddingSmall{padding-left:0;}
+	.noRightPaddingSmall{padding-right:0;}
+	.noMarginTopSmall{margin-top:0;}
+	.noMarginBottomSmall{margin-bottom:0;}
+	.noPaddingLRSmall{padding-left:0; padding-right:0;}
+	.customPad{padding:0;}
+	.hideSmall{display:none !important;}
+	.transparentBgSmall{background-color:transparent !important;}
+	.centerSmall{text-align:center;}
+	
+	.customContainer .row{margin-left:0; margin-right:0;}
+}
+
+@media screen and (max-width:736px){
+}
+
+@media screen and (max-width:667px){
+}
+
+@media screen and (max-width:600px){
+}
+
+@media screen and (max-width:568px){
+}
+
+@media screen and (max-width:480px){
+}
+
+@media screen and (max-width:414px){
+}
+
+@media screen and (max-width:384px){
+}
+
+@media screen and (max-width:375px){
+}
+
+@media screen and (max-width:360px){
+}
+
+@media screen and (max-width:320px){
+}
+
+/*------------*/
+
+@media screen and (min-width:321px){
+}
+
+@media screen and (min-width:361px){
+}
+
+@media screen and (min-width:376px){
+}
+
+@media screen and (min-width:385px){
+}
+
+@media screen and (min-width:415px){
+}
+
+@media screen and (min-width:481px){
+	
+}
+
+@media screen and (min-width:569px){
+}
+
+@media screen and (min-width:601px){
+}
+
+@media screen and (min-width:668px){
+}
+
+@media screen and (min-width:738px){
+}
+
+@media screen and (min-width:768px){
+	.noPaddingLRbig{padding-left:0; padding-right:0;}
+	.hideBig{display:none !important;}
+	.absoluteBig{position:absolute;}
+	.marginTopLg30{margin-top:30px;}
+	.form-group label{display:none;}
+	
+}
+
+@media screen and (min-width:801px){
+}
+
+@media screen and (min-width:992px){
+	.customContainer{width:800px;}
+}
+
+@media screen and (max-width:767px) and (orientation:portrait){
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+	.smallMarginBottom20{margin-bottom:20px;}
+	.hideIpadPortrait{display:none;}
+	
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
+}
+
+@media screen and (max-width:800px) and (orientation:landscape){
+	.hideTab{display:none;}
+}

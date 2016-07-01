@@ -4,31 +4,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="/Content/earlymoments.css" rel="stylesheet" />
+    @*<link href="/Content/earlymoments.css" rel="stylesheet" />*@
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/custom.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div>
-        <div style="width: 804px; margin: 50px auto;">
-            <div style="float: left; width: 800px; border-left: solid 2px #d4d4d4; border-right: solid 2px #d4d4d4;
-                background-color: #FFF">
-                <div align="center">
-                    <img src="/Images/bfd_confirm_head.gif" id="imgHeader" alt="Order Confirmation" class="responsiveImg" style="width:800px;height:118px;" />
+    <div class="container customContainer">
+        <div class="verticalCenterRow">
+            <header class="row">
+                <div class="col-md-12 noPaddingLR">                   
+                    <img src="/Images/bfd_confirm_head.gif" id="imgHeader" alt="Order Confirmation" class="responsiveImg"/>
                 </div>
-                <div>
+            </header>
+            <div class="row bodyContainer" id="diverror">
+                <div class="col-md-12 text-center red f14">
                     @RenderBody()
                 </div>
-                <div class="Divider">
-                </div>
-                <div class="Divider">
-                </div>
-                <div style="background-color: #154b78; height: 70px; width: 780px; border-top: solid 1px #d4d4d4;
-                    font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #ffffff; padding-top: 10px;
-                    padding-left: 20px;text-align:center;">
-                    Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 Copyright &copy;
+            </div>
+            <footer class="row">
+                <div class="col-md-12 text-center white">
+                    Early Moments, 934 Plaza Dr., Montoursville, PA. 17754-2400 Copyright &copy; 
                     @System.DateTime.Now.Year.ToString()
                 </div>
-            </div>
-            <!-- Close Container Div-->
+            </footer>
         </div>
     </div>
 </body>

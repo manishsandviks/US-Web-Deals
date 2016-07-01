@@ -40,16 +40,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlliantDataProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AlliantDataProxy">
       <HintPath>..\Utilities\AlliantDataProxy.dll</HintPath>
     </Reference>
     <Reference Include="as400request, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\as400request.dll</HintPath>
     </Reference>
-    <Reference Include="CLConfirmationEmail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CLConfirmationEmail">
       <HintPath>..\Utilities\CLConfirmationEmail.dll</HintPath>
     </Reference>
     <Reference Include="com.sandviks.sfmc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -86,7 +84,7 @@
       <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\Utilities\NLog.dll</HintPath>
+      <HintPath>..\..\..\..\Reference Library\Sandviks Dll Library\NLog.dll</HintPath>
     </Reference>
     <Reference Include="OrderEngine, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -216,10 +214,13 @@
     <Content Include="Content\ArialRoundedMTBoldBold.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\common.css" />
+    <Content Include="Content\commonstyle.css" />
     <Content Include="Content\confirmation.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="Content\earlymoments.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\media.css" />
     <Content Include="Content\spinn.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -341,6 +342,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\482.gif" />
     <Content Include="Images\bfd_confirm_head.gif" />
+    <Content Include="Images\bfd_confirm_head1.gif" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Bye\confirm_header.gif" />
     <Content Include="Images\Bye\Five_95\bb.png" />
