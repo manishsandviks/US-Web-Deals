@@ -13,8 +13,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
     <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
@@ -24,12 +24,21 @@
 =======
 =======
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
+>>>>>>> update: pulled Srikanths changes
+<<<<<<< HEAD
 =======
 >>>>>>> update: pulled Srikanths changes
-    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
 =======
+=======
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
 >>>>>>> update: pulled Srikanths changes
+=======
+    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
+>>>>>>> update:order status page is updated to responsive
+>>>>>>> update:order status page is updated to responsive
+>>>>>>> update:order status page is updated to responsive
+>>>>>>> update:order status page is updated to responsive
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
