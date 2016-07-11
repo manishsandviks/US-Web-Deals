@@ -8,8 +8,28 @@
 
 <script src="/Script/seuss/payment4for99spring/main.js"></script>
 <script src="/script/Payment-Validation.js"></script>
+<!-- Facebook Pixel Code (by David / 02.03.2015) -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
 
-@using (Html.BeginForm("payment4_for_99_spring", "Seuss", FormMethod.Post, new { @id = "form1" }))
+    fbq('init', '1122629181099927');
+    fbq('track', "PageView");
+    fbq('track', 'InitiateCheckout');</script>
+<noscript>
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+@using (Html.BeginForm())
 {
     <div class="rightFormDiv">
         <p class="formHeader"><img src="/Images/seuss/payment4for99spring/right_top1.png" class="responsiveImg" id="rightTopDesktop"></p>
@@ -65,85 +85,13 @@
                     </div>
 
                     <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
-                        <div class="row formFieldGap">
+                        <!--<div class="row formFieldGap">
                             <div class="col-md-4 col-sm-4 col-xs-4 formLabel adob">
                                 <label><span>*</span> Adult Date of Birth</label>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
                                 <div class="form-inline aDb">
                                     @Html.Partial("_ADOBPartialPage")
-                                    <!-- <select id="optADOBMonth" class="form-control">
-                                         <option value="">Month</option>
-                                         <option value="01">Jan</option>
-                                         <option value="02">Feb</option>
-                                         <option value="03">Mar</option>
-                                         <option value="04">Apr</option>
-                                         <option value="05">May</option>
-                                         <option value="06">Jun</option>
-                                         <option value="07">Jul</option>
-                                         <option value="08">Aug</option>
-                                         <option value="09">Sep</option>
-                                         <option value="10">Oct</option>
-                                         <option value="11">Nov</option>
-                                         <option value="12">Dec</option>
-                                     </select>
-                                     <select id="optADOBDay" class="form-control">
-                                         <option value="">Day</option>
-                                         <option value="01">1</option>
-                                         <option value="02">2</option>
-                                         <option value="03">3</option>
-                                         <option value="04">4</option>
-                                         <option value="05">5</option>
-                                         <option value="06">6</option>
-                                         <option value="07">7</option>
-                                         <option value="08">8</option>
-                                         <option value="09">9</option>
-                                         <option value="10">10</option>
-                                         <option value="11">11</option>
-                                         <option value="12">12</option>
-                                         <option value="13">13</option>
-                                         <option value="14">14</option>
-                                         <option value="15">15</option>
-                                         <option value="16">16</option>
-                                         <option value="17">17</option>
-                                         <option value="18">18</option>
-                                         <option value="19">19</option>
-                                         <option value="20">20</option>
-                                         <option value="21">21</option>
-                                         <option value="22">22</option>
-                                         <option value="23">23</option>
-                                         <option value="24">24</option>
-                                         <option value="25">25</option>
-                                         <option value="26">26</option>
-                                         <option value="27">27</option>
-                                         <option value="28">28</option>
-                                         <option value="29">29</option>
-                                         <option value="30">30</option>
-                                         <option value="31">31</option>
-                                     </select>
-                                     <select id="optADOBYear" class="form-control">
-                                         <option value="">Year</option>
-                                         <option value="2016">2016</option>
-                                         <option value="2015">2015</option>
-                                         <option value="2014">2014</option>
-                                         <option value="2013">2013</option>
-                                         <option value="2012">2012</option>
-                                         <option value="2011">2011</option>
-                                         <option value="2010">2010</option>
-                                         <option value="2009">2009</option>
-                                         <option value="2008">2008</option>
-                                         <option value="2007">2007</option>
-                                         <option value="2006">2006</option>
-                                         <option value="2005">2005</option>
-                                         <option value="2004">2004</option>
-                                         <option value="2003">2003</option>
-                                         <option value="2002">2002</option>
-                                         <option value="2001">2001</option>
-                                         <option value="2000">2000</option>
-                                         <option value="1999">1999</option>
-                                         <option value="1998">1998</option>
-                                     </select> -->
-
                                 </div>
                             </div>
                         </div>
@@ -152,7 +100,7 @@
                                 <p class="f10">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
                                 <p class="f12 text-center bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row formFieldGap">
                             <div class="col-md-12 text-center">
                                 <!-- <p><img src="/Images/key.jpg" class="responsiveImg"></p> -->
@@ -272,3 +220,6 @@
 @section footerSection {
     @Html.Partial("_SeussFooterPartialPage")
 }
+<script>
+    $("#txtKey").val('');
+</script>
