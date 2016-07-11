@@ -206,7 +206,6 @@ namespace deals.earlymoments.com.Controllers
         public ActionResult Payment_595(ShippingModels.BillingDetails billing)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
-            //ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
 
@@ -224,7 +223,7 @@ namespace deals.earlymoments.com.Controllers
                 string strCaptch = Session["rndtext"] as string;
                 if (!strCaptch.Equals(billing.SecurityCaptch))
                 {
-                    ViewBag.ErrorMsg = "Invalid Security Captch.";
+                    ViewBag.ErrorMsg = "Invalid Security Captcha.";
                     //return View();
                 }
             }
@@ -232,7 +231,7 @@ namespace deals.earlymoments.com.Controllers
             {
                 //if (string.IsNullOrEmpty(billing.SecurityCaptch))
                 //{
-                    ViewBag.ErrorMsg = "Security Captch is required.";
+                    ViewBag.ErrorMsg = "Security Captcha is required.";
                     //return View();
                // }
             }
