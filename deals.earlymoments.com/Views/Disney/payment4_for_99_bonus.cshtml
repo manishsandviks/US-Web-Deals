@@ -10,7 +10,27 @@
 <script src="/Script/disney/payment4for99bonus/main.js"></script>
 <script src="/script/Payment-Validation.js"></script>
 
-@using (Html.BeginForm("payment4_for_99_bonus", "Disney", FormMethod.Post, new { @id = "form1" }))
+<!-- Facebook Pixel Code (by David / 02.03.2015) -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1122629181099927');
+    fbq('track', "PageView");
+    fbq('track', 'InitiateCheckout');</script>
+<noscript>
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+@using (Html.BeginForm())
 {
     <div class="rightFormDiv">
         <img src="/Images/disney/payment4for99bonus/freeStar.png" class="responsiveImg hideSmall freeStar">
@@ -69,7 +89,7 @@
                 </div>
 
                 <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
-                    <div class="row formFieldGap">
+                    <!--<div class="row formFieldGap">
                         <div class="col-md-4 col-sm-4 col-xs-4 formLabel adob">
                             <label><span>*</span> Adult Date of Birth</label>
                         </div>
@@ -84,13 +104,14 @@
                             <p class="f10">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
                             <p class="f12 text-center bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row formFieldGap">
-                        <div class="col-md-12 text-center">
-                            <!-- <p><img src="/Images/key.jpg" class="responsiveImg"></p> -->
+                        <div class="col-md-12">
+                            <p class="f12 text-center bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
+                        </div><div class="col-md-12 text-center">
+
                             <img src="@Url.Action("Image","Image" ,new { agha = "foo bar" })" alt="" />
                             <p style="width:30%; margin:10px auto;">
-                                <!-- <input type="text" maxlength="5" class="form-control" id="txtKey"> -->
                                 @Html.TextBoxFor(model => model.SecurityCaptch, new { @id = "txtKey", @maxlength = "5", @class = "form-control" })
                             </p>
                         </div>
@@ -212,4 +233,6 @@
 @section footerSection {
     @Html.Partial("_DisneyFooterPartialPage")
 }
-
+<script>
+    $("#txtKey").val('');
+</script>

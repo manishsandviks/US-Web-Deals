@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using deals.earlymoments.com.Models;
 using OrderEngine;
 using deals.earlymoments.com.Utilities;
+using deals.earlymoments.com.Services;
 
 namespace deals.earlymoments.com.Controllers
 {
@@ -731,7 +732,8 @@ namespace deals.earlymoments.com.Controllers
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
-            return View();
+            OfferService offerService = new OfferService();
+            return View(offerService.GetDefaultCustomerInfo());
         }
 
         [HttpPost]
@@ -755,6 +757,7 @@ namespace deals.earlymoments.com.Controllers
 
                 oVariables = oProcess.GetOfferAndPageDetails("fosina-disney-4for99-secure");
 
+                #region "Commented by Manish @ 07.11.2016"
                 if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
                 if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
                 if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
@@ -763,7 +766,10 @@ namespace deals.earlymoments.com.Controllers
                 if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
                 if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
                 oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                #endregion
 
+                var offerService = new OfferService();
+                oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
 
                 string choiceBooks = string.Join(",", SelectedBooks);
@@ -790,9 +796,7 @@ namespace deals.earlymoments.com.Controllers
                         {
                             if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                             {
-                                //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
-                                //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
-                                // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                Session.Add("NewOrderDetails", oVariables);
                                 return RedirectToAction("orderstatus", "Home");
                             }
                             else if (oVariables.err.Length > 0)
@@ -922,7 +926,7 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult payment4_for_99_bonus(ShippingModels.BillingDetails billing)
         {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+           
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
@@ -1006,6 +1010,7 @@ namespace deals.earlymoments.com.Controllers
                                     if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                                     {
                                         Session["NewSBMDetails"] = null;
+                                        Session.Add("NewOrderDetails", oVariables);
                                         return RedirectToAction("orderstatus", "Home");
                                     }
                                     else
