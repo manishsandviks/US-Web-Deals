@@ -6,20 +6,26 @@ using System.Web.Mvc;
 using deals.earlymoments.com.Models;
 using OrderEngine;
 using deals.earlymoments.com.Utilities;
+using deals.earlymoments.com.Services;
 
 namespace deals.earlymoments.com.Controllers
 {
     public class ElmoController : Controller
     {
-        #region Four_For_1
+        #region Three_99
 
         [PreserveQueryString]
         public ActionResult Three_99()
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["GenderList"] = UtilitiesModels.GetChildGenderNameList();
-            if ((string)Request.QueryString["vendorcode"] != null) { string aa = (string)Request.QueryString["vendorcode"]; }
-            return View();
+
+            #region "Commented by Samrat_Globsyn @ 07.11.2016"
+            //if ((string)Request.QueryString["vendorcode"] != null) { string aa = (string)Request.QueryString["vendorcode"]; } 
+            #endregion
+
+            OfferService offerService = new OfferService();
+            return View(offerService.GetDefaultCustomerInfo());
         }
 
 
@@ -42,19 +48,23 @@ namespace deals.earlymoments.com.Controllers
                     return View();
                 }
 
-                var value = HttpContext.Request.Params.Get("vendorcode");
+                //var value = HttpContext.Request.Params.Get("vendorcode");
                 //oVariables = oProcess.GetOfferAndPageDetails("seuss-winter-595-responsive");
                 oVariables = oProcess.GetOfferAndPageDetails("fosina-elmo-399-secure");
 
-                if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
-                if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
-                if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
-                if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
-                if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
-                if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
-                if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
-                oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                #region "Commented by Samrat_Globsyn @ 07.11.2016"
+                //if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
+                //if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
+                //if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
+                //if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
+                //if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
+                //if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
+                //if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
+                //oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString(); 
+                #endregion
 
+                var offerService = new OfferService();
+                oVariables = offerService.MapQueryStringToOrderVariables(oVariables: oVariables);
                 oVariables = ShippingModels.AssignShippingToOrderVariable(oVariables, shipping);
 
                 //Submitting shipping details to order engin for order process
@@ -77,6 +87,7 @@ namespace deals.earlymoments.com.Controllers
                                 //   page_log += "Order is NOT processed with Order Status X or F. Error: " + oVariables.err + " | Status: " + oVariables.order_status + "<br>";
                                 //  Response.Redirect("../orderstatus.aspx" + oComm.GetURIString(), false);
                                 // HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                Session.Add("NewOrderDetails", oVariables);
                                 return RedirectToAction("orderstatus", "Home");
                             }
                             else if (oVariables.err.Length > 0)
@@ -89,7 +100,7 @@ namespace deals.earlymoments.com.Controllers
                                 //  ScriptManager.RegisterStartupScript(this, this.GetType(), "client_error", error_msg, true);
                                 //oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                                 ViewBag.ErrorMsg = oVariables.err;
-                                //oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
+                                oVariables.err = oVariables.err.Replace("<br>", "\\r\\n");
                             }
                             else if ((oVariables.order_status == "N") || (oVariables.redirect_page.Length > 0))
                             {
@@ -183,7 +194,7 @@ namespace deals.earlymoments.com.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Three_99", "Elmo");
+                    return RedirectToAction("Three_99", "Elmo", routeValues: ViewContextExtensions.OptionalParamters(Request.QueryString));
                 }
             }
             catch (Exception ex)
@@ -201,8 +212,7 @@ namespace deals.earlymoments.com.Controllers
         [HttpPost]
         public ActionResult Payment_399(FormCollection form, ShippingModels.BillingDetails billing)
         {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
+            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();          
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
 
@@ -226,11 +236,11 @@ namespace deals.earlymoments.com.Controllers
             }
             else
             {
-                if (string.IsNullOrEmpty(billing.SecurityCaptch))
-                {
+                //if (string.IsNullOrEmpty(billing.SecurityCaptch))
+                //{
                     ViewBag.ErrorMsg = "Security Captch is required.";
                     // return View();
-                }
+                //}
             }
 
             if (Session["ShippingDetails"] != null)
@@ -286,6 +296,7 @@ namespace deals.earlymoments.com.Controllers
                                     if ((oVariables.order_status == "X") || (oVariables.order_status == "F"))
                                     {
                                         Session["NewSBMDetails"] = null;
+                                        Session.Add("NewOrderDetails", oVariables);
                                         return RedirectToAction("orderstatus", "Home");
                                     }
                                     else
@@ -329,7 +340,7 @@ namespace deals.earlymoments.com.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Three_99", "Elmo");
+                    return RedirectToAction("Three_99", "Elmo", routeValues: ViewContextExtensions.OptionalParamters(Request.QueryString));
                 }
 
             }

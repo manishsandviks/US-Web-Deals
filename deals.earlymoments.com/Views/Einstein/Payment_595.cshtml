@@ -228,7 +228,7 @@
                                 <div class="clear"></div>
 
                                 <div class="marginTop10">
-                                    <div class="row formFieldGap">
+                                    @*<div class="row formFieldGap">
                                         <div class="col-xs-4 formLabel adb">
                                             <label><span>*</span> Adult Date of Birth</label>
                                         </div>
@@ -241,12 +241,12 @@
                                         <div class="col-xs-12">
                                             <p class="f10 adob">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
                                         </div>
-                                    </div>
-                                    <div class="row formFieldGap">
+                                    </div>*@
+                                    @*<div class="row formFieldGap">
                                         <div class="col-xs-12 text-center">
                                             <p class="f12 bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
                                         </div>
-                                    </div>
+                                    </div>*@
                                     <div class="row formFieldGap">
                                         <div class="col-xs-12 text-center">
                                             <img src="@Url.Action("Image","Image" ,new { agha = "foo bar" })" alt="" />
@@ -257,7 +257,7 @@
                                     </div>
                                     <div class="row formFieldGap">
                                         <div class="col-xs-12 text-center">
-                                            <p><img src="/images/bye/Payment_Five_95/button_2.png" alt="" class="buttonContinue" id="btnSubmit1"></p>
+                                            <p><img src="/images/bye/Payment_Five_95/button_2.png" alt="" class="buttonContinue" id="btnSubmit1" style="cursor:pointer"></p>
                                             <p class="marginTop10"><img src="/images/bye/Payment_Five_95/download.png"></p>
                                         </div>
                                     </div>
@@ -297,6 +297,9 @@
                 }
             }
         })
+    </script>
+    <script>
+        $("#txtKey").val('');
     </script>
     <!--cvv modal-->
     <div class="modal fade" id="cvv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

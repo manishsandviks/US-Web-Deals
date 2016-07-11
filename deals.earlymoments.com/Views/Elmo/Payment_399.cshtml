@@ -1,6 +1,6 @@
 ﻿@model deals.earlymoments.com.Models.ShippingModels.BillingDetails
 @{
-    ViewBag.Title = "Payment 4for1";
+    ViewBag.Title = "Payment 3for99";
     Layout = "~/Views/Shared/_LayoutElmo.cshtml";
 }
 <link href="/Content/themes/elmo/Payment399/custom.css" rel="stylesheet" />
@@ -63,7 +63,7 @@
             </div>
 
             <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
-                <div class="row formFieldGap">
+                @*<div class="row formFieldGap">
                     <div class="col-md-4 col-sm-4 col-xs-4 formLabel adob">
                         <label><span>*</span> Adult Date of Birth</label>
                     </div>
@@ -78,7 +78,7 @@
                         <p class="f10">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
                         <p class="f12 text-center bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
                     </div>
-                </div>
+                </div>*@
                 <div class="row formFieldGap">
                     <div class="col-md-12 text-center">
                         <!-- <p><img src="/Images/key.jpg" class="responsiveImg"></p> -->
@@ -92,7 +92,7 @@
             </div>
 
             @*<div class="text-center marginTop15"><img src="/Images/seuss/Payment4for99Calendar1/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit"></div>*@
-            <div class="text-center marginTop15"> <img src="/Images/elmo/Payment399/join-button.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit1"></div>
+            <div class="text-center marginTop15"> <img src="/Images/elmo/Payment399/join-button.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit1" style="cursor:pointer"></div>
 
             <p class="marginTop10 noMarginBottomSmall text-center"><img src="/Images/elmo/Payment399/download.png" class="responsiveImg"></p>
         </div>
@@ -122,6 +122,9 @@
         }
 
     })
+</script>
+<script>
+    $("#txtKey").val('');
 </script>
 
 @section headerStrip {
