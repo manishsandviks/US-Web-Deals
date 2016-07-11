@@ -30,6 +30,7 @@ namespace deals.earlymoments.com.Controllers
 
 
         [HttpPost]
+        [PreserveQueryString]
         public ActionResult Three_99(FormCollection form, ShippingModels.ShippingAddress shipping)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -210,9 +211,10 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
+        [PreserveQueryString]
         public ActionResult Payment_399(FormCollection form, ShippingModels.BillingDetails billing)
         {
-            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();          
+            ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
             ViewData["MonthList"] = UtilitiesModels.GetMonthNameList();
             ViewData["YearList"] = UtilitiesModels.GetCardExpiryYearList();
 
@@ -238,8 +240,8 @@ namespace deals.earlymoments.com.Controllers
             {
                 //if (string.IsNullOrEmpty(billing.SecurityCaptch))
                 //{
-                    ViewBag.ErrorMsg = "Security Captcha is required.";
-                    // return View();
+                ViewBag.ErrorMsg = "Security Captcha is required.";
+                // return View();
                 //}
             }
 
