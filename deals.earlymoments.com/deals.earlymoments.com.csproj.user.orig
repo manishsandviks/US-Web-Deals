@@ -7,28 +7,8 @@
     <WebStackScaffolding_LayoutPageFile>
     </WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <ProjectView>ProjectFiles</ProjectView>
-    <NameOfLastUsedPublishProfile>SriMachineDev1</NameOfLastUsedPublishProfile>
-    <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
-<<<<<<< HEAD
-    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
->>>>>>> update: pulled Srikanths changes
-=======
-    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
->>>>>>> update:order status page is updated to responsive
->>>>>>> update:order status page is updated to responsive
-=======
-    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>
->>>>>>> update:order status page is updated to responsive
-=======
-    <NameOfLastUsedPublishProfile>EM-Deals</NameOfLastUsedPublishProfile>
->>>>>>> update: pulled Srikanths changes
->>>>>>> update: pulled Srikanths changes
->>>>>>> update: pulled Srikanths changes
+    <ProjectView>ProjectFiles</ProjectView>   
+    <NameOfLastUsedPublishProfile>EMDeals</NameOfLastUsedPublishProfile>   
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
