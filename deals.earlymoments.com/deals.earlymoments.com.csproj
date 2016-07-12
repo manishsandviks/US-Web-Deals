@@ -84,7 +84,7 @@
       <HintPath>..\Utilities\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\..\..\..\Reference Library\Sandviks Dll Library\NLog.dll</HintPath>
+      <HintPath>..\Utilities\NLog.dll</HintPath>
     </Reference>
     <Reference Include="OrderEngine, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

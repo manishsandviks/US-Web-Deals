@@ -434,7 +434,7 @@ namespace deals.earlymoments.com.Controllers
             }
             catch (Exception ex)
             {
-                oComm.SendEmail("ProcessConfirmationEmail() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
+                oComm.SendEmail("New-ProcessConfirmationEmail() <br />Exception Raised from Confirmaiton Page in EM Landers. Exception: " + ex.Message.ToString() + ".<br />More Data (Offer URL): "
                     + oVariables.referring_url + ". <br />More Data (Order Id):" + oVariables.order_id);
             }
         }
