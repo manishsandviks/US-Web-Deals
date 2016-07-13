@@ -9,7 +9,7 @@
 <script src="/Script/disney/Payment399/main.js"></script>
 <script src="/script/Payment-Validation.js"></script>
 
-@using (Html.BeginForm("Payment_399", "Elmo", FormMethod.Post, new { @id = "form1" }))
+@using (Html.BeginForm())
 {
 
     <p class="characters hideSmall"><img src="/Images/elmo/Payment399/characters.png" alt="" class="responsiveImg"></p>
@@ -64,15 +64,15 @@
 
             <div class="formContainer smallMarginTop10 adjustMobileFormContainer">
                 @*<div class="row formFieldGap">
-                    <div class="col-md-4 col-sm-4 col-xs-4 formLabel adob">
-                        <label><span>*</span> Adult Date of Birth</label>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-xs-8">
-                        <div class="form-inline aDb">
-                            @Html.Partial("_ADOBPartialPage")
+                        <div class="col-md-4 col-sm-4 col-xs-4 formLabel adob">
+                            <label><span>*</span> Adult Date of Birth</label>
                         </div>
-                    </div>
-                </div>*@
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="form-inline aDb">
+                                @Html.Partial("_ADOBPartialPage")
+                            </div>
+                        </div>
+                    </div>*@
                 <div class="row formFieldGap">
                     <div class="col-md-12">
                         @*<p class="f10">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>*@
@@ -94,7 +94,13 @@
             @*<div class="text-center marginTop15"><img src="/Images/seuss/Payment4for99Calendar1/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit"></div>*@
             <div class="text-center marginTop15"> <img src="/Images/elmo/Payment399/join-button.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit1" style="cursor:pointer"></div>
 
-            <p class="marginTop10 noMarginBottomSmall text-center"><img src="/Images/elmo/Payment399/download.png" class="responsiveImg"></p>
+            <p class="marginTop10 noMarginBottomSmall text-center">
+                <!--- GeoTrust -->
+                <!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+                <script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+                <!-- end GeoTrust Smart Icon tag -->
+                <!--<img src="/Images/elmo/Payment399/download.png" class="responsiveImg">-->
+            </p>
         </div>
 
     </div>

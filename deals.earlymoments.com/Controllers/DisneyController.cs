@@ -737,6 +737,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
+        [PreserveQueryString]
         public ActionResult four_for_99_bonus(FormCollection form, ShippingModels.ShippingAddress shipping, string[] SelectedBooks)
         {
             ViewData["StatesList"] = UtilitiesModels.GetStateNameList();
@@ -758,14 +759,14 @@ namespace deals.earlymoments.com.Controllers
                 oVariables = oProcess.GetOfferAndPageDetails("fosina-disney-4for99-secure");
 
                 #region "Commented by Manish @ 07.11.2016"
-                if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
-                if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
-                if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
-                if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
-                if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
-                if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
-                if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
-                oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
+                //if ((string)Request.QueryString["vendorcode"] != null) { oVariables.vendor_id = (string)Request.QueryString["vendorcode"]; }
+                //if ((string)Request.QueryString["key"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["key"]; }
+                //if ((string)Request.QueryString["vc"] != null) { oVariables.vendor_id = (string)Request.QueryString["vc"]; }
+                //if ((string)Request.QueryString["pc"] != null) { oVariables.promotion_code = (string)Request.QueryString["pc"]; }
+                //if ((string)Request.QueryString["aff_id"] != null) { oVariables.vendor_data1 = (string)Request.QueryString["aff_id"]; } if ((string)Request.QueryString["tracking"] != null) { oVariables.vendor_cust_ref_id = (string)Request.QueryString["tracking"]; }
+                //if ((string)Request.QueryString["src"] != null) { oVariables.pcode_pos_8 = (string)Request.QueryString["src"]; }
+                //if ((string)Request.QueryString["seg"] != null) { oVariables.pcode_segment = (string)Request.QueryString["seg"]; } if ((string)Request.QueryString["aff_id2"] != null) { oVariables.vendor_data2 = (string)Request.QueryString["aff_id2"]; }
+                //oVariables.referring_url = System.Web.HttpContext.Current.Request.Url.ToString();
                 #endregion
 
                 var offerService = new OfferService();
@@ -924,6 +925,7 @@ namespace deals.earlymoments.com.Controllers
         }
 
         [HttpPost]
+        [PreserveQueryString]
         public ActionResult payment4_for_99_bonus(ShippingModels.BillingDetails billing)
         {
            

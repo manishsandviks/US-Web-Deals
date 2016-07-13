@@ -28,7 +28,6 @@
          src="https://www.facebook.com/tr?id=1122629181099927&ev=PageView&noscript=1" />
 </noscript>
 <!-- End Facebook Pixel Code -->
-
 @using (Html.BeginForm())
 {
     <div class="rightFormDiv">
@@ -102,7 +101,11 @@
                             </div>
                         </div>-->
                         <div class="row formFieldGap">
+                            <div class="col-md-12">
+                                <p class="f12 text-center bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
+                            </div>
                             <div class="col-md-12 text-center">
+
                                 <!-- <p><img src="/Images/key.jpg" class="responsiveImg"></p> -->
                                 <img src="@Url.Action("Image","Image" ,new { agha = "foo bar" })" alt="" />
                                 <p style="width:30%; margin:10px auto;">
@@ -116,7 +119,13 @@
                     @*<div class="text-center marginTop15"><img src="/Images/seuss/payment4for99spring/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit"></div>*@
                     <div class="text-center marginTop15"> <img src="/Images/seuss/payment4for99spring/button_2.png" alt="" class="responsiveImg buttonContinue cursor" id="btnSubmit1"></div>
 
-                    <p class="marginTop10 noMarginBottomSmall text-center"><img src="/Images/seuss/payment4for99spring/download.png" class="responsiveImg"></p>
+                    <p class="marginTop10 noMarginBottomSmall text-center">
+                        <!--- GeoTrust -->
+                        <!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+                        <script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+                        <!-- end GeoTrust Smart Icon tag -->
+                        <!--<img src="/Images/seuss/payment4for99spring/download.png" class="responsiveImg">-->
+                    </p>
                 </div>
             </div>
         </div>

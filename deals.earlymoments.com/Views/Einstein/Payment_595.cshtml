@@ -32,8 +32,8 @@
 </head>
 
 <body>
-    @using (Html.BeginForm("Payment_595", "Einstein", FormMethod.Post, new { @id = "form1" }))
-    {
+    @using (Html.BeginForm())
+{
         <div class="masterContainer">
             <div class="bodyContainer shadowLR roundedBorderBottom">
                 <header>
@@ -229,19 +229,19 @@
 
                                 <div class="marginTop10">
                                     @*<div class="row formFieldGap">
-                                        <div class="col-xs-4 formLabel adb">
-                                            <label><span>*</span> Adult Date of Birth</label>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="form-inline aDb">
-                                                @Html.Partial("_ADOBPartialPage")
+                                            <div class="col-xs-4 formLabel adb">
+                                                <label><span>*</span> Adult Date of Birth</label>
                                             </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="col-xs-12">
-                                            <p class="f10 adob">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
-                                        </div>
-                                    </div>*@
+                                            <div class="col-xs-8">
+                                                <div class="form-inline aDb">
+                                                    @Html.Partial("_ADOBPartialPage")
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-xs-12">
+                                                <p class="f10 adob">Birthdate for age verification only, as required by the Children's Online Privacy Protection Act. Your birthdate will not be recorded or stored in any form.</p>
+                                            </div>
+                                        </div>*@
                                     <div class="row formFieldGap">
                                         <div class="col-xs-12 text-center">
                                             <p class="f12 bold"><span class="red">*</span> For security reasons, please enter the code as it appears below. Letters are ALL LOWER CASE.</p>
@@ -258,7 +258,13 @@
                                     <div class="row formFieldGap">
                                         <div class="col-xs-12 text-center">
                                             <p><img src="/images/bye/Payment_Five_95/button_2.png" alt="" class="buttonContinue" id="btnSubmit1" style="cursor:pointer"></p>
-                                            <p class="marginTop10"><img src="/images/bye/Payment_Five_95/download.png"></p>
+                                            <p class="marginTop10">
+                                                <!--- GeoTrust -->
+                                                <!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+                                                <script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+                                                <!-- end GeoTrust Smart Icon tag -->
+                                                <!--<img src="/images/bye/Payment_Five_95/download.png">-->
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
