@@ -54,10 +54,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\com.sandviks.sfmc.dll</HintPath>
     </Reference>
-    <Reference Include="customtracking.earlymoments.lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Utilities\customtracking.earlymoments.lib.dll</HintPath>
-    </Reference>
     <Reference Include="CustServiceProxy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=426109a22f3e5396, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utilities\CustServiceProxy.dll</HintPath>
