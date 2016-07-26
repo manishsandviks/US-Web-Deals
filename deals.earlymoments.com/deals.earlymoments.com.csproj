@@ -203,6 +203,7 @@
     <Content Include="Assets\emails\em_optout.txt" />
     <Content Include="Assets\emails\ews_optout_email.txt" />
     <Content Include="Assets\emails\gifting.htm" />
+    <Content Include="Assets\emails\newOC.txt" />
     <Content Include="Assets\emails\ornaments.htm" />
     <Content Include="Assets\emails\ornaments.txt" />
     <Content Include="Assets\emails\welcome.htm" />
