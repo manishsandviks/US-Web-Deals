@@ -59,6 +59,16 @@
                 isPaymentVisible = true;
                 showPayment();
             }
+
+            if ('@ViewBag.IsBonusSelected' != null) {
+                var isBonusSelected = '@ViewBag.IsBonusSelected';
+                //alert(isBonusSelected);
+                if (isBonusSelected == true || isBonusSelected == 'true' || isBonusSelected == 'True') {
+                    $("#spnSavedPrice").text('51.94');
+                } else {
+                    $("#spnSavedPrice").text('26.00');
+                }
+            }
         });
 
     </script>
@@ -134,7 +144,7 @@
                             </div>
                         </div>
                         <div class="clearfix"></div>
-                        <h3 class="text-center hideSmall sky bold">$<span id="spnSavedPrice">51.94</span>!</h3>
+                        <h3 class="text-center hideSmall sky bold">You Saved $<span id="spnSavedPrice">51.94</span>!</h3>
                         <p><img src="/images/seuss/4for1spring2/left-Bottom.jpg" class="responsiveImg marginTop10"></p>
                     </div>
                 </div>
