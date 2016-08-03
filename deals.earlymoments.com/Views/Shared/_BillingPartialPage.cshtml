@@ -113,5 +113,19 @@
             </div>
         </div>
     </div>
+    <div class="row formFieldGap smallMarginTop10">
+        <div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+            <label><span>*</span> Billing Zip Code</label>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 cvvBox">
+            <div class="input-group cvv">
+                @Html.TextBoxFor(model => model.CCBillZipCode, new { @id = "txtCCBillZipCode", @maxlength = "10", @class = "form-control ccnumeric" })
+
+                <div class="input-group-addon modalQ" data-toggle="modal" data-target="#ccbillZipModal">
+                    <i class="fa fa-question-circle f18 hand"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

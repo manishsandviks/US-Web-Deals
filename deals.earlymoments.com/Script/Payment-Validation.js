@@ -148,9 +148,20 @@ function validate_form() {
         }
     }
 
-  //  if ($('#optADOBMonth').exists()) { if ($('#optADOBMonth').val() == '' || $('#optADOBMonth').val() == 'Month') { set_errs($("#optADOBMonth"), 'Adult DOB month is required.\n'); } }
-   // if ($('#optADOBDay').exists()) { if ($('#optADOBDay').val() == '' || $('#optADOBDay').val() == 'Year') { set_errs($("#optADOBDay"), 'Adult DOB Day is required.\n'); } }
-  //  if ($('#optADOBYear').exists()) { if ($('#optADOBYear').val() == '' || $('#optADOBYear').val() == 'Year') { set_errs($("#optADOBYear"), 'Adult DOB year is required.\n'); } }
+    if ($('#txtCCBillZipCode').exists()) {
+        if ($('#txtCCBillZipCode').val() == '') {
+            set_errs($("#txtCCBillZipCode"), 'Credit Card Billing Zip Code is required.\n');
+        }
+        else {
+            if ($('#txtCCBillZipCode').val().trim().length < 5 || $('#txtCCBillZipCode').val().trim().length > 10) {
+                set_errs($("#txtCCBillZipCode"), 'Credit Card Billing Zip Code should be minimum 5 chars and maximum 10.\n');
+            }
+        }
+    }
+
+    //  if ($('#optADOBMonth').exists()) { if ($('#optADOBMonth').val() == '' || $('#optADOBMonth').val() == 'Month') { set_errs($("#optADOBMonth"), 'Adult DOB month is required.\n'); } }
+    // if ($('#optADOBDay').exists()) { if ($('#optADOBDay').val() == '' || $('#optADOBDay').val() == 'Year') { set_errs($("#optADOBDay"), 'Adult DOB Day is required.\n'); } }
+    //  if ($('#optADOBYear').exists()) { if ($('#optADOBYear').val() == '' || $('#optADOBYear').val() == 'Year') { set_errs($("#optADOBYear"), 'Adult DOB year is required.\n'); } }
 
     //if (!ValidateDOBDate()) { err_message += i++ + '. ' + "Invalid Adult Date Of Birth.<br/>" }
 

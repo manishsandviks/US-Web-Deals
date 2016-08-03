@@ -32,8 +32,8 @@
 </head>
 
 <body>
-@using (Html.BeginForm())
-{
+    @using (Html.BeginForm())
+    {
         <div class="masterContainer">
             <div class="bodyContainer shadowLR roundedBorderBottom">
                 <header>
@@ -190,6 +190,19 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row formFieldGap smallMarginTop10">
+                                            <div class="col-md-4 col-sm-4 col-xs-4 formLabel">
+                                                <label><span>*</span> Billing Zip Code</label>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 cvvBox">
+                                                <div class="input-group cvv">
+                                                    @Html.TextBoxFor(model => model.CCBillZipCode, new { @id = "txtCCBillZipCode", @maxlength = "10", @class = "form-control ccnumeric" })
+                                                    <div class="input-group-addon modalQ" data-toggle="modal" data-target="#ccbillZipModal">
+                                                        <i class="fa fa-question-circle f18 hand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -324,6 +337,26 @@
             </div>
         </div>
     </div>
+
+    <!--Credit Card Bill ZIP Modal-->
+    <div class="modal fade" id="ccbillZipModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close red" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="H1">
+                        Zip Code
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    Billing address zip code where the credit card statement is delivered.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends Credit Card Bill ZIP Modal Modal -->
 
     <div id="dialog-message" title="Errors" class="modal fade" tabindex="-1" role="dialog"
          aria-labelledby="myModalLabel1" aria-hidden="true">
