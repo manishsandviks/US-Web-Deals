@@ -107,7 +107,8 @@ namespace deals.earlymoments.com.Controllers
         {
             Random oRndm = new Random();
             //string alphabet = "23456789ABCDEFGHIJKLMNPQRTUVWXYZ";
-            string alphabet = "23456789abcdefghijklmnpqrtuvwxyz";
+            //string alphabet = "23456789abcdefghijklmnpqrtuvwxyz";
+            string alphabet = "abcdefghkmnqrtuwxyz";
             string strCode = "";
             for (int i = 1; i < 100; )
             {
