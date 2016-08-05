@@ -2,6 +2,15 @@
 @{
     Layout = null;
 }
+
+@{
+    string _Page1ShippingZip = string.Empty;
+    if (Session["NewSBMDetails"] != null)
+    {
+        _Page1ShippingZip = ((OrderEngine.OrderVariables)Session["NewSBMDetails"]).ShipVars[0].ship_to_zipcode;
+    }
+
+}
 <!doctype html>
 <html>
 <head>
@@ -376,5 +385,9 @@
             </div>
         </div>
     </div>
+    <script>
+        Page1ShippingZip = '@_Page1ShippingZip';
+    </script>
+
 </body>
 </html>

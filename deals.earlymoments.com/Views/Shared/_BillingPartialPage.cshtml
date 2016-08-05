@@ -1,5 +1,14 @@
 ﻿@model deals.earlymoments.com.Models.ShippingModels.BillingDetails
 
+@{
+    string _Page1ShippingZip = string.Empty;
+    if (Session["NewSBMDetails"] != null)
+    {
+        _Page1ShippingZip = ((OrderEngine.OrderVariables)Session["NewSBMDetails"]).ShipVars[((OrderEngine.OrderVariables)Session["NewSBMDetails"]).default_shp_id].ship_to_zipcode;
+    }
+
+}
+
 <h5><span class="red">*</span>Is your billing address the same as your shipping address?</h5>
 <div class="col-md-12 text-center">
     <!--showBillInfo radio-->
@@ -129,3 +138,6 @@
     </div>
 </div>
 
+<script>
+    Page1ShippingZip = '@_Page1ShippingZip';
+</script>

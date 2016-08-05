@@ -3,6 +3,7 @@ var err_message = '';
 var i = 1;
 var tmp;
 var bookString = '';
+var Page1ShippingZip;
 
 jQuery.fn.exists = function () { return this.length > 0; }
 
@@ -12,6 +13,7 @@ $(document).ready(function () {
         this.value = this.value.replace(/[^0-9\.]/g, '');
     });
 
+    $('#txtCCBillZipCode').val(Page1ShippingZip);
 
     //billing address-shipping address radio on-off
     $('#showBillInfo').hide();
@@ -27,6 +29,15 @@ $(document).ready(function () {
     });
     $('#radbillyes').click(function () {
         $('#showBillInfo').slideUp(0);
+        $('#txtCCBillZipCode').val(Page1ShippingZip);
+    });
+
+    $('#txtBillZipCode').blur(function () {
+        if ($('#radbillyes').attr("checked") == "checked") {
+            if ($(this).val()) {
+                $('#txtCCBillZipCode').val($(this).val());
+            }
+        }
     });
     //end of billing address-shipping address radio on-off
 
