@@ -5,6 +5,13 @@
     if (Session["NewSBMDetails"] != null)
     {
         _Page1ShippingZip = ((OrderEngine.OrderVariables)Session["NewSBMDetails"]).ShipVars[((OrderEngine.OrderVariables)Session["NewSBMDetails"]).default_shp_id].ship_to_zipcode;
+    }    
+    if (Request.Form["CCBillZipCode"] != null)
+    {
+        if (Request.Form["CCBillZipCode"].Trim() != "")
+        {
+            _Page1ShippingZip = Request.Form["CCBillZipCode"].Trim();
+        }
     }
 
 }

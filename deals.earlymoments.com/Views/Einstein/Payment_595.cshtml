@@ -10,6 +10,14 @@
         _Page1ShippingZip = ((OrderEngine.OrderVariables)Session["NewSBMDetails"]).ShipVars[0].ship_to_zipcode;
     }
 
+    if (Request.Form["CCBillZipCode"] != null)
+    {
+        if (Request.Form["CCBillZipCode"].Trim() != "")
+        {
+            _Page1ShippingZip = Request.Form["CCBillZipCode"].Trim();
+        }
+    }
+
 }
 <!doctype html>
 <html>
